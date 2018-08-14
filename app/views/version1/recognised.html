@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Is your degree a recognised UK equivalent?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% from "radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "recognised",
+          name: "recognised",
+          fieldset: {
+            legend: {
+              text: " Is your degree a recognised UK equivalent?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "yes"
+            },
+            {
+              value: "no",
+              text: "no"
+            }
+
+          ]
+        }) }}
+
+
+
+
+
+
+        {% from "button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

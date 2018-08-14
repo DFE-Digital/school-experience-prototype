@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How can we help you decide?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+        {% from "radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "help-decide",
+          name: "help-decide",
+          fieldset: {
+            legend: {
+              text: "How can we help you decide?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+              text: "Select the subject you want to find out more about.  "
+            },
+
+
+          items: [
+            {
+              value: "eligiability",
+              text: "Eligibility to become a teacher"
+            },
+            {
+              value: "training-options",
+              text: " Teacher training options, routes and subjects"
+            },
+            {
+              value: "teacher-life",
+              text: "Life as a teacher"
+            },
+            {
+              value: "teach-funding",
+              text: "Teacher training funding and teaching salaries"
+            },
+            {
+              value: "personalised",
+              text: "Getting personalised help and support about becoming a teacher"
+            },
+            {
+              value: "events",
+              text: "Attending teaching events"
+            },
+            {
+              value: "school-experience",
+              text: "Finding and booking school experience"
+            },
+            {
+              value: "teacher-applications",
+              text: "Teacher training applications"
+            },
+            {
+              value: "something-else",
+              text: "Something else / another subject"
+            }
+
+          ]
+        }) }}
+
+
+
+
+
+
+        {% from "button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

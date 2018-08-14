@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you need a school experience
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+
+
+
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Get school experience: step by step
+      </h1>
+
+
+      <p class="govuk-body-l">Find out more about school experience and how to find and book a placement in primary or secondary schools in England.</p>
+
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  1. What is school experience
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+              An introduction to school experience and what it involves.
+              <ul class="govuk-list">
+                <li>
+                  <a class="govuk-link" href="#">Overview: school experience</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="#">Background and history</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="#">Types of school experience</a>
+                </li>
+
+              </ul>
+            </div>
+      </details>
+
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  2. How school experience can help
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+              Find out how school experience can help you decide on a career in teaching and help you go on to become a teacher.
+
+
+              <ul class="govuk-list">
+                 <li>
+                   <a class="govuk-link" href="#">School experience: the benefits</a>
+                 </li>
+              </ul>
+
+            </div>
+
+      </details>
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                   3. Check if school experience is right for you
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+               Use the School Experience Service to find out if getting a school experience placement is suitable for you.
+               <ul class="govuk-list">
+                   <li>
+                     <a class="govuk-link" href="#">School Experience Service: school experience triage</a>
+                   </li>
+                </ul>
+            </div>
+      </details>
+
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  4. Find and book a school experience placement
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+              Use the School Experience Service and find out the other ways to organise a school experience placement.
+              <ul class="govuk-list">
+                 <li>
+                   <a class="govuk-link" href="#">School Experience Service: find and book a placement</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="#">School experience: ask a friend</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="#">School experience: arrange an independent placement</a>
+                 </li>
+              </ul>
+            </div>
+
+      </details>
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  5. School experience: next steps
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+              Find out what to do next following your school experience placement.
+              <ul class="govuk-list">
+                 <li>
+                   <a class="govuk-link" href="#">Provide school experience feedback</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="#">Apply for initial teacher training</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="#">A N Other</a>
+                 </li>
+              </ul>
+            </div>
+
+      </details>
+
+
+    </div>
+  </div>
+{% endblock %}

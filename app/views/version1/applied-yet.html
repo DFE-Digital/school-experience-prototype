@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Why haven’t you applied yet?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% from "radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "applied-yet",
+          name: "applied-yet",
+          fieldset: {
+            legend: {
+              text: "Why haven’t you applied yet?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "notsure",
+              text: "I’m still not sure if becoming a teacher is the right career choice"
+            },
+            {
+              value: "how",
+              text: "I don’t know how"
+            },
+            {
+              value: "right-course",
+              text: " I haven’t found the right course"
+            }
+
+          ]
+        }) }}
+
+
+
+
+
+
+        {% from "button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How far have you got towards becoming a teacher?
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% from "radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "sort",
+          name: "howfar",
+          fieldset: {
+            legend: {
+              text: "How far have you got towards becoming a teacher? ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "new-to-teach",
+              text: "I'm new to teaching and want to find out more about becoming a teacher"
+            },
+            {
+              value: "assesing",
+              text: " I'm deciding if becoming a teacher is the right career choice"
+            },
+            {
+              value: "confirming",
+              text: " I've decided I want to become a teacher"
+            },
+            {
+              value: "applying",
+              text: "I'm applying for teacher training "
+            },
+            {
+              value: "training",
+              text: " I've been accepted on or taking teacher training"
+            }
+          ]
+        }) }}
+
+
+
+
+
+
+        {% from "button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
