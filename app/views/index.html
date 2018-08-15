@@ -10,70 +10,107 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        DfE Get School Experience project
+        DfE Get School Experience
         <span class="govuk-caption-xl">Prototype kit {{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
-      <p>
-        Here is a list of individual pages developed as part of Sprint 1 (6 - 17 August).
-      </p>
 
+      {% from "button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Suitabiltiy and experience"
+      }) }}
+
+      <p class="govuk-!-font-weight-bold">Onboarding information and suitability checker</p>
       <p>
+        Below is a list of individual pages developed as part of Sprint 1 (6 - 17 August).
+
         These pages will be tested as part of a journey that forms the ‘Book School Experience’ onboarding information and suitability checker.
       </p>
 
-      <ul class="govuk-list">
-         <li>
-           <a class="govuk-link" href="version1/check">Check if you need a school experience (0)</a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/how-far">How far have you got towards becoming a teacher? (1)</a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/get-into-teaching">Get into teaching (2)</a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/how-can-we-help">How can we help you decide? (3) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/have-you-got-a-degree">Have you got a degree? (4) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/where-degree">Where did you get your degree? (5)</a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/where-degree-alt">Where are you working towards your degree? (5a) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/experience-before">Have you undertaken a school experience placement? (6) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/recognised"> Is your degree a recognised UK equivalent? (7) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/call-centre">Find out about something else / another subject (8) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/check-qualification">Check your overseas qualification (9) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/find-and-book">Find and book a school experience placement (10) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/find-itt">Find and apply for teacher training (11) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/applied-yet">Why haven’t you applied yet? (12) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/itt-placement">What stage are you at?  (13) </a>
-         </li>
-         <li>
-           <a class="govuk-link" href="version1/on-teacher-training">TBC (14) </a>
-         </li>
+      {% from "button/macro.njk" import govukButton %}
+
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Individual pages
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list">
+                 <li>
+                   <a class="govuk-link" href="version1/check">Check if you need a school experience (0)</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/how-far">How far have you got towards becoming a teacher? (1)</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/get-into-teaching">Get into teaching (2)</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/how-can-we-help">How can we help you decide? (3) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/have-you-got-a-degree">Have you got a degree? (4) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/where-degree">Where did you get your degree? (5)</a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/where-degree-alt">Where are you working towards your degree? (5a) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/experience-before">Have you undertaken a school experience placement? (6) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/recognised"> Is your degree a recognised UK equivalent? (7) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/call-centre">Find out about something else / another subject (8) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/check-qualification">Check your overseas qualification (9) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/find-and-book">Find and book a school experience placement (10) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/find-itt">Find and apply for teacher training (11) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/applied-yet">Why haven’t you applied yet? (12) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/itt-placement">What stage are you at?  (13) </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/on-teacher-training">TBC (14) </a>
+                 </li>
 
 
 
-      </ul>
+              </ul>
+            </div>
+
+      </details>
+
+      <p class="govuk-!-font-weight-bold">Variance start page testing</p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>
+              <a class="govuk-link" href="version1/start-page">Start Page (Blue)</a>
+          </li>
+          <li>
+              <a class="govuk-link" href="version1/start-page">Start Page (Blue Square)</a>
+          </li>
+
+        </ul>
+
+        <div class="divider">
+          &nbsp;
+        </div>
+
+
+
 
       <!--
       <h2 class="govuk-heading-m">About this page</h2>
