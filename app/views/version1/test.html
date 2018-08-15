@@ -1,19 +1,10 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
- Is your degree a recognised UK equivalent?
+Where did you get your degree?
 {% endblock %}
 
-{% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -28,14 +19,16 @@
       <div class="govuk-grid-column-two-thirds">
 
 
+          <form action="/applied-yet" method="post">
+
 
         {{ govukRadios({
-          classes: "govuk-radios--inline",
-          idPrefix: "recognised",
-          name: "recognised",
+
+          idPrefix: "test",
+          name: "test",
           fieldset: {
             legend: {
-              text: " Is your degree a recognised UK equivalent?",
+              text: "Testing routes",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
@@ -43,26 +36,24 @@
           items: [
             {
               value: "yes",
-              text: "yes"
+              text: "yes it is"
             },
             {
               value: "no",
-              text: "no"
+              text: "no it isnt"
             }
-
           ]
         }) }}
-
-
-
-
-
-
 
 
         {{ govukButton({
           text: "Save and continue"
         }) }}
+
+
+        </form>
+
+
       </div>
     </div>
 

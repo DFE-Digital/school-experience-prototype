@@ -4,10 +4,22 @@
 Why haven’t you applied yet?
 {% endblock %}
 
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-width-container">
-  <a href="#" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper">
 
@@ -15,7 +27,7 @@ Why haven’t you applied yet?
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        {% from "radios/macro.njk" import govukRadios %}
+
 
         {{ govukRadios({
           idPrefix: "applied-yet",
@@ -49,7 +61,7 @@ Why haven’t you applied yet?
 
 
 
-        {% from "button/macro.njk" import govukButton %}
+
 
         {{ govukButton({
           text: "Save and continue"

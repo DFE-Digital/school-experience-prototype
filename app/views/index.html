@@ -14,11 +14,20 @@
         <span class="govuk-caption-xl">Prototype kit {{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
 
-      {% from "button/macro.njk" import govukButton %}
+      <p class="govuk-!-font-weight-bold">
+        Sprint 1
+      </p>
 
-      {{ govukButton({
-        text: "Suitabiltiy and experience"
-      }) }}
+      <p class="">Variance eligibility and suitability page testing</p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>
+              <a class="govuk-link" href="version1/check">Eligibility and suitability checker (Blue)</a>
+          </li>
+          <li>
+              <a class="govuk-link" href="version1/check-alt">Eligibility and suitability start page (Blue Square)</a>
+          </li>
+
+        </ul>
 
       <p class="govuk-!-font-weight-bold">Onboarding information and suitability checker</p>
       <p>
@@ -27,7 +36,7 @@
         These pages will be tested as part of a journey that forms the ‘Book School Experience’ onboarding information and suitability checker.
       </p>
 
-      {% from "button/macro.njk" import govukButton %}
+
 
 
       <details class="govuk-details">
@@ -38,8 +47,17 @@
             </summary>
             <div class="govuk-details__text">
               <ul class="govuk-list">
+
+
                  <li>
-                   <a class="govuk-link" href="version1/check">Check if you need a school experience (0)</a>
+                   <a class="govuk-link" href="version1/check">Check if you need a school experience </a>
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="version1/start-page">Start Page</a>
+                 </li>
+
+                 <li>
+                   &nbsp;
                  </li>
                  <li>
                    <a class="govuk-link" href="version1/how-far">How far have you got towards becoming a teacher? (1)</a>
@@ -94,16 +112,7 @@
 
       </details>
 
-      <p class="govuk-!-font-weight-bold">Variance start page testing</p>
-      <ul class="govuk-list govuk-list--bullet">
-          <li>
-              <a class="govuk-link" href="version1/start-page">Start Page (Blue)</a>
-          </li>
-          <li>
-              <a class="govuk-link" href="version1/start-page">Start Page (Blue Square)</a>
-          </li>
 
-        </ul>
 
         <div class="divider">
           &nbsp;

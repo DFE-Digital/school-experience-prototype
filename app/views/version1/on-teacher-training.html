@@ -4,10 +4,22 @@
 TBC...
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
 {% block content %}
 
+
 <div class="govuk-width-container">
-  <a href="#" class="govuk-back-link">Back</a>
+
 
   <main class="govuk-main-wrapper">
 
