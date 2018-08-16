@@ -27,7 +27,7 @@ Where did you get your degree?
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-
+          <form action="/version1/recognised" method="post" class="form">
 
         {{ govukRadios({
           classes: "govuk-radios--inline",
@@ -62,6 +62,9 @@ Where did you get your degree?
         {{ govukButton({
           text: "Save and continue"
         }) }}
+
+
+        </form>
       </div>
     </div>
 

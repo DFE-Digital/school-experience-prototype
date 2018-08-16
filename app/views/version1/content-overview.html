@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find and apply for teacher training
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+
+  <main class="govuk-main-wrapper">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+          <h1 class="govuk-heading-xl">School experience: overview</h1>
+        <p>
+
+                    School experience is the educational programme allowing people interested in becoming teachers to find out more about what working and teaching in a school is really like.
+
+        </p>
+        <p>
+          It provides anyone interested in teaching a first-hand taste of school life by offering in-school placements across the course of the academic year.
+
+        </p>
+        <p>
+          Undertaking a school placement isn’t a mandatory requirement but allows teacher training candidates to:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>find out more about what’s involved in teaching a class</li>
+          <li>ask real teachers questions about what the profession is really like</li>
+          <li>show they’ve worked with children and young people as part of their teacher training application</li>
+        </ul>
+
+        <p>
+          All kinds of primary and secondary schools across England offer placements across a broad range of subjects providing a valuable insight into the teaching profession at all levels.
+
+        </p>
+        <p>
+          Find out more about school experience and check if you’re eligible for and how to get a placement:
+
+        </p>
+        <ul class="govuk-list">
+           <li>
+             <a class="govuk-link" href="/version1/content-background">School experience: background and history</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/content-types">School experience: types of placement</a>
+           </li>
+
+           <li>
+             <a class="govuk-link" href="/version1/content-benefits">School experience: the benefits</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/start-page">Check if you’re eligible for a school experience placement</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/find-and-book">School experience: ways to find and book a placement</a>
+           </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

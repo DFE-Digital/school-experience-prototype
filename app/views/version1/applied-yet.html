@@ -27,11 +27,12 @@ Why haven’t you applied yet?
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+        <form action="/version1/find-itt" method="post" class="form">
 
 
         {{ govukRadios({
-          idPrefix: "applied-yet",
-          name: "applied-yet",
+          idPrefix: "applied",
+          name: "applied",
           fieldset: {
             legend: {
               text: "Why haven’t you applied yet?",
@@ -66,6 +67,11 @@ Why haven’t you applied yet?
         {{ govukButton({
           text: "Save and continue"
         }) }}
+
+      </form>
+
+
+
       </div>
     </div>
 

@@ -27,7 +27,7 @@ x{% block beforeContent %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form action="get-into-teaching" method="post" class="form">
+        <form action="/version1/get-into-teaching" method="post" class="form">
 
         {{ govukRadios({
           idPrefix: "sort-journey",
@@ -66,13 +66,6 @@ x{% block beforeContent %}
             }
           ]
         }) }}
-
-
-
-
-
-
-
 
         {{ govukButton({
           text: "Save and continue"
