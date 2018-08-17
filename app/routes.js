@@ -138,18 +138,18 @@ router.post('/version1/recognised', function (req, res) {
 })
 
 // Where degree alt [5a]
-router.post('/version1/recognised', function (req, res) {
+router.post('/version1/check-qualification', function (req, res) {
 
-  let wheredegreealt = req.session.data['where-degree-alt']
+  let degreeloction = req.session.data['degree-loction']
 
-  console.log(req.session.data['where-degree-alt'])
+  console.log(req.session.data['degree-loction'])
 
 //Option 1
- if (wheredegreealt === 'uk') {
+ if (degreeloction === 'uk') {
    res.redirect('/version1/experience-before')
   }
 //Option 2
-  else if (wheredegreealt === 'overseas') {
+  else if (degreeloction === 'overseas') {
    res.redirect('/version1/recognised')
   }
 //end
