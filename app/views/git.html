@@ -1,7 +1,7 @@
 
 
 {% block pageTitle %}
-  Example without branding
+
 {% endblock %}
 
 {% block content %}
@@ -74,33 +74,51 @@ pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
 
 <style >
 @font-face {
-font-family:dfe_icons;
-src:url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.eot?xmyOi#iefix) format(eot) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.woff?xmyOi) format(woff) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_iconsttf?xmyOi) format(truetype) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.svg?xmyOi#dfe_icons) format(svg);
+font-family: 'dfe_icons';
+src: ('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.woff') format(woff),
+..url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.ttf') format(truetype),
+..url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/dfe_icons/dfe_icons.svg?xmyOi#dfe_icons') format(svg);
 font-weight:400;
 font-style:normal;
 }
 
 @font-face {
-font-family:FuturaLight;
-src:url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.eot?xmyOi#iefix) format(eot) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.woff?xmyOi) format(woff) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.ttf?xmyOi) format(truetype) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.svg?xmyOi#dfe_icons) format(svg);
+font-family: 'FuturaLight;';
+src: url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.woff') format('woff'),
+src: url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.ttf) format('truetype'),
+..url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_light/FTN35__W.svg?xmyOi#dfe_icons') format('svg');
 font-weight:400;
 font-style:normal;
 }
 
 @font-face {
-font-family:FuturaBook;
-src:url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.eot?xmyOi#iefix) format(eot) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.woff?xmyOi) format(woff) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.ttf?xmyOi) format(truetype) ,
-url(https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.svg?xmyOi#dfe_icons) format(svg);
+font-family: 'FuturaBook';
+src: url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.woff?xmyOi') format('woff),
+src: url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.ttf?xmyOi') format('truetype'),
+..url('https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/fonts/futura_book/FTN45__W.svg?xmyOi#dfe_icons') format(svg);
 font-weight:400;
 font-style:normal;
+}
+
+@font-face {
+    font-family: 'futurabook';
+    src: url('futura_book_regular-webfont.woff2') format('woff2'),
+         url('futura_book_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'futuralight';
+    src: url('futura_light_regular-webfont.woff2') format('woff2'),
+         url('futura_light_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 .nav_item li a{
   font-family:FuturaLight;

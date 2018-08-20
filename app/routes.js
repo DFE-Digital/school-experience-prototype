@@ -156,6 +156,25 @@ router.post('/version1/check-qualification', function (req, res) {
 })
 
 
+// Recognised check qualificatipon
+router.post('/version1/find-and-book', function (req, res) {
+
+  let ukrow = req.session.data['ukrow']
+
+  console.log(req.session.data['ukrow'])
+
+//Option 1
+ if (ukrow === 'yes') {
+   res.redirect('/version1/experience-before')
+  }
+//Option 2
+  else if (ukrow === 'no') {
+   res.redirect('/version1/recognised')
+  }
+//end
+})
+
+
 
 // Have you had a school experience before
 router.post('/version1/find-and-book', function (req, res) {
