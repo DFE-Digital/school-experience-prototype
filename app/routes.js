@@ -35,7 +35,7 @@ else if (howfar === 'applying') {
   }
 //Option 6
 else if (howfar === 'training') {
-   res.redirect('/version1/how-far')
+   res.redirect('/version1/on-teacher-training')
   }
 //end
 })
@@ -157,7 +157,7 @@ router.post('/version1/check-qualification', function (req, res) {
 
 
 // Recognised check qualificatipon
-router.post('/version1/find-and-book', function (req, res) {
+router.post('/version1/experience-before', function (req, res) {
 
   let ukrow = req.session.data['ukrow']
 
@@ -169,7 +169,7 @@ router.post('/version1/find-and-book', function (req, res) {
   }
 //Option 2
   else if (ukrow === 'no') {
-   res.redirect('/version1/recognised')
+   res.redirect('/version1/check-qualification')
   }
 //end
 })
@@ -200,7 +200,7 @@ router.post('/version1/find-and-book', function (req, res) {
 
 
 // What stage are you at
-router.post('/version1/experience-before', function (req, res) {
+router.post('/version1/applied-yet', function (req, res) {
 
   let placement = req.session.data['placement']
 
