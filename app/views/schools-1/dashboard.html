@@ -1,0 +1,91 @@
+{% extends "layout-internal-1.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row dashboard">
+
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Dashboard
+    </h1>
+
+    <div class="dashboard-top-divider">
+      &nbsp;
+    </div>
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+          <div class="greyblock1">
+
+            <h2 class="govuk-heading-m">School associations</h2>
+            <ul class="govuk-list">
+            <li><a class="govuk-link" href="/schools-1/associate">View associations</a></li>
+            <li><a class="govuk-link" href="/schools-1/add-subsidiary">Add subsidiary schools</a></li>
+            <li><a class="govuk-link" href="/schools-1/remove-subsidiary">Remove subsidiary schools</a></li>
+            </ul>
+
+          </div>
+    </div>
+    <div class="govuk-grid-column-one-half ">
+          <div class="greyblock1">
+
+            <h2 class="govuk-heading-m">School profiles</h2>
+            <ul class="govuk-list">
+            <li><a class="govuk-link" href="/schools-1/profile">View profiles</a></li>
+            <li><a class="govuk-link" href="/schools-1/image-management">Image management</a></li>
+            <li><a class="govuk-link" href="/schools-1/add-content">Add content</a></li>
+            <li><a class="govuk-link" href="/schools-1/remove-content">Remove content</a></li>
+            </ul>
+
+          </div>
+    </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half ">
+        <div class="greyblock2">
+
+          <h2 class="govuk-heading-m">Your places</h2>
+          <ul class="govuk-list">
+              <li><a class="govuk-link" href="/schools-1/view-calender">View calendar</a></li>
+            <li><a class="govuk-link" href="/schools-1/non-placements">Add non-placement days</a></li>
+
+
+          <li><a class="govuk-link" href="/schools-1/current-placments">View live placements</a></li>
+          <li><a class="govuk-link" href="/schools-1/manage-placements">Manage placements</a></li>
+
+          </ul>
+
+        </div>
+  </div>
+  <div class="govuk-grid-column-one-half ">
+        <div class="greyblock2">
+
+          <h2 class="govuk-heading-m">Candidate admin</h2>
+          <ul class="govuk-list">
+          <li><a class="govuk-link" href="/schools-1/view-bookings">View bookings</a></li>
+          <li><a class="govuk-link" href="/schools-1/view-messages">View messages</a></li>
+          <li><a class="govuk-link" href="/schools-1/notification">Notifications</a></li>
+          <li><a class="govuk-link" href="/schools-1/attenedance ">Candidate attendance</a></li>
+          </ul>
+
+        </div>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

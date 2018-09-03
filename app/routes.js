@@ -70,7 +70,7 @@ else if (helpdecide === 'teach-funding') {
   }
 //Option 5
 else if (helpdecide === 'personalised') {
-   res.redirect('https://getintoteaching.education.gov.uk/funding-and-salary')
+   res.redirect('https://getintoteaching.education.gov.uk/get-help-and-support')
   }
 //Option 6
 else if (helpdecide === 'events') {
@@ -86,7 +86,7 @@ else if (helpdecide === 'teacher-applications') {
   }
   //Option 9
   else if (helpdecide === 'something-else') {
-     res.redirect('/version1/call-centre')
+     res.redirect('https://getintoteaching.education.gov.uk/contact')
     }
 
 //end
