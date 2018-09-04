@@ -87,48 +87,57 @@ $govuk-global-styles: true;
 
 // School admin variants 2 interface
 
-.schooladmin2{
+.schooladmin2 {
     .govuk-header__container {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-bottom: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: none;
     }
-    .schooladmin-menu{
-      background: #dee0e2;
-      margin-bottom: -16px;
-      padding: 10px 0 7px;
 
+    .schooladmin-menu {
+        background: #dee0e2;
+        margin-bottom: -16px;
+        padding: 10px 0 7px;
     }
-    ul{
-      list-style-type: none;
-      padding: 0;
-      margin: 0 auto;
-      width: 960px;
-      padding-left: 0px;
+
+    .schooladmin-menu-item-selected {
+        background: #ff6a00;
+        margin-bottom: -16px;
+        padding: 10px 0 7px;
     }
-    li{
-      display: inline;
-      list-style-position: inside;
-      margin-right: 30px;
-      font-weight:bold;
-          a {
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        width: 960px;
+        padding-left: 0px;
+    }
+
+    li {
+        display: inline;
+        list-style-position: inside;
+        margin-right: 30px;
+        font-weight: bold;
+
+        a {
             color: #0b0c0c;
             text-decoration: none;
 
-              &:visited {
+            &:visited {
                 color: #0b0c0c;
                 text-decoration: none;
-              }
-              &:hover {
+            }
+
+            &:hover {
                 color: #0b0c0c;
                 text-decoration: underline;
-              }
-              &:active {
+            }
+
+            &:active {
                 color: #0b0c0c;
                 text-decoration: underline;
-              }
-          }
+            }
+        }
     }
-
-
-  }
+}
