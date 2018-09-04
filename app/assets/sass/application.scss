@@ -12,6 +12,17 @@ $govuk-global-styles: true;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .outofscope{
@@ -88,15 +99,18 @@ $govuk-global-styles: true;
 // School admin variants 2 interface
 
 .schooladmin2{
+    @include clearfix();
     .govuk-header__container {
       padding-top: 10px;
       padding-bottom: 10px;
       border-bottom: none;
+      @include clearfix();
     }
     .schooladmin-menu{
       background: #dee0e2;
-      margin-bottom: -16px;
       padding: 10px 0 7px;
+      // Clearfix
+      @include clearfix();
 
     }
     ul{
@@ -129,6 +143,64 @@ $govuk-global-styles: true;
               }
           }
     }
+  }
 
+  // Sign Out link
+
+
+  .signout {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+      &:active {
+        color: #fff;
+        text-decoration: underline;
+      }
+  }
+  .signin-status{
+      @include clearfix();
+      background-color: #fff;
+
+      .banner{
+        border-bottom: 1px solid 	#bfc1c3;
+        border-top: 1px solid 	#bfc1c3;
+        margin: 0 auto;
+        width: 960px;
+        margin-top: 25px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        @include clearfix();
+      }
+     .dfe-name{
+        @include clearfix();
+       p{
+         	color: 	#0b0c0c;
+          position: absolute;
+          margin : 0;
+          padding: 0;
+       }
+     }
+     .signin-status{
+       p{
+         color: 	#6f777b;
+         margin: 0;
+         padding: 0;
+         text-align: right;
+       }
+     }
 
   }
