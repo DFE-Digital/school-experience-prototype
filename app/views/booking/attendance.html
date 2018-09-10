@@ -1,4 +1,4 @@
-{% extends "layout-internal-1.html" %}
+{% extends "layout-internal-booking.html" %}
 
 {% block pageTitle %}
 XXXXXXXXXXXXXXXXXXXXXXXXX
@@ -16,21 +16,20 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <h1 class="govuk-heading-l">Candidate admin</h1>
 
 
-
         <div class="nav-cont">
 
           <ul class="navi-style1">
-            <li class="on"><!-- <strong class="govuk-heading-s"> -->
-              <strong class="govuk-heading-s">View bookings</strong>
+            <li><!-- <strong class="govuk-heading-s"> -->
+              <a href="/booking/view-bookings?id=5">View bookings</a>
             </li>
             <li>
-              <a href="/schools-2/view-messages?id=5">View messages</a>
+              <a href="/booking/view-messages?id=5">View messages</a>
             </li>
             <li>
-              <a href="/schools-2/notification?id=5">Notification</a>
+              <a href="/booking/notification?id=5">Notification</a>
             </li>
-            <li >
-              <a href="/schools-2/attendance?id=5">Candidate atendance</a>
+            <li class="on">
+              <strong class="govuk-heading-s">Candidater atendance</strong>
             </li>
           </ul>
         </div>

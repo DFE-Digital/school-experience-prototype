@@ -50,13 +50,12 @@ $govuk-global-styles: true;
 .dashboard h1{
   margin-bottom: 20px;
 }
+
 .greyblock1,
 .greyblock2{
   border: 1px solid #bfc1c3;
-  padding: 30px;
+  padding: 25px 25px 10px 25px;
   margin: 30px 0 0 0;
-  min-height: 185px;
-
 }
 // Schools Navigation
 .nav-cont{
@@ -202,6 +201,7 @@ $govuk-global-styles: true;
           position: absolute;
           margin : 0;
           padding: 0;
+          font-weight: bold;
        }
      }
      .signin-status{
@@ -214,3 +214,207 @@ $govuk-global-styles: true;
      }
 
   }
+
+
+
+
+.dashboard-figures{
+    .dashboard-top-divider{
+      margin-bottom: 20px;
+    }
+}
+.top-data-elements{
+  @include clearfix();
+  width: 33%;
+  float: left;
+  border-bottom: 1px solid #bfc1c3;
+      margin-bottom: 25px;
+
+    .keyfigure{
+      font-style: normal;
+      font-weight: bold;
+    }
+    .key-measure{
+      font-weight: bold;
+    }
+}
+
+////////////////// snipbook ////////////////
+.snipbook{
+    @include clearfix();
+    border: 1px solid #bfc1c3;
+    margin-top: 25px;
+    padding: 15px 0px 15px 0px;
+
+    h2{
+      font-size: 16px;
+      margin-bottom: 10px;
+
+    }
+    .book-snip-personal{
+      @include clearfix();
+      color: #0b0c0c;
+      font-family: "nta", Arial, sans-serif;
+        .pic{
+          border: 1px solid red;
+          width: 150px;
+          height: 150px;
+          float: left;
+          padding-right: 15px;
+          background-color: purple;
+      
+        }
+        a{
+          margin-top: 10px;
+              display: block;
+        }
+        .name{
+          font-size: 19px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .location{
+
+        }
+        .motivation{
+
+        }
+    }
+    .book-snip-more-detail{
+        @include clearfix();
+        color: #0b0c0c;
+        font-family: "nta", Arial, sans-serif;
+        .itt{
+            ul{
+              list-style-type: none;
+              list-style-position: inside;
+              margin: 0;
+              margin-bottom: 15px;
+              padding: 0;
+                li{
+
+                }
+            }
+        }
+        .booking{
+            ul{
+              list-style-type: none;
+              list-style-position: inside;
+              margin: 0;
+              margin-bottom: 15px;
+              padding: 0;
+                li{
+
+                }
+              }
+            }
+    }
+
+}
+
+.divider-new{
+  @include clearfix();
+  background-color: yellow;
+  border-bottom: 1px solid #bfc1c3;
+  margin-bottom: 25px;
+}
+
+////////////////// Booking Detail ////////////////
+.profile{
+    h2{
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    @include clearfix();
+    .personal{
+
+    }
+    .name{
+
+    }
+    .address{
+
+    }
+    .contact{
+      ul{
+        list-style-type: none;
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+          li{
+
+          }
+        }
+    }
+}
+.qualtrain{
+  h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+    @include clearfix();
+    ul{
+      list-style-type: none;
+      list-style-position: inside;
+      margin: 0;
+      padding: 0;
+    }
+    .qual{
+      ul{
+
+          li{
+
+          }
+        }
+    }
+    .teach-t{
+      ul{
+          li{
+
+          }
+        }
+    }
+    .dbs{
+      ul{
+          li{
+
+          }
+        }
+    }
+}
+
+.booking-details{
+  h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  @include clearfix();
+  ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+      li{
+
+      }
+    }
+  p{
+
+    }
+}
+.booking-details1{
+  @include clearfix();
+  ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+      li{
+
+      }
+    }
+  p{
+
+    }
+
+}
