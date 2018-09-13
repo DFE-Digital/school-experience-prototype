@@ -49,13 +49,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <div class="govuk-grid-column-one-half profile">
 
         <div class="personal">
-            <h2 class="govuk-heading-l">N'golo Ake Akenfyewe</h2>
+            <h2 class="govuk-heading-l">David Mineli</h2>
             <ul>
-              <li>Date of birth: 27 09 1975</li>
-              <li>Address: 12 Acacia Avenue,
-                        Levenshulme,
-                        Manchester
-                        M12 F08</li>
+              <li>Date of birth: 01 08 1997</li>
+              <li>Address: 21 Byker Grove, Byker, Newcastle. NL1 5NU</li>
 
             </ul>
         </div>
@@ -64,9 +61,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <div class="govuk-grid-column-one-half profile">
           <div class="contact">
               <ul>
-                <li>Email: CWilcook@gimail.com </li>
-                <li>Tel: 0161 555 0000</li>
-                <li>Mobile: +44 777 898 080809</li>
+                <li>Email: mineliman97@hotmail.co.uk  </li>
+                <li>Tel: 0191 333 4545</li>
+                <li>07979 123 456</li>
               </ul>
           </div>
       </div>
@@ -81,8 +78,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <h2 class="govuk-heading-m">Qualifications</h2>
               <ul>
                 <li>Degree: Yes</li>
-                <li>Subject: Physics</li>
-                <li>Class: 2:1</li>
+                <li>Subject: Computer sciences</li>
+                <li>Class: 1st</li>
               </ul>
             </div>
         </div>
@@ -90,8 +87,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             <div class="teach-t">
                 <h2 class="govuk-heading-m">Teacher training</h2>
                 <ul>
-                  <li>Status: Conditional offer</li>
-                  <li>ITT provider: Manchester Metropolitan University</li>
+                  <li>Status: Applied</li>
+                  <li>ITT provider: St Andrews School Group - North Tyneside</li>
                 </ul>
             </div>
         </div>
@@ -99,12 +96,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             <div class="dbs">
                 <h2 class="govuk-heading-m">DBS</h2>
                 <ul>
-                  <li>DBS checked: Yes</li>
-                  <li> Criminal record: Yes	</li>
-                  <li>Details:
-                    For protesting against animal cruelty when I was a student in 1995. I was given a 12-month suspended sentence and bound over to keep the peace.
-
-                  </li>
+                  <li>DBS checked: No</li>
+                  <li>Criminal Recor: No</li>
+                  <li>Details: N/A</li>
                 </ul>
             </div>
         </div>
@@ -117,9 +111,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <div class="booking-details">
                 <h2 class="govuk-heading-m">Booking details</h2>
                 <ul>
-                  <li>Date: 8 to 9 October 2018 (2 days)</li>
-                  <li>Subject: Maths</li>
-                  <li>No shows: Never had placement</li>
+                  <li>Date: 15 to 20 October 2018 (5 days)</li>
+                  <li>Subject: Physics</li>
+                  <li>No shows: 1</li>
                 </ul>
                 <p>
 
@@ -129,10 +123,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="govuk-grid-column-one-half">
               <div class="booking-details1">
                 <ul>
-                  <li>Preferred placement role:	Supervised teaching</li>
-                  <li>Motivations: I’ve always wanted to be a teacher but never had the confidence to give it a try...until now.</li>
-                  <li>Expectations: to become a teacher and, hopefully, overcome my nerves and stand up in front of a class and see if it’s something I’m comfortable with.</li>
-                  <li>Reason for selecting school: Local, Right age range, Right subject
+                  <li>Preferred placement role:	Observing</li>
+                  <li>Motivations: I’ve been told by lots of people that I’d be a good teacher so I want to find out more about it.</li>
+                  <li>Expectations: I’m hoping it’ll help me decide if teaching is the right career for me.</li>
+                  <li>Reason for selecting school: OFSTED rating, Local, Right subject
                 </ul>
               </div>
           </div>
@@ -143,24 +137,30 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 <!-- ********** CTA *********** -->
       <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
-                <!-- *** Booking ***  -->
-                <form action="/booking/noti-contact" method="post" class="form">
 
-                      <!-- *** Name to be passed *** -->
-                      <input name="full-name" value="N golo Ake Akenfyewe" type="hidden">
+              <form action="/booking/noti-confirm" method="post" class="form">
 
-                      <button type="submit" name="direct" value="contact-candidate" class="govuk-button button-grey cta">
-                        Contact candidate
-                      </button>
-                      <button type="submit" name="direct" value="cancel-booking" class="govuk-button button-grey cta">
-                        Cancel booking
-                      </button>
+                <!-- *** Soft Booking *** -->
+                <!-- *** Name to be passed *** -->
+                <input name="full-name" value="David Mineli" type="hidden">
+
+                <button type="submit" name="pro2-direct" value="confirm-candidate" class="govuk-button">
+                  Confirm
+                </button>
+                <br />
+                <button type="submit" name="pro2-direct" value="reject-candidate" class="govuk-button button-grey cta">
+                  Reject candidate
+                </button>
+                <button type="submit" name="pro2-direct" value="contact-candidate" class="govuk-button button-grey cta">
+                  Contact booking
+                </button>
 
 
-                      <br />
-                      <a class="govuk-link" href="/booking/view-bookings?id=5">Back to booking list</a>
+                <br />
+                <a class="govuk-link" href="/booking/view-bookings?id=5">Back to booking list</a>
 
               </form>
+
           </div>
 
       </div>

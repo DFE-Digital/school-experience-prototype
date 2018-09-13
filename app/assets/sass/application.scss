@@ -262,7 +262,7 @@ $govuk-global-styles: true;
           float: left;
           padding-right: 15px;
           background-color: purple;
-      
+
         }
         a{
           margin-top: 10px;
@@ -312,30 +312,23 @@ $govuk-global-styles: true;
 
 }
 
-.divider-new{
+.divider-profile{
   @include clearfix();
-  background-color: yellow;
   border-bottom: 1px solid #bfc1c3;
   margin-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 ////////////////// Booking Detail ////////////////
 .profile{
-    h2{
-      font-size: 16px;
-      margin-bottom: 10px;
+  div{
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
     }
     @include clearfix();
-    .personal{
 
-    }
-    .name{
-
-    }
-    .address{
-
-    }
-    .contact{
       ul{
         list-style-type: none;
         list-style-position: inside;
@@ -345,11 +338,20 @@ $govuk-global-styles: true;
 
           }
         }
+    .personal h2{
+      margin-bottom: 20px;
+    }
+    .contact{
+      margin-top: 59px;
     }
 }
 .qualtrain{
+  div, ul{
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    }
   h2{
-    font-size: 16px;
     margin-bottom: 10px;
   }
     @include clearfix();
@@ -384,10 +386,11 @@ $govuk-global-styles: true;
 }
 
 .booking-details{
-  h2{
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
+  div, ul{
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    }
   @include clearfix();
   ul{
     list-style-type: none;
@@ -403,6 +406,11 @@ $govuk-global-styles: true;
     }
 }
 .booking-details1{
+  div, ul{
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    }
   @include clearfix();
   ul{
     list-style-type: none;
@@ -417,4 +425,44 @@ $govuk-global-styles: true;
 
     }
 
+}
+.button-grey {
+      background-color: #eee;
+      color: #000;
+      box-shadow: 0 2px 0 #666;
+
+      &:hover {
+        background-color: #ccc;
+        color: #000;
+        box-shadow: 0 2px 0 #666;
+      }
+
+      &:focus {
+        background-color: #ccc;
+        color: #000;
+        box-shadow: 0 2px 0 #666;
+      }
+    }
+
+.cta{
+  &:link{
+    color: #000;
+  }
+  &:visited{
+    color: #000;
+  }
+  &:hover {
+    color: #000;
+  }
+  &:focus {
+    color: #000;
+  }
+}
+.emails{
+      padding-top: 25px;
+}
+.noti-template{
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
 }

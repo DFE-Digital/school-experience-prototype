@@ -49,13 +49,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <div class="govuk-grid-column-one-half profile">
 
         <div class="personal">
-            <h2 class="govuk-heading-l">N'golo Ake Akenfyewe</h2>
+            <h2 class="govuk-heading-l">Grace Cooper</h2>
             <ul>
-              <li>Date of birth: 27 09 1975</li>
-              <li>Address: 12 Acacia Avenue,
-                        Levenshulme,
-                        Manchester
-                        M12 F08</li>
+              <li>Date of birth: 01 08 1997</li>
+              <li>Address: 1 Windsor Terrace, Thameside, London. W1 3XP
+
 
             </ul>
         </div>
@@ -64,9 +62,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <div class="govuk-grid-column-one-half profile">
           <div class="contact">
               <ul>
-                <li>Email: CWilcook@gimail.com </li>
-                <li>Tel: 0161 555 0000</li>
-                <li>Mobile: +44 777 898 080809</li>
+                <li>Email: AC1994@gimail.com   </li>
+                <li>Tel: N/A</li>
+                <li>Mobile: +447 888 274397</li>
               </ul>
           </div>
       </div>
@@ -81,8 +79,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <h2 class="govuk-heading-m">Qualifications</h2>
               <ul>
                 <li>Degree: Yes</li>
-                <li>Subject: Physics</li>
-                <li>Class: 2:1</li>
+                <li>Subject: Art history</li>
+                <li>Class: 3rd</li>
               </ul>
             </div>
         </div>
@@ -90,8 +88,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             <div class="teach-t">
                 <h2 class="govuk-heading-m">Teacher training</h2>
                 <ul>
-                  <li>Status: Conditional offer</li>
-                  <li>ITT provider: Manchester Metropolitan University</li>
+                  <li>Status: Haven't applied </li>
+                  <li>ITT provider: N/A</li>
                 </ul>
             </div>
         </div>
@@ -100,11 +98,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                 <h2 class="govuk-heading-m">DBS</h2>
                 <ul>
                   <li>DBS checked: Yes</li>
-                  <li> Criminal record: Yes	</li>
-                  <li>Details:
-                    For protesting against animal cruelty when I was a student in 1995. I was given a 12-month suspended sentence and bound over to keep the peace.
-
-                  </li>
+                  <li>Criminal Recor: No</li>
+                  <li>Details: N/A</li>
                 </ul>
             </div>
         </div>
@@ -117,9 +112,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <div class="booking-details">
                 <h2 class="govuk-heading-m">Booking details</h2>
                 <ul>
-                  <li>Date: 8 to 9 October 2018 (2 days)</li>
-                  <li>Subject: Maths</li>
-                  <li>No shows: Never had placement</li>
+                  <li>Date: 08 to 19 October 2019 (10 days)</li>
+                  <li>Subject: Art</li>
+                  <li>No shows: 2</li>
                 </ul>
                 <p>
 
@@ -129,42 +124,47 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="govuk-grid-column-one-half">
               <div class="booking-details1">
                 <ul>
-                  <li>Preferred placement role:	Supervised teaching</li>
-                  <li>Motivations: I’ve always wanted to be a teacher but never had the confidence to give it a try...until now.</li>
-                  <li>Expectations: to become a teacher and, hopefully, overcome my nerves and stand up in front of a class and see if it’s something I’m comfortable with.</li>
-                  <li>Reason for selecting school: Local, Right age range, Right subject
+                  <li>Preferred placement role:	Teaching assistant</li>
+                  <li>Motivations: I’ve been told by lots of people that I’d be a good teacher so I want to find out more about it.</li>
+                  <li>Expectations: I just love kids.</li>
+                  <li>Reason for selecting school: Know someone at the school, Right age & range
+
                 </ul>
               </div>
           </div>
       </div>
 
 
+      <!-- ********** CTA *********** -->
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
 
-<!-- ********** CTA *********** -->
-      <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-                <!-- *** Booking ***  -->
-                <form action="/booking/noti-contact" method="post" class="form">
+                    <form action="/booking/noti-confirm" method="post" class="form">
 
+                      <!-- *** Soft Booking *** -->
                       <!-- *** Name to be passed *** -->
-                      <input name="full-name" value="N golo Ake Akenfyewe" type="hidden">
+                      <input name="full-name" value="Grace Cooper" type="hidden">
 
-                      <button type="submit" name="direct" value="contact-candidate" class="govuk-button button-grey cta">
-                        Contact candidate
+                      <button type="submit" name="pro2-direct" value="confirm-candidate" class="govuk-button">
+                        Confirm
                       </button>
-                      <button type="submit" name="direct" value="cancel-booking" class="govuk-button button-grey cta">
-                        Cancel booking
+                      <br />
+                      <button type="submit" name="pro2-direct" value="reject-candidate" class="govuk-button button-grey cta">
+                        Reject candidate
+                      </button>
+                      <button type="submit" name="pro2-direct" value="contact-candidate" class="govuk-button button-grey cta">
+                        Contact booking
                       </button>
 
 
                       <br />
                       <a class="govuk-link" href="/booking/view-bookings?id=5">Back to booking list</a>
 
-              </form>
-          </div>
+                    </form>
 
-      </div>
+                </div>
 
+            </div>
 
 
 {% endblock %}
