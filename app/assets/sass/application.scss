@@ -468,6 +468,34 @@ $govuk-global-styles: true;
 }
 
 /* ********************************************* Calendar ******************* */
+.subject-header{
+  @include clearfix();
+  font-size: 19px;
+  padding-top: 10px;
+    padding-bottom: 10px;
+  position: relative;
+  font-family: "nta", Arial, sans-serif;
+  border-bottom: 1px solid 	#bfc1c3;
+}
+.subject-header1{
+  h2{
+    margin-bottom: 10PX;
+  }
+}
+.change-calender{
+  p{
+    margin-bottom: 10px;
+  }
+  select{
+    font-size: 19px;
+      font-family: "nta", Arial, sans-serif;
+      margin-bottom: 25px;
+
+     padding: 4px;
+    background-color: #fff;
+    border: 2px solid #6f777b;
+  }
+}
 .diary-control{
   margin-top: 30px;
 }
@@ -482,11 +510,45 @@ $govuk-global-styles: true;
     margin: 0;
     padding: 0;
   }
-  .cal-nav{
+  .cal-nav1{
+    @include clearfix();
     padding: 15px 0 15px 0;
+    border-top: 1px solid 	#bfc1c3;
+    border-bottom: 1px solid 	#bfc1c3;
     font-size: 19px;
     margin-bottom: 15px 0 20px 0;
     position: relative;
+        margin-top: 0px;
+        li{
+          float: left;
+          width: 33%
+        }
+        .prev{
+          display:block;
+
+          span{
+            font-size: 14px;
+          }
+
+        }
+        .next{
+          display: block;
+          text-align: right;
+          span{
+            font-size: 14px;
+          }
+
+        }
+     }
+  .cal-nav{
+    @include clearfix();
+    padding: 15px 0 15px 0;
+    border-top: 1px solid 	#bfc1c3;
+    border-bottom: 1px solid 	#bfc1c3;
+    font-size: 19px;
+    margin-bottom: 15px 0 20px 0;
+    position: relative;
+        margin-top: 50px;
     li{
       float: left;
       width: 33%
@@ -519,7 +581,7 @@ $govuk-global-styles: true;
 
 
   .cal-container{
-        width: 160px;
+        width: 192px;
         float: left;
 
          @include clearfix();
@@ -530,10 +592,10 @@ $govuk-global-styles: true;
           width: 16.6%;
           position: relative;
 
-          min-width: 159px;
+          min-width: 191px;
           }
           li{
-            height: 80px;
+            /*height: 40px;*/
             position: relative;
 
             border-right: 1px solid 	#bfc1c3;
@@ -541,8 +603,8 @@ $govuk-global-styles: true;
             span{
               display:block;
               position: relative;
+              height: 40px;
 
-              height: 80px;
             }
             .odd{
               background: 	#f8f8f8;
@@ -563,6 +625,20 @@ $govuk-global-styles: true;
             }
 
           }
+          .available{
+            background: #f8f8f8;
+            padding-top: 4px;
+            font-size: 14px;
+            position: relative;
+            display:block;
+            border-radius: 3px;
+          }
+          .blockout{
+            padding: 5px;
+            font-size: 14px;
+            min-height: 39px;
+            @include clearfix();
+          }
           .dayrow{
             height: 40px;
             position: relative;
@@ -578,6 +654,7 @@ $govuk-global-styles: true;
           }
           .interview, .face{
             font-size: 14px;
+            height: 40px;
             padding-left:5px;
             position: relative;
             padding-top: 4px;
@@ -586,7 +663,7 @@ $govuk-global-styles: true;
             background: lighten(	#005ea5, 55%);
             color: 	#0b0c0c;
             line-height: 16px;
-            height: 35px;
+
             position: relative;
             margin-bottom: 1px;
             cursor: default;
@@ -724,3 +801,65 @@ opacity: 1;
 }
 
 /* End Tooltip */
+
+
+
+
+
+
+/* Search Boxes */
+.search{
+  .hint-bold{
+    font-weight: bold;
+  }
+  .search-cont{
+    @include clearfix();
+  }
+  .seachbox{
+    float: left;
+    width: 335px
+  }
+  .radius{
+    float:left;
+    height: 36px;
+    border-top: 2px solid #0b0c0c;
+    border-bottom: 2px solid #0b0c0c;
+    padding-left: 5px;
+    padding-right: 5px;
+    select{
+      font-size: 19px;
+      border: 0;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      background: white;
+    }
+  }
+  .gobutton{
+    float:left;
+    border: 2px solid #0b0c0c;
+    height: 36px;
+    a{
+      display: block;
+      height: 32px;
+      background-color: #00823b;
+      font-size: 19px;
+      font-weight: bold;
+      color: white;
+      padding: 5px 10px 0px 10px;
+      text-decoration: none;
+      &:link{
+        color: #fff;
+      }
+      &:visited{
+        color: #fff;
+      }
+      &:hover {
+        color: #fff;
+      }
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
