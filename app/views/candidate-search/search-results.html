@@ -18,7 +18,7 @@
 {% block content %}
 
     <div class="govuk-grid-row">
-      <h1 class="govuk-heading-l">Manhester</h1>
+      <h1 class="govuk-heading-l">Manchester</h1>
     </div>
 
 
@@ -27,7 +27,7 @@
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-one-third filter">
-        Filter your resuls:
+
         <div class="grey-box">
           <div class="form-group">
                   <label class="legend" for="DistanceRadius">Radius<span class="visuallyhidden"> this element dynamically updates the page</span></label>
@@ -55,6 +55,9 @@
                           </option>
                   </select>
               </div>
+              <div>
+                &nbsp;
+              </div>
         </div>
 
         <div class="grey-box">
@@ -62,7 +65,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                      Which types of waste do you transport?
+                      Education phase
                     </h1>
                   </legend>
                   <span id="waste-hint" class="govuk-hint">
@@ -97,7 +100,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                      Which types of waste do you transport?
+                    School type
                     </h1>
                   </legend>
                   <span id="waste-hint" class="govuk-hint">
@@ -105,19 +108,19 @@
                   </span>
                   <div class="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                      <input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
                       <label class="govuk-label govuk-checkboxes__label" for="waste-1">
                         Academy
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
                       <label class="govuk-label govuk-checkboxes__label" for="waste-2">
                         Maintained school
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                      <input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
                       <label class="govuk-label govuk-checkboxes__label" for="waste-3">
                          Independent school
                       </label>
@@ -151,7 +154,7 @@
               Showing 1 - 50 of 165 schools and colleges
             </div>
             <div class="govuk-grid-column-one-half">
-              <ul>
+              <ul class="pagin">
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
@@ -177,12 +180,12 @@
                     </select>
                 </div>
               </div>
-              <div class="divider"></div>
+
               <div class="list">
                 <ul>
                   <li>
-                    <div class="result">
-                       <a href="" title="Abbey College Manchester">Abbey College Manchester</a>
+                    <div class="school-result">
+                       <a href="search-blank" title="Abbey College Manchester">Abbey College Manchester</a>
                        <ul>
                          <li>Address: Long Millgate, Manchester, M3 1SB</li>
                          <li>Primary, Secondary and 16 to 18</li>
@@ -190,26 +193,78 @@
                          <li>Fees: £50</li>
                          <li>Subjects: Maths, English, Art, Physics, Geography</li>
                        </ul>
-                       <button type="submit" class="govuk-button">
-                          Add to comparison list
-                        </button>
+
                     </div>
                   </li>
+
+
+
+
+
                   <li>
-                    <div class="result">
-                       <a href="" title="Abbey College Manchester">King of Kings School</a>
+                    <div class="school-result">
+                       <a href="search-blank" title="Abbey College Manchester">Chetham's School of Music</a>
                        <ul>
-                         <li>Address: 142 Dantzic Street, Manchester, M4 4DN</li>
+                         <li>Address: Long Millgate, Manchester, M3 1SB</li>
                          <li>Primary, Secondary and 16 to 18</li>
                          <li>School type: Independent School</li>
                          <li>Fees: £0</li>
                          <li>Subjects: Maths, English, Art, Physics, Geography</li>
                        </ul>
-                       <button type="submit" class="govuk-button">
-                          Add to comparison list
-                        </button>
+
                     </div>
                   </li>
+
+
+
+
+                  <li>
+                    <div class="school-result">
+                       <a href="search-blank" title="Abbey College Manchester">Manchester Creative Studio</a>
+                       <ul>
+                         <li>Address: 16 Blossom Street, Manchester, M4 5AW</li>
+                         <li>Primary, Secondary and 16 to 18</li>
+                         <li>School type: Academy</li>
+                         <li>Fees: £5</li>
+                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
+                       </ul>
+
+                    </div>
+                  </li>
+
+
+
+
+                  <li>
+                    <div class="school-result">
+                       <a href="search-blank" title="Abbey College Manchester">King of Kings School</a>
+                       <ul>
+                         <li>Address: 142 Dantzic Street, Manchester, M4 4DN</li>
+                         <li>Primary, Secondary and 16 to 18</li>
+                         <li>School type: Independent School</li>
+                         <li>Fees: £25</li>
+                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
+                       </ul>
+
+                    </div>
+                  </li>
+
+
+
+                  <li>
+                    <div class="school-result">
+                       <a href="search-blank" title="Abbey College Manchester">New Islington Free School  </a>
+                       <ul>
+                         <li>Address: 10 Hugh Oldham Way, Manchester, M4 6EY</li>
+                         <li>Primary</li>
+                         <li>School type: Academy</li>
+                         <li>Fees: £60</li>
+                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
+                       </ul>
+
+                    </div>
+                  </li>
+
                 </ul>
               </div>
           </div>
