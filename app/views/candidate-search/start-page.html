@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+ <main class="govuk-main-wrapper">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+      Search and request a school experience
+      </h1>
+
+      <p>Find out if school experience is something which can help you decide to become a primary or secondary teacher.</p>
+      <p>To get a placement you must be:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>at least 18 years of age </li>
+        <li>thinking about becoming a teacher</li>
+
+      </ul>
+
+      <p class="govuk-inset-text">This service only checks if you’re ready for school experience placements in England.
+      </p>
+
+
+
+      <a href="search" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+
+
+
+      <p>
+
+      </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
