@@ -12,6 +12,13 @@ $(document).ready(function () {
     if (selected) {
         $('#schooladmin-menu-item-' + selected).addClass('schooladmin-menu-item-selected');
     }
+
+    accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#degree-subject')
+    });
+    accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#subject')
+    });
 });
 
 var parseParam = function (a) {
