@@ -25,7 +25,7 @@
                 </legend>
 
 
-                <form action="/candidate-search/search-results-post" method="post">
+                <form action="/candidate-search2/search-results-post" method="post">
                     <div class="govuk-radios search" data-module="radios">
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="how-contacted-conditional-1" name="searchType" type="radio" value="isLocationSearch" data-aria-controls="conditional-how-contacted-conditional-1">
@@ -69,36 +69,21 @@
                                 Subject and or school type (maths, English academy, college)
                             </label>
                         </div>
+
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                            
                             <div class="govuk-form-group">
+                                
                                 <label class="govuk-label hint-bold" for="search-by-subject-and-school-type">
                                     For example, English, art college, special school
                                 </label>
-
 
                                 <div class="search-cont">
                                     <div class="seachbox">
                                         <input class="govuk-input govuk-!-width-full" id="search-by-subject-and-school-type" name="searchBySubjectAndSchoolType" type="text">
                                     </div>
-                                    <div class="radius">
-                                        <select id="subject-and-school-type-radius" class="govuk-select" name="subjectAndSchoolTypeRadius">
-                                            <option value="1">1 mile</option>
-                                            <option value="3" selected="">3 miles</option>
-                                            <option value="5">5 miles</option>
-                                            <option value="10">10 miles</option>
-                                            <option value="15">15 miles</option>
-                                            <option value="20">20 miles</option>
-                                            <option value="25">25 miles</option>
-                                        </select>
-                                    </div>
                                     <button class="govuk-button">Search</button>
                                 </div>
-
-
-
-
-
-
 
                             </div>
 
@@ -111,14 +96,19 @@
                             </label>
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+                            
                             <div class="govuk-form-group">
+                                
                                 <label class="govuk-label hint-bold" for="subject-and-location">
                                     For example, art Manchester, maths Leeds
                                 </label>
+
                                 <div class="search-cont">
+
                                     <div class="seachbox">
                                         <input class="govuk-input govuk-!-width-full" id="subject-and-location" name="subjectAndLocation" type="text">
                                     </div>
+                                    
                                     <div class="radius">
                                         <select id="subject-and-location-radius" class="govuk-select" name="subjectAndLocationRadius">
                                             <option value="1">1 mile</option>
@@ -130,12 +120,10 @@
                                             <option value="25">25 miles</option>
                                         </select>
                                     </div>
+
                                     <button class="govuk-button">Search</button>
+
                                 </div>
-
-
-
-
 
                             </div>
 

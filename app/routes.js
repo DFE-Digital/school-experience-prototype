@@ -3,35 +3,68 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-router.post('/candidate-search/search-results-post', function (req, res) {
+var getWords = function (text) {
+    return text.split(' ');
+};
+
+var expectedSubjects = ['art', 'english', 'physics', 'maths'];
+
+var extractSubject = function (words) {
+
+    var foundSubjects = [];
+    var remainder = [];
+
+    words.forEach(function (word) {
+        word = word.toLowerCase();
+        if (expectedSubjects.indexOf(word) !== -1) {
+            foundSubjects.push(word);
+        }
+        else {
+            remainder.push(word);
+        }
+    });
+
+    return { subjects: foundSubjects.join(' '), remainder: remainder.join(' ') };
+};
+
+router.post('/candidate-search2/search-results-post', function (req, res) {
 
     let radius = 0;
     var searchCriteria = '(NONE)';
+    var searchLocation = 'Manchester';
 
     switch (req.session.data['searchType']) {
         case 'isLocationSearch':
             radius = req.session.data['locationRadius'];
             searchCriteria = req.session.data['searchByLocation'];
+            searchLocation = req.session.data['searchByLocation'];
             break;
 
         case 'isSubjectAndSchoolTypeSearch':
-            radius = req.session.data['subjectAndSchoolTypeRadius'];
+            radius = 99;
             searchCriteria = req.session.data['searchBySubjectAndSchoolType'];
+            var extractSubjectAndType = extractSubject(getWords(searchCriteria));
+            searchLocation = extractSubjectAndType.remainder;
+            searchCriteria = extractSubjectAndType.subjects;
             break;
 
         case 'isSubjectAndLocationSearch':
             radius = req.session.data['subjectAndLocationRadius'];
             searchCriteria = req.session.data['subjectAndLocation'];
+            var extractSubjectAndLocation = extractSubject(getWords(searchCriteria));
+            searchLocation = extractSubjectAndLocation.remainder;
+            searchCriteria = extractSubjectAndLocation.subjects;
             break;
     }
 
     req.session.data['searchCriteria'] = searchCriteria;
     req.session.data['searchRadius'] = radius;
+    req.session.data['searchLocation'] = searchLocation;
 
-    req.session.data['schools'] = [
+    let schools = [
         {
             Name: 'Abbey College Manchester',
-            Address: 'Long Millgate, Manchester, M3 1SB',
+            Address: 'Long Millgate, Manchester',
             Phase: 'Primary, Secondary and 16 to 18',
             SchoolType: 'Independent School',
             Fees: '£50',
@@ -40,7 +73,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
         },
         {
             Name: 'Chetham\'s School of Music',
-            Address: 'Long Millgate, Manchester, M3 1SB',
+            Address: 'Long Millgate, Manchester',
             Phase: 'Primary, Secondary and 16 to 18',
             SchoolType: 'Independent School',
             Fees: '£0',
@@ -49,7 +82,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
         },
         {
             Name: 'Manchester Creative Studio',
-            Address: '16 Blossom Street, Manchester, M4 5AW',
+            Address: '16 Blossom Street, Manchester',
             Phase: 'Primary, Secondary and 16 to 18',
             SchoolType: 'Academy',
             Fees: '£5',
@@ -58,7 +91,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
         },
         {
             Name: 'King of Kings School',
-            Address: '142 Dantzic Street, Manchester, M4 4DN',
+            Address: '142 Dantzic Street, Manchester',
             Phase: 'Primary, Secondary and 16 to 18',
             SchoolType: 'Independent School',
             Fees: '£25',
@@ -67,7 +100,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
         },
         {
             Name: 'New Islington Free School',
-            Address: '10 Hugh Oldham Way, Manchester, M4 6EY',
+            Address: '10 Hugh Oldham Way, Manchester',
             Phase: 'Primary, Secondary and 16 to 18',
             SchoolType: 'Independent School',
             Fees: '£60',
@@ -75,12 +108,18 @@ router.post('/candidate-search/search-results-post', function (req, res) {
             Distance: 10
         }];
 
-    if (searchCriteria.length > 0) {
-        res.redirect('/candidate-search/search-results');
-    }
-    else {
-        res.redirect('/candidate-search/search-blank');
-    }
+    schools.forEach(function (item) {
+        item.Address.replace('Manchester', searchLocation);
+    });
+
+    req.session.data['schools'] = schools;
+
+    //if (searchCriteria.length > 0) {
+        res.redirect('/candidate-search2/search-results');
+    //}
+    //else {
+    //    res.redirect('/candidate-search2/search-blank');
+    //}
 });
 
 
