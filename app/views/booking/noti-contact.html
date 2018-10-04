@@ -1,0 +1,86 @@
+{% extends "layout-internal-booking.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Your bookings</h1>
+      <div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li><!-- <strong class="govuk-heading-s"> -->
+              <a href="/booking/view-bookings?id=5">View bookings</a>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li class="on">
+              <strong class="govuk-heading-s">Notifications</strong>
+            </li>
+            <li>
+              <a href="/booking/attendance?id=5">Candidate attendance</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['full-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Contact booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          <p>
+            <strong>Subject:</strong> Contact regarding your school experience placement request
+          </p>
+          <p>
+            <strong>Body:</strong> We are contacting you about your placement request for 8 to 12 October 2018.
+          </p>
+          <div class="divider"></div>
+
+          <form action="/booking/" method="post" class="form">
+
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                  Write your extra content in here
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              </div>
+            <!-- End Form -->
+              <a href="noti-sent?id=5" class="govuk-button">Send email</a>
+
+
+              <br />
+              <a class="govuk-link" href="/booking/profile2?id=5">Back to profile</a>
+              <br/>
+              <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+            </br/>
+          </form>
+
+
+      </div>
+  </div>
+
+
+{% endblock %}

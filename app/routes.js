@@ -251,4 +251,71 @@ router.post('/version1/find-itt', function (req, res) {
 
 
 
+
+
+// Profile 1 directions
+router.post('/booking/noti-contact', function (req, res) {
+
+  let direct = req.session.data['direct']
+
+  console.log(req.session.data['direct'])
+
+//Option 1
+ if (direct === 'contact-candidate') {
+   res.redirect('/booking/noti-contact')
+  }
+//Option 2
+  else if (direct === 'cancel-booking') {
+   res.redirect('/booking/noti-cancel')
+  }
+//end
+})
+
+
+// Profile 2 directions
+router.post('/booking/noti-confirm', function (req, res) {
+
+  let pro2direct = req.session.data['pro2-direct']
+
+  console.log(req.session.data['pro2-direct'])
+
+//Option 1
+ if (pro2direct === 'confirm-candidate') {
+   res.redirect('/booking/noti-confirm')
+  }
+//Option 2
+  else if (pro2direct === 'reject-candidate') {
+   res.redirect('/booking/noti-reject')
+  }
+//Option 2
+  else if (pro2direct === 'contact-candidate') {
+   res.redirect('/booking/noti-contact')
+  }
+//end
+})
+
+// Profile 3 directions
+router.post('/booking/noti-contact', function (req, res) {
+
+  let direct = req.session.data['direct']
+
+  console.log(req.session.data['direct'])
+
+//Option 1
+ if (direct === 'contact-candidate') {
+   res.redirect('/booking/noti-contact')
+  }
+//Option 2
+  else if (direct === 'cancel-booking') {
+   res.redirect('/booking/noti-cancel')
+  }
+//end
+})
+
+
+
+
+
+
+
 module.exports = router

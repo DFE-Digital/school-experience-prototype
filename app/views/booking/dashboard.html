@@ -1,0 +1,188 @@
+{% extends "layout-internal-booking.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row dashboard-figures">
+
+
+    <div class="govuk-grid-column-one-half">
+
+
+      <h1 class="govuk-heading-m">Your placements</h1>
+      <div class="top-data-elements">
+        <p class="govuk-!-font-size-24 key-measure">
+        <em class="govuk-!-font-size-48 keyfigure">100</em><br />
+          Advertised</p>
+      </div>
+      <div class="top-data-elements">
+        <p class="govuk-!-font-size-24 key-measure">
+          <em class="govuk-!-font-size-48 keyfigure">35</em><br />
+          Booked</p>
+      </div>
+      <div class="top-data-elements">
+
+        <p class="govuk-!-font-size-24 key-measure">
+          <em class="govuk-!-font-size-48 keyfigure">65</em><br />
+          Available</p>
+      </div>
+
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Available placements</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Subject</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Maths</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">English</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Physics</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">15</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Art</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">15</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Biology</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">15</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Available placements by school</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">School 1</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">School 2</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">School 3</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">15</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">School 4</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">15</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-half">
+
+      <div class="dashboard-top-divider">
+        &nbsp;
+      </div>
+
+      <div class="greyblock1">
+
+        <h2 class="govuk-heading-m">Your associations</h2>
+        <ul class="govuk-list">
+        <li><a class="govuk-link" href="/booking/associate?id=2">View associations</a></li>
+        <li><a class="govuk-link" href="/booking/add-subsidiary?id=2">Add subsidiary schools</a></li>
+        <li><a class="govuk-link" href="/booking/remove-subsidiary?id=2">Remove subsidiary schools</a></li>
+        </ul>
+
+      </div>
+      <div class="greyblock2">
+
+        <h2 class="govuk-heading-m">Your placements</h2>
+        <ul class="govuk-list">
+            <li><a class="govuk-link" href="/booking/view-calender?id=4">View calendar</a></li>
+          <li><a class="govuk-link" href="/booking/non-placements?id=4">Add non-placement days</a></li>
+
+
+        <li><a class="govuk-link" href="/booking/current-placments?id=4">View live placements</a></li>
+        <li><a class="govuk-link" href="/booking/manage-placements?id=4">Manage placements</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="greyblock1">
+
+        <h2 class="govuk-heading-m">Your profiles</h2>
+        <ul class="govuk-list">
+        <li><a class="govuk-link" href="/booking/profile?id=3">View profiles</a></li>
+        <li><a class="govuk-link" href="/booking/image-management?id=3">Image management</a></li>
+        <li><a class="govuk-link" href="/booking/add-content?id=3">Add content</a></li>
+        <li><a class="govuk-link" href="/booking/remove-content?id=3">Remove content</a></li>
+        </ul>
+
+      </div>
+
+      <div class="greyblock2">
+
+        <h2 class="govuk-heading-m">Your bookings</h2>
+        <ul class="govuk-list">
+        <li><a class="govuk-link" href="/booking/view-bookings?id=5">View bookings</a></li>
+        <li><a class="govuk-link" href="/booking/view-messages?id=5">View messages</a></li>
+        <li><a class="govuk-link" href="/booking/notification?id=5">Notifications</a></li>
+        <li><a class="govuk-link" href="/booking/attenedance?id=5">Candidate attendance</a></li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock %}

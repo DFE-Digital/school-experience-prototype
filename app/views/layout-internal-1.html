@@ -60,6 +60,7 @@
     <a href="/" class="govuk-header__link govuk-header__link--service-name">
       School Experience Service
     </a>
+    <a class="signout" href="">Sign out</a>
     <button role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
 
 <!--
@@ -97,37 +98,50 @@
     </div>
   </div>
   <div class="schooladmin-menu">
-    <nav>
-      <ul id="navigation" class="" aria-label="Top Level Navigation">
-        <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="/schools/dashboard">
-            Dashboard
-          </a>
-        </li>
-        <li class="">
-          <a class="govuk-header__link" href="/schools-2/associate">
-            School associations
-          </a>
-        </li>
-        <li class="">
-          <a class="govuk-header__link" href="/schools-2/profile">
-            School profiles
-          </a>
-        </li>
-        <li class="">
-          <a class="govuk-header__link" href="/schools-2/non-placements" >
-            Your places
-          </a>
-        </li>
-        <li class="">
-          <a class="govuk-header__link" href="/schools-2/view-bookings" >
-            Candidate admin
-          </a>
-        </li>
-      </ul>
-    </nav>
 
+    <ul id="navigation" aria-label="Top Level Navigation">
+          <li class="">
+              <a id="schooladmin-menu-item-1" class="" href="/schools-2/dashboard?id=1">
+                  Dashboard
+              </a>
+          </li>
+          <li class="">
+              <a id="schooladmin-menu-item-2" class="" href="/schools-2/associate?id=2">
+                  Your associations
+              </a>
+          </li>
+          <li class="">
+              <a id="schooladmin-menu-item-3" class="" href="/schools-2/profile?id=3">
+                  Your profiles
+              </a>
+          </li>
+          <li class="">
+              <a id="schooladmin-menu-item-4" class="" href="/schools-2/view-calender?id=4">
+                  Your placements
+              </a>
+          </li>
+          <li class="">
+              <a id="schooladmin-menu-item-5" class="" href="/schools-2/view-bookings?id=5">
+                  Your bookings
+              </a>
+          </li>
+      </ul>
   </div>
+
+  <div class="signin-status">
+      <div class="banner">
+        <div class="dfe-name">
+          <p class="govuk-!-font-size-19">Department for Education</p>
+        </div>
+
+        <div class="signin-status">
+          <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 June 2017</p>
+        </div>
+      </div>
+  </div>
+
+
+
 </header>
 {% endblock %}
 

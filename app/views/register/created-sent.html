@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your placement request has been submitted
+          </h1>
+          <div class="govuk-panel__body">
+            Your request for a placement at Abraham Moss for 8 to 12 October 2018 has been submitted.
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h3 class="govuk-heading-m">What happens next</h3>
+
+
+      <p>
+        The school will contact you in due course with an update about your request.
+      </p>
+      <p>
+        If you haven’t heard from them by 7 October 2018 then you should contact Jenny Lewis at the school for an update on:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+           <a href="info@central.co.uk">jenny.lewis@abraham-moss.sch.uk</a>
+        </li>
+        <li>
+           0161 123 4567
+        </li>
+      </ul>
+      <p>
+        You can view and update your personal and placement request details or request more placements at any time using the following link:
+        <a href="www.schoolexperience.gov.uk/alkhasfklhasgfalkshgas">www.schoolexperience.gov.uk/alkhasfklhasgfalkshgas</a>
+      </p>
+
+
+
+
+
+
+
+
+
+
+      <form action="/register/XXX" method="post" class="form">
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+      <div class="govuk-form-group">
+          <button type="submit" class="govuk-button">
+          continue
+          </button>
+
+        -->
+      </div>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
