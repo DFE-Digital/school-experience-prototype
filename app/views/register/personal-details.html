@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ data['longname'] }} - we don’t have all your details</h1>
+      <p>You need to register your details with us so you can ask for a school experience placement.</p>
+
+
+
+      <form action="/register/account-info" method="post" class="form">
+
+            <fieldset class="govuk-fieldset">
+            <legend class="govuk-heading-s">
+
+                Address and telephone number
+
+            </legend>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                Building and street
+                <span class="govuk-visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-2">
+                <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="address-line-2" name="address-line-2" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="address-town" name="address-town" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-county">
+                County
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="address-county" name="address-county" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="govuk-input govuk-input--width-5" id="address-postcode" name="address-postcode" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="telephone-number">
+                UK telephone number
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="telephone-number" name="telephone-number" type="tel">
+            </div>
+
+            <div class="govuk-form-group">
+                <button type="submit" class="govuk-button">
+                Continue
+                </button>
+            </div>
+
+
+          </fieldset>
+          </form>
+
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Safeguarding questions</h1>
+      <p></p>
+
+
+
+      <form action="/register/created-sent" method="post" class="form">
+
+
+
+
+
+
+            <!-- ************ What stage degree ************* -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    Have you got a criminal record?
+                  </h2>
+                </legend>
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="dont-have" name="degree" type="radio" value="nodegree">
+                    <label class="govuk-label govuk-radios__label" for="dont-have">
+                       Yes
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="graduate" name="degree" type="radio" value="graduate or postgrad">
+                    <label class="govuk-label govuk-radios__label" for="graduate">
+                      No
+                    </label>
+                  </div>
+                 </div>
+
+              </fieldset>
+            </div>
+
+
+
+
+            <!-- ************ Do you have a Disclosure and Barring Service (DBS) check document?  ************* -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have a Disclosure and Barring Service (DBS) check document?
+                  </h1>
+                </legend>
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-1" name="dbs" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                      Yes
+                    </label>
+                  </div>
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-3" name="dbs" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                      No
+                    </label>
+
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                    Some schools may require you to be DBS checked before you can go on a placement.
+                    </label>
+
+                  </div>
+
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="govuk-form-group">
+          <button type="submit" class="govuk-button">
+          Continue
+          </button>
+      </div>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

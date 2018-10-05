@@ -995,3 +995,26 @@ opacity: 1;
 
   }
 }
+
+
+
+
+
+.school-map{
+  float: left;
+  padding: 0px 15px 15px 0px;
+}
+
+/* Type ahead */
+.autocomplete__menu li{
+  font-size: 19px;
+  font-family: "nta", Arial, sans-serif;
+}
+
+
+/* ************* Added (to) in between ranges **************  */
+.added-range{
+  float: left;
+    padding-top: 37px;
+    margin-left: -62px;
+}
