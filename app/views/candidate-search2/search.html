@@ -11,6 +11,10 @@
 
 {% block content %}
 
+
+
+
+
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
@@ -18,9 +22,10 @@
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
+
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                        Search for a school experience
+                        Find a school experience placement
                     </h1>
                 </legend>
 
@@ -30,12 +35,11 @@
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="how-contacted-conditional-1" name="searchType" type="radio" value="isLocationSearch" data-aria-controls="conditional-how-contacted-conditional-1">
                             <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                                Location (area, postcode, town)
+                                Location (area and postcode)
                             </label>
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
                             <div class="govuk-form-group">
-
                                 <label class="govuk-label hint-bold" for="search-by-location">
                                     For example, Manchester, M1 1AD or <a href="#">use current location</a>
                                 </label>
@@ -58,25 +62,24 @@
                                     </div>
                                     <button class="govuk-button">Search</button>
                                 </div>
-
                             </div>
+
+
 
                         </div>
 
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="how-contacted-conditional-2" name="searchType" type="radio" value="isSubjectAndSchoolTypeSearch" data-aria-controls="conditional-how-contacted-conditional-2">
                             <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                                Subject and or school type (maths, English academy, college)
+                                Subject and school type (Maths, English academy, college)
                             </label>
                         </div>
-
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-                            
                             <div class="govuk-form-group">
-                                
                                 <label class="govuk-label hint-bold" for="search-by-subject-and-school-type">
                                     For example, English, art college, special school
                                 </label>
+
 
                                 <div class="search-cont">
                                     <div class="seachbox">
@@ -85,10 +88,15 @@
                                     <button class="govuk-button">Search</button>
                                 </div>
 
+
+
+
+
+
+
                             </div>
 
                         </div>
- 
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="how-contacted-conditional-3" name="searchType" type="radio" value="isSubjectAndLocationSearch" data-aria-controls="conditional-how-contacted-conditional-3">
                             <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
@@ -96,19 +104,14 @@
                             </label>
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-                            
                             <div class="govuk-form-group">
-                                
                                 <label class="govuk-label hint-bold" for="subject-and-location">
                                     For example, art Manchester, maths Leeds
                                 </label>
-
                                 <div class="search-cont">
-
                                     <div class="seachbox">
                                         <input class="govuk-input govuk-!-width-full" id="subject-and-location" name="subjectAndLocation" type="text">
                                     </div>
-                                    
                                     <div class="radius">
                                         <select id="subject-and-location-radius" class="govuk-select" name="subjectAndLocationRadius">
                                             <option value="1">1 mile</option>
@@ -120,10 +123,12 @@
                                             <option value="25">25 miles</option>
                                         </select>
                                     </div>
-
                                     <button class="govuk-button">Search</button>
-
                                 </div>
+
+
+
+
 
                             </div>
 
@@ -133,13 +138,9 @@
             </fieldset>
         </div>
     </div>
-</div>
-
-
-
-<div class="govuk-grid-column-one-third">
 
 </div>
+
 
 
 {% endblock %}

@@ -27,11 +27,73 @@ var extractSubject = function (words) {
     return { subjects: foundSubjects.join(' '), remainder: remainder.join(' ') };
 };
 
+var schools = [
+    {
+        Name: 'Abbey College',
+        Address: 'Long Millgate, Manchester',
+        Phase: 'Primary, Secondary and 16 to 18',
+        SchoolType: 'Independent School',
+        Fees: '£50',
+        Subjects: 'Maths, English, Art, Physics, Geography',
+        Distance: 1
+    },
+    {
+        Name: 'Chetham\'s School of Music',
+        Address: 'Long Millgate, Manchester',
+        Phase: 'Primary, Secondary and 16 to 18',
+        SchoolType: 'Independent School',
+        Fees: '£0',
+        Subjects: 'Maths, English, Art, Physics, Music',
+        Distance: 1.5
+    },
+    {
+        Name: 'The Creative Studio',
+        Address: '16 Blossom Street, Manchester',
+        Phase: 'Primary, Secondary and 16 to 18',
+        SchoolType: 'Academy',
+        Fees: '£5',
+        Subjects: 'Maths, Art, Physics, Geography',
+        Distance: 2.5
+    },
+    {
+        Name: 'King of Kings School',
+        Address: '142 Dantzic Street, Manchester',
+        Phase: 'Primary, Secondary and 16 to 18',
+        SchoolType: 'Independent School',
+        Fees: '£25',
+        Subjects: 'Maths, English, Art',
+        'Distance': 5
+    },
+    {
+        Name: 'New Islington Free School',
+        Address: '10 Hugh Oldham Way, Manchester',
+        Phase: 'Primary, Secondary and 16 to 18',
+        SchoolType: 'Independent School',
+        Fees: '£60',
+        Subjects: 'Maths, English, Geography',
+        Distance: 10
+    }];
+
+router.post('/candidate-search2/search-result-post', function (req, res) {
+
+    var school = schools.find(function (item) {
+        return (item.Name === req.session.data['school-name']);
+    });
+
+    req.session.data['school-address'] = school.Address;
+    req.session.data['school-name'] = school.Name; 
+    req.session.data['school-subjects'] = school.Subjects; 
+
+    res.redirect('/candidate-search2/school-result');
+
+});
+
+
 router.post('/candidate-search2/search-results-post', function (req, res) {
 
-    let radius = 0;
+    var radius = 0;
     var searchCriteria = '(NONE)';
-    var searchLocation = 'Manchester';
+    var searchLocation = 'XXX';
 
     switch (req.session.data['searchType']) {
         case 'isLocationSearch':
@@ -61,58 +123,13 @@ router.post('/candidate-search2/search-results-post', function (req, res) {
     req.session.data['searchRadius'] = radius;
     req.session.data['searchLocation'] = searchLocation;
 
-    let schools = [
-        {
-            Name: 'Abbey College Manchester',
-            Address: 'Long Millgate, Manchester',
-            Phase: 'Primary, Secondary and 16 to 18',
-            SchoolType: 'Independent School',
-            Fees: '£50',
-            Subjects: 'Maths, English, Art, Physics, Geography',
-            Distance: 1
-        },
-        {
-            Name: 'Chetham\'s School of Music',
-            Address: 'Long Millgate, Manchester',
-            Phase: 'Primary, Secondary and 16 to 18',
-            SchoolType: 'Independent School',
-            Fees: '£0',
-            Subjects: 'Maths, English, Art, Physics, Geography',
-            Distance: 1.5
-        },
-        {
-            Name: 'Manchester Creative Studio',
-            Address: '16 Blossom Street, Manchester',
-            Phase: 'Primary, Secondary and 16 to 18',
-            SchoolType: 'Academy',
-            Fees: '£5',
-            Subjects: 'Maths, Art, Physics, Geography',
-            Distance: 2.5
-        },
-        {
-            Name: 'King of Kings School',
-            Address: '142 Dantzic Street, Manchester',
-            Phase: 'Primary, Secondary and 16 to 18',
-            SchoolType: 'Independent School',
-            Fees: '£25',
-            Subjects: 'Maths, English, Art',
-            'Distance': 5
-        },
-        {
-            Name: 'New Islington Free School',
-            Address: '10 Hugh Oldham Way, Manchester',
-            Phase: 'Primary, Secondary and 16 to 18',
-            SchoolType: 'Independent School',
-            Fees: '£60',
-            Subjects: 'Maths, English, Geography',
-            Distance: 10
-        }];
+    var schoolResults = schools.slice(0);
 
-    schools.forEach(function (item) {
-        item.Address.replace('Manchester', searchLocation);
+    schoolResults.forEach(function (item) {
+        item.Address = item.Address.replace('Manchester', searchLocation);
     });
 
-    req.session.data['schools'] = schools;
+    req.session.data['schools'] = schoolResults;
 
     //if (searchCriteria.length > 0) {
         res.redirect('/candidate-search2/search-results');

@@ -9,12 +9,14 @@
 {{ s.banner(true) }}
 {% endblock %}
 
-
 {% block content %}
 
 <div class="govuk-grid-row">
-    <h1 class="govuk-heading-l">{{ data['searchLocation'] }}</h1>
+    <h1 class="govuk-heading-l">School experience placements near: {{ data['searchLocation'] }}</h1>
 </div>
+
+
+
 
 <div class="govuk-grid-row">
 
@@ -179,23 +181,21 @@
                         {% for item in data['schools'] | schoolFilter(data['searchRadius'], data['searchCriteria'], data['searchType']) %}
                         <li>
                             <div class="school-result">
-                                <a href="search-blank" title="{{item.Name}}">{{item.Name}}</a>
-                                <ul>
-                                    <li>Address: {{item.Address}}</li>
-                                    <li>{{item.Phase}}</li>
-                                    <li>School type: {{item.SchoolType}}</li>
-                                    <li>Fees: {{item.Fees}}</li>
-                                    <li>Subjects: {{item.Subjects}}</li>
-                                </ul>
+                                <form action="/candidate-search2/search-result-post" title="{{item.Name}}" method="post">
+
+                                    <input type="submit" name="school-name" value="{{item.Name}}" class="govuk-label" style="background: none; border-width: 0px; color: blue; text-decoration: underline; cursor: pointer;"/>
+                                    <ul>
+                                        <li>Address: {{item.Address}}</li>
+                                        <li>{{item.Phase}}</li>
+                                        <li>School type: {{item.SchoolType}}</li>
+                                        <li>Fees: {{item.Fees}}</li>
+                                        <li>Subjects: {{item.Subjects}}</li>
+                                    </ul>
+                                </form>
 
                             </div>
                         </li>
                         {% endfor %}
-
-
-
-
-
                     </ul>
                 </div>
             </div>
