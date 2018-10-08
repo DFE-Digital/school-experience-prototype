@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
+{{
+ govukPhaseBanner({
   tag: {
     text: "alpha"
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+})
+}}
 
 <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
 {% endblock %}
@@ -335,4 +337,24 @@
 
     </div>
 </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#degree-subject')
+        });
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#subject')
+        });
+    });
+
+
+</script>
+
 {% endblock %}

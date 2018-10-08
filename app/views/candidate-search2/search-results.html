@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{% import "sections.html" as s %}
+{{ s.banner(true) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <h1 class="govuk-heading-l">School experience placements near: {{ data['searchLocation'] }}</h1>
+</div>
+
+
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third filter">
+        <!--
+                <div class="grey-box">
+                  <div class="form-group">
+                          <label class="legend" for="DistanceRadius">Radius<span class="visuallyhidden"> this element dynamically updates the page</span></label>
+                          <select id="DistanceRadius" name="radius" aria-controls="js-search-results-info" class="select">
+                                  <option value="1">
+                                      1 mile radius
+                                  </option>
+                                  <option selected="" value="3">
+                                      3 mile radius
+                                  </option>
+                                  <option value="5">
+                                      5 mile radius
+                                  </option>
+                                  <option value="10">
+                                      10 mile radius
+                                  </option>
+                                  <option value="15">
+                                      15 mile radius
+                                  </option>
+                                  <option value="20">
+                                      20 mile radius
+                                  </option>
+                                  <option value="25">
+                                      25 mile radius
+                                  </option>
+                          </select>
+                      </div>
+                      <div>
+                        &nbsp;
+                      </div>
+                </div>
+              -->
+
+        <div class="grey-box">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Education phase
+                        </h1>
+                    </legend>
+                    <span id="waste-hint" class="govuk-hint">
+                        Select all that apply.
+                    </span>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                Primary
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                Secondary
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                16-18
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="grey-box">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            School type
+                        </h1>
+                    </legend>
+                    <span id="waste-hint" class="govuk-hint">
+                        Select all that apply.
+                    </span>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                Academy
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                Maintained school
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Independent school
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                                Special school
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                College
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds results">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                Showing 1 - 50 of 165 schools and colleges
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <ul class="pagin">
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">Next</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-ful">
+                <div class="divider"></div>
+                <div class="sortby">
+                    <div class="sort-text">Sorted by</div>
+                    <div class="drop">
+                        <select name="orderby" id="OrderBy" aria-controls="js-search-results-info" class="select">
+                            <option value="" selected="">Distance</option>
+                            <option value="SCHNAME_sort asc">Alphabetical A - Z</option>
+                            <option value="SCHNAME_sort desc">Alphabetical Z - A</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        {% for item in data['schools'] | schoolFilter(data['searchRadius'], data['searchCriteria'], data['searchType']) %}
+                        <li>
+                            <div class="school-result">
+                                <form action="/candidate-search2/search-result-post" title="{{item.Name}}" method="post">
+
+                                    <input type="submit" name="school-name" value="{{item.Name}}" class="govuk-label" style="background: none; border-width: 0px; color: blue; text-decoration: underline; cursor: pointer;"/>
+                                    <ul>
+                                        <li>Address: {{item.Address}}</li>
+                                        <li>{{item.Phase}}</li>
+                                        <li>School type: {{item.SchoolType}}</li>
+                                        <li>Fees: {{item.Fees}}</li>
+                                        <li>Subjects: {{item.Subjects}}</li>
+                                    </ul>
+                                </form>
+
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+{% endblock %}
