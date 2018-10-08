@@ -1,0 +1,310 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Placement subjects</h1>
+
+      <p>
+        Select all the subjects which you do not offer
+      </p>
+    </div>
+</div>
+<div class="govuk-grid-row subject">
+    <div class="govuk-grid-column-one-half">
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Core
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject1" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject1">
+                      Biology
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject2" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject2">
+                      Chemistry
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject3" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject3">
+                      English
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject4" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject4">
+                      Physics
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject5" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject5">
+                      Physics with Maths
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject6" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject6">
+                      Science
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Foundation
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject7" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject7">
+                  Citizen
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject8" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject8">
+                  Computing
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject9" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject9">
+                  Physical education (PE)
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row subject">
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Art and design
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject10" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject10">
+                  Business studies
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject11" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject11">
+                  Dance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject12" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject12">
+                  Design and technology
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject13" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject13">
+                  Music
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Humanities
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject14" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject14">
+                  Classics
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject15" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject15">
+                  Geography
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject16" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject16">
+                  History
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject17" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject17">
+                  Religious education (RE)
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row subject">
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Languages
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject18" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject18">
+                  French
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject19" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject19">
+                  German
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject20" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject20">
+                  Spanish
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Other
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject21" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject21">
+                  Economics
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject22" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject22">
+                  Health and social care
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subject23" name="sub" type="checkbox" value="">
+                <label class="govuk-label govuk-checkboxes__label" for="subject23">
+                  Medical studies
+                </label>
+              </div>
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject24" name="sub" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="subject24">
+                    Psychology
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject25" name="sub" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="subject25">
+                    Social sciences
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject26" name="sub" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="subject26">
+                    Vocational health
+                  </label>
+                </div>
+
+            </div>
+          </fieldset>
+        </div>
+    </div>
+</div>
+
+<button type="submit" class="govuk-button">
+  Confirm
+</button>
+<p>
+  <a class="govuk-link" href="">Reset</a>
+</p>
+
+
+
+{% endblock %}
