@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">School associations</h1>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  My associations
+                </h1>
+              </legend>
+
+
+              <div class="govuk-radios search" data-module="radios">
+                
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label hint-bold" for="contact-by-email">
+                        For example, Manchester, M1 1AD or <a href="#">use current location</a>
+                    </label>
+
+
+                    <div class="search-cont">
+                            <div class="seachbox">
+                              <input class="govuk-input govuk-!-width-full" id="contact-by-email" name="contact-by-email" type="email">
+                            </div>
+                            <div class="radius">
+                              <select id="radius" class="form-control" name="radius">
+                                   <option value="1">1 mile</option>
+                                   <option value="3" selected="">3 miles</option>
+                                   <option value="5">5 miles</option>
+                                   <option value="10">10 miles</option>
+                                   <option value="15">15 miles</option>
+                                   <option value="20">20 miles</option>
+                                   <option value="25">25 miles</option>
+                               </select>
+                            </div>
+                            <div class="gobutton">
+                                <a href="search-results" class="" title="Search">Search</a>
+                            </div>
+                    </div>
+
+
+
+                  </div>
+
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label hint-bold" for="contact-by-phone">
+                      For example, English, art college, special school
+                    </label>
+
+
+
+
+
+
+
+
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </fieldset>
+          </div>
+      </div>
+
+
+
+      <div class="govuk-grid-column-one-third">
+
+      </div>
+    </div>
+
+
+
+{% endblock %}

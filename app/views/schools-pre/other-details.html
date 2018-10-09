@@ -23,7 +23,7 @@
       <p>
         The following details will be shown to candidates to help them make their placement request.
       </p>
-
+    <form action="/schools-pre/subjects" method="post" class="form">
 
 
       <div class="govuk-form-group">
@@ -78,7 +78,13 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="how-contacted-conditional-3" name="dbs" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                Yes
+                Mandatory
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-3a" name="dbs" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-3a">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3a">
+                Preferred
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -107,155 +113,14 @@
 
 
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="govuk-fieldset__heading">
-              Do you have a dress code?
-            </h1>
-          </legend>
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-6" name="dress" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-6">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-6">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-6">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  Provide details
-                </label>
-                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="contact-by-email" type="email">
-              </div>
 
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-7" name="dress" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-7">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
-                No
-              </label>
-            </div>
-
-          </div>
-        </fieldset>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    Do you have parking for candidates?
-                  </h1>
-                </legend>
-                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-8" name="park" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-8">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-8">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-email">
-                        Provide details
-                      </label>
-                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="park" type="email">
-                    </div>
-
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-9" name="park" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-9">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-9">
-                      No
-                    </label>
-                  </div>
-
-                </div>
-              </fieldset>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    What are your placement start and finish times?
-                  </h1>
-                </legend>
-                <div class="govuk-form-group">
-                <label class="govuk-label" for="name">
-                  Start time
-                </label>
-                <input class="govuk-input govuk-!-width-one-quarter" id="name" name="time" type="text">
-              </div>
-              <div class="govuk-form-group">
-              <label class="govuk-label" for="name">
-                Finish time
-              </label>
-              <input class="govuk-input govuk-!-width-one-quarter" id="name" name="time" type="text">
-            </div>
-              </fieldset>
-            </div>
-
-
-
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    Who do candidates need to report to?
-                  </h1>
-                </legend>
-                <div class="govuk-form-group">
-                <label class="govuk-label" for="name">
-                  Name:
-                </label>
-                <input class="govuk-input govuk-!-width-one-half" id="report" name="time" type="text">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="name">
-                  Email address:
-                </label>
-                <input class="govuk-input govuk-!-width-one-half" id="report" name="time" type="text">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="name">
-                  Telephone number:
-                </label>
-                <input class="govuk-input govuk-!-width-one-third" id="report" name="time" type="text">
-              </div>
-              </fieldset>
-            </div>
 
 
 
 
 
       <button type="submit" class="govuk-button">
-        Confirm
+        Continue
       </button>
 
     </div>

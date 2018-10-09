@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            You have successfully set up your school experience profile
+          </h1>
+          <div class="govuk-panel__body">
+            If you need to change anything this can be done via the dashboard
+          </div>
+        </div>
+
+      <h3 class="govuk-heading-m">What happens next</h3>
+
+            <a class="govuk-link" href="/candidate-search/school-result">View my profile</a><br />
+
+           <a class="govuk-link" href="/schools-2/dashboard">Go to the dashboard</a><br />
+
+           <a class="govuk-link" href="#">Sign out</a><br />
+
+
+
+
+
+
+
+
+
+
+      <form action="/register/XXX" method="post" class="form">
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+      <div class="govuk-form-group">
+          <button type="submit" class="govuk-button">
+          continue
+          </button>
+
+        -->
+      </div>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

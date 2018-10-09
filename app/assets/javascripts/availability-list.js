@@ -47,8 +47,8 @@ $(document).ready(function () {
     };
 
     addRangeBtn.click(function (e) {
-        var startDate = startDayField.val() + '&nbsp&nbsp&nbsp' + startMonthField.val() + '&nbsp&nbsp&nbsp' + startYearField.val();
-        var finishDate = finishDayField.val() + '&nbsp&nbsp&nbsp' + finishMonthField.val() + '&nbsp&nbsp&nbsp' + finishYearField.val();
+        var startDate = startDayField.val() + '&nbsp&nbsp/&nbsp&nbsp' + startMonthField.val() + '&nbsp&nbsp/&nbsp&nbsp' + startYearField.val();
+        var finishDate = finishDayField.val() + '&nbsp&nbsp/&nbsp&nbsp' + finishMonthField.val() + '&nbsp&nbsp/&nbsp&nbsp' + finishYearField.val();
 
         addItem(startDate + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp' + finishDate, availabilityRangeField.val());
 
