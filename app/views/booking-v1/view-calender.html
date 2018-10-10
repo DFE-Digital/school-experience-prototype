@@ -1,0 +1,1137 @@
+{% extends "layout-internal-booking.html" %}
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Your places</h1>
+
+
+      <div class="nav-cont">
+
+        <ul class="navi-style1">
+          <li class="on">
+            <strong class="govuk-heading-s">View calendar</strong>
+          </li>
+          <li><!-- <strong class="govuk-heading-s"> -->
+            <a href="/booking-v1/non-placements?id=4">Add non-placement days</a>
+          </li>
+
+          <li>
+            <a href="/booking-v1/current-placements?id=4">View current placements</a>
+          </li>
+          <li>
+            <a href="/booking-v1/manage-placements?id=4">Manage placements</a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary-control">
+      <h2 class="govuk-heading-m">Your calendar for week 32 (26 Sept - 1 Oct)</h2>
+
+        <div class="change-calender">
+          <p>Displaying calendar information for:</p>
+          <select class="" onchange="location = this.value;">
+              <option value="/view-calendar">Chiserly Academy</option>
+              <option value="/view-calendar">Academy 1</option>
+              <option value="/view-calendar">Academy 2</option>
+              <option value="/view-calendar">Academy 3</option>
+          </select>
+        </div>
+    </div>
+</div>
+
+<!-- Start of Subject calendar -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary">
+
+        <div class="cal-nav1">
+          <ul>
+            <li>
+              <span class="prev"><a href="" title="Next week"><span class="back">◀</span> Previous week</a></span>
+            </li>
+            <li>
+              <span class="date">26 September - 1 October</span>
+            </li>
+            <li>
+              <span class="next"><a href="" title="Next week">Next week <span class="forward">▶</span></a></span>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="subject-header1">
+            <h2 class="govuk-heading-M">Maths</h2>
+        </div>
+
+
+        <!-- ******************* Start Calender Grid ************************** -->
+        <div class="cal-container">
+          <ul class="border-fix">
+          <li class="dayrow"><span class="day">Mon 26/9</span></li>
+
+          <li>
+            <span>
+
+
+                  <!-- Tooltip    -->
+                  <span class="interview wrapper">
+                    Booked: Maths (Day 1)<br>Kayleigh Davies<br>
+                    <!--
+                    <div class="tooltip">
+                        <span class="name">Jason Farrowash</span>
+                        <span class="tel">01691-528187</span>
+                        <a href="case-view" title="Open case">Open case</a>
+                        <a href="re-book-interview" title="Open case">Rebook interview</a>
+                    </div>-->
+                  </span>
+
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 5)<br>Ellis Nicholson<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Tue 27/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 10)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Wed 28/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 11)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Thu 29/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 12)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Janina Mahler<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Fri 30/9</span></li>
+          <li>
+            <span class="blockout">
+
+              School Closed (All day)<br />
+              Teacher training day
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+        <div class="subject-header">
+        25 Advertised, 15 Booked, 10 Still availble
+        </div>
+
+    </div>
+</div>
+<!-- End of Subject calendar -->
+
+
+
+
+
+
+
+
+
+
+<!-- Start of Subject calendar -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary">
+
+        <div class="cal-nav">
+          <ul>
+            <li>
+              <span class="prev"><a href="" title="Next week"><span class="back">◀</span> Previous week</a></span>
+            </li>
+            <li>
+              <span class="date">26 September - 1 October</span>
+            </li>
+            <li>
+              <span class="next"><a href="" title="Next week">Next week <span class="forward">▶</span></a></span>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="subject-header1">
+            <h2 class="govuk-heading-M">English</h2>
+        </div>
+
+
+        <!-- ******************* Start Calender Grid ************************** -->
+        <div class="cal-container">
+          <ul class="border-fix">
+          <li class="dayrow"><span class="day">Mon 26/9</span></li>
+
+          <li>
+            <span>
+
+
+                  <!-- Tooltip    -->
+                  <span class="interview wrapper">
+                    Booked: English (Day 1)<br>Abdul-Muhaimin Bandar<br>
+                    <!--
+                    <div class="tooltip">
+                        <span class="name">Jason Farrowash</span>
+                        <span class="tel">01691-528187</span>
+                        <a href="case-view" title="Open case">Open case</a>
+                        <a href="re-book-interview" title="Open case">Rebook interview</a>
+                    </div>-->
+                  </span>
+
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 5)<br>Joline Verrijt<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 1)<br>Jake Clarke<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 3)<br>Morgan Warner<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Tue 27/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 2)<br>Abdul-Muhaimin Bandar<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 10)<br>Freya Preston<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 2)<br>Jake Clarke<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 4)<br>Morgan Warner<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Wed 28/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 3)<br>Abdul-Muhaimin Bandar<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 11)<br>Freya Preston<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 3)<br>Jake Clarke<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Thu 29/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 4)<br>Abdul-Muhaimin Bandar<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 12)<br>Freya Preston<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: English (Day 1)<br>Zachary Long<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Fri 30/9</span></li>
+          <li>
+            <span class="blockout">
+
+              School Closed (All day)<br />
+              Teacher training day
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+        <div class="subject-header">
+        25 Advertised, 15 Booked, 10 Still available
+        </div>
+
+    </div>
+</div>
+<!-- End of Subject calendar -->
+
+
+
+
+
+
+
+
+<!-- Start of Subject calendar -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary">
+
+        <div class="cal-nav">
+          <ul>
+            <li>
+              <span class="prev"><a href="" title="Next week"><span class="back">◀</span> Previous week</a></span>
+            </li>
+            <li>
+              <span class="date">26 September - 1 October</span>
+            </li>
+            <li>
+              <span class="next"><a href="" title="Next week">Next week <span class="forward">▶</span></a></span>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="subject-header1">
+            <h2 class="govuk-heading-M">Physics</h2>
+        </div>
+
+
+        <!-- ******************* Start Calender Grid ************************** -->
+        <div class="cal-container">
+          <ul class="border-fix">
+          <li class="dayrow"><span class="day">Mon 26/9</span></li>
+
+          <li>
+            <span class="available">
+            Available
+          </span>
+
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <span class="available">
+            Available
+          </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Tue 27/9</span></li>
+          <li>
+            <span class="available">
+            Available
+          </span>
+
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <span class="available">
+            Available
+          </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Wed 28/9</span></li>
+          <li>
+            <span class="available">
+            Available
+          </span>
+
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <span class="available">
+            Available
+          </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Thu 29/9</span></li>
+          <li>
+            <span class="available">
+            Available
+          </span>
+
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <span class="available">
+            Available
+          </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Fri 30/9</span></li>
+          <li>
+            <span class="blockout">
+
+              School Closed (All day)<br />
+              Teacher training day
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+        <div class="subject-header">
+        20 Advertised, 0 Booked, 20 Still available
+        </div>
+
+    </div>
+</div>
+<!-- End of Subject calendar -->
+
+
+
+
+
+<!-- Start of Subject calendar -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary">
+
+        <div class="cal-nav">
+          <ul>
+            <li>
+              <span class="prev"><a href="" title="Next week"><span class="back">◀</span> Previous week</a></span>
+            </li>
+            <li>
+              <span class="date">26 September - 1 October</span>
+            </li>
+            <li>
+              <span class="next"><a href="" title="Next week">Next week <span class="forward">▶</span></a></span>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="subject-header1">
+            <h2 class="govuk-heading-M">Art</h2>
+        </div>
+
+
+        <!-- ******************* Start Calender Grid ************************** -->
+        <div class="cal-container">
+          <ul class="border-fix">
+          <li class="dayrow"><span class="day">Mon 26/9</span></li>
+
+          <li>
+            <span>
+
+
+                  <!-- Tooltip    -->
+                  <span class="interview wrapper">
+                    Booked: Maths (Day 1)<br>Kayleigh Davies<br>
+                    <!--
+                    <div class="tooltip">
+                        <span class="name">Jason Farrowash</span>
+                        <span class="tel">01691-528187</span>
+                        <a href="case-view" title="Open case">Open case</a>
+                        <a href="re-book-interview" title="Open case">Rebook interview</a>
+                    </div>-->
+                  </span>
+
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 5)<br>Ellis Nicholson<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Tue 27/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 10)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Wed 28/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 11)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Thu 29/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 12)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Janina Mahler<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Fri 30/9</span></li>
+          <li>
+            <span class="blockout">
+
+              School Closed (All day)<br />
+              Teacher training day
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+        <div class="subject-header">
+        25 Advertised, 15 Booked, 10 Still availble
+        </div>
+
+    </div>
+</div>
+<!-- End of Subject calendar -->
+
+
+
+
+
+
+
+<!-- Start of Subject calendar -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full diary">
+
+        <div class="cal-nav">
+          <ul>
+            <li>
+              <span class="prev"><a href="" title="Next week"><span class="back">◀</span> Previous week</a></span>
+            </li>
+            <li>
+              <span class="date">26 September - 1 October</span>
+            </li>
+            <li>
+              <span class="next"><a href="" title="Next week">Next week <span class="forward">▶</span></a></span>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="subject-header1">
+            <h2 class="govuk-heading-M">Biology</h2>
+        </div>
+
+
+        <!-- ******************* Start Calender Grid ************************** -->
+        <div class="cal-container">
+          <ul class="border-fix">
+          <li class="dayrow"><span class="day">Mon 26/9</span></li>
+
+          <li>
+            <span>
+
+
+                  <!-- Tooltip    -->
+                  <span class="interview wrapper">
+                    Booked: Maths (Day 1)<br>Kayleigh Davies<br>
+                    <!--
+                    <div class="tooltip">
+                        <span class="name">Jason Farrowash</span>
+                        <span class="tel">01691-528187</span>
+                        <a href="case-view" title="Open case">Open case</a>
+                        <a href="re-book-interview" title="Open case">Rebook interview</a>
+                    </div>-->
+                  </span>
+
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 5)<br>Ellis Nicholson<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Tue 27/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 10)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 2)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Faysal Muhab Handal<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Wed 28/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 11)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 3)<br>Jessica Frost<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Thu 29/9</span></li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 4)<br>Kayleigh Davies<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 12)<br>Nathan Randall<br>
+            </span>
+          </li>
+          <li>
+            <span class="interview wrapper">
+              Booked: Maths (Day 1)<br>Janina Mahler<br>
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          <li>
+            <span class="available">
+              Available
+            </span>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="cal-container">
+          <ul>
+          <li class="dayrow"><span class="day">Fri 30/9</span></li>
+          <li>
+            <span class="blockout">
+
+              School Closed (All day)<br />
+              Teacher training day
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+        <div class="subject-header">
+        25 Advertised, 15 Booked, 10 Still availble
+        </div>
+
+    </div>
+</div>
+<!-- End of Subject calendar -->
+{% endblock %}
