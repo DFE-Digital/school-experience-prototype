@@ -15,13 +15,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
     <div class="govuk-grid-column-one-half">
-        <h1 class="govuk-heading-xl">{{ data['data-items'].length }} Requests</h1>
+        <h1 class="govuk-heading-xl">{{ data['request-items'].length }} Requests</h1>
         <!--<a href="#" class="govuk-link">Organise by most urgent</a>
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#" class="govuk-link ">Organise by most recent</a><br /><br />
     -->
 
-        {% for item in data['data-items'] %}
+        {% for item in data['request-items'] %}
         <div class="greyblock3 {{ item.colourClass }}">
             <div class="govuk-grid-column-one-half">
                 <p class="">
@@ -54,233 +54,32 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
     <div class="govuk-grid-column-one-half">
-        <h2 class="govuk-heading-xl">10 Bookings</h2>
+        <h2 class="govuk-heading-xl">{{ data['booking-items'].length }} Bookings</h2>
         <!--<a href="#" class="govuk-link">Organise by earliest</a>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#" class="govuk-link">Organise by latest</a><br /><br />-->
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" class="govuk-link">Organise by latest</a><br /><br />-->
 
+    {% for item in data['booking-items'] %}
+        <div class="greyblock3 {{ item.colourClass }}">
+            <div class="govuk-grid-column-one-half">
+                <p class="">
+                    <a href="" class="govuk-link name"><strong>{{item.name}}</strong></a>
+                </p>
+                <p class="">
+                    DBS: {{ item.dbs }}
+                </p>
 
-
-                  <div class="greyblock3 red">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Asia Benton</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jul 2019
-                          </p>
-                          <p class="dater">
-                            Subject: French
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 red">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Amrit Shepherd</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jul 2019
-                          </p>
-                          <p class="dater">
-                            Subject: Physics
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 red">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Hanifa Curry</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jul 2019
-                          </p>
-                          <p class="dater">
-                            Subject: Science
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 red">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Lola-Mae Patton</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jan 2019
-                          </p>
-                          <p class="dater">
-                            Subject: Music
-                          </p>
-                      </div>
-                  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                  <div class="greyblock3 amber">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Jaxon Burgess</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: No
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 31st May 2019
-                          </p>
-                          <p class="dater">
-                            Subject: German
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 amber">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Henley Hurst</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 27th Mar 2019
-                          </p>
-                          <p class="dater">
-                            Subject: English
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 amber">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Nyah Turner</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jul 2019
-                          </p>
-                          <p class="dater">
-                            Subject: French
-                          </p>
-                      </div>
-                  </div>
-
-
-
-
-
-
-
-
-                  <div class="greyblock3 green">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Doris Wickens</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: No
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jan 2019
-                          </p>
-                          <p class="dater">
-                            Subject: Math
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 green">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Karen Tillman</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Jan 2019
-                          </p>
-                          <p class="dater">
-                            Subject: Geography
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="greyblock3 green">
-                      <div class="govuk-grid-column-one-half">
-                          <p class="">
-                            <a href="" class="govuk-link name"><strong>Tobi Brandt</strong></a>
-                          </p>
-                          <p class="">
-                            DBS: Yes
-                          </p>
-
-                      </div>
-                      <div class="govuk-grid-column-one-half">
-                          <p class="dater">
-                            Date: 1st Nov 2019
-                          </p>
-                          <p class="dater">
-                            Subject: History
-                          </p>
-                      </div>
-                  </div>
-
-
-
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <p class="dater">
+                    Date: {{ item.bookingDate }}
+                </p>
+                <p class="dater">
+                    Subject: {{ item.subject }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
 
 
 
