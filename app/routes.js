@@ -3,6 +3,48 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+function offsetDate(offsetInDays) {
+
+    var d = new Date();
+    d.setDate(d.getDate() + offsetInDays);
+
+    return d.getDate() + ' ' + (d.getMonth() + 1) + ' ' + d.getFullYear();
+}
+
+router.get('/booking-v1/dashboard', function (req, res) {
+
+    var items = [
+        { name: 'N\'golo Ake Akenfyewe', colourClass: 'red', dateOffset: 1, respondBy: '10th December', subjects: 'German', dateRange: '1st Jul 2018 - 22nd Dec 2019', dbs: 'Yes' },
+        { name: 'Matias Goodwin', colourClass: 'red', dateOffset: 2, respondBy: '1st Nov 2018', subjects: 'Physical education', dateRange: '10th Jan 2019 - 10th Dec 2019', dbs: 'Yes' },
+        { name: 'Emilia Coleman', colourClass: 'red', dateOffset: 3, respondBy: '1st Nov 2018', subjects: 'English', dateRange: '25st Aug 2019 - 5 Nov 2019', dbs: 'Yes' },
+
+        { name: 'Donell Reyes', colourClass: 'amber', dateOffset: 7, respondBy: '1st Nov 2018', subjects: 'Physical education', dateRange: '9th Feb 2019 - 1st Jun 2019', dbs: 'No' },
+        { name: 'Mayur Briggs', colourClass: 'amber', dateOffset: 8, respondBy: '1st Nov 2018', subjects: 'Science', dateRange: '1st Jan 2019 - 1st Dec 2019', dbs: 'Yes' },
+        { name: 'Joao Lord', colourClass: 'amber', dateOffset: 9, respondBy: '1st Nov 2018', subjects: 'Chemistry', dateRange: '1st Jul 2019 - 22 Dec 2019', dbs: 'No' },
+
+        { name: 'Felix Finney', colourClass: 'green', dateOffset: 14, respondBy: '10th December', subjects: 'French', dateRange: '1st March 2019 - 21st Oct 2019', dbs: 'Yes' },
+        { name: 'Kendal Vazquez', colourClass: 'green', dateOffset: 15, respondBy: '10th December', subjects: 'Computing', dateRange: '1st Apr 2019 - 1st Jan 2020', dbs: 'Yes' },
+        { name: 'Laaibah Regan', colourClass: 'green', dateOffset: 16, respondBy: '10th December', subjects: 'Computing', dateRange: '31st Feb 2019 - 1st Jul 2019', dbs: 'No' },
+    ];
+
+    items.forEach(function (item) {
+        item.respondBy = offsetDate(item.dateOffset);
+        if (item.dateOffset < 7) {
+            item.colourClass = 'red';
+        }
+        else if (item.dateOffset < 10) {
+            item.colourClass = 'amber';
+        }
+        else {
+            item.colourClass = 'green';
+        }
+    });
+
+    req.session.data['data-items'] = items;
+
+    res.redirect('/booking-v1/dashboard-results');
+});
+
 var getWords = function (text) {
     return text.split(' ');
 };
@@ -81,8 +123,8 @@ router.post('/candidate-search2/search-result-post', function (req, res) {
     });
 
     req.session.data['school-address'] = school.Address;
-    req.session.data['school-name'] = school.Name; 
-    req.session.data['school-subjects'] = school.Subjects; 
+    req.session.data['school-name'] = school.Name;
+    req.session.data['school-subjects'] = school.Subjects;
 
     res.redirect('/candidate-search2/school-result');
 
@@ -132,7 +174,7 @@ router.post('/candidate-search2/search-results-post', function (req, res) {
     req.session.data['schools'] = schoolResults;
 
     //if (searchCriteria.length > 0) {
-        res.redirect('/candidate-search2/search-results');
+    res.redirect('/candidate-search2/search-results');
     //}
     //else {
     //    res.redirect('/candidate-search2/search-blank');
