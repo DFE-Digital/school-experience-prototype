@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">Request new school link</h1>
+
+
+                <form action="/schools-pre/signout" method="post" class="form">
+                  <p>
+                    You need to be linked to a school to use this service
+                  </p>
+
+                  <p>
+                    To request a new school use the type ahead feature provided below.
+                    Find the school you need and click request.
+                  </p>
+
+
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="name">
+                      School name
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text">
+                  </div>
+
+<input name="full-name" value="David Mineli" type="hidden">
+                <button type="submit" class="govuk-button" name="school-request" value="Your request a link to this school is been processed, we will notify you via email soon" >
+                  Request school link
+                </button><br />
+                <a href="signout" class="govuk-link govuk-!-font-size-19">Sign out</a>
+
+
+                </form>
+    </div>
+
+</div>
+
+{% endblock %}
