@@ -2,32 +2,36 @@ const express = require('express')
 const router = express.Router()
 
 // Add your routes here - above the module.exports line
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+//const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
 function offsetDate(offsetInDays) {
 
     var d = new Date();
     d.setDate(d.getDate() + offsetInDays);
 
-    return d.getDate() + ' ' + (d.getMonth() + 1) + ' ' + d.getFullYear();
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
 }
 
 router.get('/booking-v1/dashboard', function (req, res) {
 
-    var items = [
-        { name: 'N\'golo Ake Akenfyewe', colourClass: 'red', dateOffset: 1, respondBy: '10th December', subjects: 'German', dateRange: '1st Jul 2018 - 22nd Dec 2019', dbs: 'Yes' },
-        { name: 'Matias Goodwin', colourClass: 'red', dateOffset: 2, respondBy: '1st Nov 2018', subjects: 'Physical education', dateRange: '10th Jan 2019 - 10th Dec 2019', dbs: 'Yes' },
-        { name: 'Emilia Coleman', colourClass: 'red', dateOffset: 3, respondBy: '1st Nov 2018', subjects: 'English', dateRange: '25st Aug 2019 - 5 Nov 2019', dbs: 'Yes' },
+    var requestItems = [
+        { name: 'N\'golo Ake Akenfyewe', colourClass: 'red', dateOffset: 1, subjects: 'German', dateRange: '1 July 2018 - 22 December 2019', dbs: 'Yes' },
+        { name: 'Matias Goodwin', colourClass: 'red', dateOffset: 2, subjects: 'Physical education', dateRange: '10 January 2019 - 10 December 2019', dbs: 'Yes' },
+        { name: 'Emilia Coleman', colourClass: 'red', dateOffset: 3, subjects: 'English', dateRange: '25st August 2019 - 5 November 2019', dbs: 'Yes' },
 
-        { name: 'Donell Reyes', colourClass: 'amber', dateOffset: 7, respondBy: '1st Nov 2018', subjects: 'Physical education', dateRange: '9th Feb 2019 - 1st Jun 2019', dbs: 'No' },
-        { name: 'Mayur Briggs', colourClass: 'amber', dateOffset: 8, respondBy: '1st Nov 2018', subjects: 'Science', dateRange: '1st Jan 2019 - 1st Dec 2019', dbs: 'Yes' },
-        { name: 'Joao Lord', colourClass: 'amber', dateOffset: 9, respondBy: '1st Nov 2018', subjects: 'Chemistry', dateRange: '1st Jul 2019 - 22 Dec 2019', dbs: 'No' },
+        { name: 'Donell Reyes', colourClass: 'amber', dateOffset: 7, subjects: 'Physical education', dateRange: '9 February 2019 - 1st June 2019', dbs: 'No' },
+        { name: 'Mayur Briggs', colourClass: 'amber', dateOffset: 8, subjects: 'Science', dateRange: '1st January 2019 - 1st December 2019', dbs: 'Yes' },
+        { name: 'Joao Lord', colourClass: 'amber', dateOffset: 9, subjects: 'Chemistry', dateRange: '1st July 2019 - 22 December 2019', dbs: 'No' },
 
-        { name: 'Felix Finney', colourClass: 'green', dateOffset: 14, respondBy: '10th December', subjects: 'French', dateRange: '1st March 2019 - 21st Oct 2019', dbs: 'Yes' },
-        { name: 'Kendal Vazquez', colourClass: 'green', dateOffset: 15, respondBy: '10th December', subjects: 'Computing', dateRange: '1st Apr 2019 - 1st Jan 2020', dbs: 'Yes' },
-        { name: 'Laaibah Regan', colourClass: 'green', dateOffset: 16, respondBy: '10th December', subjects: 'Computing', dateRange: '31st Feb 2019 - 1st Jul 2019', dbs: 'No' },
+        { name: 'Felix Finney', colourClass: 'green', dateOffset: 14, subjects: 'French', dateRange: '1st March 2019 - 21st October 2019', dbs: 'Yes' },
+        { name: 'Kendal Vazquez', colourClass: 'green', dateOffset: 15, subjects: 'Computing', dateRange: '1st April 2019 - 1st January 2020', dbs: 'Yes' },
+        { name: 'Laaibah Regan', colourClass: 'green', dateOffset: 16, subjects: 'Computing', dateRange: '31st March 2019 - 1st Jul 2019', dbs: 'No' },
     ];
 
-    items.forEach(function (item) {
+    requestItems.forEach(function (item) {
         item.respondBy = offsetDate(item.dateOffset);
         if (item.dateOffset < 7) {
             item.colourClass = 'red';
@@ -40,9 +44,37 @@ router.get('/booking-v1/dashboard', function (req, res) {
         }
     });
 
-    req.session.data['data-items'] = items;
+    req.session.data['request-items'] = requestItems;
 
-    res.redirect('/booking-v1/dashboard-results');
+    var bookingItems = [
+        { name: 'Tobi Brandt', dbs: 'Yes', dateOffset: 15, subject: 'History' },
+        { name: 'Asia Benton', dbs: 'Yes', dateOffset: 20, subject: 'French' },
+        { name: 'Amrit Shepherd', dbs: 'Yes', dateOffset: 25, subject: 'Physics' },
+        { name: 'Doris Wickens', dbs: 'No', dateOffset: 45, subject: 'Maths' },
+        { name: 'Karen Tillman', dbs: 'Yes', dateOffset: 55, subject: 'Geography' },
+        { name: 'Hanifa Curry', dbs: 'Yes', dateOffset: 75, subject: 'Science' },
+        { name: 'Lola-Mae Patton', dbs: 'Yes', dateOffset: 85, subject: 'Music' },
+        { name: 'Jaxon Burgess', dbs: 'No', dateOffset: 90, subject: 'German' },
+        { name: 'Henley Hurst', dbs: 'Yes', dateOffset: 95, subject: 'English' },
+        { name: 'Nyah Turner', dbs: 'Yes', dateOffset: 100, subject: 'French' }
+    ];
+
+    bookingItems.forEach(function (item) {
+        item.bookingDate = offsetDate(item.dateOffset);
+        if (item.dateOffset < 30) {
+            item.colourClass = 'red';
+        }
+        else if (item.dateOffset < 60) {
+            item.colourClass = 'amber';
+        }
+        else {
+            item.colourClass = 'green';
+        }
+    });
+
+    req.session.data['booking-items'] = bookingItems;
+
+   res.render('booking-v1/dashboard-results');
 });
 
 var getWords = function (text) {
@@ -73,7 +105,7 @@ var schools = [
     {
         Name: 'Abbey College',
         Address: 'Long Millgate, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
+        Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£50',
         Subjects: 'Maths, English, Art, Physics, Geography',
@@ -82,7 +114,7 @@ var schools = [
     {
         Name: 'Chetham\'s School of Music',
         Address: 'Long Millgate, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
+        Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£0',
         Subjects: 'Maths, English, Art, Physics, Music',
@@ -91,7 +123,7 @@ var schools = [
     {
         Name: 'The Creative Studio',
         Address: '16 Blossom Street, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
+        Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Academy',
         Fees: '£5',
         Subjects: 'Maths, Art, Physics, Geography',
@@ -100,7 +132,7 @@ var schools = [
     {
         Name: 'King of Kings School',
         Address: '142 Dantzic Street, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
+        Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£25',
         Subjects: 'Maths, English, Art',
@@ -109,7 +141,7 @@ var schools = [
     {
         Name: 'New Islington Free School',
         Address: '10 Hugh Oldham Way, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
+        Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£60',
         Subjects: 'Maths, English, Geography',
@@ -173,7 +205,7 @@ router.post('/candidate-search2/search-results-post', function (req, res) {
 
     req.session.data['schools'] = schoolResults;
 
-    //if (searchCriteria.length > 0) {
+    //if (searchCriteria.leng > 0) {
     res.redirect('/candidate-search2/search-results');
     //}
     //else {
