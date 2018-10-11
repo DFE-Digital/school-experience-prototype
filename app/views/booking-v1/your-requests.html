@@ -1,0 +1,201 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-m">Booking request: candidate profile</h1>
+  <p>
+  &nbsp;
+  </p>
+
+
+
+
+
+    </div>
+  </div>
+
+<!-- ********** Personal details *********** -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third ">
+      <h2 class="govuk-heading-l">David Mineli</h2>
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <div class="divider">
+
+      </div>
+  </div>
+</div>
+
+  <div class="govuk-grid-row ">
+
+      <div class="govuk-grid-column-one-third profile">
+
+        <div class="personal">
+
+            <h2 class="govuk-heading-s">Personal details</h2>
+            <ul>
+              <li>Date of birth: 01 September 1997</li>
+              <li>Address: 21 Byker Grove, Byker, Newcastle. NL1 5NU</li>
+
+            </ul>
+        </div>
+
+      </div>
+      <div class="govuk-grid-column-one-third profile">
+          <div class="">
+            <h2 class="govuk-heading-s">Contact details</h2>
+              <ul>
+                <li>Email: mineliman97@hotmail.co.uk  </li>
+                <li>Tel: 0191 333 4545</li>
+              </ul>
+          </div>
+      </div>
+      <div class="govuk-grid-column-one-third profile">
+        <div class="access">
+          <h2 class="govuk-heading-s">Accessibility requirements</h2>
+            <ul>
+              <li>
+                Will need ramp or lift access for any stairs<br />
+                Space to get around in a wheel chair
+              </li>
+
+            </ul>
+        </div>
+      </div>
+
+
+  </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <div class="divider">
+
+          </div>
+      </div>
+    </div>
+
+  <!-- ********** DBS, Qualifications, Teacher Training *********** -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="qual">
+              <h2 class="govuk-heading-s">Qualifications</h2>
+              <ul>
+                <li>Degree: Graduate</li>
+                <li>Subject: Computer sciences</li>
+                <!--<li>Class: 1st</li>-->
+              </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="teach-t">
+                <h2 class="govuk-heading-s">Teacher training</h2>
+                <ul>
+                  <li>Status: Applied</li>
+                  <!--<li>ITT provider: St Andrews School Group - North Tyneside</li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="dbs">
+                <h2 class="govuk-heading-s">DBS</h2>
+                <ul>
+                  <li>DBS checked: No</li>
+                  <li>Criminal Record: No</li>
+                  <!--<li>Details: N/A</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <div class="divider">
+
+          </div>
+      </div>
+    </div>
+
+
+    <!-- ********** Booking details *********** -->
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+              <div class="booking-details">
+                <h2 class="govuk-heading-s">Booking details</h2>
+                <ul>
+                  <li>Date: 15 to 20 October 2018 (5 days)</li>
+                  <li>Subject: Physics</li>
+                  <li>No shows: 1</li>
+                </ul>
+                <p>
+
+                </p>
+              </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+              <div class="booking-details1">
+                <h2 class="govuk-heading-s">General</h2>
+                <ul>
+                  <!--<li>Preferred placement role:	Observing</li>-->
+                  <p>How far have you got towards becoming a teacher:<br />I've been accepted on teacher training</p>
+                  <p>Why do you want to become a teacher: <br />Need to get experience for ITT.</p>
+                  <p>Expectations: I’m hoping it’ll help me decide if teaching is the right career for me.</p>
+                  <!--<li>Reason for selecting school: OFSTED rating, Local, Right subject-->
+                </ul>
+              </div>
+          </div>
+      </div>
+
+
+
+<!-- ********** CTA *********** -->
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+              <form action="/booking-v1/noti-confirm" method="post" class="form">
+
+                <!-- *** Soft Booking *** -->
+                <!-- *** Name to be passed *** -->
+                <input name="full-name" value="David Mineli" type="hidden">
+                <p>
+                  &nbsp;
+                </p>
+                <button type="submit" name="pro2-direct" value="confirm-candidate" class="govuk-button">
+                  Make booking
+                </button>
+                <br />
+                <button type="submit" name="pro2-direct" value="reject-candidate" class="govuk-button button-grey cta">
+                  Reject candidate
+                </button>
+                <button type="submit" name="pro2-direct" value="contact-candidate" class="govuk-button button-grey cta">
+                  Contact candidate
+                </button>
+
+
+                <br />
+                <a class="govuk-link" href="/booking-v1/dashboard?id=1">Back to dashboard</a>
+
+              </form>
+
+          </div>
+
+      </div>
+
+
+
+{% endblock %}
