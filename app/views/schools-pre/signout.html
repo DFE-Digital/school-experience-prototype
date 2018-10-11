@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
+{{
+ govukPhaseBanner({
   tag: {
     text: "alpha"
   },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+})
+}}
 
 {% endblock %}
 
@@ -20,23 +22,29 @@
 
 
 
-    <div class="govuk-grid-row">
+<div class="govuk-grid-row">
 
-      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
-            <h1 class="govuk-heading-l">You have sucessfully signed out</h1>
+        <h1 class="govuk-heading-l">You have successfully signed out</h1>
 
-                <p>
-                  {{ data['school-request'] }}
-                </p>
+        {% if data['school-request'] %}
+        <p>
+            {{ data['school-request'] }}
+        </p>
+        {% endif %}
 
-                  <p>
-                    You have been signed out, you can <a href="dfe-signin" class="">sign in again</a> at any point to use this service
-                  </p>
+        <p>
+            You have been signed out, you can <a href="dfe-signin" class="">sign in again</a> at any point to use this service
+        </p>
 
 
 
 
+    </div>
 </div>
+
+
+
 
 {% endblock %}

@@ -15,6 +15,12 @@ function offsetDate(offsetInDays) {
     return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
 }
 
+router.get('/schools-pre/add-school', function (req, res) {
+
+    req.session.data['school-request'] = null;
+    res.render('schools-pre/add-school-template');
+});
+
 router.get('/booking-v1/dashboard', function (req, res) {
 
     var requestItems = [
