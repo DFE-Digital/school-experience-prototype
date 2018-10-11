@@ -26,10 +26,9 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-l">You have sucessfully signed out</h1>
+        <h1 class="govuk-heading-l">You have successfully signed out</h1>
 
-        {% if variable %}
-        It is true
+        {% if data['school-request'] %}
         <p>
             {{ data['school-request'] }}
         </p>
@@ -43,5 +42,9 @@
 
 
     </div>
+</div>
 
-    {% endblock %}
+
+
+
+{% endblock %}
