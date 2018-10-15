@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Enter school experience placement details</h1>
+      <p>
+        The following details will be shown to candidates to help them make their placement request.
+      </p>
+    <form action="/schools-pre/subjects" method="post" class="form">
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you charge a placement fee?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-1" name="fee" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  How much?
+                </label>
+                <input class="govuk-input govuk-!-width-one-quarter" id="contact-by-email" name="contact-by-email" type="">
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="fee" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you require candidates to be DBS-checked?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-3" name="dbs" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                Mandatory
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-3a" name="dbs" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-3a">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3a">
+                Preferred
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-4" name="dbs" type="radio" value="provided" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
+                It’s provided as part of our placement fee
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-5" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-5">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+    </div>
+</div>
+
+
+{% endblock %}

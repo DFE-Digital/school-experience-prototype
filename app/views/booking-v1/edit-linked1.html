@@ -25,21 +25,22 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                 <li class="on">
                   <strong class="govuk-heading-s">Add schools</strong>
                 </li>
-                
 
               </ul>
             </div>
 
 
-            <h1 class="govuk-heading-l">Request new school link</h1>
+            <h1 class="govuk-heading-l">Your request is being processed</h1>
 
 
             <form action="/booking-v1/edit-linked1" method="post" class="form">
 
-
+              <p>
+                Your request for a link to {{ data['school-link'] }} is being processed, we will notify you via email soon
+              </p>
 
                 <p>
-                    To request a new school link, enter the school reference number and click request.
+                    To request another school link, enter the school reference number and click request.
                 </p>
 
 
@@ -48,7 +49,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                     <label class="govuk-label" for="name">
                         URN, LAESTAB or UKPRN
                     </label>
-                    <input class="govuk-input govuk-!-width-one-quarter" id="name" name="school-link" type="text">
+                    <input class="govuk-input govuk-!-width-one-quarter" id="name" name="name" type="text">
                 </div>
 
                 <button type="submit" class="govuk-button" name="school-request" value="">

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">School experience placement availability</h1>
+
+      <form action="/schools-pre/school-registration-complete" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+        Outline when placements will be available to candidates for the upcoming academic year.
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <button type="submit" class="govuk-button">
+        Confirm
+      </button>
+
+    </div>
+</div>
+
+
+{% endblock %}

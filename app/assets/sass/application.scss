@@ -217,6 +217,23 @@ $govuk-global-styles: true;
         text-decoration: underline;
       }
   }
+
+.school-switch{
+        background: 	#f8f8f8;
+          @include clearfix();
+          border-top: 1px solid 	#bfc1c3;
+          margin: 10px 0px 0px 0px;
+          p{
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+                padding: 10px 0 10px 0;
+                @include clearfix();
+          }
+          a{
+            font-size: 16px;
+          }
+}
+
   .signin-status{
       @include clearfix();
       background-color: #fff;
@@ -228,7 +245,6 @@ $govuk-global-styles: true;
         width: 960px;
         margin-top: 25px;
         padding-top: 10px;
-        padding-bottom: 7px;
         @include clearfix();
       }
      .dfe-name{
@@ -1068,4 +1084,9 @@ opacity: 1;
   float: left;
     padding-top: 37px;
     margin-left: -62px;
+}
+
+/* *************** Change image on profile school edit************** */
+.profile-img{
+        @include clearfix();
 }
