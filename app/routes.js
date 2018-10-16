@@ -546,9 +546,17 @@ router.post('/booking-v1/notify', function (req, res) {
     }
 });
 
-router.get('/schools-pre/add-school', function (req, res) {
-    res.session.data['school-request'] = null;
+
+router.post('/schools-pre/add-school', function (req, res) {
+    console.log("post");
+    req.session.data['school-request'] = 'A';
     res.render('schools-pre/add-school-template');
+});
+
+router.get('/schools-pre/signout', function (req, res) {
+    req.session.data['school-request'] = null;
+    console.log("signout");
+    res.render('schools-pre/signout');
 });
 
 router.get('/booking-v1/view-bookings', function (req, res) {
