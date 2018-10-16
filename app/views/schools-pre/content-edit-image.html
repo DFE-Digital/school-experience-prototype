@@ -1,0 +1,92 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      <div class="nav-cont1">
+
+        <ul class="navi-style1">
+          <li class="on"><!-- <strong class="govuk-heading-s"> -->
+            <strong class="govuk-heading-s">Your profile</strong>
+          </li>
+          <!--
+          <li>
+            <a href="/booking-v1/image-management?id=3">Image management</a>
+          </li>
+          <li>
+            <a href="/booking-v1/add-content?id=3">Add content</a>
+          </li>
+          <li>
+            <a href="/booking-v1/remove-content?id=3">Remove content</a>
+          </li>
+        -->
+        </ul>
+      </div>
+      <!--
+      <p class="govuk-!-width-two-thirds">
+        Use the fields provided to update your school profile. The right hand column contains information you entered when registering these can also be updated.
+      </p>
+
+
+      <div class="divider">
+        &nbsp;
+      </div>
+    -->
+    </div>
+  </div>
+
+
+
+      <form action="/booking-v1/profile" method="post" class="form">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Abraham Moss Community School</h1>
+          <p class="profile-img">
+            <img src="/public/images/abschool.jpg" width="250" height="172" />
+          </p>
+          <p>
+            This is the current image you have. You can replace this image by uploading another one.
+            (Images can be up to 500px by 500px)
+          </p>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+              Upload an image
+            </label>
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Upload image
+          </button>
+          <br />
+            <a class="govuk-link" href="/booking-v1/profile?id=3">Back to school profile page</a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+{% endblock %}

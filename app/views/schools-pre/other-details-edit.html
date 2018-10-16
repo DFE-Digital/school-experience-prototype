@@ -19,11 +19,11 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Enter school experience placement details</h1>
+      <h1 class="govuk-heading-l">Edit school experience placement details</h1>
       <p>
         The following details will be shown to candidates to help them make their placement request.
       </p>
-    <form action="/schools-pre/subjects" method="post" class="form">
+    <form action="/booking-v1/profile?id=3" method="post" class="form">
 
 
       <div class="govuk-form-group">
@@ -50,7 +50,7 @@
 
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="fee" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="fee" type="radio" value=""  data-aria-controls="conditional-how-contacted-conditional-2">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
                 No
               </label>
@@ -120,8 +120,10 @@
 
 
       <button type="submit" class="govuk-button">
-        Continue
+        Update profile
       </button>
+      <br />
+        <a class="govuk-link" href="/booking-v1/profile?id=3">Back to school profile page</a>
 
     </div>
 </div>

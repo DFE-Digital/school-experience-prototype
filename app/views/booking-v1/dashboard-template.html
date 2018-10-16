@@ -12,16 +12,17 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 <div class="govuk-grid-row dashboard-figures">
-
+    
+    <p>test: {{data['test']}}</p>
 
     <div class="govuk-grid-column-one-half">
-        <h1 class="govuk-heading-l">{{ data['request-items'].length }} Requests</h1>
+        <h1 class="govuk-heading-l">{{ data['requestItems'].length }} Requests</h1>
         <!--<a href="#" class="govuk-link">Organise by most urgent</a>
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#" class="govuk-link ">Organise by most recent</a><br /><br />
     -->
 
-        {% for item in data['request-items'] %}
+        {% for item in data['requestItems'] %}
         <div class="greyblock3 {{ item.colourClass }}">
             <div class="govuk-grid-column-one-half">
                 <p class="">
@@ -57,16 +58,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
     <div class="govuk-grid-column-one-half">
-        <h2 class="govuk-heading-l">{{ data['booking-items'].length }} Bookings</h2>
+        <h2 class="govuk-heading-l">{{ data['bookingItems'].length }} Bookings</h2>
         <!--<a href="#" class="govuk-link">Organise by earliest</a>
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#" class="govuk-link">Organise by latest</a><br /><br />-->
 
-    {% for item in data['booking-items'] %}
+    {% for item in data['bookingItems'] %}
         <div class="greyblock3 {{ item.colourClass }}">
             <div class="govuk-grid-column-one-half">
                 <p class="">
-                    <a href="" class="govuk-link name"><strong>{{item.name}}</strong></a>
+                    <a href="/booking-v1/profile2?candidate-selected-name={{item.name}}" class="govuk-link name"><strong>{{item.name}}</strong></a>
                 </p>
                 <p class="">
                     DBS: {{ item.dbs }}
@@ -99,13 +100,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 
-
-
-
-
-
-
-</div>
 
 
 
