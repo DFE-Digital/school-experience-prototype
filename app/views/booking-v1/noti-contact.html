@@ -55,27 +55,27 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             <strong>Subject:</strong> Contact regarding your school experience placement request
           </p>
           <p>
-            <strong>Body:</strong> We are contacting you about your placement request for 8 to 12 October 2018.
+              <strong>Body:</strong> We are contacting you about your placement request for {{ data['candidate-booking-dates'] }}.
           </p>
           <div class="divider"></div>
 
           <form action="/booking/" method="post" class="form">
 
-                <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                  Write your extra content in here
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="more-detail">
+                      Write your extra content in here
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
               </div>
-            <!-- End Form -->
+              <!-- End Form -->
               <a href="noti-sent?id=5" class="govuk-button">Send email</a>
 
 
               <br />
-              <a class="govuk-link" href="/booking/profile2?id=5">Back to profile</a>
-              <br/>
+              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
+              <br />
               <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
-            </br/>
+              </br/>
           </form>
 
 

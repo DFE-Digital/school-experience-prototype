@@ -54,33 +54,33 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           <p>
             <strong>Subject:</strong> Your school experience placement request has been turned down
           </p>
-          <p>The placement you requested at Central High School for 8 to 12 October 2018 has been cancelled.</p>
+          <p>The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been cancelled.</p>
           <p>
             This is because the school has decided you’re not suitable for the placement.
           </p>
           <p>
-            If you have any questions about this decision contact John Lewis at Central High School on 0161 123 4567 or at info@central.co.uk.
+              If you have any questions about this decision contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.
           </p>
 
           <div class="divider"></div>
 
           <form action="/booking-v1/" method="post" class="form">
-            <h2 class="govuk-heading-s">Need to add extra content?</h2>
-                <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                  Write any extra content you need in here, if not needed just leave blank
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              <h2 class="govuk-heading-s">Need to add extra content?</h2>
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="more-detail">
+                      Write any extra content you need in here, if not needed just leave blank
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
               </div>
-            <!-- End Form -->
+              <!-- End Form -->
               <a href="noti-sent?id=5" class="govuk-button">Send email</a>
 
 
               <br />
-              <a class="govuk-link" href="/booking-v1/profile2?id=5">Back to profile</a>
-              <br/>
+              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
+              <br />
               <a class="govuk-link" href="/booking-v1/notification?id=5">Go to notifications</a>
-            </br/>
+              </br/>
           </form>
 
 

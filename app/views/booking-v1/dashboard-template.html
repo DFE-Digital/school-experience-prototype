@@ -13,8 +13,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 <div class="govuk-grid-row dashboard-figures">
     
-    <p>test: {{data['test']}}</p>
-
     <div class="govuk-grid-column-one-half">
         <h1 class="govuk-heading-l">{{ data['requestItems'].length }} Requests</h1>
         <!--<a href="#" class="govuk-link">Organise by most urgent</a>
@@ -26,7 +24,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         <div class="greyblock3 {{ item.colourClass }}">
             <div class="govuk-grid-column-one-half">
                 <p class="">
-                    <a href="" class="govuk-link name"><strong>{{ item.name }}</strong></a>
+                    <a href="/booking-v1/profile3?candidate-selected-name={{item.name}}" class="govuk-link name"><strong>{{item.name}}</strong></a>
                 </p>
                 <p class="">
                     Respond by: {{ item.respondBy }}
@@ -76,7 +74,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
             <div class="govuk-grid-column-one-half">
                 <p class="dater">
-                    Date: {{ item.bookingDate }}
+                    Date: {{ item.bookingDate }} <br/> {{item.placementDays}}
                 </p>
                 <p class="dater">
                     Subject: {{ item.subject }}

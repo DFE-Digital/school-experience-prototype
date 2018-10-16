@@ -94,8 +94,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <div class="qual">
                 <h2 class="govuk-heading-s">Qualifications</h2>
                 <ul>
-                  <li>Degree: {{ data['candidate-degree'] }}</li>
-                  <li>Subject: {{ data['candidate-subject'] }}</li>
+                  <li>Degree: {{ data['candidate-degree-level'] }}</li>
+                  <li>Subject: {{ data['candidate-degree-subject'] }}</li>
                   <!--<li>Class: 1st</li>-->
                 </ul>
               </div>
@@ -137,7 +137,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                 <div class="booking-details">
                   <h2 class="govuk-heading-s">Booking details</h2>
                   <ul>
-                    <li>Date: 15 to 20 October 2018 (5 days)</li>
+                      <li>Date: {{ data['candidate-booking-dates'] }} </li>
                     <li>Subject: {{ data['candidate-booking-subject'] }} </li>
                     <li>No shows: {{ data['candidate-no-shows'] }} </li>
                   </ul>
@@ -152,7 +152,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                   <ul>
                     <!--<li>Preferred placement role:	Observing</li>-->
                     <p>How far have you got towards becoming a teacher:<br />{{ data['candidate-how-far'] }}</p>
-                    <p>Why do you want to become a teacher: <br />{{ data['candidate-why'] }}</p>
+                    <p>Why do you want to become a teacher: <br />{{ data['candidate-motivations'] }}</p>
                     <p>Expectations: {{ data['candidate-expectations'] }}</p>
                     <!--<li>Reason for selecting school: OFSTED rating, Local, Right subject-->
                   </ul>
@@ -166,24 +166,24 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
-                <form action="/booking-v1/noti-confirm" method="post" class="form">
+                <form action="/booking-v1/notify" method="post" class="form">
 
-                  <!-- *** Soft Booking *** -->
-                  <!-- *** Name to be passed *** -->
-                  <input name="full-name" value="{{data['candidate-name']}}" type="hidden">
-                  <p>
-                    &nbsp;
-                  </p>
-                  <button type="submit" name="result" value="cancel" class="govuk-button">
-                    Cancel booking
-                  </button>
-                  <br />
-                  <button type="submit" name="result" value="confirm" class="govuk-button button-grey cta">
-                    Contact candidate
-                  </button>
+                    <!-- *** Soft Booking *** -->
+                    <!-- *** Name to be passed *** -->
+                    <input name="full-name" value="{{data['candidate-name']}}" type="hidden">
+                    <p>
+                        &nbsp;
+                    </p>
+                    <button type="submit" name="result" value="cancel" class="govuk-button">
+                        Cancel booking
+                    </button>
+                    <br />
+                    <button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                        Contact candidate
+                    </button>
 
 
-                  <br />
+                    <br />
                     <a class="govuk-link" href="/booking-v1/view-bookings?id=5">Back to booking page</a>
 
                 </form>
