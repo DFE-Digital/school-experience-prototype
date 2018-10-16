@@ -1,3 +1,4 @@
+
 const express = require('express')
 const router = express.Router()
 
@@ -10,17 +11,18 @@ const bookingUsers = [
         name: 'David Minelli',
         dbs: 'No',
         dateOffset: 14,
-        subject: 'Computer science',
+        placementLength: 2,
+        degreeSubject: 'Computer science',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -28,17 +30,18 @@ const bookingUsers = [
         name: 'Tobi Brandt',
         dbs: 'Yes',
         dateOffset: 15,
-        subject: 'History',
+        placementLength: 1,
+        degreeSubject: 'History',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 August 1987',
         address: '5152 Denny street, Wilmslow, Cheshire',
         email: 'tobib@hotmail.co.uk',
-        tel: '0161 111 2313',
+        phone: '0161 111 2313',
         accessibility: '',
         howFarTeacher: 'Just investigating',
-        whyTeacher: '',
+        motivations: '',
         expectations: 'is the right career for me.',
         noShowCount: 0
     },
@@ -46,17 +49,18 @@ const bookingUsers = [
         name: 'Asia Benton',
         dbs: 'Yes',
         dateOffset: 20,
-        subject: 'French',
+        placementLength: 3,
+        degreeSubject: 'French',
         bookingSubject: 'Art',
         criminalRecord: 'Yes',
-        degree: 'Astrophysics',
+        degreeLevel: 'Astrophysics',
         dob: '25 February 1967',
         address: '6920 park rd.  Campbell Town, Scotland',
         email: 'asia@benton.co.uk',
-        tel: '01 811 8055',
+        phone: '01 811 8055',
         accessibility: ['Space to get around in a wheel chair'],
         howFarTeacher: 'I was nearly a teacher but did not pass the exams',
-        whyTeacher: 'Dipping my toe in',
+        motivations: 'Dipping my toe in',
         expectations: 'Low',
         noShowCount: 0
     },
@@ -64,17 +68,18 @@ const bookingUsers = [
         name: 'Amrit Shepherd',
         dbs: 'Yes',
         dateOffset: 25,
-        subject: 'Physics',
+        placementLength: 5,
+        degreeSubject: 'Physics',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'English',
+        degreeLevel: 'English',
         dob: '31 September 1990',
         address: '71 Royal Lane, Westhaughton, Bolton',
         email: 'amrit.shepherd@gmail.com',
-        tel: '0800 101 066',
+        phone: '0800 101 066',
         accessibility: [],
         howFarTeacher: '',
-        whyTeacher: '',
+        motivations: '',
         expectations: '',
         noShowCount: 5
     },
@@ -82,17 +87,18 @@ const bookingUsers = [
         name: 'Doris Wickens',
         dbs: 'No',
         dateOffset: 45,
-        subject: 'Maths',
+        placementLength: 2,
+        degreeSubject: 'Maths',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -100,17 +106,18 @@ const bookingUsers = [
         name: 'Karen Tillman',
         dbs: 'Yes',
         dateOffset: 55,
-        subject: 'Geography',
+        placementLength: 4,
+        degreeSubject: 'Geography',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -118,17 +125,18 @@ const bookingUsers = [
         name: 'Hanifa Curry',
         dbs: 'Yes',
         dateOffset: 75,
-        subject: 'Science',
+       placementLength: 2,
+        degreeSubject: 'Science',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -136,17 +144,18 @@ const bookingUsers = [
         name: 'Lola-Mae Patton',
         dbs: 'Yes',
         dateOffset: 85,
-        subject: 'Music',
+        placementLength: 2,
+        degreeSubject: 'Music',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -154,17 +163,18 @@ const bookingUsers = [
         name: 'Jaxon Burgess',
         dbs: 'No',
         dateOffset: 90,
-        subject: 'German',
+       placementLength: 3,
+        degreeSubject: 'German',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -172,17 +182,18 @@ const bookingUsers = [
         name: 'Henley Hurst',
         dbs: 'Yes',
         dateOffset: 95,
-        subject: 'English',
+        placementLength: 4,
+        degreeSubject: 'English',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     },
@@ -190,39 +201,282 @@ const bookingUsers = [
         name: 'Nyah Turner',
         dbs: 'Yes',
         dateOffset: 100,
-        subject: 'French',
+        placementLength: 1,
+        degreeSubject: 'French',
         bookingSubject: 'Art',
         criminalRecord: 'No',
-        degree: 'Graduate',
+        degreeLevel: 'Graduate',
         dob: '01 September 1997',
         address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
         email: 'mineliman97@hotmail.co.uk',
-        tel: '0191 333 4545',
+        phone: '0191 333 4545',
         accessibility: ['Will need ramp or lift access for any stairs.', 'Space to get around in a wheel chair'],
         howFarTeacher: 'I\'ve been accepted on teacher training',
-        whyTeacher: 'Need to get experience for ITT.',
+        motivations: 'Need to get experience for ITT.',
         expectations: 'is the right career for me.',
         noShowCount: 1
     }
 ];
+
+const requestUsers = [
+    {
+        name: 'N\'golo Ake Akenfyewe',
+        dateOffset: 1,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'German',
+        dateRange: '1 July 2018 - 22 December 2019',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 September 1997',
+        address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
+        email: 'ake@hotmail.co.uk',
+        phone: '0191 333 4545',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Matias Goodwin',
+        dateOffset: 2,
+        requestOffset: 70,
+        placementLength: 5,
+        subjects: 'Physical education',
+        dateRange: '10 January 2019 - 10 December 2019',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 September 1997',
+        address: '19 Lowrow, Lowton. L1 3AC',
+        email: 'matias.goodwin@hotmail.co.uk',
+        phone: '0191 333 4545',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Emilia Coleman',
+        dateOffset: 3,
+        requestOffset: 30,
+        placementLength: 2,
+        subjects: 'English',
+        dateRange: '25st August 2019 - 5 November 2019',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        requestDates: '08 to 19 October 2019 (10 days)',
+        preferredPlacementRole: 'Head teacher',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: '2:1',
+        dob: '01 June 1987',
+        address: 'The Moorings, Moire. M11 11M',
+        email: 'emcole@hotmail.co.uk',
+        phone: '987 654 3219',
+        accessibility: [' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Donell Reyes',
+        dateOffset: 7,
+        requestOffset: 32,
+        placementLength: 2,
+        subjects: 'Physical education',
+        dateRange: '9 February 2019 - 1st June 2019',
+        dbs: 'No',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 August 1937',
+        address: '999 Letsby Avenue, Copperton, CP1 1NN',
+        email: 'donny@example.com',
+        phone: '0101 999 9999',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Mayur Briggs',
+        dateOffset: 8,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'Science',
+        dateRange: '1st January 2019 - 1st December 2019',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Watching from the back',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Postgraduate',
+        dob: '01 January 1980',
+        address: 'The Old Barn, Barnton, Barnet, B1 1BB',
+        email: 'briggie-smalls@example.com',
+        phone: '0987 654 3210',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Joao Lord',
+        dateOffset: 9,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'Chemistry',
+        dbs: 'No',
+        dateRange: '1st July 2019 - 22 December 2019', dbs: 'No',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 April 1985',
+        address: '15 Lorde Street, Lord Edge, A1 1AA',
+        email: 'joaolord@example.com',
+        phone: '0123 456 7890',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Felix Finney',
+        dateOffset: 14,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'French',
+        dateRange: '1st March 2019 - 21st October 2019',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 September 1997',
+        address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
+        email: 'mineliman97@hotmail.co.uk',
+        phone: '0191 333 4545',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Kendal Vazquez',
+        dateOffset: 15,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'Computing',
+        dateRange: '1st April 2019 - 1st January 2020',
+        dbs: 'Yes',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 September 1997',
+        address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
+        email: 'mineliman97@hotmail.co.uk',
+        phone: '0191 333 4545',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    },
+    {
+        name: 'Laaibah Regan',
+        dateOffset: 16,
+        requestOffset: 60,
+        placementLength: 2,
+        subjects: 'Computing',
+        dateRange: '31st March 2019 - 1st Jul 2019',
+        dbs: 'No',
+        motivations: 'I just want to be a teacher',
+        expectations: 'is the right career for me.',
+        preferredPlacementRole: 'Teaching assistant',
+        degreeSubject: 'Computer science',
+        bookingSubject: 'Art',
+        criminalRecord: 'No',
+        degreeLevel: 'Graduate',
+        dob: '01 September 1997',
+        address: '21 Byker Grove, Byker, Newcastle. NL1 5NU',
+        email: 'mineliman97@hotmail.co.uk',
+        phone: '0191 333 4545',
+        accessibility: ['Will need ramp or lift access for any stairs.', ' Space to get around in a wheel chair'],
+        howFarTeacher: 'I\'ve been accepted on teacher training',
+        noShowCount: 1
+    }
+];
+
+function formatDate(d) {
+    return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
+}
 
 function offsetDate(offsetInDays) {
 
     var d = new Date();
     d.setDate(d.getDate() + offsetInDays);
 
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return formatDate(d);
+}
 
-    return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
+function formatDayCount(numberOfDays) {
+    var days = ' (' + numberOfDays + ' day';
+    if (numberOfDays !== 1) {
+        days += 's';
+    }
+    days += ')';
+
+    return days;
+}
+
+function formatOffsetDateRange(offsetInDays, numberOfDays) {
+    var startDate = new Date();
+    startDate.setDate(startDate.getDate() + offsetInDays);
+
+    var endDate = new Date();
+    endDate.setDate(endDate.getDate() + offsetInDays + (numberOfDays-1));
+
+    var days = formatDayCount(numberOfDays);
+
+    if (startDate.getDate() === endDate.getDate()) {
+        return formatDate(startDate) + days;
+    }
+
+    if (startDate.getMonth() == endDate.getMonth()) {
+        return startDate.getDate() + ' to ' + formatDate(endDate) + days;
+    }
+    else {
+        return formatDate(startDate) + ' to ' + formatDate(endDate) + days;
+    }
 }
 
 router.get('/booking-v1/profile2', function (req, res) {
-    console.log(res);
 
     var user = bookingUsers.find(function (item) {
         return item.name === req.session.data['candidate-selected-name'];
     });
-
 
     req.session.data['candidate-name'] = user.name;
     req.session.data['candidate-dob'] = user.dob;
@@ -230,27 +484,62 @@ router.get('/booking-v1/profile2', function (req, res) {
     req.session.data['candidate-email'] = user.email;
     req.session.data['candidate-phone'] = user.phone;
     req.session.data['candidate-accessibility'] = Object.assign(user.accessibility);
-    req.session.data['candidate-degree'] = user.degree;
-    req.session.data['candidate-subject'] = user.subject;
+    req.session.data['candidate-degree-level'] = user.degreeLevel;
+    req.session.data['candidate-degree-subject'] = user.degreeSubject;
     req.session.data['candidate-dbs'] = user.dbs;
     req.session.data['candidate-criminal'] = user.criminal;
     req.session.data['candidate-booking-subject'] = user.bookingSubject;
+    req.session.data['candidate-booking-dates'] = formatOffsetDateRange(user.dateOffset, user.placementLength);
     req.session.data['candidate-no-shows'] = user.noShowCount;
     req.session.data['candidate-how-far'] = user.howFarTeacher;
-    req.session.data['candidate-why'] = user.whyTeacher;
+    req.session.data['candidate-motivations'] = user.motivations;
     req.session.data['candidate-expectations'] = user.expectations;
+    req.session.data['candidate-profile-page'] = '/booking-v1/profile2?candidate-selected-name=' + user.name;
 
+    console.log(user.dateOffset +' '+ user.placementLength + ' ' +req.session.data['candidate-booking-dates']);
     res.redirect('/booking-v1/profile2-template');
 });
 
+router.get('/booking-v1/profile3', function (req, res) {
 
-router.post('/booking-v1/noti-confirm', function (req, res) {
+    var user = requestUsers.find(function (item) {
+        return item.name === req.session.data['candidate-selected-name'];
+    });
+
+    req.session.data['candidate-name'] = user.name;
+    req.session.data['candidate-dob'] = user.dob;
+    req.session.data['candidate-address'] = user.address;
+    req.session.data['candidate-email'] = user.email;
+    req.session.data['candidate-phone'] = user.phone;
+    req.session.data['candidate-accessibility'] = Object.assign(user.accessibility);
+    req.session.data['candidate-degree-level'] = user.degreeLevel;
+    req.session.data['candidate-degree-subject'] = user.degreeSubject;
+    req.session.data['candidate-dbs'] = user.dbs;
+    req.session.data['candidate-criminal'] = user.criminal;
+    req.session.data['candidate-booking-dates'] = formatOffsetDateRange(user.requestOffset, user.placementLength);
+    req.session.data['candidate-booking-subject'] = user.bookingSubject;
+    req.session.data['candidate-no-shows'] = user.noShowCount;
+    req.session.data['candidate-how-far'] = user.howFarTeacher;
+    req.session.data['candidate-motivations'] = user.motivations;
+    req.session.data['candidate-expectations'] = user.expectations;
+    req.session.data['candidate-profile-page'] = '/booking-v1/profile3?candidate-selected-name=' + user.name;
+
+    res.redirect('/booking-v1/profile3-template');
+});
+
+router.post('/booking-v1/notify', function (req, res) {
 
     if (req.session.data['result'] === 'confirm') {
         res.render('booking-v1/noti-confirm');
     }
     else if (req.session.data['result'] === 'cancel') {
         res.render('booking-v1/noti-cancel');
+    }
+    else if (req.session.data['result'] === 'contact') {
+        res.render('booking-v1/noti-contact');
+    }
+    else if (req.session.data['result'] === 'reject') {
+        res.render('booking-v1/noti-reject');
     }
     else {
         res.render('booking-v1/dashboard');
@@ -262,22 +551,38 @@ router.get('/schools-pre/add-school', function (req, res) {
     res.render('schools-pre/add-school-template');
 });
 
+router.get('/booking-v1/view-bookings', function (req, res) {
+
+    var bookingItems = [];
+    bookingUsers.forEach(function (item) {
+        bookingItems.push(Object.assign(item));
+    });
+
+    bookingItems.forEach(function (item) {
+        item.bookingDate = offsetDate(item.dateOffset);
+        if (item.dateOffset < 30) {
+            item.colourClass = 'red';
+        }
+        else if (item.dateOffset < 60) {
+            item.colourClass = 'amber';
+        }
+        else {
+            item.colourClass = 'green';
+        }
+    });
+
+    req.session.data['bookingItems'] = bookingItems;
+
+    res.redirect('/booking-v1/view-bookings-template');
+});
 
 router.get('/booking-v1/dashboard', function (req, res) {
 
-    var requestItems = [
-        { name: 'N\'golo Ake Akenfyewe', colourClass: 'red', dateOffset: 1, subjects: 'German', dateRange: '1 July 2018 - 22 December 2019', dbs: 'Yes' },
-        { name: 'Matias Goodwin', colourClass: 'red', dateOffset: 2, subjects: 'Physical education', dateRange: '10 January 2019 - 10 December 2019', dbs: 'Yes' },
-        { name: 'Emilia Coleman', colourClass: 'red', dateOffset: 3, subjects: 'English', dateRange: '25st August 2019 - 5 November 2019', dbs: 'Yes' },
-
-        { name: 'Donell Reyes', colourClass: 'amber', dateOffset: 7, subjects: 'Physical education', dateRange: '9 February 2019 - 1st June 2019', dbs: 'No' },
-        { name: 'Mayur Briggs', colourClass: 'amber', dateOffset: 8, subjects: 'Science', dateRange: '1st January 2019 - 1st December 2019', dbs: 'Yes' },
-        { name: 'Joao Lord', colourClass: 'amber', dateOffset: 9, subjects: 'Chemistry', dateRange: '1st July 2019 - 22 December 2019', dbs: 'No' },
-
-        { name: 'Felix Finney', colourClass: 'green', dateOffset: 14, subjects: 'French', dateRange: '1st March 2019 - 21st October 2019', dbs: 'Yes' },
-        { name: 'Kendal Vazquez', colourClass: 'green', dateOffset: 15, subjects: 'Computing', dateRange: '1st April 2019 - 1st January 2020', dbs: 'Yes' },
-        { name: 'Laaibah Regan', colourClass: 'green', dateOffset: 16, subjects: 'Computing', dateRange: '31st March 2019 - 1st Jul 2019', dbs: 'No' },
-    ];
+    var requestItems = [];
+    requestUsers.forEach(function (item) {
+        var newItem = Object.assign(item);
+        requestItems.push(newItem);
+    });
 
     requestItems.forEach(function (item) {
         item.respondBy = offsetDate(item.dateOffset);
@@ -296,7 +601,10 @@ router.get('/booking-v1/dashboard', function (req, res) {
 
     var bookingItems = [];
     bookingUsers.forEach(function (item) {
-        bookingItems.push(Object.assign(item));
+        var newItem = Object.assign(item);
+        newItem.dateRange = formatOffsetDateRange(item.dateOffset, item.placementLength);
+        newItem.placementDays = formatDayCount(item.placementLength);
+        bookingItems.push(newItem);
     });
 
     bookingItems.forEach(function (item) {

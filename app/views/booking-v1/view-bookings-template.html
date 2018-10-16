@@ -45,16 +45,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 
-            <h2 class="govuk-heading-l">{{ data['booking-items'].length }} Bookings</h2>
+            <h2 class="govuk-heading-l">{{ data['bookingItems'].length }} Bookings</h2>
             <!--<a href="#" class="govuk-link">Organise by earliest</a>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <a href="#" class="govuk-link">Organise by latest</a><br /><br />-->
 
-        {% for item in data['booking-items'] %}
+        {% for item in data['bookingItems'] %}
             <div class="greyblock3 {{ item.colourClass }}">
                 <div class="govuk-grid-column-one-half">
                     <p class="">
-                        <a href="" class="govuk-link name"><strong>{{item.name}}</strong></a>
+                        <a href="/booking-v1/profile2?candidate-selected-name={{item.name}}" class="govuk-link name"><strong>{{item.name}}</strong></a>
                     </p>
                     <p class="">
                         DBS: {{ item.dbs }}
@@ -63,7 +63,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                 </div>
                 <div class="govuk-grid-column-one-half">
                     <p class="dater">
-                        Date: {{ item.bookingDate }}
+                        Date: {{ item.bookingDate }} <br /> {{item.placementDays}}
                     </p>
                     <p class="dater">
                         Subject: {{ item.subject }}
