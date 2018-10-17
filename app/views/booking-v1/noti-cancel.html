@@ -12,12 +12,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+<!--
 
-      <h1 class="govuk-heading-l">Your bookings</h1>
       <div class="nav-cont">
 
           <ul class="navi-style1">
-            <li><!-- <strong class="govuk-heading-s"> -->
+            <li>
               <a href="/booking-v1/view-bookings?id=5">View bookings</a>
             </li>
             <li>
@@ -33,11 +33,42 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         </div>
     </div>
   </div>
+-->
+          <form action="/booking/" method="post" class="form">
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Cancel booking for {{ data['full-name'] }}</h1>
+
+
+      <h2 class="govuk-heading-s">Edit email content if needed</h2>
+      <div class="govuk-form-group">
+
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">
+The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been cancelled.
+
+This is because the school has decided you're not suitable for the placement.
+
+If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk.
+
+
+          </textarea>
+      </div>
 
 
 
+      <a href="noti-sent?id=5" class="govuk-button">Cancel and send email</a>
 
 
+      <br />
+      <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
+      <br />
+      <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+
+    </div>
+              </form>
+</div>
+
+<!--
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-full emails">
           <h2 class="govuk-heading-m">Email to {{ data['full-name'] }}</h2>
@@ -48,7 +79,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="divider"></div>
       </div>
   </div>
+-->
 
+<!--
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
           <p>
@@ -61,10 +94,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           <p>
               If you have any questions about this decision contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.
           </p>
- 
+
           <div class="divider"></div>
 
-          <form action="/booking/" method="post" class="form">
+
               <h2 class="govuk-heading-s">Need to add extra content?</h2>
               <div class="govuk-form-group">
                   <label class="govuk-label" for="more-detail">
@@ -72,7 +105,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                   </label>
                   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
               </div>
-              <!-- End Form -->
+
               <a href="noti-sent?id=5" class="govuk-button">Send email</a>
 
 
@@ -81,8 +114,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
               <br />
               <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
               </br/>
-          </form>
 
+-->
 
       </div>
   </div>

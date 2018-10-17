@@ -12,12 +12,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+  <form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Confirm booking for {{ data['candidate-name'] }}</h1>
 
-      <h1 class="govuk-heading-l">Your bookings</h1>
+<!--
       <div class="nav-cont">
 
           <ul class="navi-style1">
-            <li><!-- <strong class="govuk-heading-s"> -->
+            <li>
               <a href="/booking-v1/view-bookings?id=5">View bookings</a>
             </li>
             <li>
@@ -33,10 +35,134 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         </div>
     </div>
   </div>
+-->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-m">Give the candidate a date range for their school experience</h1>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+
+              <span id="dob-hint" class="govuk-hint">
+                First day
+              </span>
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
 
 
 
 
+<p>
+  &nbsp;
+</p>
+              <span id="dob-hint" class="govuk-hint">
+                Last day
+              </span>
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <p>
+            &nbsp;
+          </p>
+
+
+          <h2 class="govuk-heading-m">Email message to candidate</h2>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="more-detail">
+                      This will form the email to the candidate.
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint">
+The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+
+placement start and finish time - 8am to 4pm
+school location and directions - (Abraham Moss Community School)
+parking and access - in teaching car park accessed via south gate on Mosley Street
+report to - John Lewis in main school reception
+dress code - formal
+placement fee - £10
+
+The school will be contacting you in due course with further details about your placement.
+
+In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk
+
+
+
+                    </textarea>
+                  </div>
+
+                  <a href="noti-sent?id=5" class="govuk-button">Confirm and send</a>
+
+
+              <br />
+              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
+              <br/>
+              <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+            </br/>
+          </form>
+
+
+    </div>
+</div>
+
+
+
+
+
+<!--
 
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-full emails">
@@ -51,12 +177,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-          <p>
+         <p>
             <strong>Subject:</strong> Your school experience placement confirmation
           </p>
           <p>
               <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
           </p>
+
           <p>
             The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
           </p>
@@ -73,28 +200,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
           <div class="divider"></div>
 
-          <form action="/booking/" method="post" class="form">
-            <h2 class="govuk-heading-s">Need to add extra content?</h2>
-                <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                  Write any extra content you need in here, if not needed just leave blank
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-              </div>
-            <!-- End Form -->
-              <a href="noti-sent?id=5" class="govuk-button">Send email</a>
 
-
-              <br />
-              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
-              <br/>
-              <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
-            </br/>
-          </form>
 
 
       </div>
   </div>
-
+-->
 
 {% endblock %}
