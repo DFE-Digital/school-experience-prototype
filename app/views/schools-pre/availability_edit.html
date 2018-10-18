@@ -1,0 +1,276 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Availability for school experience</h1>
+
+      <form action="/booking-v1/profile" method="post" class="form">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds" id="date-list">
+
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption">Dates added</caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+
+                            <th class="govuk-table__header" scope="col">Date</th>
+                            <th class="govuk-table__header" scope="col">Availability</th>
+                            <th class="govuk-table__header" scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list govuk-table__body">
+                        <tr data-id="0" class="govuk-table__row">
+                            <td class="dates govuk-table__header" scope="row">This tr is the template and will be automatically removed</td>
+                            <td class="availability govuk-table__cell">XXX</td>
+                            <td class="remove govuk-table__cell "><a href="#" class="remove-item-btn">Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+
+<p>
+  &nbsp;
+</p>
+
+
+        <h2 class="govuk-heading-m">Add date ranges</h2>
+        <div class="govuk-grid-row" id="available-range">
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="availability-range-field">
+                                Adding
+                            </label>
+                            <select class="govuk-select" id="availability-range-field" name="sort">
+                                <option value="available">Dates available</option>
+                                <option value="unavailable">Dates unavailable</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+
+                        <div class="govuk-date-input" id="start">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="start-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="dob-day" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="start-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="dob-month" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="start-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="dob-year" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+
+
+            <div class="govuk-grid-column-one-third">
+                <div class="added-range">
+                    <h2 class="govuk-heading-m">to</h2>
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+
+                        <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="finish-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="finish-day" name="dob-day" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="finish-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="finish-month" name="dob-month" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="finish-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="finish-year" name="dob-year" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <button id="add-range" class="govuk-button button-grey">
+                    Add date range
+                </button>
+
+            </div>
+        </div>
+
+
+
+
+        <h2 class="govuk-heading-m">Add a single date</h2>
+        <div class="govuk-grid-row" id="available-single">
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="availability-single-field">
+                                Adding
+                            </label>
+                            <select class="govuk-select" id="availability-single-field" name="sort">
+                                <option value="available">Dates available</option>
+                                <option value="unavailable">Dates unavailable</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+
+                        <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-day" name="dob-day" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-month" name="dob-month" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="single-year" name="dob-year" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <button id="add-single" class="govuk-button button-grey">
+                    Add single date
+                </button>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+<p>
+  &nbsp;
+</p>
+
+
+<button type="submit" class="govuk-button">
+    continue
+</button>
+
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+
+{% endblock %}
