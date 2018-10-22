@@ -26,7 +26,7 @@ $(document).ready(function () {
         finishYearField = $('#finish-year'),
         availabilityRangeField = $('#availability-range-field'),
         singleDayField = $('#single-day'),
-        singleMonthField = $('#start-month'),
+        singleMonthField = $('#single-month'),
         singleYearField = $('#single-year'),
         availabilitySingleField = $('#availability-single-field'),
         addRangeBtn = $('#add-range'),
@@ -57,7 +57,7 @@ $(document).ready(function () {
     });
 
     addSingleBtn.click(function (e) {
-        var date = singleDayField.val() + ' ' + singleMonthField.val() + ' ' + singleYearField.val();
+        var date = singleDayField.val() + '&nbsp&nbsp/&nbsp&nbsp' + singleMonthField.val() + '&nbsp&nbsp/&nbsp&nbsp' + singleYearField.val();
 
         addItem(date, availabilitySingleField.val());
 
