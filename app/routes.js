@@ -1077,7 +1077,27 @@ router.post('/booking/noti-contact', function (req, res) {
 })
 
 
+// School type
+router.post('/schools-pre/subjects', function (req, res) {
 
+    let schooltype = req.session.data['schooltype']
+
+    console.log(req.session.data['schooltype'])
+
+    //Option 1
+    if (schooltype === 'primary') {
+        res.redirect('/schools-pre/other-details-continued')
+    }
+    //Option 2
+    else if (schooltype === 'secondary') {
+        res.redirect('/schools-pre/subjects')
+    }
+    //Option 2
+    else if (schooltype === 'both') {
+        res.redirect('/schools-pre/subjects')
+    }
+    //end
+})
 
 
 

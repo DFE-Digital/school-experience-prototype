@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+    <form action="/schools-pre/subjects" method="post" class="form">
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Select the phases which you offer for school experience
+            </h1>
+          </legend>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="primary" name="schooltype" type="radio" value="primary">
+            <label class="govuk-label govuk-radios__label" for="primary">
+              Primary
+            </label>
+          </div>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondary" name="schooltype" type="radio" value="secondary">
+              <label class="govuk-label govuk-radios__label" for="secondary">
+                Secondary
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="both" name="schooltype" type="radio" value="both">
+              <label class="govuk-label govuk-radios__label" for="both">
+                Both
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+    </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

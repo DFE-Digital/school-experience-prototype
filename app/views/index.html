@@ -9,17 +9,34 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+<!-- *********************************************
+************************************************** -->
+      {{ govukButton({
+        text: "Start now",
+        href: "#",
+        classes: "govuk-button--start"
+      }) }}
+<!-- *********************************************
+************************************************** -->
+
+
       <h1 class="govuk-heading-xl">
         DfE Get School Experience
         <span class="govuk-caption-xl">Prototype kit {{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
+
+
+
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      SPRINT 1 + 2
+      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
       <p class="govuk-heading-l">
         Sprint 1 &amp; 2
       </p>
 
       <p class="govuk-!-font-weight-bold">Variance eligibility and suitability page testing</p>
-      <ul class="govuk-list govuk-list--bullet">
+      <ul class="govuk-list govuk-!-font-size-16">
           <li>
               <a class="govuk-link" href="version1/start-page">Eligibility and suitability checker</a>
           </li>
@@ -43,14 +60,10 @@
 
 
 
-      <details class="govuk-details">
-            <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Individual pages
-                </span>
-            </summary>
-            <div class="govuk-details__text">
-              <ul class="govuk-list">
+
+
+
+              <ul class="govuk-list govuk-!-font-size-16">
 
 
                  <li>
@@ -114,9 +127,9 @@
                  </li>
 
               </ul>
-            </div>
 
-      </details>
+
+
 
 
 
@@ -124,6 +137,15 @@
           &nbsp;
         </div>
 
+
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        SPRINT 3
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
         <p class="govuk-heading-l">
           Sprint 3
@@ -161,11 +183,29 @@
         </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        SPRINT 4
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
         <p class="govuk-heading-l">
           Sprint 4
         </p>
         <p class="govuk-!-font-weight-bold">
-Testing out 2 styles of booking
+          Testing out 2 styles of booking
         </p>
         <p>
           In Sprint 4 we wanted to test out how users felt about booking and was unsure whether the onus should be on them to confirm the booking or just give them confirmed bookings. So we developed the ‘your bookings’ sections to include a set of results and from these results candidate details pages were placed with differing options. This was done in anticipation of learning which most suited them. We also added a dashboard under ‘your bookings’ to help summarise information they may need. This would help us organise the right information in the right place and get rid of irrelevant information.
@@ -209,6 +249,20 @@ Testing out 2 styles of booking
 
 
 
+
+
+
+
+
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        SPRINT 5
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
         <p class="govuk-heading-l">
           Sprint 5
         </p>
@@ -248,6 +302,7 @@ Testing out 2 styles of booking
       <a class="govuk-link" href="/schools-pre/dfe-signin">DFE school first sign in</a><br />
       <a class="govuk-link" href="/schools-pre/associations">School associations (simple association)</a><br />
       <a class="govuk-link" href="/schools-pre/other-details">School registration (fees and DBS)</a><br />
+
       <a class="govuk-link" href="/schools-pre/subjects">School registration (subjects offered)</a><br />
       <a class="govuk-link" href="/schools-pre/other-details-continued">School registration (candidate info)</a><br />
       <a class="govuk-link" href="/schools-pre/availability1">School registration (availability simple A)</a><br />
@@ -260,6 +315,19 @@ Testing out 2 styles of booking
         <div class="divider">
           &nbsp;
         </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        SPRINT 6
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
 
         <p class="govuk-heading-l">
@@ -277,30 +345,51 @@ Testing out 2 styles of booking
         </ul>
 
         <p>
-          <h2 class="govuk-heading-s">Links</h2>
-          <a class="govuk-link" href="XXXX">School association (first login)</a><br />
-          <a class="govuk-link" href="XXXX">School association (reject path)</a><br />
-          <a class="govuk-link" href="XXXX">School association (add new school when no association)</a><br />
-          <a class="govuk-link" href="XXXX">School association (switch school page)</a><br />
+          <h2 class="govuk-heading-s">Schools links</h2>
+          <a class="govuk-link" href="/schools-pre/reject">School associations (reject association)<br />
+          <a class="govuk-link" href="/schools-pre/add-school">School association (confirm school rejection & request another school)</a><br />
+          <a class="govuk-link" href="/schools-pre/signout">School association (requested school association and signed out) * Button has to be click from previous page to show message  </a><br />
+          <a class="govuk-link" href="/schools-pre/signout">School signed out</a><br />
 
           <br />
-          <a class="govuk-link" href="XXXX">School signed out</a><br />
+          <a class="govuk-link" href="/schools-pre/school-type">School phase (if primary skip subjects)</a><br />
+
+          <a class="govuk-link" href="/booking-v1/profile?id=3">School profile page (from which edit journeys spring off)</a><br />
+          <a class="govuk-link" href="/schools-pre/content-edit">School profile (change content)</a><br />
+          <a class="govuk-link" href="/schools-pre/content-edit-image">School profile (Edit image)</a><br />
+          <a class="govuk-link" href="/schools-pre/availability_edit">School profile (change availability)</a><br />
+          <a class="govuk-link" href="/schools-pre/other-details-edit">School profile (change fees &amp; DBS information)</a><br />
+          <a class="govuk-link" href="/schools-pre/subjects-edit">School profile (change subjects)</a><br />
+
+<br />
+          <a class="govuk-link" href="/booking-v1/dashboard-template">School switcher(in header bar)</a><br />
+          <a class="govuk-link" href="/booking-v1/switch">School switcher(switching options)</a><br />
+
           <br />
+          <a class="govuk-link" href="/booking-v1/associate?id=2">Your schools(editing &amp; deleting)</a><br />
+          <a class="govuk-link" href="/booking-v1/delete-school?id=2">Your schools(delete school)</a><br />
+          <a class="govuk-link" href="/booking-v1/delete-school-confirm">Your schools(delete confirm)</a><br />
+
+          <a class="govuk-link" href="/booking-v1/edit-linked?id=2">Your schools(request new school link)</a><br />
+          <a class="govuk-link" href="/booking-v1/edit-linked1">Your schools(delete confirm)</a><br />
+
+        </p>
 
 
 
-          <a class="govuk-link" href="XXXX">School association (maintenance)</a><br />
-          <a class="govuk-link" href="XXXX">School association (add new schools)</a><br />
-          <a class="govuk-link" href="XXXX">Confirm request and turn into a booking</a><br />
-          <a class="govuk-link" href="XXXX">View amend school profile</a><br />
-          <a class="govuk-link" href="XXXX"></a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
-          <a class="govuk-link" href="XXXX">XXXX</a><br />
+        <p>
+            <h2 class="govuk-heading-s">Candidate links</h2>
+            <a class="govuk-link" href="/candidate-dashboard/signin">Candidate signin</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/dash-search">Candidate dashboard</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/cancel-request">Candidate signed in (cancel request &mp; give feedback)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/cancel-confirm">Candidate signed in (confirm cancel request)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/cancel-booking">Candidate signed in (cancel booking &amp; give feedback)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/cancel-confirm">Candidate signed in (confirm booking cancel)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/school-confirmation">Candidate signed in (Booking confirmation)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/school-bookings">Candidate signed in (bookings page)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/feedback">Candidate signed in (give reason for missing it - feedback)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/feedback-confirm">Candidate signed in (feedback confirmation)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/feedback-confirm">Candidate signed in (give school experience feedback)</a><br />
 
         </p>
 
@@ -317,16 +406,6 @@ Testing out 2 styles of booking
         </div>
 
 
-      <!--
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
--->
 
 
 
