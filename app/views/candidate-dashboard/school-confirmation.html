@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+<div class="signin-status">
+    <div class="banner1">
+
+
+      <div class="signin-status">
+        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Booking confirmation</h1>
+
+            <p>
+              Here is your booking confirmation for <strong>Abraham Moss Community School</strong>
+            </p>
+
+            <table class="govuk-table">
+              <caption class="govuk-table__caption">Usefull information</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="col">Questions</th>
+                  <th class="govuk-table__header" scope="col">Answers</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Address</th>
+                  <td class="govuk-table__cell">
+                    Crescent Road<br />
+                    Manchester<br />
+                    Greater Manchester<br />
+                    M8 5UF<br />
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Dates attending:</th>
+                  <td class="govuk-table__cell"> 1st - 8th November 2018</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Contact</th>
+                  <td class="govuk-table__cell">Jon Lewis</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Contact</th>
+                  <td class="govuk-table__cell"><a href="mailto:info@central.co.uk">info@central.co.uk</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Contact Telephone</th>
+                  <td class="govuk-table__cell">0161 3456 355</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">DBS</th>
+                  <td class="govuk-table__cell">Yes</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Dress code</th>
+                  <td class="govuk-table__cell">Smart casual</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Parking</th>
+                  <td class="govuk-table__cell">100 yards past school</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Start time</th>
+                  <td class="govuk-table__cell">8:15</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Finish time</th>
+                  <td class="govuk-table__cell">3:15</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <!--
+            <p>
+              <strong>Abraham Moss Community School</strong> <br />
+              Dates requested: 1st - 8th November 2018<br />
+              <span class="greyout">Applied on: 1st September 2018</span><br />
+            </p>
+          -->
+            <p>
+              <a href="cancel-confirm" class="govuk-button">Cancel Booking</a><br />
+              <a href="dash-search" class="">Go to my home page</a>
+            </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

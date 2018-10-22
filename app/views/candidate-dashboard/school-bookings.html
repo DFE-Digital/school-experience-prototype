@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+<div class="signin-status">
+    <div class="banner1">
+
+
+      <div class="signin-status">
+        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Bookings</h1>
+
+
+
+
+
+                        <table class="govuk-table">
+                          <caption class="govuk-table__caption">Your School Experience bookings past and present</caption>
+                          <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="col">School</th>
+                              <th class="govuk-table__header" scope="col">Dates</th>
+                              <th class="govuk-table__header" scope="col">Status</th>
+                              <th class="govuk-table__header" scope="col">Feedback</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row">Hills School</th>
+                              <td class="govuk-table__cell">1st - 5th March 2018</td>
+                              <td class="govuk-table__cell">Completed</td>
+                              <td class="govuk-table__cell">Feedback completed</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row">Trinity High School</th>
+                              <td class="govuk-table__cell">2nd - 4th June 2018</td>
+                              <td class="govuk-table__cell">Missed</td>
+                              <td class="govuk-table__cell"><a href="feedback" class="">Give reason</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row">Moss High School</th>
+                              <td class="govuk-table__cell">10th - 15th September 2018</td>
+                              <td class="govuk-table__cell">Complete</td>
+                              <td class="govuk-table__cell"><a href="feedback" class="">Leave feedback</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header" scope="row">Moss High School</th>
+                              <td class="govuk-table__cell">1st - 5th December 2018</td>
+                              <td class="govuk-table__cell">Booked</td>
+                              <td class="govuk-table__cell">N/A</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+
+
+
+            <p>
+              <a href="dash-search" class="">Go to my home page</a>
+            </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

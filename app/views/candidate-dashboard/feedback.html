@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+<div class="signin-status">
+    <div class="banner1">
+
+
+      <div class="signin-status">
+        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">School Experience feedback</h1>
+            <p>
+
+            </p>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="more-detail">
+                Provide feedback on your recent school experience
+              </label>
+
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+
+
+
+            <p>
+              <a href="feedback-confirm" class="govuk-button">Leave feedback</a><br />
+              <a href="dash-search" class="">Go to my home page</a>
+            </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

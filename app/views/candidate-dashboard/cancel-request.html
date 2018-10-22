@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+<div class="signin-status">
+    <div class="banner1">
+
+
+      <div class="signin-status">
+        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Cancel your School Experience request</h1>
+            <p>
+              You are about to cancel your request for:
+            </p>
+            <p>
+              <strong>Abraham Moss Community School</strong> <br />
+              Dates requested: 1st - 8th November 2018<br />
+              <span class="greyout">Applied on: 1st September 2018</span><br />
+            </p>
+            <p>
+              <a href="cancel-confirm" class="govuk-button">Confirm cancellation</a><br />
+              <a href="dash-search" class="">I don't want to cancel this request</a>
+            </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

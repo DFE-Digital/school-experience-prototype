@@ -7,29 +7,35 @@
 
 {% block beforeContent %}
 {{ s.banner() }}
+<div class="signin-status">
+    <div class="banner1">
+
+
+      <div class="signin-status">
+        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
+      </div>
+    </div>
+
+
+</div>
 {% endblock %}
 
 {% block content %}
 
 
-
-
-
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
-
 
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
                         Find a school experience placement
                     </h1>
                 </legend>
-
-
+              <br />
                 <form action="/candidate-search2/search-results-post" method="post">
                     <div class="govuk-radios search" data-module="radios">
                         <div class="govuk-radios__item">
@@ -40,9 +46,9 @@
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
                             <div class="govuk-form-group">
-                                <div class="govuk-label hint-bold" for="search-by-location">
+                                <label class="govuk-label hint-bold" for="search-by-location">
                                     For example, Manchester, M1 1AD or <a href="#">use current location</a>
-                                </div>
+                                </label>
 
 
                                 <div class="search-cont">
@@ -76,9 +82,9 @@
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
                             <div class="govuk-form-group">
-                                <div class="govuk-label hint-bold" for="search-by-subject-and-school-type">
+                                <label class="govuk-label hint-bold" for="search-by-subject-and-school-type">
                                     For example, English, art college, special school
-                                </div>
+                                </label>
 
 
                                 <div class="search-cont">
@@ -100,14 +106,14 @@
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="how-contacted-conditional-3" name="searchType" type="radio" value="isSubjectAndLocationSearch" data-aria-controls="conditional-how-contacted-conditional-3">
                             <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                                Subject and location (maths Manchester, English M1 1AD)
+                                Subject and location (Maths Manchester, English M1 1AD)
                             </label>
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
                             <div class="govuk-form-group">
-                                <div class="govuk-label hint-bold" for="subject-and-location">
-                                    For example, art Manchester, maths Leeds
-                                </div>
+                                <label class="govuk-label hint-bold" for="subject-and-location">
+                                    For example, Art Manchester, Maths Leeds
+                                </label>
                                 <div class="search-cont">
                                     <div class="seachbox">
                                         <input class="govuk-input govuk-!-width-full" id="subject-and-location" name="subjectAndLocation" type="text">
@@ -137,8 +143,65 @@
                 </form>
             </fieldset>
         </div>
+
+
+        <div class="divider">
+
+        </div>
+
+
     </div>
 
+</div>
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+            <br />
+            <h2 class="govuk-heading-l">Your requests</h2>
+
+
+              <p>
+                <strong>Abraham Moss Community School</strong> <br />
+                Dates requested: 1st - 8th November 2018<br />
+                <span class="greyout">Applied on: 1st September 2018</span><br />
+                <a href="cancel-request">Cancel request</a>
+              </p>
+              <p>
+                <strong>Class High School</strong> <br />
+                Dates requested: 4th - 10th December 2018<br />
+                <span class="greyout">Applied on: 2nd September 2018</span><br />
+                <a href="cancel-request">Cancel request</a>
+              </p>
+              <p>
+                <strong>Big River High School</strong> <br />
+                Dates requested: 15th - 20th Jan 2019<br />
+                <span class="greyout">Applied on: 3rd Oct 2018</span><br />
+                <a href="cancel-request">Cancel request</a>
+              </p>
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-half ">
+      <br />
+            <h2 class="govuk-heading-l">Your bookings</h2>
+            <p>
+              <strong>Calder High School</strong> <br />
+              Dates booked: 1st - 8th November 2018<br />
+              <a href="school-confirmation">View confirmation</a>
+            </p>
+            <p>
+              <strong>Brook High School</strong> <br />
+              Dates booked: 10th - 15th January 2019<br />
+              <a href="school-confirmation">View confirmation</a>
+            </p>
+            <p>
+              You can leave feedback, cancel bookings or view your previous school experiences via the <a href="school-bookings">bookings</a> page.
+            </p>
+    </div>
 </div>
 
 
