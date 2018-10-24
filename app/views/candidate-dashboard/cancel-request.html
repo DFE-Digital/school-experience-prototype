@@ -26,9 +26,9 @@
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Cancel your School Experience request</h1>
+            <h1 class="govuk-heading-l">Cancel request</h1>
             <p>
-              You are about to cancel your request for:
+              You’re about to cancel your school experience placement request for:
             </p>
             <p>
               <strong>Abraham Moss Community School</strong> <br />
@@ -38,16 +38,116 @@
 
 
 
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="more-detail">
-                            Can you provide a reason why?
-                          </label>
 
-                          <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                        </div>
+
+
+
+
+
+
+
+
+
+
+{% set textHtml %}
+{{ govukInput({
+  id: "contact-by-text",
+  name: "contact-by-text",
+  type: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Provide details"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "cancel-request",
+  name: "cancelrequest",
+  fieldset: {
+    legend: {
+      text: "Provide a reason for your cancellation",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+  items: [
+  {
+             value: "changed-placement",
+             text: "Changed placement requirements"
+           },
+           {
+             value: "changed-teaching",
+             text: " Changed teaching preference"
+           },
+           {
+             value: "need-closer",
+             text: "Need a closer and more convenient placement"
+           },
+           {
+             value: "need-diff-date",
+             text: "Need a different date"
+           },
+           {
+             value: "found-another",
+             text: "Found another placement"
+           },
+           {
+             value: "illness",
+             text: "Illness"
+           },
+           {
+             value: "not-interested",
+             text: "No longer interested in becoming a teacher"
+           },
+           {
+             value: "no-longer-interested",
+             text: "No longer interested in going on a placement"
+           },
+           {
+             value: "holiday",
+             text: "On holiday"
+           },
+           {
+             value: "commitments",
+             text: "Other commitments"
+           },
+           {
+             value: "personal-commitments",
+             text: "Family and personal commitments"
+           },
+           {
+             value: "university-commitments",
+             text: "University commitments"
+           },
+           {
+             value: "work-commitments",
+             text: "Work commitments"
+           },
+           {
+             value: "error",
+             text: "Request made in error"
+           },
+           {
+             value: "error",
+             text: "Request made in error"
+           },
+
+           {
+             value: "other-reason",
+             text: "Other reason",
+             conditional: {
+               html: textHtml
+             }
+    }
+  ]
+}) }}
+
+
             <p>
-              <a href="cancel-confirm" class="govuk-button">Confirm cancellation</a><br />
-              <a href="dash-search" class="">I don't want to cancel this request</a>
+              <a href="cancel-confirm" class="govuk-button">Confirm</a><br />
+              <a href="dash-search" class="">I do not want to cancel this request</a>
             </p>
 
     </div>
