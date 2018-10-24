@@ -833,6 +833,8 @@ opacity: 1;
 }
 
 
+
+
 /* This bridges the gap so you can mouse into the tooltip without it disappearing */
 .wrapper .tooltip:before {
   bottom: -20px;
@@ -1137,4 +1139,100 @@ opacity: 1;
 
 .app-related-items {
     margin-top: 50px;
+}
+
+
+/* ////////////////// Index Page Styling /////////////////  */
+.dfelogo{
+  margin-right: 50px;
+}
+.index{
+  .headfix{
+    margin-bottom: 10px;
+    .govuk-caption-l{
+      float: right;
+      margin-top: -123px;
+    }
+  }
+  .govuk-heading-s{
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+  }
+  .summary{
+      @include clearfix();
+
+      background: rgba(#ffbf47, 0.5);
+      padding: 15px;
+      span{
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 19px;
+      }
+  }
+  .starts{
+    @include clearfix();
+    padding: 15px;
+    background: rgba(#bfc1c3, 0.2);
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .ourstory{
+    background: rgba(#bfc1c3, 0.2);
+    padding: 15px;
+    .govuk-heading-l{
+      margin-bottom: 10px;
+    }
+    p{
+      width: 70%;
+    }
+    .arrow{
+      float: right;
+      -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+     -o-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+     transform: rotate(90deg);
+     color: 	#bfc1c3;
+     position: relative;
+     font-size: 171px;
+     margin-top: -175px;
+    }
+
+  }
+}
+.hypo1, .hypo2, .hypo3, .hypo4{
+  background: rgba(	#6f72af, 0.2);
+  padding: 15px;
+  h3{
+    margin-bottom: 10px;
+  }
+}
+.hypo2{
+    background: rgba(	#d53880, 0.2);
+}
+.hypo3{
+  background: rgba( #2b8cc4, 0.2);
+
+}
+.hypo4{
+  background: rgba(	#912b88, 0.2);
+
+}
+.learned{
+  background: rgba(	#28a197, 0.1);
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+  .govuk-heading-m{
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+}
+.sprint{
+      background: rgba(#bfc1c3, 0.1);
+      border-bottom: 1px solid 	#bfc1c3;
+      padding: 15px;
+      margin: 15px 0px 0px 0px;
 }

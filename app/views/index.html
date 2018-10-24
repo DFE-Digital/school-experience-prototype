@@ -6,136 +6,178 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row index">
+  <div class="govuk-grid-column-full headfix">
+    <h1 class="govuk-heading-xl headfix">
+      <img class="dfelogo" src="/public/images/dfe-logo.png" width="151" height="89" />Get School Experience
+    </h1>
+        <div class="govuk-caption-l">Prototype kit {{releaseVersion}}</div>
+  </div>
+</div>
 
-  <div class="govuk-grid-row">
+
+  <div class="govuk-grid-row index">
     <div class="govuk-grid-column-two-thirds">
-<!-- *********************************************
-************************************************** -->
-      {{ govukButton({
-        text: "Start now",
-        href: "#",
-        classes: "govuk-button--start"
-      }) }}
-<!-- *********************************************
-************************************************** -->
 
 
-      <h1 class="govuk-heading-xl">
-        DfE Get School Experience
-        <span class="govuk-caption-xl">Prototype kit {{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+
+      <div class="summary">
+        <span class="govuk-heading-l">The Vision</span>
+        <p>
+          The School Experience Service will help more potential teachers easily find an appropriate school experience near them so that they can make an informed choice about a career in teaching.
+          It will also help schools and other providers recruit more of the trainee teachers they need (and manage the demand for school experience from candidates)
+          In addition the government can access timely data that will inform teacher recruitment policy and continuously improve the service.
+        </p>
+        <p>This will contribute to the overall vision that teachers can access a seamless set of services to begin their career.
+        </p>
+      </div>
+
+      <div class="starts">
+          <span class="govuk-heading-l">Looking for the latest prototypes?</span>
+          <p>
+            Look no further both prototypes can be launched here.
+          </p>
+          <p>
+            <a href="/candidate-search/start-page" role="button" draggable="false" class="govuk-!-font-size-24">
+            Candidates (without profile)
+            </a>
+          </p>
+          <p>
+            <a href="/candidate-dashboard/signin" role="button" draggable="false" class="govuk-!-font-size-24">
+            Candidates (with profile)
+            </a>
+          </p>
+          <p>
+            <a href="/schools-pre/dfe-signin" role="button" draggable="false" class="govuk-!-font-size-24">
+            Schools (first sign in)
+            </a>
+          </p>
+
+      </div>
+
+
+      <div class="ourstory">
+        <span class="govuk-heading-l">Our journey</span>
+        <p>
+          The sections below describe our journey so far and demonstrate how our prototypes have developed. We also describe briefly what we tested and what we found.
+        </p>
+        <span class="arrow">&#10547;</span>
+      </div>
+
+
+
 
 
 
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       SPRINT 1 + 2
       <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+      <div class="sprint">
 
-      <p class="govuk-heading-l">
-        Sprint 1 &amp; 2
+
+      <p class="govuk-heading-l">Sprint 1 &amp; 2</p>
+
+
+            <p>
+              Below is a list of individual pages developed as part of Sprint 1 &amp 2.
+
+              These pages will be tested as part of a journey that forms the ‘Book School Experience’ onboarding information and suitability checker.
+            </p>
+
+      <p>
+        <strong>Check if you need a school experience</strong><br />
+        <a class="govuk-link" href="/version1/check">School experience Step by step</a>
       </p>
 
-      <p class="govuk-!-font-weight-bold">Variance eligibility and suitability page testing</p>
-      <ul class="govuk-list govuk-!-font-size-16">
-          <li>
-              <a class="govuk-link" href="version1/start-page">Eligibility and suitability checker</a>
-          </li>
+      <p><strong>Eligibility and suitability page testing</strong><br />
+        <a class="govuk-link" href="/version1/start-page">Eligibility and suitability checker</a>
+      </p>
 
+
+      <p>
+        In sprint 1 & 2 we tested an old hypothesis which can be found here:
+        <a class="govuk-link" href="https://docs.google.com/presentation/d/1ev1lsSa7mv_t3ASZYqAlZNX6U6LUHX5_JE6IWFtqHnI/edit?usp=sharing">Old hypothesis 1 & 2</a>
+      </p>
+
+
+
+      <div class="learned">
+        <p>
+          <span class="govuk-heading-m">Findings</span>
+          sddsgfsg
+        </p>
+      </div>
+
+
+
+
+
+        <h2 class="govuk-heading-s">Individual page links</h2>
+
+
+        <ul class="govuk-list govuk-!-font-size-16">
+           <li>
+             <a class="govuk-link" href="/version1/check">Check if you need a school experience </a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/start-page">Candidtes start page</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/how-far">How far have you got towards becoming a teacher?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/get-into-teaching">Get into teaching</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/how-can-we-help">How can we help you decide?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/have-you-got-a-degree">Have you got a degree?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/where-degree">Where did you get your degree?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/where-degree-alt">Where are you working towards your degree?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/experience-before">Have you undertaken a school experience placement?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/recognised"> Is your degree a recognised UK equivalent?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/call-centre">Find out about something else / another subject</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/check-qualification">Check your overseas qualification</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/find-and-book">Find and book a school experience placement</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/find-itt">Find and apply for teacher training</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/applied-yet">Why haven’t you applied yet?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/itt-placement">What stage are you at?</a>
+           </li>
+           <li>
+             <a class="govuk-link" href="/version1/on-teacher-training">Not needed</a>
+           </li>
+
+           <li>
+             <a class="govuk-link" href="/version1/start-page-book">Start Page for booking a school experience (Version 1)</a>
+           </li>
 
         </ul>
 
-      <p class="govuk-!-font-weight-bold">Onboarding information and suitability checker</p>
-      <p>
-        Below is a list of individual pages developed as part of Sprint 1 &amp 2.
 
-        These pages will be tested as part of a journey that forms the ‘Book School Experience’ onboarding information and suitability checker.
-      </p>
-      <p class="govuk-!-font-weight-m">
-        Findings
-      </p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Coming Soon</li>
-      </ul>
+      </div>
 
 
-
-
-
-
-
-              <ul class="govuk-list govuk-!-font-size-16">
-
-
-                 <li>
-                   <a class="govuk-link" href="/version1/check">Check if you need a school experience </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/start-page">Start Page</a>
-                 </li>
-
-                 <li>
-                   &nbsp;
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/how-far">How far have you got towards becoming a teacher? (1)</a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/get-into-teaching">Get into teaching (2)</a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/how-can-we-help">How can we help you decide? (3) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/have-you-got-a-degree">Have you got a degree? (4) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/where-degree">Where did you get your degree? (5)</a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/where-degree-alt">Where are you working towards your degree? (5a) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/experience-before">Have you undertaken a school experience placement? (6) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/recognised"> Is your degree a recognised UK equivalent? (7) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/call-centre">Find out about something else / another subject (8) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/check-qualification">Check your overseas qualification (9) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/find-and-book">Find and book a school experience placement (10) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/find-itt">Find and apply for teacher training (11) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/applied-yet">Why haven’t you applied yet? (12) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/itt-placement">What stage are you at?  (13) </a>
-                 </li>
-                 <li>
-                   <a class="govuk-link" href="/version1/on-teacher-training">TBC (14) </a>
-                 </li>
-
-                 <li>
-                   <a class="govuk-link" href="/version1/start-page-book">Start Page for booking a school experience</a>
-                 </li>
-
-              </ul>
-
-
-
-
-
-
-        <div class="divider">
-          &nbsp;
-        </div>
 
 
 
@@ -146,53 +188,46 @@
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         SPRINT 3
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-
+        <div class="sprint">
         <p class="govuk-heading-l">
           Sprint 3
         </p>
-        <p class="govuk-!-font-weight-bold">
-          A + B Testing an top level internal menu system<br />
-          Skeleton navigation produced
 
-        </p>
+
+
         <p>
-          In Sprint 3 we started to look at how the Schools admin interface may function. This would help us test out hypothesis number 2.
+          In Sprint 3 we started to look at how the schools admin interface may function. This would help us test out hypothesis number 2.
         </p>
+
         <p>
           We started building a menu system in the prototype kit that lent itself to a gov.uk style interface. Placing menu items in the black header we thought would be lost. So we created a different style menu bringing the top-level menu items outside off the black header. This could then be tested with users to which they find easiest to navigate.
         </p>
+
         <p>
           As part of testing the hypothesis number 2 we developed a skeleton navigation style for the second level and linked all this together so we could see if the sections made sense to users and ask them what would be expected in the sections and if this was what they needed.
         </p>
-        <p class="govuk-!-font-weight-bold">
-          Findings
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Coming Soon</li>
-        </ul>
+
         <p>
-          <h2 class="govuk-heading-s">Links</h2>
+          In sprint 3 we covered hypothesis 1 and 2
+        </p>
+
+        <div class="learned">
+          <p>
+            <span class="govuk-heading-m">Findings</span>
+            sddsgfsg
+          </p>
+        </div>
+
+        <p>
+                  <h2 class="govuk-heading-s">Individual page links</h2>
           <a class="govuk-link" href="/schools-1/dashboard">Example navigation A</a><br />
           <a class="govuk-link" href="/schools-2/dashboard">Example navigation B</a><br />
           <a class="govuk-link" href="/schools-1/view-bookings">Example skeleton A</a><br />
           <a class="govuk-link" href="/schools-2/view-bookings?id=5">Example skeleton B</a><br />
         </p>
 
-        <div class="divider">
-          &nbsp;
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -201,11 +236,13 @@
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         SPRINT 4
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+        <div class="sprint">
         <p class="govuk-heading-l">
           Sprint 4
         </p>
         <p class="govuk-!-font-weight-bold">
-          Testing out 2 styles of booking
+          Testing two styles of booking
         </p>
         <p>
           In Sprint 4 we wanted to test out how users felt about booking and was unsure whether the onus should be on them to confirm the booking or just give them confirmed bookings. So we developed the ‘your bookings’ sections to include a set of results and from these results candidate details pages were placed with differing options. This was done in anticipation of learning which most suited them. We also added a dashboard under ‘your bookings’ to help summarise information they may need. This would help us organise the right information in the right place and get rid of irrelevant information.
@@ -213,35 +250,38 @@
         <p>
           Also in sprint 4 we started to look at how schools may manage their candidates through the ‘your placements’ section. Within this we started to develop a calendar where they can view what candidate are booked in for the week ahead. We broke this down by subject so they could easily see what was bookd in. We are unsure if they need a monthly view so we will draw one of these and show them to see if its needed. As this area will be crucial to them managing their placements we will try various options here on paper and in the prototype.
         </p>
-        <p class="govuk-!-font-weight-bold">
-          Findings
+        <p>
+          In sprint 4 we covered hypothesis 1 and 2
         </p>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Coming Soon</li>
-        </ul>
+
+
+        <div class="learned">
+          <p>
+            <span class="govuk-heading-m">Findings</span>
+            sddsgfsg
+          </p>
+        </div>
+
 
         <p>
-          <h2 class="govuk-heading-s">Links</h2>
+                  <h2 class="govuk-heading-s">Individual page links</h2>
           <a class="govuk-link" href="/booking/dashboard?id=1">Dashboard</a><br />
           <a class="govuk-link" href="/booking/view-bookings?id=5">Bookings incoming</a><br />
           <a class="govuk-link" href="/booking/profile2?id=5">School booking candidate detail 1 with contact and cancel</a><br />
           <a class="govuk-link" href="/booking/profile2?id=5">School booking detail 2 with confirm, reject and cancel</a><br />
           <a class="govuk-link" href="/booking/profile3?id=5">School booking detail 3 with confirm, reject and cancel</a><br />
 
-            <a class="govuk-link" href="/booking/noti-contact">Contact candidate template for schools</a><br />
-            <a class="govuk-link" href="/booking/noti-cancel">Cancel candidate template for schools</a><br />
-            <a class="govuk-link" href="/booking/noti-confirm">Confirm candidate template for schools</a><br />
-            <a class="govuk-link" href="/booking/noti-reject">Reject candidate template for schools</a><br />
+          <a class="govuk-link" href="/booking/noti-contact">Contact candidate template for schools</a><br />
+          <a class="govuk-link" href="/booking/noti-cancel">Cancel candidate template for schools</a><br />
+          <a class="govuk-link" href="/booking/noti-confirm">Confirm candidate template for schools</a><br />
+          <a class="govuk-link" href="/booking/noti-reject">Reject candidate template for schools</a><br />
 
-            <a class="govuk-link" href="/booking/noti-sent?id=5">Confirm email</a><br />
-            <a class="govuk-link" href="/booking/view-calender?id=4">Your placements: calendar</a><br />
-
-
+          <a class="govuk-link" href="/booking/noti-sent?id=5">Confirm email</a><br />
+          <a class="govuk-link" href="/booking/view-calender?id=4">Your placements: calendar</a><br />
         </p>
 
-        <div class="divider">
-          &nbsp;
+
         </div>
 
 
@@ -262,6 +302,7 @@
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         SPRINT 5
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <div class="sprint">
 
         <p class="govuk-heading-l">
           Sprint 5
@@ -270,34 +311,43 @@
           Candidate information check<br />
           A + B Search and find a school experience
         </p>
+
         <p>
         In Sprint 5 we decided to test out hypothesis 3. To start this off we looked what the candidate’s think and feel is the right amount and right content for giving as part of registration. This was set out with the basic ‘needed’ information then asking them how they feel about the rest.
         </p>
+
         <p>
           A key part of hypothesis 3 was users searching and finding the appropriate school experience. We tested 2 variations along this theme with the aim of gaining direction on what works best.
         </p>
-        <p class="govuk-!-font-weight-bold">
-          Findings
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Coming Soon</li>
-        </ul>
-
         <p>
-          <h2 class="govuk-heading-s">Links</h2>
-          <a class="govuk-link" href="/candidate-search/start-page">Candidate start</a><br />
-          <a class="govuk-link" href="/candidate-search/search">Candidate search facility</a><br />
-          <a class="govuk-link" href="/search-results">Candidate search results</a><br />
+          In sprint 5 we covered hypothesis 3 and 4
+        </p>
 
-          <a class="govuk-link" href="/candidate-search/school-result">Candidate school profile view</a><br />
-<br />
-          <a class="govuk-link" href="/register/request">Candidate registration (requirements)</a><br />
-          <a class="govuk-link" href="/register/account-check">Candidate registration (check if we have your details, account check!)</a><br />
-            <a class="govuk-link" href="/register/personal-details">Candidate registration (personal details)</a><br />
-            <a class="govuk-link" href="/register/account-info">Candidate registration (education and background)</a><br />
-            <a class="govuk-link" href="/register/account-info1">Candidate registration (safeguarding)</a><br />
-            <a class="govuk-link" href="/register/created-sent">Candidate registration (registration complete)</a><br />
-<br />
+        <div class="learned">
+          <p>
+            <span class="govuk-heading-m">Findings</span>
+            sddsgfsg
+          </p>
+        </div>
+
+
+
+      <p>
+
+            <h2 class="govuk-heading-s">Individual page links</h2>
+      <a class="govuk-link" href="/candidate-search/start-page">Candidate start</a><br />
+      <a class="govuk-link" href="/candidate-search/search">Candidate search facility</a><br />
+      <a class="govuk-link" href="/search-results">Candidate search results</a><br />
+
+      <a class="govuk-link" href="/candidate-search/school-result">Candidate school profile view</a><br />
+      <br />
+      <a class="govuk-link" href="/register/request">Candidate registration (requirements)</a><br />
+      <a class="govuk-link" href="/register/account-check">Candidate registration (check if we have your details, account check!)</a><br />
+      <a class="govuk-link" href="/register/personal-details">Candidate registration (personal details)</a><br />
+      <a class="govuk-link" href="/register/account-info">Candidate registration (education and background)</a><br />
+      <a class="govuk-link" href="/register/account-info1">Candidate registration (safeguarding)</a><br />
+      <a class="govuk-link" href="/register/created-sent">Candidate registration (registration complete)</a><br />
+      <br />
 
       <a class="govuk-link" href="/schools-pre/dfe-signin">DFE school first sign in</a><br />
       <a class="govuk-link" href="/schools-pre/associations">School associations (simple association)</a><br />
@@ -309,12 +359,10 @@
       <a class="govuk-link" href="/schools-pre/availability">School registration (availability advanced B)</a><br />
       <a class="govuk-link" href="/schools-pre/school-registration-complete">School registration (complete)</a><br />
 
+      </p>
 
-        </p>
 
-        <div class="divider">
-          &nbsp;
-        </div>
+      </div>
 
 
 
@@ -328,27 +376,36 @@
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         SPRINT 6
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-
+    <div class="sprint">
 
         <p class="govuk-heading-l">
           Sprint 6
         </p>
-        <p class="govuk-!-font-weight-bold">
-
+        <p>
+          In sprint 6 most of the separate areas for both the candidate and the schools journeys came together. We stitched together the full candidate journey from a start page through to a successful submission request for a school experience. We also put together a journey for a candidate’s second visit once logged in.  The candidate signed in journey gives the user the ability to view or cancel a request, cancel a booking, view a confirmation, view bookings or leave feedback for missing or completing a placement.
+        </p>
+        <p>
+          The schools part of the service also had developments in editing their school profile, the dashboard, turning a request in to a booking and rejecting a request.
+        </p>
+        <p>
+          There was also iterations based on feedback from candidates, these changes were around the dashboard, your bookings, the sub pages of sections and typographical elements to help users identify with areas.
+        </p>
+        <p>
+          In sprint 6 we covered hypothesis 3 and 4
         </p>
 
-        <p class="govuk-!-font-weight-bold">
-          Findings
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Coming Soon</li>
-        </ul>
+        <div class="learned">
+          <p>
+            <span class="govuk-heading-m">Findings</span>
+            sddsgfsg
+          </p>
+        </div>
 
         <p>
-          <h2 class="govuk-heading-s">Schools links</h2>
+          <h2 class="govuk-heading-s">Individual page links (Schools)</h2>
           <a class="govuk-link" href="/schools-pre/reject">School associations (reject association)<br />
           <a class="govuk-link" href="/schools-pre/add-school">School association (confirm school rejection & request another school)</a><br />
-          <a class="govuk-link" href="/schools-pre/signout">School association (requested school association and signed out) * Button has to be click from previous page to show message  </a><br />
+          <a class="govuk-link" href="/schools-pre/signout">School association (requested school association and signed out) * Button has to be clicked from previous page to show message  </a><br />
           <a class="govuk-link" href="/schools-pre/signout">School signed out</a><br />
 
           <br />
@@ -361,7 +418,7 @@
           <a class="govuk-link" href="/schools-pre/other-details-edit">School profile (change fees &amp; DBS information)</a><br />
           <a class="govuk-link" href="/schools-pre/subjects-edit">School profile (change subjects)</a><br />
 
-<br />
+          <br />
           <a class="govuk-link" href="/booking-v1/dashboard-template">School switcher(in header bar)</a><br />
           <a class="govuk-link" href="/booking-v1/switch">School switcher(switching options)</a><br />
 
@@ -378,19 +435,19 @@
 
 
         <p>
-            <h2 class="govuk-heading-s">Candidate links</h2>
+            <h2 class="govuk-heading-s">Individual page links (Candidates)</h2>
+            <a class="govuk-link" href="/candidate-search/start-page">Candidate Start (Content iterated)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/signin">Candidate signin</a><br />
             <a class="govuk-link" href="/candidate-dashboard/dash-search">Candidate dashboard</a><br />
             <a class="govuk-link" href="/candidate-dashboard/cancel-request">Candidate signed in (cancel request &mp; give feedback)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/cancel-confirm">Candidate signed in (confirm cancel request)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/cancel-booking">Candidate signed in (cancel booking &amp; give feedback)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/cancel-confirm">Candidate signed in (confirm booking cancel)</a><br />
-            <a class="govuk-link" href="/candidate-dashboard/school-confirmation">Candidate signed in (Booking confirmation)</a><br />
+            <a class="govuk-link" href="/candidate-dashboard/school-confirmation">Candidate signed in (booking confirmation)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/school-bookings">Candidate signed in (bookings page)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/feedback">Candidate signed in (give reason for missing it - feedback)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/feedback-confirm">Candidate signed in (feedback confirmation)</a><br />
             <a class="govuk-link" href="/candidate-dashboard/feedback-confirm">Candidate signed in (give school experience feedback)</a><br />
-
         </p>
 
         <h2 class="govuk-heading-s">Schools Iteration</h2>
@@ -401,15 +458,175 @@
         <a class="govuk-link" href="XXXX">Your placements heading (changed to your availability)</a><br />
         <a class="govuk-link" href="XXXX">Your placements subpages (your availability + edit availability added)</a><br />
         <a class="govuk-link" href="XXXX">Your associtions heading (changed to your schools)</a><br />
-        <div class="divider">
-          &nbsp;
+
+<p>
+  &nbsp;
+</p>
+
         </div>
 
 
 
 
 
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="hypo1">
+        <h3 class="govuk-heading-m">Hypothesis 1</h3>
+        <p>
+          A range of users in schools have a problem with the volume of ‘unsuitable’ candidates they see and lack of advance information about them provided by the SEP. This is making them opt out, or considering to opt out, of hosting placements.
+        </p>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Read more on hypothesis 1
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>
+                <strong>We believe that</strong> if we triage candidates, and share more relevant information about them with schools ahead of placements, we’ll see more new schools taking part in and fewer existing schools leaving the school experience service. ‘Unsuitable’ candidates will be directed to a more appropriate service.
+              </p>
+              <p>
+                <strong>We’ll test this</strong> by presenting information about candidates to staff (admin / decision makers) at schools to understand what they need to know about a candidate to comfortably host them on a school experience versus what they currently receive via SEP. The findings of this testing can be used to connect schools to the suitable candidates (triage) as well as notifications to staff at a school at the point of candidate booking.
+              </p>
+              <p>
+                <strong>We’ll know this is true when</strong> schools who do not currently use SEP (including dormant schools) state that the advanced information and improved candidate suitability would contribute to their decision to enroll on a new DfE service and existing schools remain engaged.
+              </p>
+            </div>
+        </details>
+      </div>
+
+
+      <div class="hypo2">
+        <h3 class="govuk-heading-m">Hypothesis 2</h3>
+        <p>
+A range of users in schools have a problem with the time, effort and processes required to coordinate and manage placements causing them to opt out of the school experience service.        </p>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Read more on hypothesis 2
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>
+                <strong>We believe that</strong>  if we provide them with the tools to efficiently schedule and organise placements it will:
+                <ul class="govuk-list--bullet">
+                  <li>
+                    reduce school administration time and costs
+                  </li>
+                  <li>
+                    increase the availability and quality of placements for candidates
+                  </li>
+                  <li>
+                    encourage more schools to opt-in to the service
+                  </li>
+                </ul>
+              </p>
+              <p>
+                <strong>We’ll test this</strong> with staff at schools (admin and decision makers) who have never been part of SEP and those who have left SEP to see if the improvements would encourage them to enroll in the new service and schools currently using SEP to see if the improvements increase their likelihood to remain with a DfE run service (e.g.measured on a Likert scale).
+
+              </p>
+              <p>
+                <strong>We’ll know this is true when</strong> when our test schools state that the improved service would encourage them to enroll in a DfE school experience service or continue their enrollment.
+              </p>
+            </div>
+        </details>
+      </div>
+
+
+
+
+      <div class="hypo3">
+        <h3 class="govuk-heading-m">Hypothesis 3</h3>
+        <p>
+Candidates have a problem with the effort required to find and contact schools who offer appropriate placements, making them less likely to progress with a booking.        </p>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Read more on hypothesis 3
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>
+                <strong>We believe that</strong> if we give them a quick and easy way to find, choose and book a local placement more candidates will complete a booking.
+
+              </p>
+              <p>
+                <strong>We’ll test this</strong> measuring the amount of effort required by a candidate to find and contact one or more schools (relative difference in effort to complete a task; e.g. number of steps and perceived effort measured on a Likert scale) using the new prototype service and comparing it to the manual process (baseline) to find and contact one or more schools.
+              </p>
+              <p>
+                <strong>We’ll know this is true when</strong> when our test candidates are able to find and contact schools with less effort.
+              </p>
+            </div>
+        </details>
+      </div>
+
+
+
+
+
+      <div class="hypo4">
+        <h3 class="govuk-heading-m">Hypothesis 4</h3>
+        <p>
+Candidates have a problem with the lack of very basic information currently provided by schools causing confusion and leading to them not booking and attending placements.
+</p>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Read more on hypothesis 4
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+
+
+              <p>
+                <strong>We believe that</strong> if they get the right information, at the right time, they’ll feel more prepared and less anxious and more likely to book and attend placements.
+              </p>
+              <p>
+                <strong>We’ll test this</strong> by presenting the information currently offered by SEP (baseline) and a new prototype to test whether candidates are more, less or equally likely to book and feel prepared for the placement.  We will also measure how ‘prepared’ candidates feel based on the information provided to them by the existing service versus a prototype. ‘Preparedness’ will be measured by candidates selecting a level on a scale.  We will also test what type of information candidates value having regarding a school experience in order to feel prepared.
+              </p>
+              <p>
+                <strong>We’ll know this is true when</strong> when our tests show candidate confidence in the information we’ve provided would ensure they booked and felt prepared for a placement.
+              </p>
+            </div>
+        </details>
+      </div>
+
+
+
+    </div>
+
+
+
+
 </div>
+<!-- *********************************************
+**************************************************
+      {{ govukButton({
+        text: "Start now",
+        href: "#",
+        classes: "govuk-button--start"
+      }) }}
+<!-- *********************************************
+************************************************** -->
+
 
 {% endblock %}
