@@ -40,7 +40,7 @@ $(document).ready(function () {
         contactList.add({
             id: Math.floor(Math.random() * 1234567),
             dates: dates,
-            availability: availability,
+            availability: availability
         });
         clearFields();
         refreshCallbacks();
