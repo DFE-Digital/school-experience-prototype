@@ -137,7 +137,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                   <h2 class="govuk-heading-s">DBS</h2>
                   <ul>
                     <li>DBS: {{ data['candidate-dbs'] }}</li>
-                    <li>Criminal Record: {{ data['candidate-criminal'] }} </li>
+
                     <!--<li>Details: N/A</li>-->
                   </ul>
               </div>
@@ -158,7 +158,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-half">
                 <div class="booking-details">
-                  <h2 class="govuk-heading-s">Booking details</h2>
+                  <h2 class="govuk-heading-m">Booking details</h2>
                   <ul>
                       <li>Date: {{ data['candidate-booking-dates'] }} </li>
                     <li>Subject: {{ data['candidate-booking-subject'] }} </li>
@@ -171,11 +171,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
             <div class="govuk-grid-column-one-half">
                 <div class="booking-details1">
-                  <h2 class="govuk-heading-s">General</h2>
+
                   <ul>
                     <!--<li>Preferred placement role:	Observing</li>-->
-                    <p>How far have you got towards becoming a teacher:<br />{{ data['candidate-how-far'] }}</p>
-                    <p>Why do you want to become a teacher: <br />{{ data['candidate-motivations'] }}</p>
+                    <p>How far towards becoming a teacher:<br />{{ data['candidate-how-far'] }}</p>
+                    <p>Why wants to become a teacher: <br />{{ data['candidate-motivations'] }}</p>
                     <p>Expectations: {{ data['candidate-expectations'] }}</p>
                     <!--<li>Reason for selecting school: OFSTED rating, Local, Right subject-->
                   </ul>
@@ -198,7 +198,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                         &nbsp;
                     </p>
                     <button type="submit" name="result" value="cancel" class="govuk-button">
-                        Cancel booking
+                        Cancel
                     </button>
                     <br />
                     <!--<button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
@@ -206,8 +206,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                     </button>-->
 
 
-            
-                    <a class="govuk-link" href="/booking-v1/view-bookings?id=5">Go to booking page</a>
+
+                    <a class="govuk-link" href="/booking-v1/view-bookings?id=5">Go to your bookings</a>
 
                 </form>
 

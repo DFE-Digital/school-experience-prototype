@@ -12,7 +12,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 <div class="govuk-grid-row dashboard-figures">
-    
+
     <div class="govuk-grid-column-one-half">
         <h1 class="govuk-heading-l">{{ data['requestItems'].length }} Requests</h1>
         <!--<a href="#" class="govuk-link">Organise by most urgent</a>
@@ -36,7 +36,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
             <div class="govuk-grid-column-one-half">
                 <p class="dater">
-                    Date Range: {{ item.dateRange }}
+                    Dates: {{ item.dateRange }}
                 </p>
                 <p class="dater">
                     Subject: {{ item.subjects }}
@@ -74,7 +74,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
             <div class="govuk-grid-column-one-half">
                 <p class="dater">
-                    Date: {{ item.bookingDate }} <br/> {{item.placementDays}}
+                  Start date: {{ item.bookingDate }} <br/> Experience length: {{item.placementDays}}
                 </p>
                 <p class="dater">
                     Subject: {{ item.subject }}
