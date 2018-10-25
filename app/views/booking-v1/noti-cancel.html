@@ -40,27 +40,26 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       <h1 class="govuk-heading-l">Cancel booking for {{ data['full-name'] }}</h1>
 
 
-      <h2 class="govuk-heading-s">Edit email content if needed</h2>
+      <h2 class="govuk-heading-s">Cancellation email for candidate</h2>
       <div class="govuk-form-group">
 
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">
-The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been cancelled.
+Your booking for school experience at Abraham Moss Community School for for {{ data['candidate-booking-dates'] }} has been cancelled.
 
 This is because the school has decided you're not suitable for the placement.
 
 If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk.
-
 
           </textarea>
       </div>
 
 
 
-      <a href="noti-sent?id=5" class="govuk-button">Cancel and send email</a>
+      <a href="noti-sent?id=5" class="govuk-button">Cancel and send</a>
 
 
       <br />
-      <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to profile</a>
+      <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
       <br />
       <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
 

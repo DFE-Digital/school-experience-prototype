@@ -13,7 +13,7 @@
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-l">School experience placements near: {{ data['searchLocation'] }}</h1>
+        <h1 class="govuk-heading-l">School experience placements near {{ data['searchLocation'] }}</h1>
     </div>
 </div>
 
@@ -34,7 +34,7 @@
                         </h2>
                     </legend>
                     <span id="waste-hint" class="govuk-hint">
-                        Select all that apply.
+                        Select all that apply
                     </span>
                     <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
@@ -52,7 +52,7 @@
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                16-18
+                                16 to 18
                             </label>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                         </h2>
                     </legend>
                     <span id="waste-hint" class="govuk-hint">
-                        Select all that apply.
+                        Select all that apply
                     </span>
                     <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
@@ -156,9 +156,9 @@
                                     <input type="submit" name="school-name" value="{{item.Name}}" class="govuk-label link-fix" />
                                     <ul>
                                         <li>Address: {{item.Address}}</li>
-                                        <li>{{item.Phase}}</li>
-                                        <li>School type: {{item.SchoolType}}</li>
+                                        <li>Education phase: {{item.Phase}}</li>
                                         <li>Fees: {{item.Fees}}</li>
+                                        <li>School type: {{item.SchoolType}}</li>
                                         <li>Subjects: {{item.Subjects}}</li>
                                     </ul>
                                 </form>
