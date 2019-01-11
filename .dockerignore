@@ -1,0 +1,8 @@
+/node_modules
+/yarn-error.log
+/public
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore .env file
+.env
