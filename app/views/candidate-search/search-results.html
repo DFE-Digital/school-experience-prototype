@@ -5,279 +5,237 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% import "sections.html" as s %}
+{{ s.banner(true) }}
 {% endblock %}
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-      <h1 class="govuk-heading-l">School experience placements</h1>
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">School experience placements near {{ data['searchLocation'] }}</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third filter">
+
+
+        <div class="grey-box">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h2 class="govuk-fieldset__heading">
+                            Education phase
+                        </h2>
+                    </legend>
+                    <span id="waste-hint" class="govuk-hint">
+                        Select all that apply
+                    </span>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                Primary 4 - 11
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                Secondary 11- 16
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                16 to 18
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="grey-box">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h2 class="govuk-fieldset__heading">
+                            Subject
+                        </h2>
+                    </legend>
+                    <span id="waste-hint" class="govuk-hint">
+                        Select all that apply
+                    </span>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                Art and design
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                Combined science
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Computer science
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                                Food preparation and nutrition
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Geography
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                History
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Music
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Physical education
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Religious studies
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="grey-box">
+		<div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h2 class="govuk-fieldset__heading">
+                            Fees
+                        </h2>
+                    </legend>
+		    <div class="govuk-radios">
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees1" name="fees" type="radio" value="up to £25">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+		          up to £25
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees2" name="fees" type="radio" value="up to £50">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+		          up to £50
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees3" name="fees" type="radio" value="up to £75">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+		          up to £75
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees4" name="fees" type="radio" value="up to £100">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+		          up to £100
+		        </label>
+		      </div>
+		    </div>
+		  </fieldset>
+		</div>
+	</div>
+
+
+
+
     </div>
 
+    <div class="govuk-grid-column-two-thirds results">
 
-
-
-    <div class="govuk-grid-row">
-
-      <div class="govuk-grid-column-one-third filter">
-<!--
-        <div class="grey-box">
-          <div class="form-group">
-                  <label class="legend" for="DistanceRadius">Radius<span class="visuallyhidden"> this element dynamically updates the page</span></label>
-                  <select id="DistanceRadius" name="radius" aria-controls="js-search-results-info" class="select">
-                          <option value="1">
-                              1 mile radius
-                          </option>
-                          <option selected="" value="3">
-                              3 mile radius
-                          </option>
-                          <option value="5">
-                              5 mile radius
-                          </option>
-                          <option value="10">
-                              10 mile radius
-                          </option>
-                          <option value="15">
-                              15 mile radius
-                          </option>
-                          <option value="20">
-                              20 mile radius
-                          </option>
-                          <option value="25">
-                              25 mile radius
-                          </option>
-                  </select>
-              </div>
-              <div>
-                &nbsp;
-              </div>
+        <div class="results-number">
+            Showing 1 - 50 of 165 schools and colleges
         </div>
-      -->
-
-        <div class="grey-box">
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                    <h1 class="govuk-fieldset__heading">
-                      Education phase
-                    </h1>
-                  </legend>
-                  <span id="waste-hint" class="govuk-hint">
-                    Select all that apply.
-                  </span>
-                  <div class="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                        Primary
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                        Secondary
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        16-18
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-        </div>
-
-        <div class="grey-box">
-          <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                    <h1 class="govuk-fieldset__heading">
-                    School type
-                    </h1>
-                  </legend>
-                  <span id="waste-hint" class="govuk-hint">
-                    Select all that apply.
-                  </span>
-                  <div class="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                        Academy
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                        Maintained school
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                         Independent school
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-4">
-                          Special school
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-5">
-                           College
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-                </div>
-        </div>
-
-
-
-
-      </div>
-
-      <div class="govuk-grid-column-two-thirds results">
-
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-              Showing 1 - 50 of 165 schools and colleges
-            </div>
-            <div class="govuk-grid-column-one-half">
-              <ul class="pagin">
+        <div class="pagination-container">
+            <ul class="pagin">
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
                 <li><a href="">4</a></li>
                 <li><a href="">Next</a></li>
-              </ul>
-            </div>
-          </div>
+            </ul>
+        </div>
+
+
 
 
 
         <div class="govuk-grid-row">
 
-          <div class="govuk-grid-column-ful">
-              <div class="divider"></div>
-              <div class="sortby">
-                <div class="sort-text">Sorted by</div>
-                <div class="drop">
-                  <select name="orderby" id="OrderBy" aria-controls="js-search-results-info" class="select">
+            <div class="govuk-grid-column-full">
+                <div class="divider"></div>
+                <div class="sortby">
+                    <div class="sort-text">Sorted by</div>
+                    <div class="drop">
+                        <select name="orderby" id="OrderBy" aria-controls="js-search-results-info" class="select">
                             <option value="" selected="">Distance</option>
-                        <option value="SCHNAME_sort asc">Alphabetical A - Z</option>
-                        <option value="SCHNAME_sort desc">Alphabetical Z - A</option>
-                    </select>
+                            <option value="SCHNAME_sort asc">Alphabetical A - Z</option>
+                            <option value="SCHNAME_sort desc">Alphabetical Z - A</option>
+                        </select>
+                    </div>
                 </div>
-              </div>
 
-              <div class="list">
-                <ul>
-                  <li>
-                    <div class="school-result">
-                       <a href="school-result" title="Abbey College Manchester">Abraham Moss Community School Manchester</a>
-                       <ul>
-                         <li>Address: Crescent Road, Manchester, M8 5UF</li>
-                         <li>Education phase: Primary, Secondary and 16 to 18</li>
-                         <li>School type: Independent School</li>
-                         <li>Fees: £50</li>
-                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
-                       </ul>
+                <div class="list">
+                    <ul>
+                        {% for item in data['schools'] | schoolFilter(data['searchRadius'], "stuff", data['searchType']) %}
+                        <li>
+                            <div class="school-result">
+                                <form action="/candidate-search/search-result-post" title="{{item.Name}}" method="post">
 
-                    </div>
-                  </li>
+                                    <input type="submit" name="school-name" value="{{item.Name}}" class="govuk-label link-fix" />
+                                    <ul>
+                                        <li>Address: {{item.Address}}</li>
+                                        <li>Education phase: {{item.Phase}}</li>
+                                        <li>Fees: {{item.Fees}}</li>
+                                        <li>School type: {{item.SchoolType}}</li>
+                                        <li>Subjects: {{item.Subjects}}</li>
+                                    </ul>
+                                </form>
 
-
-
-
-
-                  <li>
-                    <div class="school-result">
-                       <a href="school-result" title="Abbey College Manchester">Chetham's School of Music</a>
-                       <ul>
-                         <li>Address: Long Millgate, Manchester, M3 1SB</li>
-                         <li>Education phase: Secondary and 16 to 18</li>
-                         <li>School type: Independent School</li>
-                         <li>Fees: £0</li>
-                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
-                       </ul>
-
-                    </div>
-                  </li>
-
-
-
-
-                  <li>
-                    <div class="school-result">
-                       <a href="school-result" title="Abbey College Manchester">Manchester Creative Studio</a>
-                       <ul>
-                         <li>Address: 16 Blossom Street, Manchester, M4 5AW</li>
-                         <li>Education phase: 16 to 18</li>
-                         <li>School type: Academy</li>
-                         <li>Fees: £5</li>
-                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
-                       </ul>
-
-                    </div>
-                  </li>
-
-
-
-
-                  <li>
-                    <div class="school-result">
-                       <a href="school-result" title="Abbey College Manchester">King of Kings School</a>
-                       <ul>
-                         <li>Address: 142 Dantzic Street, Manchester, M4 4DN</li>
-                         <li>Education phase: Primary</li>
-                         <li>School type: Independent School</li>
-                         <li>Fees: £25</li>
-                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
-                       </ul>
-
-                    </div>
-                  </li>
-
-
-
-                  <li>
-                    <div class="school-result">
-                       <a href="school-result" title="Abbey College Manchester">New Islington Free School  </a>
-                       <ul>
-                         <li>Address: 10 Hugh Oldham Way, Manchester, M4 6EY</li>
-                         <li>Education phase: Primary</li>
-                         <li>School type: Academy</li>
-                         <li>Fees: £60</li>
-                         <li>Subjects: Maths, English, Art, Physics, Geography</li>
-                       </ul>
-
-                    </div>
-                  </li>
-                </ul>
-              </div>
-          </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
 
         </div>
 
 
-      </div>
-
-
-
-
     </div>
+
+
+
+
+</div>
+
 
 
 

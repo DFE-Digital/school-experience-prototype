@@ -1,18 +1,12 @@
 {% extends "layout.html" %}
+{% import "sections.html" as s %}
 
 {% block pageTitle %}
   Blank page
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{{ s.banner() }}
 {% endblock %}
 
 {% block content %}
@@ -21,151 +15,132 @@
 
 
 
-    <div class="govuk-grid-row">
+<div class="govuk-grid-row">
 
-      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
 
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  Find a school experience placement
-                </h1>
-              </legend>
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Find school experience placements 
+                    </h1>
+                </legend>
+				<p class="govuk-body">This service is only available in England</p> 
 
 
-              <div class="govuk-radios search" data-module="radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
-                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                    Location (area and postcode)
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label hint-bold" for="contact-by-email">
-                        For example, Manchester, M1 1AD or <a href="#">use current location</a>
-                    </label>
+                <form action="/candidate-search/search-results-post" method="post">
+                    <div class="govuk-radios search" data-module="radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-1" name="searchType" type="radio" value="isLocationSearch" data-aria-controls="conditional-how-contacted-conditional-1">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                                Location (area and postcode)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+                            <div class="govuk-form-group">
+                                <div class="govuk-label hint-bold" for="search-by-location">
+                                    For example, Manchester, M1 1AD or <a href="#">use current location</a>
+                                </div>
 
 
-                    <div class="search-cont">
-                            <div class="seachbox">
-                              <input class="govuk-input govuk-!-width-full" id="contact-by-email" name="contact-by-email" type="email">
+                                <div class="search-cont">
+                                    <div class="seachbox">
+                                        <input class="govuk-input govuk-!-width-full" id="search-by-location" name="searchByLocation" type="text">
+                                    </div>
+                                    <div class="radius">
+                                        <select id="search-location-radius" class="govuk-select" name="locationRadius">
+                                            <option value="1">1 mile</option>
+                                            <option value="3" selected="">3 miles</option>
+                                            <option value="5">5 miles</option>
+                                            <option value="10">10 miles</option>
+                                            <option value="15">15 miles</option>
+                                            <option value="20">20 miles</option>
+                                            <option value="25">25 miles</option>
+                                        </select>
+                                    </div>
+                                    <button class="govuk-button">Find</button>
+                                </div>
                             </div>
-                            <div class="radius">
-                              <select id="radius" class="form-control" name="radius">
-                                   <option value="1">1 mile</option>
-                                   <option value="3" selected="">3 miles</option>
-                                   <option value="5">5 miles</option>
-                                   <option value="10">10 miles</option>
-                                   <option value="15">15 miles</option>
-                                   <option value="20">20 miles</option>
-                                   <option value="25">25 miles</option>
-                               </select>
+
+
+
+                        </div>
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="searchType" type="radio" value="isSubjectAndSchoolTypeSearch" data-aria-controls="conditional-how-contacted-conditional-2">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                Subject and school type
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                            <div class="govuk-form-group">
+                                <div class="govuk-label hint-bold" for="search-by-subject-and-school-type">
+                                    For example, Maths, art college, English academy, special school
+                                </div>
+
+
+                                <div class="search-cont">
+                                    <div class="seachbox">
+                                        <input class="govuk-input govuk-!-width-full" id="search-by-subject-and-school-type" name="searchBySubjectAndSchoolType" type="text">
+                                    </div>
+                                    <button class="govuk-button">Find</button>
+                                </div>
+
+
+
+
+
+
+
                             </div>
-                            <div class="gobutton">
-                                <a href="search-results" class="" title="Search">Search</a>
+
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-3" name="searchType" type="radio" value="isSubjectAndLocationSearch" data-aria-controls="conditional-how-contacted-conditional-3">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                                Subject and location (area and postcode)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+                            <div class="govuk-form-group">
+                                <div class="govuk-label hint-bold" for="subject-and-location">
+                                    For example, art Manchester, English M1 1AD, maths Leeds
+                                </div>
+                                <div class="search-cont">
+                                    <div class="seachbox">
+                                        <input class="govuk-input govuk-!-width-full" id="subject-and-location" name="subjectAndLocation" type="text">
+                                    </div>
+                                    <div class="radius">
+                                        <select id="subject-and-location-radius" class="govuk-select" name="subjectAndLocationRadius">
+                                            <option value="1">1 mile</option>
+                                            <option value="3" selected="">3 miles</option>
+                                            <option value="5">5 miles</option>
+                                            <option value="10">10 miles</option>
+                                            <option value="15">15 miles</option>
+                                            <option value="20">20 miles</option>
+                                            <option value="25">25 miles</option>
+                                        </select>
+                                    </div>
+                                    <button class="govuk-button">Find</button>
+                                </div>
+
+
+
+
+
                             </div>
+
+                        </div>
                     </div>
-
-
-
-                  </div>
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                    Subject and school type (Maths, English academy, college)
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label hint-bold" for="contact-by-phone">
-                      For example, English, art college, special school
-                    </label>
-
-
-                    <div class="search-cont">
-                            <div class="seachbox">
-                              <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contact-by-phone" type="tel">
-                            </div>
-                            <!--<div class="radius">
-                              <select id="radius" class="form-control" name="radius">
-                                   <option value="1">1 mile</option>
-                                   <option value="3" selected="">3 miles</option>
-                                   <option value="5">5 miles</option>
-                                   <option value="10">10 miles</option>
-                                   <option value="15">15 miles</option>
-                                   <option value="20">20 miles</option>
-                                   <option value="25">25 miles</option>
-                               </select>
-                            </div>-->
-                            <div class="gobutton">
-                                <a href="search-results" class="" title="Search">Search</a>
-                            </div>
-                    </div>
-
-
-
-
-
-
-
-                  </div>
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
-                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                    Subject and location (maths Manchester, English M1 1AD)
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label hint-bold" for="contact-by-text">
-                      For example, art Manchester, maths Leeds
-                    </label>
-                    <div class="search-cont">
-                            <div class="seachbox">
-                              <input class="govuk-input govuk-!-width-ful" id="contact-by-text" name="contact-by-text" type="tel">
-                            </div>
-                            <div class="radius">
-                              <select id="radius" class="form-control" name="radius">
-                                   <option value="1">1 mile</option>
-                                   <option value="3" selected="">3 miles</option>
-                                   <option value="5">5 miles</option>
-                                   <option value="10">10 miles</option>
-                                   <option value="15">15 miles</option>
-                                   <option value="20">20 miles</option>
-                                   <option value="25">25 miles</option>
-                               </select>
-                            </div>
-                            <div class="gobutton">
-                                <a href="search-results" class="" title="Search">Search</a>
-                            </div>
-                    </div>
-
-
-
-
-
-                  </div>
-
-                </div>
-              </div>
+                </form>
             </fieldset>
-          </div>
-      </div>
-
-
-
-      <div class="govuk-grid-column-one-third">
-
-      </div>
+        </div>
     </div>
+
+</div>
 
 
 

@@ -704,7 +704,7 @@ var schools = [
         Distance: 10
     }];
 
-router.post('/candidate-search2/search-result-post', function (req, res) {
+router.post('/candidate-search/search-result-post', function (req, res) {
 
     var school = schools.find(function (item) {
         return (item.Name === req.session.data['school-name']);
@@ -714,12 +714,12 @@ router.post('/candidate-search2/search-result-post', function (req, res) {
     req.session.data['school-name'] = school.Name;
     req.session.data['school-subjects'] = school.Subjects;
 
-    res.redirect('/candidate-search2/school-result');
+    res.redirect('/candidate-search/school-result');
 
 });
 
 
-router.post('/candidate-search2/search-results-post', function (req, res) {
+router.post('/candidate-search/search-results-post', function (req, res) {
 
     var radius = 0;
     var searchCriteria = '(NONE)';
@@ -762,10 +762,10 @@ router.post('/candidate-search2/search-results-post', function (req, res) {
     req.session.data['schools'] = schoolResults;
 
     //if (searchCriteria.leng > 0) {
-    res.redirect('/candidate-search2/search-results');
+    res.redirect('/candidate-search/search-results');
     //}
     //else {
-    //    res.redirect('/candidate-search2/search-blank');
+    //    res.redirect('/candidate-search/search-blank');
     //}
 });
 
