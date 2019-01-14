@@ -39,7 +39,12 @@ module.exports = function (env) {
     ------------------------------------------------------------------ */
 
     env.addFilter('schoolFilter', function (items, distance, criteria, searchType) {
+
+		console.log(criteria);
+
         criteria = criteria.toUpperCase();
+		
+
 
         switch (searchType) {
             case 'isLocationSearch':

@@ -39,7 +39,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Cancel booking for {{ data['full-name'] }}</h1>
 
-
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This candidate is due tomorrow. To make sure they don't turn up at your school - call them to tell them their placement has been cancelled.
+  </strong>
+</div>
       <h2 class="govuk-heading-s">Cancellation email for candidate</h2>
       <div class="govuk-form-group">
 
@@ -51,16 +57,17 @@ This is because the school has decided you're not suitable for the placement.
 If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk.
 
           </textarea>
-      </div>
+      </div> 
 
 
 
-      <a href="noti-sent?id=5" class="govuk-button">Cancel and send</a>
+      <a href="noti-sent?id=5" class="govuk-button">Send cancellation</a>
 
 
       <br />
       <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
       <br />
+<br>
       <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
 
     </div>

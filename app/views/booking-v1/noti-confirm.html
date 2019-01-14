@@ -83,7 +83,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 </p>
               <span id="dob-hint" class="govuk-hint">
                 Last day
-              </span>
+              </span> 
               <div class="govuk-date-input" id="dob">
                 <div class="govuk-date-input__item">
                   <div class="govuk-form-group">
@@ -114,11 +114,23 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
 
 
-          <p>
-            &nbsp;
-          </p>
 
-
+<fieldset class="govuk-fieldset">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Report to:
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="report-to" name="report-to" type="text">
+    </div>
+	
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        At location:
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="report-to" name="report-to" type="text">
+    </div>
+	
+</fieldset>
           <h2 class="govuk-heading-m">Confirmation email for candidate</h2>
 
                 <div class="govuk-form-group">
@@ -126,27 +138,32 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint">
 The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
 
-placement start and finish time - 8am to 4pm
-school location and directions - (Abraham Moss Community School)
-parking and access - in teaching car park accessed via south gate on Mosley Street
-report to - John Lewis in main school reception
-dress code - formal
-placement fee - £10
+Placement start and finish time - 8am to 4pm
+
+School location and directions - (Abraham Moss Community School)
+
+Parking and access - in teaching car park accessed via south gate on Mosley Street
+
+Report to - Peter Jones in main school reception
+
+Dress code - formal
+
+Placement fee - £10
 
 The school will be contacting you in due course with further details about your placement.
 
-In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk.
+In the meantime, if you have any urgent questions contact Peter Jones at Abraham Moss Community School on 0161 123 4567 or at info@abraham.ac.uk
                     </textarea>
                   </div>
 
-                  <a href="noti-sent?id=5" class="govuk-button">Confirm and send</a>
+                  <a href="noti-sent?id=5" class="govuk-button">Send confirmation</a>
 
 
               <br />
               <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
-              <br/>
+              <br/><br>
               <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
-            </br/>
+
           </form>
 
 

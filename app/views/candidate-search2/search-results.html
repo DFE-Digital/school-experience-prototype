@@ -17,7 +17,7 @@
     </div>
 </div>
 
-
+ ß
 
 
 <div class="govuk-grid-row">
@@ -40,13 +40,13 @@
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                                Primary
+                                Primary 4 - 11
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                Secondary
+                                Secondary 11- 16
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
@@ -65,7 +65,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h2 class="govuk-fieldset__heading">
-                            School type
+                            Subject
                         </h2>
                     </legend>
                     <span id="waste-hint" class="govuk-hint">
@@ -75,37 +75,97 @@
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                                Academy
+                                Art and design
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                Maintained school
+                                Combined science
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                Independent school
+                                Computer science
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-4">
-                                Special school
+                                Food preparation and nutrition
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
                             <label class="govuk-label govuk-checkboxes__label" for="waste-5">
-                                College
+                                Geography
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                History
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Music
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Physical education
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                                Religious studies
                             </label>
                         </div>
                     </div>
                 </fieldset>
             </div>
         </div>
+        <div class="grey-box">
+		<div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h2 class="govuk-fieldset__heading">
+                            Fees
+                        </h2>
+                    </legend>
+		    <div class="govuk-radios">
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees1" name="fees" type="radio" value="up to £25">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+		          up to £25
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees2" name="fees" type="radio" value="up to £50">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+		          up to £50
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees3" name="fees" type="radio" value="up to £75">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+		          up to £75
+		        </label>
+		      </div>
+		      <div class="govuk-radios__item">
+		        <input class="govuk-radios__input" id="fees4" name="fees" type="radio" value="up to £100">
+		        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+		          up to £100
+		        </label>
+		      </div>
+		    </div>
+		  </fieldset>
+		</div>
+	</div>
 
 
 
@@ -148,7 +208,7 @@
 
                 <div class="list">
                     <ul>
-                        {% for item in data['schools'] | schoolFilter(data['searchRadius'], data['searchCriteria'], data['searchType']) %}
+                        {% for item in data['schools'] | schoolFilter(data['searchRadius'], "stuff", data['searchType']) %}
                         <li>
                             <div class="school-result">
                                 <form action="/candidate-search2/search-result-post" title="{{item.Name}}" method="post">
