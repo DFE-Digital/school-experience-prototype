@@ -1,0 +1,101 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <!--<h1 class="govuk-heading-l">School associations</h1>-->
+
+
+      <div class="nav-cont1">
+
+        <ul class="navi-style1">
+          <li class="on">
+            <strong class="govuk-heading-s">Your schools</strong>
+          </li>
+          <li>
+            <a href="/booking/edit-linked?id=2">Add schools</a>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-heading-l">Your schools</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">School</th>
+            <th class="govuk-table__header" scope="col">Profile</th>
+            <th class="govuk-table__header" scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Abraham Moss Community School<br />
+            Crescent Road, Manchester M8 5UF</th>
+            <td class="govuk-table__cell"><a href="/booking/profile?id=3" class="">Change</a></td>
+            <td class="govuk-table__cell"><a href="/booking/delete-school?id=2" class="">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Calder High School<br />
+            Tall Tree Lane, Manchester M12 4WZ</th>
+            <td class="govuk-table__cell"><a href="/booking/profile?id=3" class="">Change</a></td>
+            <td class="govuk-table__cell"><a href="/booking/delete-school?id=2" class="">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Brook High School<br />
+            Valley Head, Manchester M22 8NN</th>
+            <td class="govuk-table__cell"><a href="/booking/profile?id=3" class="">Change</a></td>
+            <td class="govuk-table__cell"><a href="/booking/delete-school?id=2" class="">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Hills School<br />
+            Riverside, Manchester M18 1TW</th>
+            <td class="govuk-table__cell"><a href="/booking/profile?id=3" class="">Change</a></td>
+            <td class="govuk-table__cell"><a href="/booking/delete-school?id=2" class="">Remove</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+      <a href="edit-linked?id=2" role="button" draggable="false" class="govuk-button">
+        Add new school
+      </a>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+{% endblock %}

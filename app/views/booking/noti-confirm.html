@@ -1,0 +1,222 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  <form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Confirm booking for {{ data['candidate-name'] }}</h1>
+
+<!--
+      <div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li>
+              <a href="/booking/view-bookings?id=5">View bookings</a>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li class="on">
+              <strong class="govuk-heading-s">Notifications</strong>
+            </li>
+            <li>
+              <a href="/booking/attendance?id=5">Candidate attendance</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+-->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-m">Enter school experience dates for candidate</h1>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+
+              <span id="dob-hint" class="govuk-hint">
+                First day
+              </span>
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+<p>
+  &nbsp;
+</p>
+              <span id="dob-hint" class="govuk-hint">
+                Last day
+              </span> 
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+<fieldset class="govuk-fieldset">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Report to:
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="report-to" name="report-to" type="text">
+    </div>
+	
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        At location:
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="report-to" name="report-to" type="text">
+    </div>
+	
+</fieldset>
+          <h2 class="govuk-heading-m">Confirmation email for candidate</h2>
+
+                <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint">
+The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+
+Placement start and finish time - 8am to 4pm
+
+School location and directions - (Abraham Moss Community School)
+
+Parking and access - in teaching car park accessed via south gate on Mosley Street
+
+Report to - Peter Jones in main school reception
+
+Dress code - formal
+
+Placement fee - £10
+
+The school will be contacting you in due course with further details about your placement.
+
+In the meantime, if you have any urgent questions contact Peter Jones at Abraham Moss Community School on 0161 123 4567 or at info@abraham.ac.uk
+                    </textarea>
+                  </div>
+
+                  <a href="noti-sent?id=5" class="govuk-button">Send confirmation</a>
+
+
+              <br />
+              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
+              <br/><br>
+              <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+
+          </form>
+
+
+    </div>
+</div>
+
+
+
+
+
+<!--
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['candidate-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Confirm booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <p>
+            <strong>Subject:</strong> Your school experience placement confirmation
+          </p>
+          <p>
+              <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
+          </p>
+
+          <p>
+            The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+          </p>
+          <ul class="govuk-list">
+            <li>placement start and finish time - 8am to 4pm</li>
+            <li>school location and directions - (Abraham Moss Community School)[<a href="">https://goo.gl/maps/p3AgGMyAwgy</a>] </li>
+            <li>parking and access - in teaching car park accessed via south gate on Mosley Street</li>
+            <li>report to - John Lewis in main school reception</li>
+            <li>dress code - formal </li>
+            <li>placement fee - £10</li>
+          </ul>
+          <p>The school will be contacting you in due course with further details about your placement.</p>
+          <p>In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.</p>
+
+          <div class="divider"></div>
+
+
+
+
+      </div>
+  </div>
+-->
+
+{% endblock %}

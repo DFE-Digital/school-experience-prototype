@@ -1,0 +1,220 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Booking: candidate profile</h1>
+
+
+
+
+    </div>
+  </div>
+  <div>
+    &nbsp;
+  </div>
+
+
+  <div class="nav-cont1">
+
+    <ul class="navi-style1">
+      <li class="on"><!-- <strong class="govuk-heading-s"> -->
+        <strong class="govuk-heading-s">Your bookings</strong>
+      </li>
+      <li>
+        <a href="/booking/view-messages?id=5">View messages</a>
+      </li>
+      <li>
+        <a href="/booking/notification?id=5">Notifications </a>
+      </li>
+      <li >
+        <a href="/booking/attendance?id=5">Candidate attendance</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+  <!-- ********** Personal details *********** -->
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third ">
+        <h2 class="govuk-heading-l">{{ data['candidate-name'] }}</h2>
+      </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="divider">
+
+        </div>
+    </div>
+  </div>
+
+    <div class="govuk-grid-row ">
+
+        <div class="govuk-grid-column-one-third profile">
+
+          <div class="personal">
+
+              <h2 class="govuk-heading-s">Personal details</h2>
+              <ul>
+                <li>Date of birth: {{ data['candidate-dob'] }}</li>
+                <li>Address: {{ data['candidate-address'] }}</li>
+
+              </ul>
+          </div>
+
+        </div>
+        <div class="govuk-grid-column-one-third profile">
+            <div class="">
+              <h2 class="govuk-heading-s">Contact details</h2>
+                <ul>
+                  <li>Email: {{ data['candidate-email'] }} </li>
+                  <li>Tel: {{ data['candidate-phone'] }} </li>
+                </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third profile">
+          <div class="access">
+            <h2 class="govuk-heading-s">Accessibility requirements</h2>
+              <ul>
+                  {% for item in data['candidate-accessibility'] %}
+                  <li>
+                      {{ item }}
+                  </li>
+                  {% endfor %}
+
+              </ul>
+          </div>
+        </div>
+
+
+    </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="divider">
+
+            </div>
+        </div>
+      </div>
+
+    <!-- ********** DBS, Qualifications, Teacher Training *********** -->
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third qualtrain">
+              <div class="qual">
+                <h2 class="govuk-heading-s">Qualifications</h2>
+                <ul>
+                  <li>Degree: {{ data['candidate-degree-level'] }}</li>
+                  <li>Subject: {{ data['candidate-degree-subject'] }}</li>
+                  <!--<li>Class: 1st</li>-->
+                </ul>
+              </div>
+          </div>
+          <div class="govuk-grid-column-one-third qualtrain">
+              <div class="teach-t">
+                  <h2 class="govuk-heading-s">Teacher training</h2>
+                  <ul>
+                    <li>Status: Applied</li>
+                    <!--<li>ITT provider: St Andrews School Group - North Tyneside</li>-->
+                  </ul>
+              </div>
+          </div>
+          <div class="govuk-grid-column-one-third qualtrain">
+              <div class="dbs">
+                  <h2 class="govuk-heading-s">DBS</h2>
+                  <ul>
+                    <li>DBS: {{ data['candidate-dbs'] }}</li>
+
+                    <!--<li>Details: N/A</li>-->
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="divider">
+
+            </div>
+        </div>
+      </div>
+
+
+      <!-- ********** Booking details *********** -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <div class="booking-details">
+                  <h2 class="govuk-heading-m">Booking details</h2>
+                  <ul>
+                      <li>Date: {{ data['candidate-booking-dates'] }} </li>
+                    <li>Subject: {{ data['candidate-booking-subject'] }} </li>
+                    <li>No shows: {{ data['candidate-no-shows'] }} </li>
+                  </ul>
+                  <p>
+
+                  </p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <div class="booking-details1">
+
+                  <ul>
+                    <!--<li>Preferred placement role:	Observing</li>-->
+                    <p>How far towards becoming a teacher:<br />{{ data['candidate-how-far'] }}</p>
+                    <p>Why wants to become a teacher: <br />{{ data['candidate-motivations'] }}</p>
+                    <p>Expectations: {{ data['candidate-expectations'] }}</p>
+                    <!--<li>Reason for selecting school: OFSTED rating, Local, Right subject-->
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+  <!-- ********** CTA *********** -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <form action="/booking/notify" method="post" class="form">
+
+                    <!-- *** Soft Booking *** -->
+                    <!-- *** Name to be passed *** -->
+                    <input name="full-name" value="{{data['candidate-name']}}" type="hidden">
+                    <p>
+                        &nbsp;
+                    </p>
+                    <button type="submit" name="result" value="cancel" class="govuk-button">
+                        Cancel
+                    </button>
+                    <br />
+                    <!--<button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                        Contact candidate
+                    </button>-->
+
+
+
+                    <a class="govuk-link" href="/booking/view-bookings?id=5">Back to your bookings</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+{% endblock %}

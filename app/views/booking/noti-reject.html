@@ -1,0 +1,121 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      <!--<div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li>
+              <a href="/booking/view-bookings?id=5">View bookings</a>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li class="on">
+              <strong class="govuk-heading-s">Notifications</strong>
+            </li>
+            <li>
+              <a href="/booking/attendance?id=5">Candidate attendance</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+-->
+<form action="/booking/" method="post" class="form">
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Reject request for {{ data['full-name'] }}</h1>
+
+            <p>
+              The request you made for school experience at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been turned down.
+
+            </p>
+
+            <h2 class="govuk-heading-s">Give reasons why the request has been rejected</h2>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                    Add a reason
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
+
+                </textarea>
+
+
+                <h2 class="govuk-heading-s">Rejection email for {{ data['full-name'] }}</h2>
+                <textarea class="govuk-textarea" id="more-detail1" name="more-detail" rows="8" aria-describedby="more-detail-hint">
+
+If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk.
+
+                </textarea>
+          </div>
+
+
+          <!-- End Form -->
+          <a href="noti-sent?id=5" class="govuk-button">Reject and send</a>
+
+
+          <br />
+          <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
+          <br />
+          <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+          </br/>
+      </form>
+
+
+
+    </div>
+
+</div>
+
+<!--
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['full-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Reject booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+-->
+
+<!--
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+            <strong>Subject:</strong> Your school experience placement request has been turned down
+
+          The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been rejected.</p>
+
+              If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk
+
+
+          <div class="divider"></div>
+
+-->
+
+
+
+
+      </div>
+  </div>
+
+
+{% endblock %}

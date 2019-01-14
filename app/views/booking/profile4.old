@@ -1,0 +1,163 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-m">Candidate profile</h1>
+
+
+
+        <div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li class="on"><!-- <strong class="govuk-heading-s"> -->
+              <strong class="govuk-heading-s">View bookings</strong>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li>
+              <a href="/booking/notification?id=5">Notification</a>
+            </li>
+            <li >
+              <a href="/booking/attendance?id=5">Candidate atendance</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+    </div>
+  </div>
+  <div>
+    &nbsp;
+  </div>
+
+<!-- ********** Personal details *********** -->
+  <div class="govuk-grid-row divider-profile">
+
+      <div class="govuk-grid-column-one-half profile">
+
+        <div class="personal">
+            <h2 class="govuk-heading-l">George McDonald</h2>
+            <ul>
+              <li>Date of birth: 01 07 1995</li>
+              <li>Apt. 510, 1333 Staten Island Road, Queens, New York. NYQ 10002
+
+
+            </ul>
+        </div>
+
+      </div>
+      <div class="govuk-grid-column-one-half profile">
+          <div class="contact">
+              <ul>
+                <li>Email: GMcDonaldUSA@outlook.com </li>
+                <li>Tel: +1 212-366-1182</li>
+                <li>Mobile: 	+1 040-663-8811</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- ********** DBS, Qualifications, Teacher Training *********** -->
+    <div class="govuk-grid-row divider-profile">
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="qual">
+              <h2 class="govuk-heading-m">Qualifications</h2>
+              <ul>
+                <li>Degree: Yes</li>
+                <li>Subject: Degree in Chemistry and Biology - special interest marine biology</li>
+                <li>Class:1st</li>
+              </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="teach-t">
+                <h2 class="govuk-heading-m">Teacher training</h2>
+                <ul>
+                  <li>Status: Offer </li>
+                  <li>ITT provider: City College London</li>
+                </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third qualtrain">
+            <div class="dbs">
+                <h2 class="govuk-heading-m">DBS</h2>
+                <ul>
+                  <li>DBS checked: 	No</li>
+                  <li>Criminal Record: No</li>
+                  <!--<li>Details: N/A</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ********** Booking details *********** -->
+      <div class="govuk-grid-row divider-profile">
+          <div class="govuk-grid-column-one-half">
+              <div class="booking-details">
+                <h2 class="govuk-heading-m">Booking details</h2>
+                <ul>
+                  <li>Date: 08 to 26 October 2018 (15 days)</li>
+                  <li>Subject: Biology</li>
+                  <li>No shows: Never had placement</li>
+                </ul>
+                <p>
+
+                </p>
+              </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+              <div class="booking-details1">
+                <ul>
+                  <li>Preferred placement role:	Shadowing</li>
+                  <li>Motivations: </li>
+                  <li>Expectations: I want to find out more about what it’s really like to be teacher in the UK and see if it’s as rewarding as I’ve been told. </li>
+                  <li>Reason for selecting school: Recommendation, Right age range, Right subject.
+
+
+                </ul>
+              </div>
+          </div>
+      </div>
+
+
+
+<!-- ********** CTA *********** -->
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+              <form action="/booking/applied-yet" method="post" class="form">
+                <!-- *** Request *** -->
+                <button type="submit" class="govuk-button">
+                  Confirm Booking
+                </button><br />
+                <button type="submit" class="govuk-button button-grey ">
+                    Cancel Booking
+                </button>
+                <button type="submit" class="govuk-button button-grey ">
+                    Contact Candidate
+                </button>
+
+              </form>
+              <a class="govuk-link" href="/booking/view-bookings">Back to booking list</a>
+          </div>
+
+      </div>
+
+
+
+{% endblock %}

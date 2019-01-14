@@ -1,0 +1,104 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row dashboard-figures">
+
+    <div class="govuk-grid-column-one-half">
+        <h1 class="govuk-heading-l">{{ data['requestItems'].length }} Requests</h1>
+        <!--<a href="#" class="govuk-link">Organise by most urgent</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" class="govuk-link ">Organise by most recent</a><br /><br />
+    -->
+
+        {% for item in data['requestItems'] %}
+        <div class="greyblock3 {{ item.colourClass }}">
+            <div class="govuk-grid-column-one-half">
+                <p class="">
+                    <a href="/booking/profile3?candidate-selected-name={{item.name}}" class="govuk-link name"><strong>{{item.name}}</strong></a>
+                </p>
+                <p class="">
+                    Respond by: {{ item.respondBy }}
+                </p>
+                <p class="">
+                    DBS2: {{ item.dbs }}
+                </p>
+
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <p class="dater">
+                    Dates: {{ item.dateRange }}
+                </p>
+                <p class="dater">
+                    Subject: {{ item.subjects }}
+                </p>
+                <p>
+                    Accessibility: {{ item.accessibility }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+
+    </div>
+
+
+
+    <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">{{ data['bookingItems'].length }} Bookings</h2>
+        <!--<a href="#" class="govuk-link">Organise by earliest</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" class="govuk-link">Organise by latest</a><br /><br />-->
+
+    {% for item in data['bookingItems'] %}
+        <div class="greyblock3 {{ item.colourClass }}">
+            <div class="govuk-grid-column-one-half">
+                <p class="">
+                    <a href="/booking/profile2?candidate-selected-name={{item.name}}" class="govuk-link name"><strong>{{item.name}}</strong></a>
+                </p>
+                <p class="">
+                    DBS: {{ item.dbs }}
+                </p>
+
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <p class="dater">
+                  Start date: {{ item.bookingDate }} <br/> Experience length: {{item.placementDays}}
+                </p>
+                <p class="dater">
+                    Subject: {{ item.bookingSubject }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
