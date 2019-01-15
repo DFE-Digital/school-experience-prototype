@@ -1014,45 +1014,6 @@ opacity: 1;
     }
 }
 
-
-.filter{
-      .grey-box{
-          select{
-            font-size: 19px;
-            position: relative;
-            font-family: "nta", Arial, sans-serif;
-
-          }
-          label{
-            font-size: 19px;
-            position: relative;
-            font-family: "nta", Arial, sans-serif;
-            padding-left: 50px;
-
-          }
-          legend{
-            font-size: 19px;
-            position: relative;
-            font-family: "nta", Arial, sans-serif;
-          }
-          h1{
-            font-size: 19px;
-            position: relative;
-            font-family: "nta", Arial, sans-serif;
-
-          }
-          span{
-            font-size: 19px;
-            position: relative;
-            font-family: "nta", Arial, sans-serif;
-
-          }
-
-
-
-      }
-}
-
 .sortby{
       @include clearfix();
       border-bottom: 1px solid #bfc1c3;
@@ -1067,12 +1028,6 @@ opacity: 1;
           font-size: 19px;
         }
       }
-}
-.govuk-checkboxes{
-  div{
-    padding-left: 0;
-
-  }
 }
 
 .subject{
