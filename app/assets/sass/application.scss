@@ -881,9 +881,32 @@ opacity: 1;
 
 /* End Tooltip */
 
+/*
+  experimental version that switches from
+  column to row
+*/
+.govuk-form-group > .stackable {
+  display: flex;
+  flex-direction: row;
 
+  input {
+    flex-grow: 1;
+  }
 
+  input,select,button {
+    margin: 0rem 0.2rem;
+  }
 
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+
+    input,select,button {
+      margin: 0.5rem 0rem;
+    }
+
+  }
+
+}
 
 
 /* Search Boxes */
@@ -898,26 +921,29 @@ opacity: 1;
     float: left;
     width: 335px
   }
+
   .radius{
     float:left;
-    height: 36px;
-    border-top: 2px solid #0b0c0c;
-    border-bottom: 2px solid #0b0c0c;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 3px;
+
     select{
       font-size: 19px;
-      border: 0;
-      height: 35px;
-      padding-left: 5px;
-      padding-right: 5px;
+      border: none;
+      height: 30px;
       background: white;
     }
   }
+
+  .inline-button {
+    border-bottom: 2px solid #00823b;
+  }
+
   .gobutton{
     float:left;
     border: 2px solid #0b0c0c;
-    height: 36px;
     a{
       display: block;
       height: 32px;
