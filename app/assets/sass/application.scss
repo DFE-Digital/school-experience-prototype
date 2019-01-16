@@ -908,6 +908,13 @@ opacity: 1;
 
 }
 
+/* reduce margin beneath filter headings */
+.govuk-form-group.se-filter {
+  h3.govuk-heading-m {
+    margin-bottom: 0px;
+  }
+}
+
 
 /* Search Boxes */
 .search{
