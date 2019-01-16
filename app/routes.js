@@ -725,37 +725,9 @@ router.post('/candidate-search/search-results-post', function (req, res) {
     var searchCriteria = '(NONE)';
     var searchLocation = 'XXX';
 
-	/*
-	switch (req.session.data['searchType']) {
-		case 'isLocationSearch':
-			radius = req.session.data['locationRadius'];
-			searchCriteria = req.session.data['searchByLocation'];
-			searchLocation = req.session.data['searchByLocation'];
-			break;
-
-		case 'isSubjectAndSchoolTypeSearch':
-			radius = 99;
-			searchCriteria = req.session.data['searchBySubjectAndSchoolType'];
-			var extractSubjectAndType = extractSubject(getWords(searchCriteria));
-			searchLocation = extractSubjectAndType.remainder;
-			searchCriteria = extractSubjectAndType.subjects;
-			break;
-
-		case 'isSubjectAndLocationSearch':
-			radius = req.session.data['subjectAndLocationRadius'];
-			searchCriteria = req.session.data['subjectAndLocation'];
-			var extractSubjectAndLocation = extractSubject(getWords(searchCriteria));
-			searchLocation = extractSubjectAndLocation.remainder;
-			searchCriteria = extractSubjectAndLocation.subjects;
-			break;
-		default:
-			searchLocation = req.session.data.search;
-	}
-	*/
-
 	req.session.data['searchCriteria'] = searchCriteria;
 	req.session.data['searchRadius'] = radius;
-	req.session.data['searchLocation'] = req.session.data.searchByLocation;
+	req.session.data['searchLocation'] = req.session.data.search;
 
 	var schoolResults = schools.slice(0);
 
