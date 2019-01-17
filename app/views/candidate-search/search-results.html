@@ -197,7 +197,7 @@
 
 				<div class="list">
 					<ul>
-						{% for item in data['schools'] | schoolFilter(data['searchRadius'], data['searchCriteria'], data['searchType']) %}
+						{% for item in data['schools'] %}
 						<li>
 							<div class="school-result">
 								<form action="/candidate-search/search-result-post" title="{{item.Name}}" method="post">
