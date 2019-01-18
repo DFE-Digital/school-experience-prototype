@@ -692,7 +692,7 @@ var schools = [
         SchoolType: 'Independent School',
         Fees: '£25',
         Subjects: 'Maths, English, Art',
-        'Distance': 5
+        Distance: 5
     },
     {
         Name: 'New Islington Free School',
@@ -713,6 +713,8 @@ router.post('/candidate-search/search-result-post', function (req, res) {
     req.session.data['school-address'] = school.Address;
     req.session.data['school-name'] = school.Name;
     req.session.data['school-subjects'] = school.Subjects;
+    req.session.data['school-phase'] = school.Phase;
+    req.session.data['school-fees'] = school.Fees;
 
     res.redirect('/candidate-search/school-result');
 
