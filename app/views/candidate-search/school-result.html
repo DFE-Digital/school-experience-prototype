@@ -29,28 +29,28 @@
             <h1 class="govuk-heading-m">Official school information</h1>
 
 			<p><b>DfE information:</b><br> <a class="govuk-link" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/105560#school-dashboard">{{ data['school-name'] }}: Get Information About Schools</a></p>
-			
+
 			<p><b>School website:</b><br>  <a class="govuk-link" href="https://www.abrahammoss.manchester.sch.uk/">{{ data['school-name'] }}</a></p>
-			
+
 			<p><b>Performance information:</b><br>  <a class="govuk-link" href="https://www.compare-school-performance.service.gov.uk/school/105560/abraham-moss-community-school">{{ data['school-name'] }}: Find and compare schools in England</a></P>
-				
-			<p><b>Ofsted:</b><br>  <a class="govuk-link" href="https://reports.ofsted.gov.uk/provider/28/105560">Latest inspection report</a></p>
-				  
+
+			<p><b>Ofsted information:</b><br>  <a class="govuk-link" href="https://reports.ofsted.gov.uk/provider/28/105560">Latest inspection report</a></p>
+
 	<h1 class="govuk-heading-m">About our school</h1>
-	
-		<p><b>Age range:</b> {{ data['school-phase'] }}</p>
-		
-			<p><b>Specialisms:</b> Arts, bilingual students and SEN.</p>   			
-			
+
+		<p><b>Education phases:</b> {{ data['school-phase'] }}.</p>
+
+			<p><b>Specialisms:</b> Arts, bilingual students and SEN.</p>
+
    <h1 class="govuk-heading-m">Placement information</h1>
-   
+
    			<p><b>Individual requirements:</b> Must have a degree and be planning to become a teacher.</p>
-			
+
    			<p><b>Placement details:</b> Attendees will observe lessons in their chosen subjects and may get the chance to interact with pupils and classroom activities. Only offer key stage 1 experience for primary placements.</p>
 
-			<p><b>Placement subjects:</b> {{ data['school-subjects'] }}</p>
+			<p><b>Placement subjects:</b> {{ data['school-subjects'] }}.</p>
 
-   <h1 class="govuk-heading-m">Location</h1>		  
+   <h1 class="govuk-heading-m">Location</h1>
 	<img class="school-map" src="/public/images/abschool.jpg" width="250" height="172" />
 <br>
 <br>
@@ -71,20 +71,20 @@
         <div class="govuk-grid-column-one-third app-related-items ">
         <h3 class="govuk-heading-m">Address</h3>
         <p class="govuk-body">
-            {{ data['school-address'] }}
+            {{ data['school-address'] }}.
 
         </p>
 
-        <h3 class="govuk-heading-s">DBS Check required</h3>
+        <h3 class="govuk-heading-s">DBS check required</h3>
         <p class="govuk-body">
           Yes
         </p>
 
-        <h3 class="govuk-heading-s">Fees</h3>
+        <h3 class="govuk-heading-s">Fee</h3>
         <p class="govuk-body">
 		{{ data['school-fees'] }}
         </p>
-		
+
         <h3 class="govuk-heading-s">Placement start and finish times</h3>
         <p class="govuk-body">
           9am to 5pm
@@ -94,7 +94,7 @@
         <p class="govuk-body">
         Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day
         </p>
-		
+
         <h3 class="govuk-heading-s">Accessibility details</h3>
         <p class="govuk-body">
  		Ramp access and disabled parking available on site
