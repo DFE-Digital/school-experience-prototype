@@ -104,62 +104,18 @@
 				<span id="waste-hint" class="govuk-hint">
 					Select all that apply
 				</span>
+
 				<div class="govuk-checkboxes">
+					{% for subject in data['subjects'] %}
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input fix" id="waste-1" name="waste" type="checkbox" value="carcasses">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-1">
-							Art and design
+						<input class="govuk-checkboxes__input fix" id="waste-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							{{ subject }}
 						</label>
 					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input fix" id="waste-2" name="waste" type="checkbox" value="mines">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-2">
-							Combined science
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input fix" id="waste-3" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-3">
-							Computer science
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-4">
-							Food preparation and nutrition
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-5">
-							Geography
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-5">
-							History
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-5">
-							Music
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-5">
-							Physical education
-						</label>
-					</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-5">
-							Religious studies
-						</label>
-					</div>
+					{% endfor %}
 				</div>
+
 			</fieldset>
 		</div>
 

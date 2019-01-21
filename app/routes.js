@@ -741,6 +741,38 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 	req.session.data['searchRadius'] = radius;
 	req.session.data['searchLocation'] = req.session.data.search;
 
+	let subjects = [
+		"Biology",
+		"Business studies",
+		"Chemistry",
+		"Citizen",
+		"Classics",
+		"Computing",
+		"Dance",
+		"Design and technology",
+		"Economics",
+		"English",
+		"French",
+		"Geography",
+		"General experience",
+		"German",
+		"Health and social care",
+		"History",
+		"Mathematics",
+		"Medical studies",
+		"Music",
+		"Physical education (PE)",
+		"Physics",
+		"Physics with Maths",
+		"Psychology",
+		"Religious education (RE)",
+		"Social sciences",
+		"Science",
+		"Spanish",
+		"Vocational health"
+	];
+    req.session.data['subjects'] = subjects;
+
 	var schoolResults = schools.slice(0);
 
     schoolResults.forEach(function (item) {
