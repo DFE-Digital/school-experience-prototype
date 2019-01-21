@@ -659,49 +659,59 @@ var extractSubject = function (words) {
 
 var schools = [
     {
+        Id: 1,
         Name: 'Abbey College',
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£50',
         Subjects: 'Maths, English, Art, Physics, Geography',
-        Distance: 1
+        Distance: 1,
+        ShowLong: false
     },
     {
+        Id: 2,
         Name: 'Chetham\'s School of Music',
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£0',
         Subjects: 'Maths, English, Art, Physics, Music',
-        Distance: 1.5
+        Distance: 1.5,
+        ShowLong: true
     },
     {
+        Id: 3,
         Name: 'The Creative Studio',
         Address: '16 Blossom Street, Manchester',
         Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Academy',
         Fees: '£5',
         Subjects: 'Maths, Art, Physics, Geography',
-        Distance: 2.5
+        Distance: 2.5,
+        ShowLong: false
     },
     {
+        Id: 4,
         Name: 'King of Kings School',
         Address: '142 Dantzic Street, Manchester',
         Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£25',
         Subjects: 'Maths, English, Art',
-        Distance: 5
+        Distance: 5,
+        ShowLong: false
     },
     {
+        Id: 5,
         Name: 'New Islington Free School',
         Address: '10 Hugh Oldham Way, Manchester',
         Phase: 'Primary, Secondary a 16 to 18',
         SchoolType: 'Independent School',
         Fees: '£60',
         Subjects: 'Maths, English, Geography',
-        Distance: 10
+        Distance: 10,
+        ShowLong: false
     }];
 
 router.post('/candidate-search/search-result-post', function (req, res) {
@@ -745,6 +755,28 @@ router.post('/candidate-search/search-results-post', function (req, res) {
     //else {
     //    res.redirect('/candidate-search/search-blank');
     //}
+});
+
+router.get('/schools/:schoolId', function(req, res) {
+
+    let sId = Number.parseInt(req.params.schoolId);
+    let school = schools.find(s => s.Id === sId);
+
+    // We need to do this so the old template will render,
+    // just sending the school object would be more sensible...
+    req.session.data['school-address']  = school.Address;
+    req.session.data['school-name']     = school.Name;
+    req.session.data['school-subjects'] = school.Subjects;
+    req.session.data['school-phase']    = school.Phase;
+    req.session.data['school-fees']     = school.Fees;
+
+    if (school.ShowLong) {
+        res.render('candidate-search/school-result-long.html');
+    }
+    else {
+        res.render('candidate-search/school-result.html');
+    }
+
 });
 
 

@@ -200,17 +200,15 @@
 						{% for item in data['schools'] %}
 						<li>
 							<div class="school-result">
-								<form action="/candidate-search/search-result-post" title="{{item.Name}}" method="post">
 
-									<input type="submit" name="school-name" value="{{item.Name}}" class="govuk-label link-fix" />
-									<ul>
-										<li><b>Address:</b> {{item.Address}}</li>
-										<li><b>Education phases:</b> {{item.Phase}}</li>
-										<li><b>Fee:</b>  {{item.Fees}}</li>
-										<li><b>School type:</b> {{item.SchoolType}}</li>
-										<li><b>Subjects:</b>  {{item.Subjects}}</li>
-									</ul>
-								</form>
+								<a class= "govuk-label" href="/schools/{{item.Id}}">{{item.Name}}</a>
+								<ul>
+									<li><b>Address:</b> {{item.Address}}</li>
+									<li><b>Education phases:</b> {{item.Phase}}</li>
+									<li><b>Fee:</b>  {{item.Fees}}</li>
+									<li><b>School type:</b> {{item.SchoolType}}</li>
+									<li><b>Subjects:</b>  {{item.Subjects}}</li>
+								</ul>
 
 							</div>
 						</li>
