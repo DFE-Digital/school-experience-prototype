@@ -802,11 +802,16 @@ router.get('^/schools/:schoolId([0-9]*)', function(req, res) {
     req.session.data['school-phase']    = school.Phase;
     req.session.data['school-fees']     = school.Fees;
 
+	// FIXME we're redirecting rather than rendering here because the
+	// over-reliance on session data is complicating the page and
+	// sometimes making schools data not load initially.
     if (school.ShowLong) {
-        res.render('candidate-search/school-result-long.html');
+        //res.render('candidate-search/school-result-long.html');
+        res.redirect('/candidate-search/school-result-long.html');
     }
     else {
-        res.render('candidate-search/school-result.html');
+        //res.render('candidate-search/school-result.html');
+        res.redirect('/candidate-search/school-result.html');
     }
 
 });
