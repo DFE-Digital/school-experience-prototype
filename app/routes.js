@@ -757,7 +757,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
     //}
 });
 
-router.get('/schools/:schoolId', function(req, res) {
+router.get('^/schools/:schoolId([0-9]*)', function(req, res) {
 
     let sId = Number.parseInt(req.params.schoolId);
     let school = schools.find(s => s.Id === sId);
