@@ -25,191 +25,149 @@
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
+	<div class="govuk-grid-column-two-thirds">
 
-        <!-- test -->
-
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h1 class="govuk-fieldset__heading">
-                        Find school experience placements
-                    </h1>
-                </legend>
-              <br />
-                <form action="/candidate-search/search-results-post" method="post">
-                    <div class="govuk-radios search" data-module="radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="how-contacted-conditional-1" name="searchType" type="radio" value="isLocationSearch" data-aria-controls="conditional-how-contacted-conditional-1">
-                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                                Location (area and postcode)
-                            </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label hint-bold" for="search-by-location">
-                                    For example, Manchester, M1 1AD or <a href="#">use current location</a>
-                                </label>
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
 
 
-                                <div class="search-cont">
-                                    <div class="seachbox">
-                                        <input class="govuk-input govuk-!-width-full" id="search-by-location" name="searchByLocation" type="text">
-                                    </div>
-                                    <div class="radius">
-                                        <select id="search-location-radius" class="govuk-select" name="locationRadius">
-                                            <option value="1">1 mile</option>
-                                            <option value="3" selected="">3 miles</option>
-                                            <option value="5">5 miles</option>
-                                            <option value="10">10 miles</option>
-                                            <option value="15">15 miles</option>
-                                            <option value="20">20 miles</option>
-                                            <option value="25">25 miles</option>
-                                        </select>
-                                    </div>
-                                    <button class="govuk-button">Find</button>
-                                </div>
-                            </div>
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Find school experience placements
+					</h1>
+				</legend>
+				<p class="govuk-body">Search using area and postcode, school type and subject.</p>
 
+				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
 
+				<form action="/candidate-search/search-results-post" method="post">
 
-                        </div>
+					<div class="govuk-form-group">
 
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="searchType" type="radio" value="isSubjectAndSchoolTypeSearch" data-aria-controls="conditional-how-contacted-conditional-2">
-                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                                Subject and school type
-                            </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label hint-bold" for="search-by-subject-and-school-type">
-                                    For example, Maths, art college, English academy, special school
-                                </label>
+						<span id="search-hint" class="govuk-hint">
+							For example, '<strong>Manchester M1 1AD</strong>' or '<strong>Special school, Manchester M1 1AD</strong>' or '<strong>Maths, Manchester M1 1AD</strong>'
+						</span>
 
+						<div class="stackable">
+							<input class="govuk-input govuk-!-width-full" id="search-by-location" name="search" type="text">
 
-                                <div class="search-cont">
-                                    <div class="seachbox">
-                                        <input class="govuk-input govuk-!-width-full" id="search-by-subject-and-school-type" name="searchBySubjectAndSchoolType" type="text">
-                                    </div>
-                                    <button class="govuk-button">Find</button>
-                                </div>
+							<select id="search-location-radius" class="govuk-select" name="locationRadius">
+								<option selected>Select search distance</option>
+								<option value="1">1 mile</option>
+								<option value="3">3 miles</option>
+								<option value="5">5 miles</option>
+								<option value="10">10 miles</option>
+								<option value="15">15 miles</option>
+								<option value="20">20 miles</option>
+								<option value="25">25 miles</option>
+							</select>
 
+							<button class="govuk-button inline-button">Find</button>
+						</div>
+					</div>
 
-
-
-
-
-
-                            </div>
-
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="how-contacted-conditional-3" name="searchType" type="radio" value="isSubjectAndLocationSearch" data-aria-controls="conditional-how-contacted-conditional-3">
-                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                                Subject and location (area and postcode)
-                            </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label hint-bold" for="subject-and-location">
-                                    For example, art Manchester, English M1 1AD, maths Leeds
-                                </label>
-                                <div class="search-cont">
-                                    <div class="seachbox">
-                                        <input class="govuk-input govuk-!-width-full" id="subject-and-location" name="subjectAndLocation" type="text">
-                                    </div>
-                                    <div class="radius">
-                                        <select id="subject-and-location-radius" class="govuk-select" name="subjectAndLocationRadius">
-                                            <option value="1">1 mile</option>
-                                            <option value="3" selected="">3 miles</option>
-                                            <option value="5">5 miles</option>
-                                            <option value="10">10 miles</option>
-                                            <option value="15">15 miles</option>
-                                            <option value="20">20 miles</option>
-                                            <option value="25">25 miles</option>
-                                        </select>
-                                    </div>
-                                    <button class="govuk-button">Find</button>
-                                </div>
-
-
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
-            </fieldset>
-        </div>
-
-
-        <div class="divider">
-
-        </div>
-
-
-    </div>
+				</form>
+			</fieldset>
+		</div>
+	</div>
 
 </div>
-
-
-
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
-            <br />
-            <h2 class="govuk-heading-l">Your requests</h2>
 
+        <div class="govuk-se-dashboard">
+            <div class="govuk-se-dashboard__row govuk-se-dashboard__row--header">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader">
+                </div>
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--heading">
+                    <h3>Your Requests</h3>
+                    <div>Oldest first</div>
+                </div>
+            </div>
+            <div class="govuk-se-dashboard__row">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter">
+                </div>
 
-              <p>
-                <strong>Abraham Moss Community School</strong> <br />
-                Dates requested: 10 to 18 November 2018<br />
-                <span class="greyout">Request sent: 10 September 2018</span><br />
-                <a href="cancel-request">Cancel request</a>
-              </p>
-              <p>
-                <strong>Class High School</strong> <br />
-                Dates requested: 14 to 20 December 2018<br />
-                <span class="greyout">Request sent: 12 September 2018</span><br />
-                <a href="cancel-request">Cancel request</a>
-              </p>
-              <p>
-                <strong>Big River High School</strong> <br />
-                Dates requested: 15 to 20 January 2019<br />
-                <span class="greyout">Request sent: 13 October 2018</span><br />
-                <a href="cancel-request">Cancel request</a>
-              </p>
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+                    <div class="govuk-se-dashboard-entry__heading">
+                        <a href="#">New Islington Free School</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__info">
+                        Dates requested: 10 to 18 November 2018<br />
+                        <a href="view-request">View request</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__cancel">
+                        <a href="cancel-request">Cancel request</a>
+                    </div>
+                </div>
+            </div>
 
-
-
+            <div class="govuk-se-dashboard__row">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter">
+                </div>
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+                    <div class="govuk-se-dashboard-entry__heading">
+                        <a href="#">Newton Heath School</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__info">
+                        Dates requested: 10 to 18 November 2018<br />
+                        <a href="view-request">View request</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__cancel">
+                        <a href="cancel-request">Cancel request</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="govuk-grid-column-one-half ">
-      <br />
-            <h2 class="govuk-heading-l">Your bookings</h2>
-            <p>
-              <strong>Calder High School</strong> <br />
-              Dates booked: 10 to 18 November 2018<br />
-              <a href="school-confirmation">View booking</a><br />
-              <a href="cancel-booking">Cancel booking</a>
-            </p>
-            <p>
-              <strong>Brook High School</strong> <br />
-              Dates booked: 10 to 15 January 2019<br />
-              <a href="school-confirmation">View booking</a><br />
-              <a href="cancel-booking">Cancel booking</a>
-            </p>
-            <p>
-				          <h2 class="govuk-heading-l">Feedback</h2>
+    <div class="govuk-grid-column-one-half">
 
-              <a href="school-bookings">Leave feedback about your placements</a>
-            </p>
+        <div class="govuk-se-dashboard turquoise">
+            <div class="govuk-se-dashboard__row govuk-se-dashboard__row--header">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader">
+                </div>
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--heading">
+                    <h3>Your Bookings</h3>
+                    <div>Latest first</div>
+                </div>
+            </div>
+            <div class="govuk-se-dashboard__row">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter">
+                </div>
+
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+                    <div class="govuk-se-dashboard-entry__heading">
+                        <a href="#">Ancoats Nursery School</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__info">
+                        Dates requested: 10 to 18 November 2018<br />
+                        <a href="view-request">View request</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__cancel">
+                        <a href="cancel-request">Cancel request</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-se-dashboard__row">
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter">
+                </div>
+                <div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+                    <div class="govuk-se-dashboard-entry__heading">
+                        <a href="#">Ellen Wilkinson High School</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__info">
+                        Dates requested: 10 to 18 November 2018<br />
+                        <a href="view-request">View request</a>
+                    </div>
+                    <div class="govuk-se-dashboard-entry__cancel">
+                        <a href="cancel-request">Cancel request</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-
 
 {% endblock %}
