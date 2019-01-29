@@ -21,7 +21,7 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Enter school experience details for candidates</h1>
       <p>
-        The following details will be shown to candidates to help them make their school experience requests.
+        These details will help candidates select a school experience.
       </p>
 
 
@@ -54,9 +54,9 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-6">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-email">
-                  Provide details
+                  Provide details.
                 </label>
-                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="contact-by-email" type="text">
+                <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
               </div>
 
             </div>
@@ -100,9 +100,9 @@
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-8">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-email">
-                        Provide details
+                        Provide details.
                       </label>
-                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="park" type="text">
+                      <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
                     </div>
 
                   </div>
@@ -115,9 +115,9 @@
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-9">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-email">
-                        Provide details of where candidates can park
+                        Provide details of where candidates can park near your school.
                       </label>
-                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="park" type="text">
+                      <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
                     </div>
 
                   </div>
@@ -126,7 +126,47 @@
               </fieldset>
             </div>
 
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you provide facilities for candidates with disabilities or access needs?
+                  </h1>
+                </legend>
+                <p class="govuk-hint">
+                  For example, disabled parking spaces, disabled toilets, ramp and wheelchair access
+                </p>
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-10" name="park" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-10">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-10">
+                      Yes
+                    </label>
+                  </div>
 
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-10">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-email">
+                        Provide details.
+                      </label>
+                      <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-9" name="park" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-9">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-9">
+                      No
+                    </label>
+                  </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+            </div>
 
 
 
