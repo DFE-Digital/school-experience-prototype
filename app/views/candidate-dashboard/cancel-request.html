@@ -11,9 +11,7 @@
     <div class="banner1">
 
 
-      <div class="signin-status">
-        <p class="govuk-!-font-size-16">Darren Silcox, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
-      </div>
+
     </div>
 
 
@@ -29,117 +27,26 @@
             <h1 class="govuk-heading-l">Cancel request</h1>
             <p>
               You've chosen to cancel your school experience placement request for Abraham Moss Community School.</p>
-              <p>Dates requested: 10 to 18 November 2018<br />
-              <span class="greyout">Request sent: 10 September 2018</span><br />
+			  <p>
+Dates requested: 10 to 18 November 2019<br/>
+<p>
+              <span class="greyout">Request sent: 10 September 2019</span><br />
             </p>
+      <p><h2 class="govuk-heading-m">Cancellation reasons</h2></p>
+            <p>
+<div class="govuk-form-group">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% set textHtml %}
-{{ govukInput({
-  id: "contact-by-text",
-  name: "contact-by-text",
-  type: "tel",
-  classes: "govuk-!-width-one-third",
-  label: {
-    text: "Provide details"
-  }
-}) }}
-{% endset -%}
-
-{{ govukRadios({
-  idPrefix: "cancel-request",
-  name: "cancelrequest",
-  fieldset: {
-    legend: {
-      text: "Cancellation reasons",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-
-  items: [
-  {
-             value: "changed-placement",
-             text: "Changed placement requirements"
-           },
-           {
-             value: "changed-teaching",
-             text: " Changed teaching preference"
-           },
-           {
-             value: "need-closer",
-             text: "Need a closer and more convenient placement"
-           },
-           {
-             value: "need-diff-date",
-             text: "Need a different date"
-           },
-           {
-             value: "found-another",
-             text: "Found another placement"
-           },
-           {
-             value: "illness",
-             text: "Illness"
-           },
-           {
-             value: "not-interested",
-             text: "No longer interested in becoming a teacher"
-           },
-           {
-             value: "no-longer-interested",
-             text: "No longer interested in going on a placement"
-           },
-           {
-             value: "holiday",
-             text: "On holiday"
-           },
-           {
-             value: "commitments",
-             text: "Other commitments"
-           },
-           {
-             value: "personal-commitments",
-             text: "Family and personal commitments"
-           },
-           {
-             value: "university-commitments",
-             text: "University commitments"
-           },
-           {
-             value: "work-commitments",
-             text: "Work commitments"
-           },
-           {
-             value: "error",
-             text: "Request made in error"
-           },
-           {
-             value: "other-reason",
-             text: "Other reason",
-             conditional: {
-               html: textHtml
-             }
-    }
-  ]
-}) }}
-
-
+  <span id="more-detail-hint" class="govuk-hint">
+    Tell us a why you want to cancel your request so we can let the school know you no longer want a placement.
+  </span>
+  <label class="govuk-label" for="more-detail">
+    Provide details
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
             <p>
               <a href="cancel-confirm" class="govuk-button">Confirm request cancellation</a><br />
-              <a href="dash-search" class="">Back to Your requests</a>
+              <a href="dash-search" class="">Your requests</a>
             </p>
 
     </div>
