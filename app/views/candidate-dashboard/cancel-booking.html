@@ -29,114 +29,24 @@
       <h1 class="govuk-heading-l">Cancel booking</h1>
       <p>
         You've chosen to cancel your school experience placement booking for Abraham Moss Community School.</p>
-        <p>Dates requested: 10 to 18 November 2018<br />
-        <span class="greyout">Request sent: 10 September 2018</span><br />
+        <p>Dates requested: 10 to 18 November 2019<br />
+        <span class="greyout">Request sent: 10 September 2019</span><br />
       </p>
       <p class="govuk-inset-text">To change and update any placement details you’ll need to contact the school.</p>
       <p>
-        <a href="cancel-confirm" class="govuk-button">Contact school</a><br />
+        <a href="view-booking" class="govuk-button">Contact school</a><br />
       </p>
 
-
-
-
-
-
-
-
-
-
-            {% set textHtml %}
-            {{ govukInput({
-              id: "contact-by-text",
-              name: "contact-by-text",
-              type: "tel",
-              classes: "govuk-!-width-one-third",
-              label: {
-                text: "Provide details"
-              }
-            }) }}
-            {% endset -%}
-
-            {{ govukRadios({
-              idPrefix: "cancel-request",
-              name: "cancelrequest",
-              fieldset: {
-                legend: {
-                  text: "Cancellation reasons",
-                  isPageHeading: true,
-                  classes: "govuk-fieldset__legend--m"
-                }
-              },
-
-              items: [
-              {
-                         value: "changed-placement",
-                         text: "Changed placement requirements"
-                       },
-                       {
-                         value: "changed-teaching",
-                         text: " Changed teaching preference"
-                       },
-                       {
-                         value: "need-closer",
-                         text: "Need a closer and more convenient placement"
-                       },
-                       {
-                         value: "need-diff-date",
-                         text: "Need a different date"
-                       },
-                       {
-                         value: "found-another",
-                         text: "Found another placement"
-                       },
-                       {
-                         value: "illness",
-                         text: "Illness"
-                       },
-                       {
-                         value: "not-interested",
-                         text: "No longer interested in becoming a teacher"
-                       },
-                       {
-                         value: "no-longer-interested",
-                         text: "No longer interested in going on a placement"
-                       },
-                       {
-                         value: "holiday",
-                         text: "On holiday"
-                       },
-                       {
-                         value: "commitments",
-                         text: "Other commitments"
-                       },
-                       {
-                         value: "personal-commitments",
-                         text: "Family and personal commitments"
-                       },
-                       {
-                         value: "university-commitments",
-                         text: "University commitments"
-                       },
-                       {
-                         value: "work-commitments",
-                         text: "Work commitments"
-                       },
-                       {
-                         value: "error",
-                         text: "Request made in error"
-                       },
-                       {
-                         value: "other-reason",
-                         text: "Other reason",
-                         conditional: {
-                           html: textHtml
-                         }
-                }
-              ]
-            }) }}
-
-
+<div class="govuk-form-group">
+  <h2 class="govuk-heading-m">Cancellation reasons</h2>
+  <span id="more-detail-hint" class="govuk-hint">
+Tell us a why you want to cancel your booking so we can let the school know you no longer want your placement.
+  </span>
+  <label class="govuk-label" for="more-detail">
+    Provide details
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
             <p>
               <a href="cancel-confirm" class="govuk-button">Confirm booking cancellation</a><br />
               <a href="dash-search" class="">Back to Your bookings</a>
