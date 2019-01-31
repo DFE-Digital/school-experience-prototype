@@ -148,17 +148,42 @@ $govuk-global-styles: true;
       @include clearfix();
     }
     .schooladmin-menu{
-      background: #dee0e2;
+      background: #104f75;
       padding: 10px 0 7px;
       // Clearfix
       @include clearfix();
-        padding: 10px 0 7px;
+      padding: 10px 0 7px;
+			a {
+				color: white;
+				&:visited {
+				  color: white;	
+				}
+				&:hover {
+					color: white;
+				}
+				&:focus {
+					color: black;
+				}
+			}
+			
+
     }
 
     .schooladmin-menu-item-selected {
         background: #fff;
         padding: 9px 20px 7px 20px;
+
     }
+		
+		a.schooladmin-menu-item-selected {
+			color: black;
+			&:visited {
+			  color: black;	
+			}
+			&:hover {
+			  color: black;	
+			}
+		}
 
     ul {
         list-style-type: none;
@@ -167,6 +192,10 @@ $govuk-global-styles: true;
         width: 960px;
         padding-left: 0px;
     }
+		
+		a {
+			color: white;
+		}
 
     li {
         display: inline;
