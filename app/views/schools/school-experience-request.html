@@ -1,0 +1,81 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-l">School experience request</h1>
+<br>
+<h2 class="govuk-heading-m">Matthew Richards</h2>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+		<p><strong>Personal details</strong></p>
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      1 Arcadia Avenue, Middle Town, Northampton NP1 1JD
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01689 444 555
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      mat.rich1996@outlook.com 
+    </dd>
+  </div>
+  <br>
+	
+</dl>
+<!-- ********** CTA *********** -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/booking/notify" method="post" class="form">
+
+            <!-- *** Soft Booking *** -->
+            <!-- *** Name to be passed *** -->
+            <input name="full-name" value="{{data['candidate-name']}}" type="hidden">
+
+            <button type="submit" name="result" value="confirm" class="govuk-button">
+                Confirm
+            </button>
+            <br />
+            <button type="submit" name="result" value="reject" class="govuk-button button-grey cta">
+                Reject
+            </button>
+            <!--<button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                Contact booking
+            </button>-->
+
+
+            <br />
+            <a class="govuk-link" href="/booking/dashboard?id=5">Back to your bookings</a>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
