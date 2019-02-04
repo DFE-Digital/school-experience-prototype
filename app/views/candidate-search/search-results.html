@@ -157,7 +157,8 @@
 						<li>
 							<div class="school-result">
 
-								<a class= "govuk-label" href="/schools/{{item.Id}}">{{item.Name}}</a>
+								<a href="/schools/{{item.Id}}">{{item.Name}}</a>
+								<span class="govuk-hint">{{'1 mile' if item.Distance == 1 else item.Distance + ' miles'}} away</span>
 								<ul>
 									<li><b>Address:</b> {{item.Address}}</li>
 									<li><b>Education phases:</b> {{item.Phase}}</li>

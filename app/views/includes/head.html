@@ -2,3 +2,15 @@
 <!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
 <link rel="stylesheet" href="/public/css/accessible-autocomplete.min.css" />
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		params = new URLSearchParams(window.location.search) ;
+		if (params.has('back')) {
+			var frms = document.querySelectorAll('form')
+			for(var i = 0; i < frms.length; i++) {
+				frms[i].setAttribute('action', params.get('back')) ;
+			}
+		} ;
+	});
+</script>
