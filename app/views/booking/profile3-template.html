@@ -5,32 +5,56 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 {% endblock %}
 
 {% block beforeContent %}
-<!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="nav-cont1">
+
+    <ul class="navi-style1">
+      <li class="on"><!-- <strong class="govuk-heading-s"> -->
+        <strong class="govuk-heading-s">Your bookings</strong>
+      </li>
+      <li>
+        <a href="/booking/view-messages?id=5">View messages</a>
+      </li>
+      <li>
+        <a href="/booking/notification?id=5">Notifications </a>
+      </li>
+      <li >
+        <a href="/booking/attendance?id=5">Candidate attendance</a>
+      </li>
+    </ul>
+  </div>
+
 
 <h1 class="govuk-heading-l">View candidate booking profile</h1>
 
 <dl class="govuk-summary-list">
 	  
+<h2 class="govuk-heading-m">Amit Laghari</h2>
+<p><strong>Personal details</strong></p>
+<dl class="govuk-summary-list">
+	  
   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Full name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Chiserly Academy
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
+
     <dt class="govuk-summary-list__key">
       Address
     </dt>
     <dd class="govuk-summary-list__value">
-      Cheshire Road, Manchester MA2 4TW 
+      78 Acacia Avenue, Byker, Newcastle NE4 6RP
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -38,51 +62,163 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
       UK telephone number
     </dt>
     <dd class="govuk-summary-list__value">
-      0161 555 1234
+      0191 456 7897
     </dd>
-    <dd class="govuk-summary-list__actions">
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Email address
     </dt>
     <dd class="govuk-summary-list__value">
-      info@chiserly.ac.uk
+      amritlag@outlook.com	
     </dd>
   </div>
   <br>
-	
 </dl>
-<!-- ********** CTA *********** -->
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
 
-        <form action="/booking/notify" method="post" class="form">
+<p><strong>Booking details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
 
-            <!-- *** Soft Booking *** -->
-            <!-- *** Name to be passed *** -->
-            <input name="full-name" value="{{data['candidate-name']}}" type="hidden">
+    <dt class="govuk-summary-list__key">
+      School experience subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Maths
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      15 February 2019
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Confirmed
+    </dd>
+  </div>
+  <br>
+</dl>
 
-            <button type="submit" name="result" value="confirm" class="govuk-button">
-                Confirm
-            </button>
-            <br />
-            <button type="submit" name="result" value="reject" class="govuk-button button-grey cta">
-                Reject
-            </button>
-            <!--<button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
-                Contact booking
-            </button>-->
 
+<p><strong>Request details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
 
-            <br />
-            <a class="govuk-link" href="/booking/dashboard?id=5">Back to your bookings</a>
+    <dt class="govuk-summary-list__key">
+      Dates requested
+    </dt>
+    <dd class="govuk-summary-list__value">
+      15 to 18 February 2019
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      DBS checked
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Disability or access needs
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Request received
+    </dt>
+    <dd class="govuk-summary-list__value">
+      15 December 2018
+    </dd>
+  </div>
+  <br>
+</dl>
 
-        </form>
+<p><strong>Candidate details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
 
-    </div>
+    <dt class="govuk-summary-list__key">
+      What they want out of school experience
+    </dt>
+    <dd class="govuk-summary-list__value">
+			I want to see what teachers have to do behind the scenes and ask them what they think about teaching as a career.
+      
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Graduate or postgraduate
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Maths
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      I want to become a teacher
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      First choice:  Physics
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Second choice:  Maths
+    </dd>
+  </div>
+  <br>
+</dl>
 
-</div>
+                    <!--<button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                        Contact candidate
+                    </button>-->
+
+                    <button type="submit" name="result" value="feedback" class="govuk-button">
+                        Leave feedback
+                    </button>
+<br>
+                    <a class="govuk-link" href="/booking/view-bookings?id=5">Your bookings</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
 
 
 {% endblock %}
