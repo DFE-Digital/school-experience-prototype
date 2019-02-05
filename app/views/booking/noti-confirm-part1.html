@@ -1,0 +1,159 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  <form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Confirm booking </h1>
+
+<!--
+      <div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li>
+              <a href="/booking/view-bookings?id=5">View bookings</a>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li class="on">
+              <strong class="govuk-heading-s">Notifications</strong>
+            </li>
+            <li>
+              <a href="/booking/attendance?id=5">Candidate attendance</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+-->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-m">Confirm the following school experience details for {{ data['candidate-name'] }}</h1>
+
+          <h2 class="govuk-heading-m">Placement dates</h2>
+					<p class="govuk-body">01 June 2019 to 5 June 2019</p>
+
+          <h2 class="govuk-heading-m">School experience contact on the day</h2>
+					<p class="govuk-body">On the day of your school experience placement you’ll need to report to:
+</p>
+
+<dl class="govuk-summary-list">  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Mrs I Teach
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      0161 345 6355
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      iteach@abbeycollege.co.uk	
+    </dd>
+  </div>
+</dl>
+
+					<p class="govuk-body">You can also contact them if you have any questions about your actual placement.</p>
+
+          <h2 class="govuk-heading-m">Placement details</h2>
+					<p class="govuk-body">You’ll be observing lessons and may get the chance to interact with pupils and classroom activities</p>
+
+					<p class="govuk-body"><strong>Subject: </strong>Maths</p>
+
+          <h2 class="govuk-heading-m">Remember to bring</h2>
+					
+				<ul class="govuk-list govuk-list--bullet">
+					<li>your DBS check document</li>
+					<li>your £30 placement fee</li>
+				</ul>
+					
+					
+					
+					
+
+                  <a href="noti-sent?id=5" class="govuk-button">Send confirmation</a>
+
+
+              <br />
+              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to candidate profile</a>
+              <br/><br>
+              <a class="govuk-link" href="/booking/notification?id=5">Go to notifications</a>
+
+          </form>
+
+
+    </div>
+</div>
+
+
+
+
+
+<!--
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['candidate-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Confirm booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <p>
+            <strong>Subject:</strong> Your school experience placement confirmation
+          </p>
+          <p>
+              <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
+          </p>
+
+          <p>
+            The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+          </p>
+          <ul class="govuk-list">
+            <li>placement start and finish time - 8am to 4pm</li>
+            <li>school location and directions - (Abraham Moss Community School)[<a href="">https://goo.gl/maps/p3AgGMyAwgy</a>] </li>
+            <li>parking and access - in teaching car park accessed via south gate on Mosley Street</li>
+            <li>report to - John Lewis in main school reception</li>
+            <li>dress code - formal </li>
+            <li>placement fee - £10</li>
+          </ul>
+          <p>The school will be contacting you in due course with further details about your placement.</p>
+          <p>In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.</p>
+
+          <div class="divider"></div>
+
+
+
+
+      </div>
+  </div>
+-->
+
+{% endblock %}
