@@ -12,8 +12,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-  <form action="/booking/" method="post" class="form">
-      <h1 class="govuk-heading-l">Confirm booking details</h1>
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Confirm school experience booking</h1>
 
 <!--
       <div class="nav-cont">
@@ -39,68 +39,75 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">Confirm the following school experience details for {{ data['candidate-name'] }}</p>
+          <p class="govuk-body">You’ve confirmed the booking details for {{ data['candidate-name'] }}</p>
 
-          <h2 class="govuk-heading-m">Placement dates</h2>
-					<p class="govuk-body">01 June 2019 to 5 June 2019</p>
+					<p class="govuk-body">The following contains the wording of the email which will be sent to them to confirm their school experience booking.
+<p>
+You can change any of the details ahead of sending the confirmation by simply editing or adding in any extra details in the following text box.
+<p>
 
-          <h2 class="govuk-heading-m">School experience contact on the day</h2>
-					<p class="govuk-body">On the day of your school experience placement you’ll need to report to:
-</p>
+         <h2 class="govuk-heading-m">Read and update confirmation email </h2>
+					<div class="govuk-form-group">
 
-<dl class="govuk-summary-list">  
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Mrs I Teach
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      UK telephone number
-    </dt>
-    <dd class="govuk-summary-list__value">
-      0161 345 6355
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Email address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      iteach@abbeycollege.co.uk	
-    </dd>
-  </div>
-</dl>
+					 <textarea class="govuk-textarea" rows="15">
+Dear {{ data['candidate-name'] }},
+Here are the details about your school experience placement at {{ data['school-name'] }}.
 
-					<p class="govuk-body">You can also contact them if you have any questions about your actual placement.</p>
+School details
 
-          <h2 class="govuk-heading-m">Placement details</h2>
-					<p class="govuk-body">You’ll be observing lessons and may get the chance to interact with pupils and classroom activities</p>
+School or college: Abbey College - Manchester 
+Address: Crescent Road, Crumpsall, Manchester M8 5UF. 
+Placement dates: 01 June 2019 to 5 June 2019       
+Placement start and finish times: 9am to 5pm
+Dress code: Business attire with male attendees expected to wear a collar and tie
+Parking: Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day					
 
-					<p class="govuk-body"><strong>Subject: </strong>Maths</p>
+Placement contacts
 
-          <h2 class="govuk-heading-m">Remember to bring</h2>
+If you have any questions about your booking:
+
+Name: Billy Admin
+Email address: badmin@abbeycollege.co.uk 
+UK telephone number: 0161 345 6000
+
+On the day of your school experience placement, you’ll need to report to:
+
+Name: Mrs I Teach
+Email address: iteach@abbeycollege.co.uk 
+UK telephone number: 0161 345 6355
+
+You can also contact them if you have any questions about your actual placement.
+
+Placement details
+
+You’ll be observing lessons and may get the chance to interact with pupils and classroom activities 
+
+Subject: Maths
+
+Remember to bring
+
+Make sure you bring the following with you on the day of your placement:
+
+your DBS check document
+your £30 placement fee
+
+					 </textarea>
+					</div>
 					
-				<ul class="govuk-list govuk-list--bullet">
-					<li>your DBS check document</li>
-					<li>your £30 placement fee</li>
-				</ul>
-					
-					
-					
-					
-
-                  <a href="noti-sent?id=5" class="govuk-button">Continue</a>
+					<h2 class="govuk-heading-m">Send confirmation email to {{ data['candidate-name'] }}
+</h2>
 
 
-              <br />
-              <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to request</a>
-              <br/>
+					<p class="govuk-body">By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
 
-          </form>
+<a href="noti-sent?id=5" class="govuk-button">Send booking confirmation</a>
+<br/>
+
+<a class="govuk-link" href="">Back to confirm booking details</a>
+<br>
+<br>
+<a class="govuk-link" href="">Back to request</a>
+		</form>
 
 
     </div>
