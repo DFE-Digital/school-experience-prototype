@@ -156,7 +156,7 @@ $govuk-global-styles: true;
 			a {
 				color: white;
 				&:visited {
-				  color: white;	
+				  color: white;
 				}
 				&:hover {
 					color: white;
@@ -165,7 +165,7 @@ $govuk-global-styles: true;
 					color: black;
 				}
 			}
-			
+
 
     }
 
@@ -174,14 +174,14 @@ $govuk-global-styles: true;
         padding: 9px 20px 7px 20px;
 
     }
-		
+
 		a.schooladmin-menu-item-selected {
 			color: black;
 			&:visited {
-			  color: black;	
+			  color: black;
 			}
 			&:hover {
-			  color: black;	
+			  color: black;
 			}
 		}
 
@@ -192,7 +192,7 @@ $govuk-global-styles: true;
         width: 960px;
         padding-left: 0px;
     }
-		
+
 		a {
 			color: white;
 		}
@@ -1311,8 +1311,8 @@ div.govuk-se-dashboard {
       }
 
       .govuk-se-dashboard-entry__heading {
-        @include govuk-font(16);
-        margin-bottom: 0.4rem;
+        @include govuk-font(24);
+        margin-bottom: 0.7rem;
         font-weight: 600;
       }
 
@@ -1326,6 +1326,28 @@ div.govuk-se-dashboard {
       }
     }
 
+  }
+
+  dl.govuk-summary-list {
+    @include govuk-font(14) ;
+    @include govuk-responsive-margin(1, "bottom");
+
+    .govuk-summary-list__key {
+      width: 50%;
+    }
+
+    .govuk-summary-list__key,
+    .govuk-summary-list__value,
+    .govuk-summary-list__actions {
+      @include govuk-media-query($from: tablet) {
+        padding-right: govuk-spacing(1);
+      }
+
+      @include govuk-media-query($from: tablet) {
+        padding-top: govuk-spacing(0);
+        padding-bottom: govuk-spacing(0);
+      }
+    }
   }
 
   &.purple {
