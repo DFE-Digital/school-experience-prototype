@@ -1,0 +1,194 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="nav-cont1">
+
+    <ul class="navi-style1">
+      <li class="on"><!-- <strong class="govuk-heading-s"> -->
+        <strong class="govuk-heading-s">Your requests</strong>
+      </li>
+      <li>
+        <a href="/booking/view-messages?id=5">View messages</a>
+      </li>
+      <li>
+        <a href="/booking/notification?id=5">Notifications </a>
+      </li>
+      <li >
+        <a href="/booking/attendance?id=5">Candidate attendance</a>
+      </li>
+    </ul>
+  </div>
+
+
+<h1 class="govuk-heading-l">View candidate request</h1>
+
+<dl class="govuk-summary-list">
+	  
+<h2 class="govuk-heading-m">Matthew Richards</h2>
+<p><strong>Personal details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      1 Arcadia Avenue, Middle Town, Northampton NP1 1JD
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01689 444 555
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      mat.rich1996@outlook.com 	
+    </dd>
+  </div>
+  <br>
+</dl>
+
+
+<p><strong>Request details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      Dates requested
+    </dt>
+    <dd class="govuk-summary-list__value">
+      10 to 18 March 2019
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      DBS checked
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Yes
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Disability or access needs
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Request received
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01 January 2019
+    </dd>
+  </div>
+  <br>
+</dl>
+
+<p><strong>Candidate details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      What they want out of school experience
+    </dt>
+    <dd class="govuk-summary-list__value">
+			I don’t really know yet but I guess I just want to know what it’s like to be a teacher.  
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Final year
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Maths
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      I want to become a teacher
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      First choice:  Maths
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Second choice:  Physics
+    </dd>
+  </div>
+  <br>
+</dl>
+
+
+
+                    <button type="submit" name="result" value="confirm" class="govuk-button">
+                        Confirm booking
+                    </button>
+<br>										
+                    <button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                        Cancel request
+                    </button>
+<br>
+                    <a class="govuk-link" href="/booking/view-bookings?id=5">Your requests</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+{% endblock %}

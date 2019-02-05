@@ -1,0 +1,194 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="nav-cont1">
+
+    <ul class="navi-style1">
+      <li class="on"><!-- <strong class="govuk-heading-s"> -->
+        <strong class="govuk-heading-s">Your requests</strong>
+      </li>
+      <li>
+        <a href="/booking/view-messages?id=5">View messages</a>
+      </li>
+      <li>
+        <a href="/booking/notification?id=5">Notifications </a>
+      </li>
+      <li >
+        <a href="/booking/attendance?id=5">Candidate attendance</a>
+      </li>
+    </ul>
+  </div>
+
+
+<h1 class="govuk-heading-l">View candidate request</h1>
+
+<dl class="govuk-summary-list">
+	  
+<h2 class="govuk-heading-m">Jacob Sterling</h2>
+<p><strong>Personal details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      101 Brook Street, West Hampstead, London SW1 8RG.
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      0207 555 6666
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      jacob.sterling@gmail.com 	
+    </dd>
+  </div>
+  <br>
+</dl>
+
+
+<p><strong>Request details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      Dates requested
+    </dt>
+    <dd class="govuk-summary-list__value">
+      28 February to 08 March 2019
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      DBS checked
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Yes
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Disability or access needs
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Request received
+    </dt>
+    <dd class="govuk-summary-list__value">
+      15 January 2019
+    </dd>
+  </div>
+  <br>
+</dl>
+
+<p><strong>Candidate details</strong></p>
+<dl class="govuk-summary-list">
+	  
+  <div class="govuk-summary-list__row">
+
+    <dt class="govuk-summary-list__key">
+      What they want out of school experience
+    </dt>
+    <dd class="govuk-summary-list__value">
+			I want to check that I’m up for becoming a teacher and can handle being in front of students. 
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Graduate or postgraduate
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Biology
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      I’ve applied for teacher training
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      First choice:  Biology
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Second choice:  Chemistry
+    </dd>
+  </div>
+  <br>
+</dl>
+
+
+
+                    <button type="submit" name="result" value="confirm" class="govuk-button">
+                        Confirm booking
+                    </button>
+<br>										
+                    <button type="submit" name="result" value="contact" class="govuk-button button-grey cta">
+                        Cancel request
+                    </button>
+<br>
+                    <a class="govuk-link" href="/booking/view-bookings?id=5">Your requests</a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+{% endblock %}
