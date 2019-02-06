@@ -1,0 +1,127 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">School experience contact details</h1>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">Provide us with the contact details for the person who deals with the administrative side of school experience at your school.</p>
+
+					<p class="govuk-body">This means the main person who receives your school experience requests and manages the bookings.
+<p>
+These details will be used to send your school the following school experience information:
+<p>
+<ul class="govuk-list govuk-list--bullet">
+            <li>requests for school experience and candidate details</li>
+
+           <li>booking confirmations, reminders and other messages</li>
+
+           <li>important information and updates about the service</li>
+</ul>
+
+
+         <h2 class="govuk-heading-m">Provide admin contact details </h2>
+				 
+				 <div class="govuk-form-group">
+				   <label class="govuk-label" for="name">
+				     Full name
+				   </label>
+				   <input class="govuk-input" id="name" name="name" type="text">
+				 </div>
+					
+					<div class="govuk-form-group">
+					  <label class="govuk-label" for="name">
+					    UK telephone number
+					  </label>
+					  <input class="govuk-input" id="name" name="name" type="text">
+					</div>
+					
+					<div class="govuk-form-group">
+					  <label class="govuk-label" for="name">
+					    Email address
+					  </label>
+					  <input class="govuk-input" id="name" name="name" type="text">
+					</div>
+					
+					
+					<h2 class="govuk-heading-m">Send confirmation email to {{ data['candidate-name'] }}
+</h2>
+
+
+					<p class="govuk-body">By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
+
+<a href="noti-sent?id=5" class="govuk-button">Send booking confirmation</a>
+<br/>
+
+<a class="govuk-link" href="">Back to confirm booking details</a>
+<br>
+<br>
+<a class="govuk-link" href="">Back to request</a>
+		</form>
+
+
+    </div>
+</div>
+
+
+
+
+
+<!--
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['candidate-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Confirm booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <p>
+            <strong>Subject:</strong> Your school experience placement confirmation
+          </p>
+          <p>
+              <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
+          </p>
+
+          <p>
+            The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+          </p>
+          <ul class="govuk-list">
+            <li>placement start and finish time - 8am to 4pm</li>
+            <li>school location and directions - (Abraham Moss Community School)[<a href="">https://goo.gl/maps/p3AgGMyAwgy</a>] </li>
+            <li>parking and access - in teaching car park accessed via south gate on Mosley Street</li>
+            <li>report to - John Lewis in main school reception</li>
+            <li>dress code - formal </li>
+            <li>placement fee - £10</li>
+          </ul>
+          <p>The school will be contacting you in due course with further details about your placement.</p>
+          <p>In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.</p>
+
+          <div class="divider"></div>
+
+
+
+
+      </div>
+  </div>
+-->
+
+{% endblock %}
