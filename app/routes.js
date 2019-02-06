@@ -745,7 +745,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 		"Biology",
 		"Business studies",
 		"Chemistry",
-		"Citizen",
+		"Citizenship",
 		"Classics",
 		"Computing",
 		"Dance",
