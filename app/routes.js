@@ -662,18 +662,18 @@ var schools = [
         Id: 1,
         Name: 'Ellen Wilkinson High School',
         Address: 'Long Millgate, Manchester',
-        Phase: 'Primary, Secondary a 16 to 18',
+        Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary School',
         Fees: '£50',
         Subjects: 'Maths, English, Art, Physics, Geography',
         Distance: 1,
-        ShowLong: false
+        ShowLong: true
     },
     {
         Id: 2,
         Name: 'City College Manchester',
         Address: 'Long Millgate, Manchester',
-        Phase: 'Primary, Secondary a 16 to 18',
+        Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'College',
         Fees: '£0',
         Subjects: 'Maths, English, Art, Physics, Music',
@@ -684,12 +684,12 @@ var schools = [
         Id: 3,
         Name: 'New Islington Free School',
         Address: '16 Blossom Street, Manchester',
-        Phase: 'Primary, Secondary a 16 to 18',
+        Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary, Academy',
         Fees: '£5',
         Subjects: 'Maths, Art, Physics, Geography',
         Distance: 2.5,
-        ShowLong: false
+        ShowLong: true
     },
     {
         Id: 4,
@@ -700,7 +700,7 @@ var schools = [
         Fees: '£25',
         Subjects: 'Maths, English, Art',
         Distance: 5,
-        ShowLong: false
+        ShowLong: true
     },
     {
         Id: 5,
@@ -711,7 +711,7 @@ var schools = [
         Fees: '£60',
         Subjects: 'Maths, English, Geography',
         Distance: 10,
-        ShowLong: false
+        ShowLong: true
     }];
 
 router.post('/candidate-search/search-result-post', function (req, res) {
@@ -735,7 +735,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 
     var radius = 0;
     var searchCriteria = '(NONE)';
-    var searchLocation = 'XXX';
+    var searchLocation = 'Manchester';
 
 	req.session.data['searchCriteria'] = searchCriteria;
 	req.session.data['searchRadius'] = radius;
