@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            You've successfully set up your administration contact
+          </h1>
+          <div class="govuk-panel__body">
+
+          </div>
+        </div>
+<br>
+
+  </p>
+
+<h3 class="govuk-heading-m">View and update your school experience details</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="/booking/profile?id=3">School experience profile</a></li>
+
+           <li><a class="govuk-link" href="/schools/school-dashboard">Requests and bookings</a></li>
+
+           <li><a class="govuk-link" href="/schools/signout">Sign out</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
