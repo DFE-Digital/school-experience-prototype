@@ -157,15 +157,59 @@
 						<li>
 							<div class="school-result">
 
-								<a href="/schools/{{item.Id}}">{{item.Name}}</a>
-								<span class="govuk-hint">{{'1 mile' if item.Distance == 1 else item.Distance + ' miles'}} away</span>
-								<ul>
-									<li><b>Address:</b> {{item.Address}}</li>
-									<li><b>Education phases:</b> {{item.Phase}}</li>
-									<li><b>Fee:</b>  {{item.Fees}}</li>
-									<li><b>School type:</b> {{item.SchoolType}}</li>
-									<li><b>Subjects:</b>  {{item.Subjects}}</li>
-								</ul>
+								<h3 class="govuk-heading-m">
+									{{item.Name}}
+									<span class="govuk-caption-m">{{'1 mile' if item.Distance == 1 else item.Distance + ' miles'}} away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											{{item.Address}}
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											{{item.Phase}}
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Fee
+										</dt>
+										<dd class="govuk-summary-list__value">
+											{{item.Fees}}
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											School type
+										</dt>
+										<dd class="govuk-summary-list__value">
+											{{item.SchoolType}}
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											{{item.Subjects}}
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/schools/{{item.Id}}" class="govuk-button" style="font-weight:normal">View School Details</a>
 
 							</div>
 						</li>
