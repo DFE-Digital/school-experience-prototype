@@ -40,30 +40,43 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 <form action="/booking/" method="post" class="form">
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Confirm rejection details </h1>
+            <h1 class="govuk-heading-l">Confirm school experience rejection </h1>
 
             <p>
-              Enter and confirm the reasons for rejecting the school experience request by {{ data['full-name'] }}.
-
+              You’ve confirmed the reasons for rejecting the request for school experience at your school by {{ data['full-name'] }}.
             </p>
-
-            <h2 class="govuk-heading-s">Reasons for rejecting request</h2>
+						<p>
+The following contains the wording of the email which will be sent to them to let them know their request has been turned down.
+						</p>
+						<p>
+							You can change any of the details ahead of sending this message by simply editing or adding in any extra details in the following text box.
+						</p>
+            <h2 class="govuk-heading-s">Read and update rejection email </h2>
             <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                    Provide a reason.
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
+                <textarea class="govuk-textarea" id="more-detail1" name="more-detail" rows="8" aria-describedby="more-detail-hint">
+
+The request you made for school experience at [INSERT SCHOOL NAME] has been turned down for the following reasons:
+
+[INSERT REJECTION REASON FROM SCHOOL HERE]
+If you have any questions about this decision contact [INSERT SCHOOL EXPERIENCE ADMIN CONTACT DETAILS].
+
+You can still apply to other schools for placements. If you need support call the Teaching Line on [INSERT TELEPHONE NUMBER].
 
                 </textarea>
           </div>
 
 
           <!-- End Form -->
-          <a href="/booking/noti-reject2" class="govuk-button">Continue</a>
+					<h2 class="govuk-heading-s">Send rejection email to {{ data['full-name'] }} </h2>
+          <a href="noti-sent?id=5" class="govuk-button">Send request rejection</a>
 
 
           <br>
+          <a class="govuk-link" href="/schools/school-dashboard">Requests and bookings</a>
+					<br>
+					<br>
           <a class="govuk-link" href="{{data['candidate-profile-page']}}&id=5">Back to request</a>
+          <br>
       </form>
 
 
