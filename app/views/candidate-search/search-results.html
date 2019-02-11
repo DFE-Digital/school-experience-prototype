@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<div class="govuk-grid-row" id="search-results-heading">
       <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-l">School experience placements near {{ data['searchLocation'] }}</h1>
     </div>
@@ -126,6 +126,7 @@
 		<div class="results-number">
 			Showing 1 - 5 of 20 schools and colleges
 		</div>
+		
 		<div class="pagination-container">
 			<ul class="pagin">
 				<li><a href="">1</a></li>
@@ -139,7 +140,7 @@
 		<div class="govuk-grid-row">
 
 			<div class="govuk-grid-column-full">
-				<div class="divider"></div>
+
 				<div class="sortby">
 					<div class="sort-text">Sorted by</div>
 					<div class="drop">
@@ -209,11 +210,31 @@
 									</div>
 								</dl>
 
-								<a href="/schools/{{item.Id}}" class="govuk-button" style="font-weight:normal">View School Details</a>
+								<a href="/schools/{{item.Id}}" class="govuk-button" style="font-weight:normal">View school details</a>
 
 							</div>
 						</li>
 						{% endfor %}
+					</ul>
+				</div>
+
+
+
+				<div class="pagination-container">
+					<a href="#search-results-heading" class="govuk-link govuk-link--no-visited-state back-to-top">
+						<svg class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+				      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+				    </svg>
+
+						Back to top
+					</a>
+
+					<ul class="pagin">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">Next</a></li>
 					</ul>
 				</div>
 			</div>

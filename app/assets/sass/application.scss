@@ -1017,11 +1017,17 @@ opacity: 1;
       position: relative;
       font-family: "nta", Arial, sans-serif;
     }
+
+    a.back-to-top {
+      float: left;
+    }
+
     .pagin{
       list-style-type: none;
       list-style-position: inside;
       margin: 0;
       padding: 0;
+      float: right;
 
       li{
         display: inline-block;
@@ -1103,8 +1109,8 @@ opacity: 1;
 
 .sortby{
       @include clearfix();
-      border-bottom: 1px solid #bfc1c3;
-      padding-bottom: 15px;
+      margin-top: 15px;
+      padding-bottom: 0;
       margin-bottom: 15px;
       .sort-text{
         display:inline-block;
@@ -1172,10 +1178,7 @@ opacity: 1;
 
 }
 .pagination-container{
-  float: left;
-  @include clearfix();
-  width: 40%;
-    text-align: right;
+  text-align: right;
 }
 
 
