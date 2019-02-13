@@ -1142,10 +1142,14 @@ router.post('/schools/subjects', function (req, res) {
     else if (schoolType === 'secondary') {
         res.redirect('/schools/subjects-secondary')
     }
-    //Option 2
+    //Option 3
     else if (schoolType === 'both') {
         res.redirect('/schools/subjects-primary-and-secondary')
     }
+    //Option 4
+    else if (schoolType === '16 to 18') {
+        res.redirect('/schools/subjects-secondary')
+    }		
     //end
 })
 
