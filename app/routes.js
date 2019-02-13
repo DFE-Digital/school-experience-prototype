@@ -547,16 +547,16 @@ router.post('/booking-v1/notify', function (req, res) {
 });
 
 
-router.post('/schools-pre/add-school', function (req, res) {
+router.post('/schools/add-school', function (req, res) {
     console.log("post");
     req.session.data['school-request'] = 'A';
-    res.render('schools-pre/add-school-template');
+    res.render('schools/add-school-template');
 });
 
-router.get('/schools-pre/signout', function (req, res) {
+router.get('/schools/signout', function (req, res) {
     req.session.data['school-request'] = null;
     console.log("signout");
-    res.render('schools-pre/signout');
+    res.render('schools/signout');
 });
 
 router.get('/booking-v1/view-bookings', function (req, res) {
@@ -1125,23 +1125,26 @@ router.post('/booking/noti-contact', function (req, res) {
 
 
 // School type
-router.post('/schools-pre/subjects', function (req, res) {
+router.post('/schools/subjects', function (req, res) {
 
-    let schooltype = req.session.data['schooltype']
+    let schoolType = req.session.data['schooltype']
 
-    console.log(req.session.data['schooltype'])
+    console.log("*****************************")
+    console.log(schoolType)
+    console.log("*****************************")
+
 
     //Option 1
-    if (schooltype === 'primary') {
-        res.redirect('/schools-pre/other-details-continued')
+    if (schoolType === 'primary') {
+        res.redirect('/schools/primary-key-stages')
     }
     //Option 2
-    else if (schooltype === 'secondary') {
-        res.redirect('/schools-pre/subjects')
+    else if (schoolType === 'secondary') {
+        res.redirect('/schools/subjects-secondary')
     }
     //Option 2
-    else if (schooltype === 'both') {
-        res.redirect('/schools-pre/subjects')
+    else if (schoolType === 'both') {
+        res.redirect('/schools/subjects-primary-and-secondary')
     }
     //end
 })
