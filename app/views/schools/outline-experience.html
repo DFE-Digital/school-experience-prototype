@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Outline experience and teacher training details</h1>
+      <p>
+        These details will help candidates select your school experience.
+      </p>
+
+
+  <form action="/schools/school-experience-contact" method="post" class="form">
+
+
+
+           <div class="govuk-form-group">
+             <h2 class="govuk-heading-m">
+                        What kind of school experience do you offer candidates?
+             </h2>
+             <label class="govuk-label " for="more-detail">
+             <p>Tell us about what candidates can expect to do while they’re at your school. For example, explain whether candidates will observe lessons or get the chance to interact with pupils and classroom activities.</p>
+             </label>
+             <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
+              </div>
+    <div class="govuk-grid-column-two-thirds">
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you run your own teacher training or have any links to teacher training organisations and providers?
+            </h1>
+          </legend>
+					<p>
+						For example, are you a School Direct lead or partner school or do you offer mainstream teacher training placements.
+					</p>
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-6" name="dress" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-6">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-6">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-6">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Provide details.
+                </label>
+                <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-7" name="dress" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-7">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+
+
+
+
+{% endblock %}

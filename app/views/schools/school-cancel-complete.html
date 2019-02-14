@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your cancellation has been sent
+          </h1>
+          <div class="govuk-panel__body">
+
+          </div>
+        </div>
+<br>
+
+  </p>
+
+<h3 class="govuk-heading-m">What happens next</h3>
+
+<p>
+Your cancellation will be forwarded to {{ data['full-name'] }}.</p>
+<p>
+We'll also send you an email to confirm you’ve sent these details.</p>
+
+<h3 class="govuk-heading-m">View more requests and bookings</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+
+
+           <li><a class="govuk-link" href="/schools/school-dashboard">Requests and bookings</a></li>
+
+           <li><a class="govuk-link" href="/schools/signout">Sign out</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
