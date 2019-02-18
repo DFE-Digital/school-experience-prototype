@@ -14,9 +14,8 @@
 
 <div class="govuk-grid-row">
 
-	<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-full">
 
-		<div class="govuk-form-group">
 			<fieldset class="govuk-fieldset">
 
 
@@ -28,32 +27,50 @@
 				<p class="govuk-hint">Search by location, postcode, school type and subject or any combination of these</p>
 
 				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
-
-				<form action="/candidate-search/search-results-post" method="post">
-
-					<div class="govuk-form-group">
-
-						<div class="stackable">
-							<input class="govuk-input govuk-!-width-full" id="search-by-location" name="search" type="text">
-
-							<select id="search-location-radius" class="govuk-select" name="locationRadius">
-								<option selected>Select search distance</option>
-								<option value="1">1 mile</option>
-								<option value="3">3 miles</option>
-								<option value="5">5 miles</option>
-								<option value="10">10 miles</option>
-								<option value="15">15 miles</option>
-								<option value="20">20 miles</option>
-								<option value="25">25 miles</option>
-							</select>
-
-							<button class="govuk-button inline-button">Find</button>
+				<div class="govuk-grid-row school-search-form">
+					<form action="/candidate-search/search-results-post" method="post">
+						<div class="school-search-form__search-field">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="search-by-name">Find what?</label>
+								<input class="govuk-input govuk-!-width-full" id="search-by-name" name="search" type="text" placeholder="e.g. maths, special school">
+							</div>
 						</div>
-					</div>
-
-				</form>
+							
+            <div class="school-search-form__location-pair">
+                <div class="school-search-form__location-field">
+									<div class="govuk-form-group">
+										<label class="govuk-label" for="search-by-location">Where?</label>
+										<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="e.g. Manchester, M1 3BD">
+									</div>
+								</div>
+								
+								<div class="school-search-form__distance-field">
+									<div class="govuk-form-group">
+										<label class="govuk-label" for="search-location-radius">Distance</label>
+										<select id="search-location-radius" class="govuk-select" name="locationRadius">
+											<option selected>Select search distance</option>
+											<option value="1">1 mile</option>
+											<option value="3">3 miles</option>
+											<option value="5">5 miles</option>
+											<option value="10">10 miles</option>
+											<option value="15">15 miles</option>
+											<option value="20">20 miles</option>
+											<option value="25">25 miles</option>
+										</select>
+									</div>
+								</div>
+							</div>
+								
+              <div class="school-search-form__submit">
+                <div class="govuk-form-group">
+									<button class="govuk-button inline-button">Find</button>
+								</div>
+							</div>										
+						</div>
+					</form>
+				</div>
 			</fieldset>
-		</div>
+
 	</div>
 
 </div>
