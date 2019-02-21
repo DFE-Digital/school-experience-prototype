@@ -20,15 +20,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Request school experience placement</h1>
-			
-		
+
+
       <p>Tell us a few details so we can forward your requirements to the school.</p><br />
 
       <form action="/register/account-check" method="post" class="form">
 
-
-
-                 ************ Give us a date range when you will be available for a school experience *************
                   <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -36,108 +33,15 @@
                             When are you available for placements?
                           </h1>
                         </legend>
-                        <p>This information will be used by the school to find and offer you the best dates it has available.</p>
+                        <p>Tell us about your availability. For example, when you'll be available for placements or any particular days or periods when you won't.</p>
+
+                        <p>The school will contact you to arrange the exact date of your placement and will use this information to offer you the best dates it has available.</p>
 
                         <p>Depending on availability and time of year, schools may not always be able to offer you the exact dates you’re looking for.</p>
-                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="dates1" name="when" type="radio" value="email" data-aria-controls="conditional-dates1">
-                            <label class="govuk-label govuk-radios__label" for="dates1">
-                              Provide a date range
-                            </label>
-                          </div>
-                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-dates1">
 
 
 
-
-
-                          <div class="govuk-form-group">
-
-
-                            <label class="govuk-label " for="more-detail">
-                              Start date
-                            </label>
-                              <div class="govuk-date-input" id="dob">
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-day">
-                                      Day
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-month">
-                                      Month
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-year">
-                                      Year
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                              </div>
-
-                          </div>
-
-
-
-
-                          <div class="govuk-form-group">
-
-
-                            <label class="govuk-label " for="more-detail">
-                              End date
-                            </label>
-                              <div class="govuk-date-input" id="dob">
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-day">
-                                      Day
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-month">
-                                      Month
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="dob-year">
-                                      Year
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
-                                  </div>
-                                </div>
-                              </div>
-
-                          </div>
-
-
-
-                          </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="dates2" name="when" type="radio" value="phone" data-aria-controls="conditional-dates2">
-                            <label class="govuk-label govuk-radios__label" for="dates2">
-                              Any time
-                            </label>
-                          </div>
-
-
-
-
+                      <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
 
                       </fieldset>
                     </div>
