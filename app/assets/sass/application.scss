@@ -1409,3 +1409,21 @@ div.govuk-se-dashboard {
 button.govuk-se-wide-button {
 	padding: 0rem 2rem;
 }
+
+
+.govuk-se-masthead {
+  @include govuk-font(16);
+  @include govuk-responsive-padding(6);
+  background-color: govuk-colour("blue");
+
+  * {
+    color: govuk-colour("white");
+
+    a.govuk-link {
+      color: govuk-colour("white");
+    }
+  }
+
+}
+
+
