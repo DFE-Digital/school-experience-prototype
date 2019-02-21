@@ -19,29 +19,25 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-l">Select school experience availability and enter dates</h1>
 
-      <form action="/schools/outline-experience" method="post" class="form">
+<h1 class="govuk-heading-l">School experience dates</h1>
+	<form action="/schools/outline-experience" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds" id="date-list">
+<p>You need to contact individual candidates to discuss, arrange and offer them a placement date after you’ve received their school experience request.
+You should try and respond to requests within 10 working days.</p>
 
-
-                    </thead>
-                    <tbody class="list govuk-table__body">
-
-                    </tbody>
-                </table>
-
-
-            </div>
-        </div>
+<p>Once you’ve accepted a request you’ll be asked to confirm the candidate’s placement dates as part of confirming their school experience booking.
+</p>
 
 
 
 
+
+
+
+<!-- 
 
 
         <h2 class="govuk-heading-m">Add date ranges</h2>
@@ -248,15 +244,18 @@
 <p>
   &nbsp;
 </p>
+-->
 
-
+		</div>
+	</div>
+<br>
 <button type="submit" class="govuk-button">
     Continue
 </button>
 
-
+<!-- 
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script src="/public/javascripts/availability-list.js"></script>
-
+-->
 {% endblock %}
