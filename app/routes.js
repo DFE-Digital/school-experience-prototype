@@ -1126,7 +1126,7 @@ router.post('/booking/noti-contact', function (req, res) {
 
 // School type
 router.post('/schools/subjects', function (req, res) {
-
+    console.dir(req.session.data)
     let schoolType = req.session.data['schooltype']
 
     console.log("*****************************")
