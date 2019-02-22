@@ -19,7 +19,9 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-l">Do you charge fees to cover any of the following?</h1>
+    <form action="/schools/other-details-admin-save" method="post" class="form">
 
 				<p>
               Schools can charge fees to cover the associated costs of running school experience.
@@ -27,30 +29,30 @@
 						<p>
 							This includes fees to cover administration costs, background and security ‘DBS check’ charges or any other school experience-related costs schools might incur.
 						</p>
-    
 
 
 
 	<div class="govuk-form-group">
+
 	  <fieldset class="govuk-fieldset" aria-describedby="">
 
 
 	    <div class="govuk-checkboxes">
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="" name="" type="checkbox" value="">
-	        <label class="govuk-label govuk-checkboxes__label" for="">
+	        <input class="govuk-checkboxes__input" id="checkbox_admin_costs" name="checkbox_admin_costs" type="checkbox" value="1" data-local-store>
+	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
 	          Administration costs
 	        </label>
 	      </div>
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="" name="" type="checkbox" value="">
-	        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+	        <input class="govuk-checkboxes__input" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="checkbox" value="1" data-local-store>
+	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_dbs_costs">
 	          DBS check costs
 	        </label>
 	      </div>
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="" name="" type="checkbox" value="">
-	        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+	        <input class="govuk-checkboxes__input" id="checkbox_other_costs" name="checkbox_other_costs" type="checkbox" value="1" data-local-store>
+	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_other_costs">
 	          Other costs
 	        </label>
 	      </div>
@@ -60,12 +62,12 @@
 
 <br>
 <br>
-      <button type="submit" class="govuk-button">
+				<button type="submit" class="govuk-button">
         Continue
-      </button>
+				</button>
 
     </div>
+		</form>
 </div>
-
 
 {% endblock %}
