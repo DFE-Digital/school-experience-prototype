@@ -664,7 +664,7 @@ var schools = [
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary School',
-        Fees: '£50',
+        Fees: '£25 per day for placement / £50 for DBS check',
         Subjects: 'Maths, English, Art, Physics, Geography',
         Distance: 1,
         ShowLong: true
@@ -686,7 +686,7 @@ var schools = [
         Address: '16 Blossom Street, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary, Academy',
-        Fees: '£5',
+        Fees: '£10 per day for placement / £50 for DBS check ',
         Subjects: 'Maths, Art, Physics, Geography',
         Distance: 2.5,
         ShowLong: true
@@ -697,7 +697,7 @@ var schools = [
         Address: '142 Dantzic Street, Manchester',
         Phase: 'Primary',
         SchoolType: 'Primary School',
-        Fees: '£25',
+        Fees: '£20 per day for placement / £75 for DBS check ',
         Subjects: 'Maths, English, Art',
         Distance: 5,
         ShowLong: true
@@ -708,7 +708,7 @@ var schools = [
         Address: '10 Hugh Oldham Way, Manchester',
         Phase: 'Nursery School',
         SchoolType: 'Nursery School',
-        Fees: '£60',
+        Fees: '£0 per day for placement / £50 for DBS check ',
         Subjects: 'Maths, English, Geography',
         Distance: 10,
         ShowLong: true
@@ -1126,14 +1126,10 @@ router.post('/booking/noti-contact', function (req, res) {
 
 // School type
 router.post('/schools/subjects', function (req, res) {
-    console.dir(req.session.data)
-    let schoolType = req.session.data['schooltype']
-
-    console.log("*****************************")
-    console.log(schoolType)
-    console.log("*****************************")
-
-
+    let schoolTypes = req.session.data['schooltype']
+	
+	  let schoolType = schoolTypes.filter(option => option '')
+	
     //Option 1
     if (schoolType === 'primary') {
         res.redirect('/schools/primary-key-stages')
