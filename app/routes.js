@@ -686,7 +686,7 @@ var schools = [
         Address: '16 Blossom Street, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary, Academy',
-        Fees: '£10 per day for placement / £50 for DBS check ',
+        Fees: '£10 per day for placement / £50 for DBS check',
         Subjects: 'Maths, Art, Physics, Geography',
         Distance: 2.5,
         ShowLong: true
@@ -697,7 +697,7 @@ var schools = [
         Address: '142 Dantzic Street, Manchester',
         Phase: 'Primary',
         SchoolType: 'Primary School',
-        Fees: '£20 per day for placement / £75 for DBS check ',
+        Fees: '£20 per day for placement / £75 for DBS check',
         Subjects: 'Maths, English, Art',
         Distance: 5,
         ShowLong: true
@@ -708,7 +708,7 @@ var schools = [
         Address: '10 Hugh Oldham Way, Manchester',
         Phase: 'Nursery School',
         SchoolType: 'Nursery School',
-        Fees: '£0 per day for placement / £50 for DBS check ',
+        Fees: '£0 per day for placement / £50 for DBS check',
         Subjects: 'Maths, English, Geography',
         Distance: 10,
         ShowLong: true
