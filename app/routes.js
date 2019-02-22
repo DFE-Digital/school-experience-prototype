@@ -1149,11 +1149,44 @@ router.post('/schools/subjects', function (req, res) {
     //Option 4
     else if (schoolType === '16 to 18') {
         res.redirect('/schools/subjects-secondary')
-    }		
+    }
     //end
 })
 
+router.post('/schools/other-details-admin-save', function(req, res) {
+  let admin_costs = req.body['checkbox_admin_costs'] ;
+  let dbs_costs = req.body['checkbox_dbs_costs'] ;
+  let other_costs = req.body['checkbox_other_costs'] ;
 
+  req.session.data['checkbox_admin_costs'] = (admin_costs == '1') ;
+  req.session.data['checkbox_dbs_costs'] = (dbs_costs == '1') ;
+  req.session.data['checkbox_other_costs'] = (other_costs == '1') ;
 
+  res.redirect('/schools/other-details-admin') ;
+}) ;
+
+router.get('/schools/other-details-admin', function(req, res) {
+  if (!req.session.data['checkbox_admin_costs']) {
+    res.redirect('/schools/other-details-dbs') ;
+  } else {
+    res.render('schools/other-details-admin') ;
+  }
+}) ;
+
+router.get('/schools/other-details-dbs', function(req, res) {
+  if (!req.session.data['checkbox_dbs_costs']) {
+    res.redirect('/schools/other-details-other') ;
+  } else {
+    res.render('schools/other-details-dbs') ;
+  }
+}) ;
+
+router.get('/schools/other-details-other', function(req, res) {
+  if (!req.session.data['checkbox_other_costs']) {
+    res.redirect('/schools/school-type') ;
+  } else {
+    res.render('schools/other-details-other') ;
+  }
+}) ;
 
 module.exports = router
