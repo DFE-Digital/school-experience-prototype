@@ -28,13 +28,66 @@
   <form action="/schools/availability" method="post" class="form">
 
 
-
-
-
-
-
-
-
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you have a dress code for candidates?
+            </h1>
+          </legend>
+    <span id="citizenship-conditional-hint" class="govuk-hint">
+      Select all that apply or leave blank if no dress code
+    </span>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject1" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject1">
+                      Business dress
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject10" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject10">
+                      Smart casual
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject2" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject2">
+                      Cover up tattoos
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="subject7" name="sub" type="checkbox" value="">
+                      <label class="govuk-label govuk-checkboxes__label" for="subject7">
+                        Remove piercings
+                      </label>
+                    </div>
+									</div>
+              </fieldset>
+<br>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Other
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            For example no jeans, denim, short skirts, shorts
+          </label>
+          <input class="govuk-input govuk-!-width-two-third" id="other dress" name="dress" type="" spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
 
       <div class="govuk-form-group">
@@ -69,12 +122,6 @@
 
           </div>
         </fieldset>
-      </div>
-
-
-
-
-
 
 
 
@@ -119,9 +166,7 @@
                       </label>
                       <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
                     </div>
-
                   </div>
-
                 </div>
               </fieldset>
             </div>
