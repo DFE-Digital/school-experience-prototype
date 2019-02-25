@@ -1187,4 +1187,14 @@ router.get('/schools/other-details-other', function(req, res) {
   }
 }) ;
 
+router.get('/booking/profile', function(req, res) {
+  let id = req.query['id'] || '1' ;
+
+  let school = schools.find(function (item) {
+      return (item.Id.toString() === id);
+  });
+
+  res.render('booking/profile', {school: school}) ;
+})
+
 module.exports = router
