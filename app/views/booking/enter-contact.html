@@ -20,32 +20,23 @@
     <div class="govuk-grid-column-two-thirds">
           <p class="govuk-body">Your details will be used by schools to contact you about placements once you’ve sent them a school experience request.</p>
 
-					 
-				 <div class="govuk-form-group">
-				   <label class="govuk-label" for="name">
-				     Full name
-				   </label>
-				   <input class="govuk-input" id="name" name="name" type="text">
-				 </div>
-					
-					<div class="govuk-form-group">
-					  <label class="govuk-label" for="name">
-					    UK telephone number
-					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text">
-					</div>
-					
-					<div class="govuk-form-group">
-					  <label class="govuk-label" for="name">
-					    Email address
-					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text">
-					</div>
 
+					<h2 class="govuk-heading-m">Address </h2>
 
-         <h2 class="govuk-heading-m">Address </h2>
 								
 <fieldset class="govuk-fieldset">
+	
+	  <div class="govuk-form-group">
+	    <label class="govuk-label" for="address-postcode">
+	      Postcode
+	    </label>
+	    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+	  </div>
+
+	</fieldset>
+	
+<a href="" class="govuk-button">Find address</a>
+<!--
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-1">
       Building and street
@@ -74,15 +65,48 @@
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
   </div>
+-->
+	
+	
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Don't know the postcode?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You can <a href="http://www.royalmail.com/find-a-postcode" target="_blank">check the postcode at Royal Mail</a>
   </div>
+</details>
+<br>
+					<h2 class="govuk-heading-m">Personal details </h2>
+					 
+				 <div class="govuk-form-group">
+				   <label class="govuk-label" for="name">
+				     Full name
+				   </label>
+				   <input class="govuk-input" id="name" name="name" type="text">
+				 </div>
+					
+					<div class="govuk-form-group">
+					  <label class="govuk-label" for="name">
+					    UK telephone number
+					  </label>
+					  <input class="govuk-input" id="name" name="name" type="text">
+					</div>
+					
+					<div class="govuk-form-group">
+					  <label class="govuk-label" for="name">
+					    Email address
+					  </label>
+					  <input class="govuk-input" id="name" name="name" type="text">
+					</div>
 
-</fieldset>
+
+
+
 
 
 <a href="/register/account-info" class="govuk-button">Continue</a>
