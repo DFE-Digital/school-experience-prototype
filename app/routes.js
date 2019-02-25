@@ -1126,8 +1126,8 @@ router.post('/booking/noti-contact', function (req, res) {
 
 // School type
 router.post('/schools/subjects', function (req, res) {
-    let schoolTypes = req.session.data['schooltype']
-	
+    let schoolType = req.session.data['schooltype'] ;
+
     //Option 1
     if (schoolType === 'primary') {
         res.redirect('/schools/primary-key-stages')
