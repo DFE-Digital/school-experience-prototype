@@ -28,53 +28,72 @@
   <form action="/schools/availability" method="post" class="form">
 
 
-
-
-
-
-
-
-
-
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
               Do you have a dress code for candidates?
             </h1>
           </legend>
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-6" name="dress" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-6">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-6">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-6">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  Provide details.
-                </label>
-                <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
-              </div>
+    <p>
+      Select all that apply or leave blank if you have no dress code.
+    </p>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject1" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject1">
+                      Business dress
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject10" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject10">
+                     Cover up tattoos
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="subject2" name="sub" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="subject2">
+                      Remove piercings
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="subject7" name="sub" type="checkbox" value="">
+                      <label class="govuk-label govuk-checkboxes__label" for="subject7">
+                       Smart casual
+                      </label>
+                    </div>
+									</div>
+              </fieldset>
+<br>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Other
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="">
+            For example no denim, jeans, shorts, short skirts, trainers
+          </label>
+          <input class="govuk-input govuk-!-width-two-third" id="other dress" name="dress" type="" spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-7" name="dress" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-7">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
-                No
-              </label>
-            </div>
+
+
 
           </div>
         </fieldset>
-      </div>
-
-
-
-
-
 
 
 
@@ -119,9 +138,7 @@
                       </label>
                       <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
                     </div>
-
                   </div>
-
                 </div>
               </fieldset>
             </div>
@@ -130,11 +147,11 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   <h1 class="govuk-fieldset__heading">
-                    Do you provide facilities for candidates with disabilities or access needs?
+                    Do you provide facilities or support for candidates with disabilities or access needs?
                   </h1>
                 </legend>
                 <p class="govuk-hint">
-                  For example, disabled parking spaces and support for autistic spectrum disorders, dyslexia and the hearing impaired
+                  For example, disabled parking spaces and support for autistic spectrum disorders, dyslexia and hearing impairments
                 </p>
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                   <div class="govuk-radios__item">
@@ -159,13 +176,9 @@
                       No
                     </label>
                   </div>
-
                     </div>
-
                   </div>
-
                 </div>
-
             </div>
 
 
@@ -201,11 +214,11 @@
             </h1>
             </legend>
           <p class="govuk-hint">
-            Could candidates start later or finish earlier depending on their individual needs. For example, around child care or any other responsibilities
+            Can candidates start later or finish earlier depending on their individual needs. For example, around child care or any other responsibilities
           </p>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-10" name="park" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-10">
+              <input class="govuk-radios__input" id="how-contacted-conditional-10" name="" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-10">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-10">
                 Yes
               </label>
