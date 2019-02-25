@@ -1144,6 +1144,10 @@ router.post('/schools/subjects', function (req, res) {
     else if (schoolType === '16 to 18') {
         res.redirect('/schools/subjects-secondary')
     }
+
+    else {
+      res.redirect('/schools/school-type');
+    }
     //end
 })
 
