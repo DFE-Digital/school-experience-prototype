@@ -742,6 +742,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 	req.session.data['searchLocation'] = req.session.data.search;
 
 	let subjects = [
+		"Art and design",
 		"Biology",
 		"Business studies",
 		"Chemistry",
@@ -750,24 +751,25 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 		"Computing",
 		"Dance",
 		"Design and technology",
+		"Drama",
 		"Economics",
 		"English",
 		"French",
 		"Geography",
-		"General experience",
 		"German",
 		"Health and social care",
 		"History",
-		"Mathematics",
-		"Medical studies",
+		"Languages (other)",
+		"Maths",
+		"Media studies",
 		"Music",
 		"Physical education (PE)",
 		"Physics",
-		"Physics with Maths",
+		"Physics with maths",
+		"Primary",
 		"Psychology",
 		"Religious education (RE)",
 		"Social sciences",
-		"Science",
 		"Spanish",
 		"Vocational health"
 	];
@@ -1186,5 +1188,15 @@ router.get('/schools/other-details-other', function(req, res) {
     res.render('schools/other-details-other') ;
   }
 }) ;
+
+router.get('/booking/profile', function(req, res) {
+  let id = req.query['id'] || '1' ;
+
+  let school = schools.find(function (item) {
+      return (item.Id.toString() === id);
+  });
+
+  res.render('booking/profile', {school: school}) ;
+})
 
 module.exports = router
