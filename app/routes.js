@@ -742,6 +742,7 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 	req.session.data['searchLocation'] = req.session.data.search;
 
 	let subjects = [
+		"Art and design",
 		"Biology",
 		"Business studies",
 		"Chemistry",
@@ -750,24 +751,25 @@ router.post('/candidate-search/search-results-post', function (req, res) {
 		"Computing",
 		"Dance",
 		"Design and technology",
+		"Drama",
 		"Economics",
 		"English",
 		"French",
 		"Geography",
-		"General experience",
 		"German",
 		"Health and social care",
 		"History",
-		"Mathematics",
-		"Medical studies",
+		"Languages (other)",
+		"Maths",
+		"Media studies",
 		"Music",
 		"Physical education (PE)",
 		"Physics",
-		"Physics with Maths",
+		"Physics with maths",
+		"Primary",
 		"Psychology",
 		"Religious education (RE)",
 		"Social sciences",
-		"Science",
 		"Spanish",
 		"Vocational health"
 	];
