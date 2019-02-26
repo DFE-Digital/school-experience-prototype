@@ -682,11 +682,11 @@ var schools = [
     },
     {
         Id: 3,
-        Name: 'New Islington Free School',
+        Name: 'New Islington High School',
         Address: '16 Blossom Street, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary, Academy',
-        Fees: '£10 per day for placement / £50 for DBS check',
+        Fees: '£10 daily admin fee / £50 one-off DBS fee',
         Subjects: 'Maths, Art, Physics, Geography',
         Distance: 2.5,
         ShowLong: true
