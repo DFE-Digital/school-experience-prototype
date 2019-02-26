@@ -815,9 +815,7 @@ router.get('^/schools/:schoolId([0-9]*)', function(req, res) {
         //res.render('candidate-search/school-result.html');
         res.redirect('/candidate-search/school-result.html');
     }
-
 });
-
 
 // Main journey sort
 router.post('/version1/get-into-teaching', function (req, res) {
