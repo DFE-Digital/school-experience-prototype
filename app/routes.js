@@ -665,7 +665,6 @@ var schools = [
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary School',
         Fees: '£10 daily admin fee and £50 one-off DBS check fee',
-        DBS required: 'Yes - Always',
         Subjects: 'Maths, English, Art, Physics, Geography',
         Distance: 1,
         ShowLong: true
