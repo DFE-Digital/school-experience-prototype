@@ -1075,6 +1075,19 @@ opacity: 1;
 
       }
       .school-result{
+        padding: 2rem 0rem;
+
+        dl.govuk-summary-list {
+          margin-bottom: 1rem;
+
+          .govuk-summary-list__row:nth-last-child(1){
+            dt.govuk-summary-list__key,
+            dd.govuk-summary-list__value {
+              border-bottom: none;
+            }
+          }
+        }
+
         margin-top: 15px;
         button{
           float: right;
