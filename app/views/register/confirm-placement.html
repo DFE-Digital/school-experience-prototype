@@ -36,19 +36,13 @@
 
       <p>If you can’t find or haven’t received the email use the following link to resend it:</p>
 
-<ul class="govuk-list govuk-list--bullet">
-            <li><a class="govuk-link" href="">resend link</a></li>
+			<a id="resend-btn" class="govuk-button" href="/fake-emails/email-magic-link" target="_blank">Resend link</a>
 
-</ul>
-
-            <div class="govuk-form-group">
-			<form method="get" action="/register/created-sent">
-                <button type="submit" class="govuk-button">
-                    Continue
-                </button>
-            </div>
-
-
+			<script>
+				window.setTimeout(function() {
+					document.getElementById('resend-btn').click() ;
+				}, 2000) ;
+			</script>
 
     </div>
   </div>

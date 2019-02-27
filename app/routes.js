@@ -1197,4 +1197,8 @@ router.get('/booking/profile', function(req, res) {
   res.render('booking/profile', {school: school}) ;
 })
 
+router.get('/fake-emails/:templateName', function(req, res) {
+  res.render('fake-emails/' + req.params.templateName, {domain: req.hostname})
+}) ;
+
 module.exports = router
