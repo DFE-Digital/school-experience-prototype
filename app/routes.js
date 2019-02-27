@@ -664,7 +664,8 @@ var schools = [
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
         SchoolType: 'Secondary School',
-        Fees: '£25 per day for placement / £50 for DBS check',
+        Fees: '£10 daily admin fee and £50 one-off DBS check fee',
+        DBS required: 'Yes - Always',
         Subjects: 'Maths, English, Art, Physics, Geography',
         Distance: 1,
         ShowLong: true
