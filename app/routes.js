@@ -682,12 +682,12 @@ var schools = [
     },
     {
         Id: 3,
-        Name: 'New Islington High School',
-        Address: '16 Blossom Street, Manchester',
-        Phase: 'Primary, Secondary and 16 to 18',
-        SchoolType: 'Secondary, Academy',
-        Fees: '£10 daily admin fee / £50 one-off DBS fee',
-        Subjects: 'Maths, Art, Physics, Geography',
+        Name: 'Chiserly Academy',
+        Address: 'Cheshire Road, Manchester M42 4TW.',
+        Phase: 'Both primary and secondary',
+        SchoolType: 'Primary, Secondary, Academy',
+        Fees: '£10 daily admin fee and £50 one-off DBS fee',
+        Subjects: 'Key stage 1, Maths, Art, Physics, Geography',
         Distance: 2.5,
         ShowLong: true
     },
