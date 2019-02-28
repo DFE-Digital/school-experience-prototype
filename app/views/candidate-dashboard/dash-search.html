@@ -15,7 +15,7 @@
 
 <div class="govuk-grid-row">
 
-	<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-full">
 
 		<div class="govuk-form-group">
 			<fieldset class="govuk-fieldset">
@@ -29,36 +29,252 @@
 				<p class="govuk-hint">Search by location, postcode, school type and subject or any combination of these</p>
 
 				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
-
-				<form action="/candidate-search/search-results-post" method="post">
-
-					<div class="govuk-form-group">
-
-						<div class="stackable">
-							<input class="govuk-input govuk-!-width-full" id="search-by-location" name="search" type="text">
-
-							<select id="search-location-radius" class="govuk-select" name="locationRadius">
-								<option selected>Select search distance</option>
-								<option value="1">1 mile</option>
-								<option value="3">3 miles</option>
-								<option value="5">5 miles</option>
-								<option value="10">10 miles</option>
-								<option value="15">15 miles</option>
-								<option value="20">20 miles</option>
-								<option value="25">25 miles</option>
-							</select>
-
-							<button class="govuk-button inline-button govuk-se-wide-button">Find</button>
+				<div class="govuk-grid-row school-search-form">
+					<form action="/candidate-search/search-results-post" method="post">
+						<div class="school-search-form__search-field">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="search-by-name">Find what?</label>
+								<input class="govuk-input govuk-!-width-full" id="search-by-name" name="search" type="text" placeholder="For example, maths, special school">
+							</div>
 						</div>
+
+            <div class="school-search-form__location-pair">
+                <div class="school-search-form__location-field">
+									<div class="govuk-form-group">
+										<label class="govuk-label" for="search-by-location">Where?</label>
+										<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="For example, Manchester, M1 3BD">
+									</div>
+								</div>
+
+								<div class="school-search-form__distance-field">
+									<div class="govuk-form-group">
+										<label class="govuk-label" for="search-location-radius">Distance</label>
+										<select id="search-location-radius" class="govuk-select" name="locationRadius">
+											<option selected>Select search distance</option>
+											<option value="1">1 mile</option>
+											<option value="3">3 miles</option>
+											<option value="5">5 miles</option>
+											<option value="10">10 miles</option>
+											<option value="15">15 miles</option>
+											<option value="20">20 miles</option>
+											<option value="25">25 miles</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+              <div class="school-search-form__submit">
+                <div class="govuk-form-group">
+									<button class="govuk-button inline-button">Find</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</fieldset>
+
+
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Your requests and bookings
+					</h1>
+				</legend>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-half">
+		<div class="govuk-se-dashboard">
+    	<div class="govuk-se-dashboard__row govuk-se-dashboard__row--header">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader">
+				</div>
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--heading">
+					<h3>Your requests</h3>
+					<div>Oldest first</div>
+				</div>
+			</div>
+
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/new-islington-high-school">New Islington High School</a>
 					</div>
 
-				</form>
-			</fieldset>
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates available
+							</dt>
+							<dd class="govuk-summary-list__value">
+								21 to 24 September 2019
+					    </dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+
+
+
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/newton-heath-school">Newton Heath School</a>
+					</div>
+
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates available
+							</dt>
+							<dd class="govuk-summary-list__value">
+								4 to 8 October 2019
+					    </dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/marsden-high-school">Marsden High School</a>
+					</div>
+
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates available
+							</dt>
+							<dd class="govuk-summary-list__value">
+								10 to 12 November 2019
+					    </dd>
+						</div>
+					</dl>
+				</div>
+			</div>			
+
+
 		</div>
+
 	</div>
 
+
+	<div class="govuk-grid-column-one-half">
+
+  	<div class="govuk-se-dashboard purple">
+			<div class="govuk-se-dashboard__row govuk-se-dashboard__row--header">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader">
+				</div>
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--heading">
+					<h3>Your bookings</h3>
+					<div>Latest first</div>
+				</div>
+			</div>
+
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/ancoats-nursery-school">Ancoats Nursery School</a>
+					</div>
+
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates
+							</dt>
+							<dd class="govuk-summary-list__value">
+								10 to 18 November 2019
+					    </dd>
+						</div>
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Status
+							</dt>
+							<dd class="govuk-summary-list__value">
+								<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Confirmed</strong>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+			
+
+
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/ellen-wilkinson-high-school">Ellen Wilkinson High School</a>
+					</div>
+
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates
+							</dt>
+							<dd class="govuk-summary-list__value">
+								15 to 19 October 2019
+					    </dd>
+						</div>
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Status
+							</dt>
+							<dd class="govuk-summary-list__value">
+								<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">not attended</strong>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>			
+
+
+			<div class="govuk-se-dashboard__row">
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--leader counter"></div>
+				<div class="govuk-se-dashboard__cell govuk-se-dashboard__cell--data">
+					<div class="govuk-se-dashboard-entry__heading">
+						<a href="/candidate-dashboard/hulme-high-school">Hulme High School</a>
+					</div>
+
+					<dl class="govuk-summary-list">
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Dates
+							</dt>
+							<dd class="govuk-summary-list__value">
+								1 to 4 November 2019
+					    </dd>
+						</div>
+					  <div class="govuk-summary-list__row">
+					    <dt class="govuk-summary-list__key">
+								Status
+							</dt>
+							<dd class="govuk-summary-list__value">
+								<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">attended</strong>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>	
+
+			
+
+
+		</div>
+	</div>
 </div>
-<br>
+
+
+
+<!--
+
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 					<h1 class="govuk-fieldset__heading">
 						Your requests and bookings
@@ -194,5 +410,5 @@
         </div>
     </div>
 </div>
-
+-->
 {% endblock %}

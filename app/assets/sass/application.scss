@@ -1367,6 +1367,12 @@ div.govuk-se-dashboard {
 
       &.govuk-se-dashboard__cell--data {
         background-color: govuk-colour("grey-4");
+				
+				dl.govuk-summary-list > div.govuk-summary-list__row > dd.govuk-summary-list__value {
+					strong.govuk-tag {
+						float: left;
+					}
+				}
       }
 
       .govuk-se-dashboard-entry__heading {
