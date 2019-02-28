@@ -663,8 +663,7 @@ var schools = [
         Name: 'Ellen Wilkinson High School',
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
-        SchoolType: 'Secondary School',
-        Fees: '£10 daily admin fee and £50 one-off DBS check fee',
+        Fees: 'Admin and DBS check fees',
         Subjects: 'Maths, English, Art, Physics, Geography',
         Distance: 1,
         ShowLong: true
@@ -674,8 +673,7 @@ var schools = [
         Name: 'City College Manchester',
         Address: 'Long Millgate, Manchester',
         Phase: 'Primary, Secondary and 16 to 18',
-        SchoolType: 'College',
-        Fees: '£0',
+        Fees: 'None',
         Subjects: 'Maths, English, Art, Physics, Music',
         Distance: 1.5,
         ShowLong: true
@@ -685,8 +683,7 @@ var schools = [
         Name: 'Chiserly Academy',
         Address: 'Cheshire Road, Manchester M42 4TW.',
         Phase: 'Both primary and secondary',
-        SchoolType: 'Primary, Secondary, Academy',
-        Fees: '£10 daily admin fee and £50 one-off DBS fee',
+        Fees: 'DBS check fee',
         Subjects: 'Key stage 1, Maths, Art, Physics, Geography',
         Distance: 2.5,
         ShowLong: true
@@ -696,8 +693,7 @@ var schools = [
         Name: 'Medlock Primary School',
         Address: '142 Dantzic Street, Manchester',
         Phase: 'Primary',
-        SchoolType: 'Primary School',
-        Fees: '£20 per day for placement / £75 for DBS check',
+        Fees: 'Admin fee',
         Subjects: 'Maths, English, Art',
         Distance: 5,
         ShowLong: true
@@ -707,8 +703,7 @@ var schools = [
         Name: 'Ancoats Nursery School',
         Address: '10 Hugh Oldham Way, Manchester',
         Phase: 'Nursery School',
-        SchoolType: 'Nursery School',
-        Fees: '£0 per day for placement / £50 for DBS check',
+        Fees: 'None',
         Subjects: 'Maths, English, Geography',
         Distance: 10,
         ShowLong: true
@@ -1196,5 +1191,9 @@ router.get('/booking/profile', function(req, res) {
 
   res.render('booking/profile', {school: school}) ;
 })
+
+router.get('/fake-emails/:templateName', function(req, res) {
+  res.render('fake-emails/' + req.params.templateName, {domain: req.hostname})
+}) ;
 
 module.exports = router

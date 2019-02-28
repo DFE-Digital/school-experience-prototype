@@ -1,0 +1,15 @@
+{% extends "fake-email.html" %}
+
+{% block emailcontent %}
+	<h2 class="govuk-heading-l">Verify your placement</h2>
+
+	<p>
+		Click the link below to verify your request for a placement at Ellen Wilkinson High School
+	</p>
+
+	<p>
+		<a href="https://{{ domain }}/register/created-sent" target="_blank">
+			https://{{ domain }}/register/created-send
+		</a>
+	</p>
+{% endblock %}
