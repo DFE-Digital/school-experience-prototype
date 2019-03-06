@@ -28,23 +28,15 @@
 
 				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
 				<div class="govuk-grid-row school-search-form">
-					<form action="/candidate-search/search-results-post" method="post">
-						<div class="school-search-form__search-field">
-							<div class="govuk-form-group">
-								<label class="govuk-label" for="search-by-name">Find what?</label>
-								<input class="govuk-input govuk-!-width-full" id="search-by-name" name="search" type="text" placeholder="For example, maths, special school">
-							</div>
-						</div>
-
-            <div class="school-search-form__location-pair">
-                <div class="school-search-form__location-field">
+						<form action="/candidate-search/search-results-post" method="post">
+                <div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
 										<label class="govuk-label" for="search-by-location">Where?</label>
 										<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="For example, Manchester, M1 3BD">
 									</div>
 								</div>
 
-								<div class="school-search-form__distance-field">
+								<div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
 										<label class="govuk-label" for="search-location-radius">Distance</label>
 										<select id="search-location-radius" class="govuk-select" name="locationRadius">
@@ -59,16 +51,16 @@
 										</select>
 									</div>
 								</div>
-							</div>
-
-              <div class="school-search-form__submit">
-                <div class="govuk-form-group">
-									<button class="govuk-button inline-button">Find</button>
+								
+	              <div class="school-search-form__submit govuk-grid-column-one-third">
+	                <div class="govuk-form-group">
+										<button class="govuk-button inline-button">Find</button>
+									</div>
 								</div>
-							</div>
-						</div>
-					</form>
-				</div>
+
+						</form>
+					</div>
+
 			</fieldset>
 
 	</div>
