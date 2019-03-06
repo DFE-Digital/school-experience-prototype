@@ -1415,15 +1415,25 @@ div.govuk-se-dashboard {
     }
   }
 
-  &.purple {
+  &.green {
     .govuk-se-dashboard__row {
       .govuk-se-dashboard__cell {
         &.govuk-se-dashboard__cell--leader {
-          background-color: govuk-colour("purple");
+          background-color: govuk-colour("green");
         }
       }
     }
-  }
+	}
+  
+	&.grey {
+	  .govuk-se-dashboard__row {
+	     .govuk-se-dashboard__cell {
+	       &.govuk-se-dashboard__cell--leader {
+	         background-color : govuk-colour("grey");
+	       }
+	     }
+	   }
+	 }
 
 }
 
