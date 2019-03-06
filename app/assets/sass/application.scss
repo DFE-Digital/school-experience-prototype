@@ -1424,12 +1424,12 @@ div.govuk-se-dashboard {
       }
     }
 	}
-  
+
 	&.grey {
 	  .govuk-se-dashboard__row {
 	     .govuk-se-dashboard__cell {
 	       &.govuk-se-dashboard__cell--leader {
-	         background-color : govuk-colour("grey");
+	         background-color : govuk-colour("grey-1");
 	       }
 	     }
 	   }
