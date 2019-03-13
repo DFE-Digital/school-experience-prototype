@@ -1196,4 +1196,10 @@ router.get('/fake-emails/:templateName', function(req, res) {
   res.render('fake-emails/' + req.params.templateName, {domain: req.hostname})
 }) ;
 
+router.get('/schools/school-dashboard', function(req, res) {
+  let request_count = req.query['request-count']
+  let change_count = req.query['change-count']
+  res.render('schools/school-dashboard', { request_count: request_count, change_count: change_count });
+});
+
 module.exports = router

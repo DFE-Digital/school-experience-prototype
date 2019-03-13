@@ -1482,3 +1482,36 @@ button.govuk-se-wide-button {
   background-color: govuk-colour('grey-1');
 }
 
+#school-dashboard {
+  p.govuk-body {
+    margin-bottom: 0;
+  }
+  svg {
+    vertical-align: middle;
+    margin-left: 4px;
+    circle {
+      &.red {
+        fill: #A32526;
+      }
+    }
+    text {
+      text-anchor: middle;
+      font-family: sans-serif;
+      font-weight: bold;
+      fill: white;
+    }
+  }
+}
+.govuk-details__text {
+  dd, dt {
+    border-bottom: 0;
+  }
+}
+#school-requests {
+  .govuk-tag {
+    background-color: govuk-colour("grey-1");
+  }
+  hr {
+    border-bottom: 10px solid $govuk-brand-colour;
+  }
+}

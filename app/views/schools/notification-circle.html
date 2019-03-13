@@ -1,0 +1,13 @@
+{% macro count(link_path, link_text, number, hint) %}
+  {% if number > 0 %}
+    <a href="{{ link_path }}" class="govuk-!-font-weight-bold govuk-!-font-size-24">{{ link_text }}</a>
+    <svg width="26" height="30">
+      <circle class="red" cx="13" cy="13" r="13"/>
+      <text x="50%" y="50%" font-size="16px" dy=".2em">{{ number }}</text>
+    </svg>
+    <span class="govuk-hint">{{ hint }}</span>
+  {% else %}
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-24">0 {{ link_text }}</p>
+    <span class="govuk-hint">You're upto date</span>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" id="school-requests">
+  <div class="govuk-grid-column-full">
+  {{ candidate_request.profile(
+      "Matthew Richards",
+      "Any time during July 2019",
+      "01 January 2019",
+      "1 Arcadia avenue, Middle Town, Northampton NP1 1JD",
+      "01689 444 555",
+      "mat.rich1996@outlook.com",
+      "I've applied for teacher training",
+      "Maths",
+      "NEW",
+      "/booking/profile-request1"
+      ) }}
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  {{ candidate_request.profile(
+      "Jacob Sterling",
+      "20 to 27 March, 6 to 25 April and 5 until 20 May 2019",
+      "01 January 2019",
+      "101 Brook Street, West Hampstead, London SW1 8RG",
+      "0207 555 6666",
+      "jacob.sterling@gmail.com",
+      "I’m very sure and think I’ll apply",
+      "Biology",
+      "AMENDED",
+      "/booking/profile-request2"
+      ) }}
+  </div>
+</div>
+{% endblock %}

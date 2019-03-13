@@ -1,0 +1,78 @@
+{% macro profile(name, date_requested, request_received, address, telephone, email_address, teaching_stage, teaching_subject, status, booking_url) %}
+<div>
+  <h1 class="govuk-heading-l">
+    Request from {{ name }}
+  </h1>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Dates requested
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ date_requested }}
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Request received
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ request_received }}
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Contact details
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">View contact details</span>
+        </summary>
+        <div class="govuk-details__text">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Address</dt>
+              <dd class="govuk-summary-list__value">{{ address }}</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">UK telephone number</dt>
+              <dd class="govuk-summary-list__value">{{ telephone }}</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Email address</dt>
+              <dd class="govuk-summary-list__value">{{ email_address }}</dd>
+            </div>
+          </dl>
+        </div>
+      </details>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Teaching stage
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ teaching_stage }}
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Teaching subject
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ teaching_subject }}
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Status
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <span class="govuk-tag">{{ status }}</span>
+      </dd>
+    </div>
+  </dl>
+  <a href="{{booking_url}}" class="govuk-button">Open request</a>
+</div>
+{% endmacro %}
