@@ -21,7 +21,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">Do you charge fees to cover any of the following?</h1>
-    <form action="/schools/other-details-admin-save" method="post" class="form">
+    <form action="/schools/other-details-admin-save" method="post" class="form" data-local-save="school-onboarding:fees-charged">
 
 				<p>
               Some schools charge fees to cover the associated costs of running school experience.
@@ -39,19 +39,19 @@
 
 	    <div class="govuk-checkboxes">
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="checkbox_admin_costs" name="checkbox_admin_costs" type="checkbox" value="1" data-local-store>
+	        <input class="govuk-checkboxes__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="checkbox" value="1" data-local-store>
 	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
 	          Administration costs
 	        </label>
 	      </div>
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="checkbox" value="1" data-local-store>
+	        <input class="govuk-checkboxes__input" data-save-name="dbs-check-costs" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="checkbox" value="1" data-local-store>
 	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_dbs_costs">
 	          DBS check costs
 	        </label>
 	      </div>
 	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" id="checkbox_other_costs" name="checkbox_other_costs" type="checkbox" value="1" data-local-store>
+	        <input class="govuk-checkboxes__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="checkbox" value="1" data-local-store>
 	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_other_costs">
 	          Other costs
 	        </label>

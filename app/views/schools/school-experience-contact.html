@@ -12,7 +12,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-  		<form action="/schools/check-answers-school" method="post" class="form">
+  		<form action="/schools/check-answers-school" method="post" class="form" data-local-save="school-onboarding:admin-contact">
       <h1 class="govuk-heading-l">School experience admin contact details</h1>
 
 <div class="govuk-grid-row">
@@ -40,21 +40,21 @@ These details will be used to send your school the following school experience i
 				   <label class="govuk-label" for="name">
 				     Full name
 				   </label>
-				   <input class="govuk-input" id="name" name="name" type="text">
+				   <input class="govuk-input" data-save-name="full-name" id="name" name="name" type="text">
 				 </div>
 
 					<div class="govuk-form-group">
 					  <label class="govuk-label" for="name">
 					    UK telephone number
 					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text">
+					  <input class="govuk-input" data-save-name="phone" id="name" name="name" type="text">
 					</div>
 
 					<div class="govuk-form-group">
 					  <label class="govuk-label" for="name">
 					    Email address
 					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text">
+					  <input class="govuk-input" data-save-name="email" id="name" name="name" type="text">
 					</div>
 
 

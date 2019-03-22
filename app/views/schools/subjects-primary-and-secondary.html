@@ -17,6 +17,8 @@
 
 {% block content %}
 
+<form action="/schools/subjects-secondary" method="post" class="form" data-local-save="school-onboarding:key-stages">
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Confirm number of primary key stages</h1>
@@ -26,7 +28,6 @@
     </div>
 </div>
 
-  <form action="/schools/subjects-secondary" method="post" class="form">
 
 
 
@@ -39,19 +40,19 @@
 
                 <div class="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="subject1" name="sub" type="checkbox" value="">
+                    <input class="govuk-checkboxes__input" data-save-name="early-years" id="subject1" name="sub" type="checkbox" value="">
                     <label class="govuk-label govuk-checkboxes__label" for="subject1">
                       Early years foundation stage (EYFS)
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="subject10" name="sub" type="checkbox" value="">
+                    <input class="govuk-checkboxes__input" data-save-name="key-stage-1" id="subject10" name="sub" type="checkbox" value="">
                     <label class="govuk-label govuk-checkboxes__label" for="subject10">
                       Key stage 1
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="subject2" name="sub" type="checkbox" value="">
+                    <input class="govuk-checkboxes__input" data-save-name="key-stage-2" id="subject2" name="sub" type="checkbox" value="">
                     <label class="govuk-label govuk-checkboxes__label" for="subject2">
                       Key stage 2
                     </label>
@@ -64,6 +65,7 @@
   Continue
 </button>
 </div>
+</form>
 
 
 {% endblock %}

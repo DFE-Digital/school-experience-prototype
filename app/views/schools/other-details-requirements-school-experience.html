@@ -16,6 +16,7 @@
 {% endblock %}
 
 {% block content %}
+<form action="/schools/other-details" method="post" class="form" data-local-save="school-onboarding:candidate-requirements">
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Enter your school experience details</h1>
@@ -29,14 +30,14 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
+              <input class="govuk-radios__input" data-save-name="DBS-required-Always" id="how-contacted-conditional-2" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
                 Yes - Always
               </label>
             </div>
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-4" name="dbs" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-4">
+              <input class="govuk-radios__input" data-save-name="DBS-required-Sometimes" id="how-contacted-conditional-4" name="dbs" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-4">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
                 Yes - Sometimes
               </label>
@@ -46,12 +47,12 @@
                 <label class="govuk-label" for="contact-by-email">
                   Outline your DBS policy in 50 words or less.
                 </label>
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="DBS-policy" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
               </div>
 
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-3" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-3">
+              <input class="govuk-radios__input" data-save-name="DBS-required-Never" id="how-contacted-conditional-3" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-3">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
                 No - Never
               </label>
@@ -80,7 +81,7 @@
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-5" name="requirements" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-5">
+              <input class="govuk-radios__input" data-save-name="candidate-requirements-Yes" id="how-contacted-conditional-5" name="requirements" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-5">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
                 Yes
               </label>
@@ -90,12 +91,12 @@
                 <label class="govuk-label" for="contact-by-email">
                   Provide details.
                 </label>
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="candidate-requirements-details" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
               </div>
 
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-contacted-conditional-1" name="requirements" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-1">
+              <input class="govuk-radios__input" data-save-name="candidate-requirements-No" id="how-contacted-conditional-1" name="requirements" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-1">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
                 No
               </label>
@@ -106,14 +107,13 @@
       </div>
 
 
-			<form action="/schools/other-details" method="post" class="form">
         <button type="submit" class="govuk-button">
           Continue
         </button>
-      </form>
 
     </div>
 </div>
+</form>
 
 
 {% endblock %}
