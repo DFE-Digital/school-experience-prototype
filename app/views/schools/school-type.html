@@ -21,7 +21,7 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-    <form action="/schools/subjects" method="post" class="form">
+    <form action="/schools/subjects" method="post" class="form" data-local-save="school-onboarding:phases">
 
 
 
@@ -39,26 +39,26 @@
 
           </p>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="primary" name="schooltype" type="radio" value="primary">
+            <input class="govuk-radios__input" data-save-name="primary" id="primary" name="schooltype" type="radio" value="primary">
             <label class="govuk-label govuk-radios__label" for="primary">
               Primary
             </label>
           </div>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="secondary" name="schooltype" type="radio" value="secondary">
+              <input class="govuk-radios__input" data-save-name="secondary" id="secondary" name="schooltype" type="radio" value="secondary">
               <label class="govuk-label govuk-radios__label" for="secondary">
                 Secondary
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="both" name="schooltype" type="radio" value="both">
+              <input class="govuk-radios__input" data-save-name="both-primary-and-secondary" id="both" name="schooltype" type="radio" value="both">
               <label class="govuk-label govuk-radios__label" for="both">
                 Both primary and secondary
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="both" name="schooltype" type="radio" value="16 to 18">
+              <input class="govuk-radios__input" data-save-name="sixteen_to_eighteen" id="sixteen_to_eighteen" name="schooltype" type="radio" value="16 to 18">
               <label class="govuk-label govuk-radios__label" for="both">
                 16 to 18 years
               </label>
