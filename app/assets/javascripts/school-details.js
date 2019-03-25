@@ -77,6 +77,18 @@ class SchoolDetails {
     return phases.join(", ")
   }
 
+  get keyStages() {
+    let earlyYears = this.getItem('key-stages:early-years');
+    let keyStage1 = this.getItem('key-stages:key-stage-1');
+    let keyStage2 = this.getItem('key-stages:key-stage-2');
+    let stages = [];
+
+    if (earlyYears) { stages.push('Early years'); }
+    if (keyStage1) { stages.push('Key stage 1'); }
+    if (keyStage2) { stages.push('Key stage 2'); }
+    return stages.join(", ");
+  }
+
   get secondarySubjects() {
     let isSubject = /school-onboarding:secondary-subjects:.*$/;
     let replace = /school-onboarding:secondary-subjects:/;
