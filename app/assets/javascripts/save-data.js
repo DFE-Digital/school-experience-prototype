@@ -36,9 +36,10 @@ let saveInputs = (form) => {
 $('form[data-local-save]').submit(function (e) {
   saveInputs(this);
 });
-$('a[data-save-inputs').click(function (e) {
+$('a[data-save-inputs]').click(function (e) {
   saveInputs($('form[data-local-save]'));
 });
+
 $('a[href="/prototype-admin/clear-data"]').click(function (e) {
   window.localStorage.clear();
 });
