@@ -198,6 +198,8 @@ class SchoolDetails {
 }
 
 $('*[data-school-details]').each((index, element) => {
+  if (window.sessionStorage['local-storage'] != 'ON') { return; }
+
   let details = new SchoolDetails(window.localStorage);
   let key = $(element).data('school-details');
   let value = details[key];

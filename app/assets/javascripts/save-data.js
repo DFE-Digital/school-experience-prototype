@@ -39,3 +39,28 @@ $('form[data-local-save]').submit(function (e) {
 $('a[data-save-inputs').click(function (e) {
   saveInputs($('form[data-local-save]'));
 });
+$('a[href="/prototype-admin/clear-data"]').click(function (e) {
+  window.localStorage.clear();
+});
+
+$(document).ready(function (e) {
+  let storageLink = $('a[href="/prototype-admin/local-storage"]');
+  if (window.sessionStorage['local-storage'] == 'ON') {
+    storageLink.text('Local storage - ON');
+  } else {
+    storageLink.text('Local storage - OFF');
+  }
+});
+
+$('a[href="/prototype-admin/local-storage"]').click(function (e) {
+  e.preventDefault();
+  if (window.sessionStorage['local-storage'] == 'ON') {
+    window.sessionStorage['local-storage'] = 'OFF';
+    $(this).text('Local storage - OFF');
+  } else {
+    window.sessionStorage['local-storage'] = 'ON';
+    $(this).text('Local storage - ON');
+  }
+
+  location.reload();
+});
