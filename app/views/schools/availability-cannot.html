@@ -20,46 +20,23 @@
 {% block content %}
 
 
-<h1 class="govuk-heading-l">School experience dates</h1>
+<h1 class="govuk-heading-l">Tell us about your school experience availability</h1>
 	<form action="/schools/outline-experience" method="post" class="form">
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
 
-<p>You need to contact individual candidates to discuss, arrange and offer them a placement date after you’ve received their school experience request.</p>
+<p>Outline when you <strong>cannot</strong> offer school experience at your school. For example, around exam periods, school holidays and at the start and end of the school year.</p>
 
-<p>You should try and respond to requests within 10 working days.</p>
+<p>These details will be shown to candidates to help them choose a school experience at your school.</p>
 
-<p>Once you’ve accepted a request you’ll be asked to confirm the candidate’s placement dates as part of confirming their school experience booking.
-</p>
-<h2 class="govuk-heading-m">School experience availability</h2>
-<p>
-Select how you’d like to provide details about your school experience availability:
-</p>
+
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="dates1" name="date" type="radio" value="can">
-        <label class="govuk-label govuk-radios__label" for="dates-1">
-           Tell us about when you can offer school experience. For example, on specific days of the week or month or school open days
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="dates2" name="date" type="radio" value="cannot">
-        <label class="govuk-label govuk-radios__label" for="dates-2">
-          Tell us about when you cannot offer school experience. For example, around exam periods, school holidays and at the start and end of the school year
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="dates3" name="date" type="radio" value="calander">
-        <label class="govuk-label govuk-radios__label" for="dates-3">
-          Use a calendar to tell us when you can offer school experience
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+  <label class="govuk-label" for="more-detail">
+    Provide details
+  </label>
 
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
 
 
 
