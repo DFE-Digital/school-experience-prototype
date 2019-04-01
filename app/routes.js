@@ -1121,30 +1121,41 @@ router.post('/booking/noti-contact', function (req, res) {
 
 // School type
 router.post('/schools/subjects', function (req, res) {
-    let schoolType = req.session.data['schooltype'] ;
+  let schoolType = req.session.data['schooltype'];
+  req.session.data['phases'] = req.body['phases'];
 
-    //Option 1
-    if (schoolType === 'primary') {
-        res.redirect('/schools/primary-key-stages')
-    }
-    //Option 2
-    else if (schoolType === 'secondary') {
-        res.redirect('/schools/subjects-secondary')
-    }
-    //Option 3
-    else if (schoolType === 'both') {
-        res.redirect('/schools/subjects-primary-and-secondary')
-    }
-    //Option 4
-    else if (schoolType === '16 to 18') {
-        res.redirect('/schools/subjects-secondary')
-    }
+  let paths = [];
 
-    else {
-      res.redirect('/schools/school-type');
-    }
-    //end
+  if (req.session.data['phases'].includes('primary')) {
+    paths.push('/schools/primary-key-stages');
+  }
+  if (req.session.data['phases'].includes('secondary')) {
+    paths.push('/schools/subjects-secondary');
+  }
+  if (req.session.data['phases'].includes('college')) {
+    paths.push('/schools/subjects-college');
+  }
+
+  if (paths.length > 0) {
+    req.session.data['phase_paths'] = paths;
+    res.redirect(paths[0]);
+  } else {
+    res.redirect('/schools/school-type');
+  }
 })
+
+router.post('/schools/specialisms', function(req, res) {
+  var nextStep = null;
+  if (req.session.data['phase_paths']) {
+    req.session.data['phase_paths'].shift();
+    nextStep = req.session.data['phase_paths'][0]
+  }
+  if (nextStep) {
+    res.redirect(nextStep);
+  } else {
+    res.redirect('/schools/specialisms');
+  }
+});
 
 router.post('/schools/other-details-admin-save', function(req, res) {
   let admin_costs = req.body['checkbox_admin_costs'] ;

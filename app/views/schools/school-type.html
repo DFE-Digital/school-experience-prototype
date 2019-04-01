@@ -38,45 +38,28 @@
           <p>
 
           </p>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" data-save-name="primary" id="primary" name="schooltype" type="radio" value="primary">
-            <label class="govuk-label govuk-radios__label" for="primary">
-              Primary
-            </label>
-          </div>
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="secondary" id="secondary" name="schooltype" type="radio" value="secondary">
-              <label class="govuk-label govuk-radios__label" for="secondary">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" data-save-name="phases_primary" id="phases_primary" name="phases" type="checkbox" value="primary" data-local-store>
+              <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
+                Primary
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" data-save-name="phases_seconday" id="phases_seconday" name="phases" type="checkbox" value="seconday" data-local-store>
+              <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
                 Secondary
               </label>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="both-primary-and-secondary" id="both" name="schooltype" type="radio" value="both">
-              <label class="govuk-label govuk-radios__label" for="both">
-                Both primary and secondary
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="sixteen_to_eighteen" id="sixteen_to_eighteen" name="schooltype" type="radio" value="16 to 18">
-              <label class="govuk-label govuk-radios__label" for="both">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" data-save-name="phases_college" id="phases_college" name="phases" type="checkbox" value="college" data-local-store>
+              <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
                 16 to 18 years
               </label>
             </div>
-
           </div>
         </fieldset>
       </div>
-
-
-
-
-
-
-
-
-
-
 
       <button type="submit" class="govuk-button">
         Continue
@@ -85,6 +68,5 @@
 
     </div>
 </div>
-
 
 {% endblock %}
