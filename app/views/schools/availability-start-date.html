@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Tell us about your school experience availability</h1>
+	<form action="/schools/outline-experience" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>Select dates on the calendar to tell us when you can offer school experience at your school.</p>
+
+<p>These details will be shown to candidates to help them choose a school experience at your school.</p>
+		</div>
+	</div>
+
+
+  <h2 class="govuk-heading-m">Start date</h2>
+ 	 <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                        <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-day" name="dob-day" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-month" name="dob-month" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="single-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="single-year" name="dob-year" type="number" pattern="[0-9]*">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+   </div>
+
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Duration</h2>
+				
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="width-3">
+				    Enter number of days
+				  </label>
+				  <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+				</div>
+				
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <button id="add-single" class="govuk-button button-grey">
+                    Add another date
+                </button>
+            </div>
+        </div>
+
+
+
+
+<br>
+<button type="submit" class="govuk-button">
+    Continue
+</button>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}
