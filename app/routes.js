@@ -1157,6 +1157,16 @@ router.post('/schools/specialisms', function(req, res) {
   }
 });
 
+router.post('/schools/availability', function(req, res) {
+  if (req.body['date'] == 'can') {
+    res.redirect('/schools/availability-start-date') ;
+  } else if (req.body['date'] == 'cannot') {
+    res.redirect('/schools/availability-describe') ;
+  } else {
+    res.redirect('/schools/availability')
+  }
+}) ;
+
 router.post('/schools/other-details-admin-save', function(req, res) {
   let admin_costs = req.body['checkbox_admin_costs'] ;
   let dbs_costs = req.body['checkbox_dbs_costs'] ;
