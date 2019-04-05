@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="school-dashboard">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      My school
+    </h1>
+
+			<br>
+    <a href="#" class="">View specific school</a>
+		<p>
+			A summary of all school experience information - including requests and and bookings - for Newton Heath School.</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Accept and reject requests",  2, "Manage candidate requests", "Candidates have requested school experience") }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
+
+    {{ notification.count("#", "Change existing bookings", 4, "Candidates have asked to change a booking") }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Confirm candidate attendance", 1, "Confirm the attendance of candidates who've been on school experience") }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "View bookings", 1, "") }}
+		<br>
+		{{ notification.count("#", "View requests", 1, "") }}
+
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read about service updates and changes</a>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Edit school profiles</a>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Get help and support</a>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Give feedback on this service</a>
+		
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		
+		    <a href="#" class="">Add a new school</a><p>Request to view and update another school’s requests and bookings</p>
+
+				
+  </div>
+</div>
+{% endblock %}
