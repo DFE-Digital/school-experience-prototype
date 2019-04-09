@@ -13,7 +13,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
   		<form action="/booking/" method="post" class="form">
-      <h1 class="govuk-heading-l">Confirm school experience booking</h1>
+      <h1 class="govuk-heading-l">Confirm booking</h1>
 
 <!--
       <div class="nav-cont">
@@ -39,14 +39,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">You’ve confirmed the booking details for {{ data['candidate-name'] }}</p>
 
-					<p class="govuk-body">The following contains the wording of the email which will be sent to them to confirm their school experience booking.
+					<p class="govuk-body">The following contains the wording of the confirmation email which will be sent to {{ data['candidate-name'] }} to confirm their school experience booking.
+
+<h2 class="govuk-heading-m">Read confirmation email </h2>
 <p>
-You can change any of the details ahead of sending the confirmation by simply editing or adding in any extra details in the following text box.
+You can change any details in the email by simply adding or editing the details in the following box.
 <p>
 
-         <h2 class="govuk-heading-m">Read and update confirmation email </h2>
+         
 					<div class="govuk-form-group">
 
 					 <textarea class="govuk-textarea" rows="15">
@@ -55,32 +56,32 @@ Here are the details about your school experience placement at {{ data['school-n
 
 School details
 
-School or college: Abbey College - Manchester 
-Address: Crescent Road, Crumpsall, Manchester M8 5UF. 
-Placement dates: 01 June 2019 to 5 June 2019       
+School or college: Abbey College - Manchester
+Address: Crescent Road, Crumpsall, Manchester M8 5UF.
+Placement dates: 01 June 2019 to 5 June 2019
 Placement start and finish times: 9am to 5pm
 Dress code: Business attire with male attendees expected to wear a collar and tie
-Parking: Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day					
+Parking: Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day
 
 Placement contacts
 
 If you have any questions about your booking:
 
 Name: Billy Admin
-Email address: badmin@abbeycollege.co.uk 
+Email address: badmin@abbeycollege.co.uk
 UK telephone number: 0161 345 6000
 
 On the day of your school experience placement, you’ll need to report to:
 
 Name: Mrs I Teach
-Email address: iteach@abbeycollege.co.uk 
+Email address: iteach@abbeycollege.co.uk
 UK telephone number: 0161 345 6355
 
 You can also contact them if you have any questions about your actual placement.
 
 Placement details
 
-You’ll be observing lessons and may get the chance to interact with pupils and classroom activities 
+You’ll be observing lessons and may get the chance to interact with pupils and classroom activities
 
 Subject: Maths
 
@@ -93,7 +94,7 @@ your £30 placement fee
 
 					 </textarea>
 					</div>
-					
+
 					<h2 class="govuk-heading-m">Send confirmation email to {{ data['candidate-name'] }}
 </h2>
 
