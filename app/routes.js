@@ -1158,13 +1158,23 @@ router.post('/schools/specialisms', function(req, res) {
 });
 
 router.post('/schools/availability', function(req, res) {
-  if (req.body['date'] == 'can') {
+  req.session.data['fixed_dates'] = (req.body['fixed_dates'] == '1') ;
+  req.session.data['flexible_dates'] = (req.body['flexible_dates'] == '1') ;
+
+  if (req.session.data['fixed_dates']) {
     res.redirect('/schools/availability-start-date') ;
-  } else if (req.body['date'] == 'cannot') {
+  } else if (req.session.data['flexible_dates']) {
     res.redirect('/schools/availability-describe') ;
   } else {
     res.redirect('/schools/availability')
   }
+}) ;
+
+router.post('/schools/availability-start-date', function(req, res) {
+  if (req.session.data['flexible_dates'])
+    res.redirect('/schools/availability-describe') ;
+  else
+    res.redirect('/schools/outline-experience') ;
 }) ;
 
 router.post('/schools/other-details-admin-save', function(req, res) {
