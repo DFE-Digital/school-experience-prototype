@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+	tag: {
+		text: "alpha"
+	},
+	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Pick a date when you can attend</h1>
+
+
+		<p class="govuk-body">Ellen Wilkinson School has these dates available. If you can't see a suitable date, try a different school nearby.</p>
+
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+
+				<div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="date" name="degree" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="1 August 2019">
+							1 August 2019
+						</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="date" name="degree" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="3 August 2019">
+							3 August 2019
+						</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="date" name="degree" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="7 - 10 August 2019">
+							7 - 10 August 2019
+						</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="second" name="date" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="16 - 19 August 2019">
+							16 - 19 August 2019
+						</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="firstyear" name="date" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="22 - 27 August 2019">
+							22 - 27 August 2019
+						</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="how-contacted-conditional-1" name="date" type="radio" value="date">
+						<label class="govuk-label govuk-radios__label" for="2 September 2019">
+							2 September 2019
+						</label>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+
+
+		<form action="/register/account-check" method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+    
+												                          
+
+					<h1 class="govuk-heading-m">Is there anything schools need to know about your availability for school experience?</h1>
+					<div class="govuk-warning-text">
+						<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+						<strong class="govuk-warning-text__text">
+							<span class="govuk-warning-text__assistive">Warning</span>
+							Depending on availability and time of year, schools may not always be able to offer you the exact dates you’re looking for.
+						</strong>
+					</div>
+                        
+
+
+
+					<textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
+				</fieldset>
+			</div>
+
+			<a href="/booking/enter-contact" class="govuk-button">Continue</a>
+
+		</form>
+	</div>
+</div>
+{% endblock %}
