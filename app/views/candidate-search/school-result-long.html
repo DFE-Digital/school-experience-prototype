@@ -54,7 +54,42 @@
 
    			<p><b>Experience details:</b> Attendees will observe lessons in their chosen subjects and may get the chance to interact with pupils and classroom activities. Only offer key stage 1 experience for primary placements.</p>
 
-			<p><b>Experience subjects:</b> {{ data['school-subjects'] }}.</p>
+			<div>
+
+				<details class="govuk-details">
+					<summary class="govuk-details__summary">
+						<span class="govuk-details__summary-text">
+							Experiences available in {{ data['school-subjects'] }}
+						</span>
+					</summary>
+					<div class="govuk-details__text">
+						<dl class="govuk-summary-list">
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Maths</dt>
+								<dd class="govuk-summary-list__value">
+									<ul class="govuk-list">
+										<li>January 18th 2019</li>
+										<li>January 19th 2019</li>
+										<li>January 24th 2019</li>
+									</ul>
+								</dd>
+							</div>
+
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">English</dt>
+								<dd class="govuk-summary-list__value">
+									<ul class="govuk-list">
+										<li>February 10th 2019</li>
+										<li>March 19th 2019</li>
+										<li>April 25th 2019</li>
+									</ul>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</details>
+
+			</div>
 
    <h1 class="govuk-heading-m">Location</h1>
 	 <div style="width: 100%; height: 400px; overflow: hidden; vertical-align: middle">
