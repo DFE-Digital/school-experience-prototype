@@ -33,23 +33,23 @@
 </p>
 <h2 class="govuk-heading-m">Enter school experience availability or fixed dates</h2>
 <p>
-Tell candidates about your school experience availability. Select at least 1 option.
+Select whether you’d like to tell candidates about your school experience by outlining your school's availability or telling them about fixed dates:
 </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="dates1" name="fixed_dates" type="checkbox" value="1">
-        <label class="govuk-label govuk-checkboxes__label" for="dates-1">
-          <p>If you offer <strong>fixed</strong> dates, state when you provide school experience.</p>
-          <span id="more-detail-hint" class="govuk-hint">For example, on 10 May 2020</span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dates1" name="date" type="radio" value="can">
+        <label class="govuk-label govuk-radios__label" for="dates-1">
+          <p>If you only offer <strong>fixed</strong> dates, state when you provide school experience.</p>
+          <span id="more-detail-hint" class="govuk-hint">For example, on 10 May 2020.</span>
         </label>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="dates2" name="flexible_dates" type="checkbox" value="1">
-        <label class="govuk-label govuk-checkboxes__label" for="dates-2">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dates2" name="date" type="radio" value="cannot">
+        <label class="govuk-label govuk-radios__label" for="dates-2">
           <p>If you're <strong>flexible</strong> on dates, describe your school experience availability.</p>
-          <span id="more-detail-hint" class="govuk-hint">For example, on specific days of the week and open days or around exams, holidays and term times</span>
+          <span id="more-detail-hint" class="govuk-hint">For example, on specific days of the week and open days or around exams, holidays and term times.</span>
         </label>
       </div>
   </fieldset>
