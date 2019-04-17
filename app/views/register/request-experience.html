@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+	tag: {
+		text: "alpha"
+	},
+	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+
+
+
+		<form action="/register/account-check" method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+
+
+
+     <div class="govuk-character-count" data-module="character-count" data-maxwords="150"><div class="govuk-form-group" id="candidates_registrations_placement_preference_objectives_container"><label class="govuk-heading-l" for="candidates_registrations_placement_preference_objectives">What do you want to get out of your school experience?</label>
+          <p>
+            Provide a short explanation. For example:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              I want to experience day-to-day life in a school
+            </li>
+            <li>
+              I want to find out and see if teaching is the right thing for me
+            </li>
+            <li>
+              I want to observe and support pupils with class activities
+            </li>
+            <li>
+              I want to see how teachers teach my subject
+            </li>
+          </ul>
+          <p>
+            This will help the school see if it can offer you the kind of experience you’re looking for.
+          </p>
+<textarea rows="5" class="govuk-textarea js-character-count" name="candidates_registrations_placement_preference[objectives]" id="candidates_registrations_placement_preference_objectives">
+</textarea></div></div>
+
+
+
+
+
+				</fieldset>
+			</div>
+
+			<a href="/register/account-info1" class="govuk-button">Continue</a>
+
+		</form>
+	</div>
+</div>
+{% endblock %}
