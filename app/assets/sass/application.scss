@@ -1515,3 +1515,19 @@ button.govuk-se-wide-button {
     border-bottom: 10px solid $govuk-brand-colour;
   }
 }
+
+#school-dashboard {
+  .govuk-tag {
+    &.govuk-tag--default {
+      background-color: govuk-colour('grey-1');
+    }
+
+    &.govuk-tag--available {
+      background-color: govuk-colour('green');
+    }
+
+    &.govuk-tag--unavailable {
+      background-color: govuk-colour('red');
+    }
+  }
+}
