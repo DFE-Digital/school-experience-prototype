@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="school-dashboard">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Schools manager
+    </h1>
+
+
+		<p>
+			Select a school to view requests, bookings, notices and manage its profile.</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Newton Heath School",  4, "Two requests and two change booking items", "Candidates have requested school experience") }}
+<strong class="govuk-tag">
+  Accepting requests
+</strong>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Ellen Wilkinson High School", 3, "Two requests and one change booking") }}
+<strong class="govuk-tag">
+  Accepting requests
+</strong>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Buile Hill Visual Arts College", 1, "One service update") }}
+<strong class="govuk-tag">
+  Not accepting requests
+</strong>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ notification.count("#", "Barton Moss Community Primary School", 1, "One request") }}
+		<strong class="govuk-tag">
+		  Accepting requests
+		</strong>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read about service updates and changes</a>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Get help and support</a>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Give feedback on this service</a>
+		
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		
+		    <a href="#" class="govuk-body">Add new school</a>
+				<p>Request to view and update another school’s requests and bookings</p>
+
+				
+  </div>
+</div>
+{% endblock %}
