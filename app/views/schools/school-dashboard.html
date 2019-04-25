@@ -21,39 +21,41 @@
     <a href="#" class="">Change school</a>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    {{ notification.count("/schools/school-requests", "Accept and reject requests", request_count, "Candidates have requested school experience") }}
+    {{ notification.count("/schools/school-requests", "New requests", request_count, "Accept or reject the latest requests from candidates") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
 
-    {{ notification.count("#", "Change existing bookings", change_count, "A candidate has asked to change a booking") }}
+    {{ notification.count("#", "Updated bookings", change_count, "Accept or reject requests to change bookings from candidates") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    {{ notification.count("#", "Confirm candidate attendance", 4, "Confirm the attendance of candidates who've been on school experience") }}
+    {{ notification.count("#", "Confirm attendance", 4, "Confirm if candidates have attended their school experience") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     <br>
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">View upcoming bookings</a>
-
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read about service updates and changes</a>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Edit school profile</a>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">View old bookings</a>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read service guidance</a>
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">View bookings</a>
+    <p class="govuk-hint">View, update and cancel bookings</p>
     <hr class="govuk-section-break govuk-section-break--m">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">View rejected requests</a>
+    <p class="govuk-hint">View recently rejected requests</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Update school profile</a>
+    <p class="govuk-hint">Add and remove school profile details</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read about service updates and changes</a>
+    <p class="govuk-hint">Find out about the latest updates and changes to the manage school experience service</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read service guidance</a>
+    <p class="govuk-hint">Find out about how the manage school experience service works</p>
     <hr class="govuk-section-break govuk-section-break--m">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Give feedback on this service</a>
+    <p class="govuk-hint">Help us improve the manage school experience service</p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
   </div>
 </div>
