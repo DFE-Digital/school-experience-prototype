@@ -1531,3 +1531,14 @@ button.govuk-se-wide-button {
     }
   }
 }
+
+.govuk-se-dashboard-row {
+	display: flex;
+	
+	.govuk-se-dashboard--heading {
+		flex-grow: 1;
+		
+	}
+	.govuk-se-dashboard--info {
+	}
+}

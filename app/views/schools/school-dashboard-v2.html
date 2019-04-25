@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% extends "layout-internal-booking-iteration.html" %}
 {% import "sections.html" as s %}
 {% import "schools/notification-circle.html" as notification %}
 
@@ -24,11 +25,72 @@
 			Select a school to manage requests, bookings, notices and edit its profile.</p>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    {{ notification.count("#", "Newton Heath School",  4, "Two requests and two change booking items", "Candidates have requested school experience") }}
-<strong class="govuk-tag govuk-tag--available">
-  Accepting requests
-</strong>
 
+		<div class="govuk-se-dashboard-row">
+			<div class="govuk-se-dashboard--heading">
+		    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">
+		    	{{ notification.count("#", "Newton Heath School",  4, "Two requests and two change booking items", "Candidates have requested school experience") }}
+				</a>
+			</div>
+			<div class="govuk-se-dashboard--info">
+				<strong class="govuk-tag govuk-tag--available">
+				  Accepting requests
+				</strong>
+			</div>
+		</div>
+
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+		<div class="govuk-se-dashboard-row">
+			<div class="govuk-se-dashboard--heading">
+		    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">
+    			{{ notification.count("#", "Ellen Wilkinson High School", 3, "Two requests and one change booking") }}
+				</a>
+			</div>
+			<div class="govuk-se-dashboard--info">
+				<strong class="govuk-tag govuk-tag--available">
+				  Accepting requests
+				</strong>
+			</div>
+		</div>
+		
+		
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+		<div class="govuk-se-dashboard-row">
+			<div class="govuk-se-dashboard--heading">
+		    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">
+    			{{ notification.count("#", "Buile Hill Visual Arts College", 1, "One service update") }}
+				</a>
+			</div>
+			<div class="govuk-se-dashboard--info">
+				<strong class="govuk-tag govuk-tag--default">
+				  Not accepting requests
+				</strong>
+			</div>
+		</div>	
+		
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+		<div class="govuk-se-dashboard-row">
+			<div class="govuk-se-dashboard--heading">
+		    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">
+    			{{ notification.count("#", "Barton Moss Community Primary School", 1, "One request") }}
+				</a>
+			</div>
+			<div class="govuk-se-dashboard--info">
+				<strong class="govuk-tag govuk-tag--available">
+				  Accepting requests
+				</strong>
+			</div>
+		</div>				
+
+<!--
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     {{ notification.count("#", "Ellen Wilkinson High School", 3, "Two requests and one change booking") }}
@@ -49,7 +111,7 @@
 		<strong class="govuk-tag govuk-tag--available">
 		  Accepting requests
 		</strong>
-
+-->
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-18">Read about service updates and changes</a>
