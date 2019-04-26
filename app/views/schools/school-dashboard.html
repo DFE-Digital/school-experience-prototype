@@ -16,16 +16,15 @@
 <div class="govuk-grid-row" id="school-dashboard">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
-      Newton Heath School
+      Manage school experience at Newton Heath School
     </h1>
     <a href="#" class="">Change school</a>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    {{ notification.count("/schools/school-requests-table", "New requests", request_count, "Accept or reject the latest requests from candidates") }}
+    {{ notification.count("/schools/school-requests", "Manage requests", request_count, "Accept and reject new and revisit existing requests from candidates") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
 
-    {{ notification.count("#", "Updated bookings", change_count, "Accept or reject requests to change bookings from candidates") }}
+    {{ notification.count("#", "Update bookings", change_count, "Accept or reject requests to change bookings from candidates") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -34,6 +33,10 @@
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     <br>
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Update school experience dates</a>
+    <p class="govuk-hint">Add, edit and disable <strong>fixed</strong> dates for candidates</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">View bookings</a>
     <p class="govuk-hint">View, update and cancel bookings</p>
     <hr class="govuk-section-break govuk-section-break--m">
@@ -43,19 +46,28 @@
     <hr class="govuk-section-break govuk-section-break--m">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Update school profile</a>
-    <p class="govuk-hint">Add and remove school profile details</p>
+    <p class="govuk-hint">Add, edit and remove school profile details</p>
     <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Turn requests on / off</a>
+    <p class="govuk-hint">Choose to stop / start receiving requests from candidates</p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read about service updates and changes</a>
     <p class="govuk-hint">Find out about the latest updates and changes to the manage school experience service</p>
-    <hr class="govuk-section-break govuk-section-break--m">
+
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Read service guidance</a>
     <p class="govuk-hint">Find out about how the manage school experience service works</p>
-    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Get help and support</a>
+    <p class="govuk-hint">Contact us if you need help with the manage school experience service</p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-24">Give feedback on this service</a>
     <p class="govuk-hint">Help us improve the manage school experience service</p>
+
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
   </div>
 </div>
