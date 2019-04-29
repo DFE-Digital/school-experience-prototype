@@ -1542,3 +1542,15 @@ button.govuk-se-wide-button {
 	.govuk-se-dashboard--info {
 	}
 }
+
+col.name {
+	width: 14rem;
+}
+
+col.status {
+	width: 14rem;
+}
+
+tr:nth-child(even) {
+	background-color: govuk-colour("grey-4");
+}
