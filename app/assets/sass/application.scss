@@ -1516,21 +1516,21 @@ button.govuk-se-wide-button {
   }
 }
 
-#school-dashboard {
-  .govuk-tag {
-    &.govuk-tag--default {
-      background-color: govuk-colour('grey-1');
-    }
 
-    &.govuk-tag--available {
-      background-color: govuk-colour('green');
-    }
+.govuk-tag {
+  &.govuk-tag--default {
+    background-color: govuk-colour('grey-1');
+  }
 
-    &.govuk-tag--unavailable {
-      background-color: govuk-colour('red');
-    }
+  &.govuk-tag--available {
+    background-color: govuk-colour('green');
+  }
+
+  &.govuk-tag--unavailable {
+    background-color: govuk-colour('red');
   }
 }
+
 
 .govuk-se-dashboard-row {
 	display: flex;
