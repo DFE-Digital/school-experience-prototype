@@ -1129,12 +1129,10 @@ router.post('/schools/subjects', function (req, res) {
   if (req.session.data['phases'].includes('primary')) {
     paths.push('/schools/primary-key-stages');
   }
-  if (req.session.data['phases'].includes('secondary')) {
+  if (req.session.data['phases'].includes('secondary') || req.session.data['phases'].includes('college') || req.session.data['phases'].includes('secondary-with-college')) {
     paths.push('/schools/subjects-secondary');
   }
-  if (req.session.data['phases'].includes('college')) {
-    paths.push('/schools/subjects-college');
-  }
+
 
   if (paths.length > 0) {
     req.session.data['phase_paths'] = paths;
