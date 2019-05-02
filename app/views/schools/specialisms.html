@@ -20,13 +20,31 @@
 <form action="/schools/other-details-continued" method="post" class="form" data-local-save="school-onboarding:specialisms">
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Is there anything which makes your school unique?</h1>
-      <p>Tell us about what might make your school interesting to candidates.</p>
-      <p>For example, if your school offers any unique opportunities via links to outside organisations or specialises in certain educational phases, subject areas or subjects.</p>
+      <h1 class="govuk-heading-l">Enter a short description of your school </h1>
+      <p>Tell us about your school. Provide a summary to help candidates choose school experience at your school.</p>
+      <p>We recommend your summary includes and outlines the following kind of details:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your area, catchment and the kind and numbers of pupils you teach</li>
+        <li>your level of educational attainment and performance</li>
+        <li>any unique opportunities you offer via links to outside agencies and organisations</li>
+        <li>any activities, educational phases or subjects and subject areas you specialise in</li>
+        </ul>
+      <details class="govuk-details">
+ <summary class="govuk-details__summary">
+   <span class="govuk-details__summary-text">
+     View description example
+   </span>
+ </summary>
+ <div class="govuk-details__text">
+   <p>We’re a thriving community school serving a cosmopolitan community with more than 1,700 pupils.</p>
 
-      <p>These details will help candidates select your school experience.</p>
+<p>Our GCSE scores are above the national average and, with multiple languages spoken at our school, we’re highly-skilled in meeting the needs of bilingual children.</p>
 
+<p>We’re a barrier-free school and cater for pupils with movement difficulties while our work with hearing-impaired children is supported by the local authority and other agencies.</p>
 
+<p>We also specialise in art and drama and have strong sporting connections with local community organisations.</p>
+ </div>
+</details>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -34,27 +52,8 @@
 
           </legend>
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="yes" id="how-contacted-conditional-4" name="fee" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-4">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" data-save-name="details" id="conditional-how-contacted-conditional-4">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  Provide details.
-                </label>
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
-              </div>
 
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="no" id="how-contacted-conditional-2" name="fee" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2">
-              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                No
-              </label>
-            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
 
           </div>
         </fieldset>
