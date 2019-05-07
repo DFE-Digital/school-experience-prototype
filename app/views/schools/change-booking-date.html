@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Change 1 October 2019 to a new date</h1>
+	<form action="/schools/school-edit-dates" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>Enter the start dates and tell us how long it will last.</p>
+
+<p>These details will be shown to candidates to help them choose school experience at your school.</p>
+		</div>
+	</div>
+
+
+	<div id="dates-block">
+		<div id="initial-block">
+			<h2 class="govuk-heading-m">Enter start date</h2>
+			<p class="govuk-hint">For example, 01 09 2019</p>
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-one-third">
+					<div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+							<div class="govuk-date-input">
+								<div class="govuk-date-input__item">
+									<div class="govuk-form-group">
+										<label class="govuk-label govuk-date-input__label" for="single-day">
+											Day
+										</label>
+										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-day" name="dob-day" type="number" pattern="[0-9]*">
+									</div>
+								</div>
+								<div class="govuk-date-input__item">
+									<div class="govuk-form-group">
+										<label class="govuk-label govuk-date-input__label" for="single-month">
+											Month
+										</label>
+										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-month" name="dob-month" type="number" pattern="[0-9]*">
+									</div>
+								</div>
+								<div class="govuk-date-input__item">
+									<div class="govuk-form-group">
+										<label class="govuk-label govuk-date-input__label" for="single-year">
+											Year
+										</label>
+										<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="single-year" name="dob-year" type="number" pattern="[0-9]*">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-two-thirds">
+        	<h2 class="govuk-heading-m">How long will it last</h2>
+
+					<div class="govuk-form-group">
+						<label class="govuk-label" for="width-3">
+							Enter number of days.
+						</label>
+						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+					</div>
+				</div>
+			</div>
+
+<!--
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button id="add-single" onclick="copy_dates_block(); return false" class="govuk-button button-grey">
+				Add more dates
+			</button>
+		</div>
+	</div>
+-->
+	<br>
+	<button type="submit" class="govuk-button">
+		Save and return to date manager
+	</button>
+</div>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}
