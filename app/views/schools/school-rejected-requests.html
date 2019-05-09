@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Rejected requests
+    </h1>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">Name</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date requested</th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+      <th class="govuk-table__header app-custom-class" scope="col">Reason for rejection</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Matthew Richards</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>1 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+      <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Jacob Sterling</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>17 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+      <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Ellie Simpson</th>
+      <td class="govuk-table__cell">Media studies</td>
+      <td class="govuk-table__cell"><strong>5 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+      <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Paul Baker</th>
+      <td class="govuk-table__cell">Maths</td>
+      <td class="govuk-table__cell"><strong>13 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+      <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+    </tr>
+  </tbody>
+</table>
+<!--
+<br>
+
+    <h1 class="govuk-heading-l">
+      Flexible date requests
+    </h1>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="govuk-table__header app-custom-class" scope="col">Status</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Availability / preferred dates</th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Martin Riley</th>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag">new</strong>
+			</td>
+      <td class="govuk-table__cell">Drama</td>
+      <td class="govuk-table__cell">I would only be able to attend school experience on a Wednesday or Thursday
+each week due to work commitments and child care issues.<br>
+<br>
+If school experience is only on offer outside of these days then I'd need
+at least 2 to 3 weeks notice to see if I could make arrangements to make sure I would be able make it.</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Kevin May</th>
+			<td class="govuk-table__cell"><strong class="govuk-tag">new</strong></td>
+      <td class="govuk-table__cell">History</td>
+      <td class="govuk-table__cell">I would only be able to attend school experience on a Wednesday or Thursday
+each week due to work commitments and child care issues.<br>
+<br>
+If school experience is only on offer outside of these days then I'd need
+at least 2 to 3 weeks notice to see if I could make arrangements to make sure I would be able make it.</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Wendy Roots</th>
+			<td class="govuk-table__cell"><strong class="govuk-tag">new</strong></td>
+      <td class="govuk-table__cell">Religious Education</td>
+      <td class="govuk-table__cell">I would only be able to attend school experience on a Wednesday or Thursday
+each week due to work commitments and child care issues.<br>
+<br>
+If school experience is only on offer outside of these days then I'd need
+at least 2 to 3 weeks notice to see if I could make arrangements to make sure I would be able make it.</td>
+      <td class="govuk-table__cell"><a href="" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Sarah Conran</th>
+			<td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">Music</td>
+      <td class="govuk-table__cell">I would only be able to attend school experience on a Wednesday or Thursday
+each week due to work commitments and child care issues.<br>
+<br>
+If school experience is only on offer outside of these days then I'd need
+at least 2 to 3 weeks notice to see if I could make arrangements to make sure I would be able make it.</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Nico Bernard</th>
+			<td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">French</td>
+      <td class="govuk-table__cell">I would only be able to attend school experience on a Wednesday or Thursday
+each week due to work commitments and child care issues.<br>
+<br>
+If school experience is only on offer outside of these days then I'd need
+at least 2 to 3 weeks notice to see if I could make arrangements to make sure I would be able make it.</td>
+      <td class="govuk-table__cell"><a href="" class="govuk-link">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+-->
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=2&change-count=1">Return to requests and bookings</a></p>
+
+
+<!--
+<div class="govuk-grid-row" id="school-requests">
+  <div class="govuk-grid-column-full">
+  {{ candidate_request.profile(
+      "Matthew Richards",
+      "Any time during July 2019",
+      "01 January 2019",
+      "1 Arcadia avenue, Middle Town, Northampton NP1 1JD",
+      "01689 444 555",
+      "mat.rich1996@outlook.com",
+      "I've applied for teacher training",
+      "Maths",
+      "NEW",
+      "/booking/profile-request1-full"
+      ) }}
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  {{ candidate_request.profile(
+      "Jacob Sterling",
+      "20 to 27 March, 6 to 25 April and 5 until 20 May 2019",
+      "01 January 2019",
+      "101 Brook Street, West Hampstead, London SW1 8RG",
+      "0207 555 6666",
+      "jacob.sterling@gmail.com",
+      "I’m very sure and think I’ll apply",
+      "Biology",
+      "AMENDED",
+      "/booking/profile-request2"
+      ) }}
+  </div>
+</div>
+-->
+{% endblock %}
