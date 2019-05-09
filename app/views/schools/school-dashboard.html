@@ -13,22 +13,22 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row" id="school-dashboard">	
-	
+<div class="govuk-grid-row" id="school-dashboard">
+
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
       Manage school experience at Newton Heath School
     </h1>
     <a href="#" class="">Change school</a>
-		<!--		
+		<!--
 		<div class="blue-banner">
 			<br><h4 class="govuk-heading-s">&nbsp;&nbsp;You have no dates available for candidates to book. <a href="/schools/availability-start-date-edit"> Add more dates</a></h4>
-		</div>	
-		-->	
+		</div>
+		-->
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-		
+
     {{ notification.count("/schools/school-requests-fixed", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests from candidates") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
@@ -43,7 +43,7 @@
 
 
     <br>
-    <a href="/schools/school-edit-dates" class="govuk-!-font-weight-bold govuk-!-font-size-18">Update school experience dates</a>
+    <a href="/schools/school-edit-dates" class="govuk-!-font-weight-bold govuk-!-font-size-18">Manage dates</a>
     <p class="govuk-hint">Add, edit and disable <strong>fixed</strong> dates for candidates</p>
     <hr class="govuk-section-break govuk-section-break--m">
 
@@ -64,14 +64,14 @@
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-18">Read about service updates and changes</a>
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-18">Service updates and changes</a>
     <p class="govuk-hint">Find out about the latest updates and changes to the manage school experience service</p>
 
 
-    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-18">Read service guidance</a>
+    <a href="#" class="govuk-!-font-weight-bold govuk-!-font-size-18">Service guidance</a>
     <p class="govuk-hint">Find out about how the manage school experience service works</p>
 
-    <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-!-font-weight-bold govuk-!-font-size-18">Get help and support</a>
+    <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-!-font-weight-bold govuk-!-font-size-18">Help and support</a>
     <p class="govuk-hint">Contact us if you need help with the manage school experience service</p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
