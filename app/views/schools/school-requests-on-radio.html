@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Turn requests on / off
+    </h1>
+		<p class="govuk-body">Decide to stop / start receiving requests from candidates</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+          Requests are on 
+        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          You are currently receieving requests from candidates
+        </span> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+          Turn requests off 
+        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          stop receieving requests from candidates
+        </span> </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+<!--
+		<div class="turquoise-banner">
+			<br><h4 class="govuk-heading-m">&nbsp;&nbsp;Requests on - you're currently receiving requests from candidates.</h4>
+		</div>	
+
+<br>
+<br>
+
+<p><a class="govuk-button button" href="/schools/school-requests-off">Turn requests off - stop receieving requests from candidates</a></p>
+		<br>
+-->
+<p><a class="govuk-button button" href="/schools/school-dashboard?request-count=2&change-count=1">Save and return to requests and bookings</a></p>
+
+
+
+{% endblock %}
