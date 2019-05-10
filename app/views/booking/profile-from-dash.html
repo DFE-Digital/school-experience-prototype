@@ -1,0 +1,136 @@
+{% extends "layout-internal-booking-iteration.html" %} {% block pageTitle %} XXXXXXXXXXXXXXXXXXXXXXXXX {% endblock %} {% block beforeContent %}
+<!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <!--
+      <p class="govuk-!-width-two-thirds">
+        Use the fields provided to update your school profile. The right hand column contains information you entered when registering these can also be updated.
+      </p>
+
+      <div class="divider">
+        &nbsp;
+      </div>
+    -->
+    </div> 
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">{{ school['Name'] }}</h1>
+
+        <p>We’re a thriving community school serving a cosmopolitan community in North Manchester with more than 1,700 pupils.
+        </p>
+        <p>Our pupils’ GCSE scores are above the national average and, with more than 63 languages spoken at our school, we’re highly skilled in meeting the needs of bilingual children. </p>
+        <p>We’re also a barrier free school and cater fully for the needs of pupils with movement difficulties while our work with hearing impaired children is well supported by the local authority and other agencies.</p>
+
+        <h1 class="govuk-heading-m">About our school</h1>
+
+        <p><b>Age range:</b> 3 to 16 years (nursery, primary and secondary)</p>
+
+        <p><b>Specialisms:</b> Arts, bilingual students and SEN.</p>
+
+        <p><b>For more information about our school use the following links: </b>
+            <br>
+
+            <p>
+                <li><a class="govuk-link" href="https://www.abrahammoss.manchester.sch.uk/">{{ school['Name'] }} website</a></li>
+            </p>
+
+            <p>
+                <li><a class="govuk-link" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/105560#school-dashboard">{{ school['Name'] }} Get Information About Schools page</a></li>
+            </p>
+
+            <p>
+                <li><a class="govuk-link" href="https://reports.ofsted.gov.uk/provider/28/105560">Ofsted report: {{ school['Name'] }}</a></li>
+            </P>
+
+            <p>
+                <li><a class="govuk-link" href="https://www.compare-school-performance.service.gov.uk/school/105560/abraham-moss-community-school">Performance information: {{ school['Name'] }}</a></li>
+            </p>
+
+            <h1 class="govuk-heading-m">Placement information</h1>
+
+            <p><b>Individual requirements:</b> Must have a degree and be planning to become a teacher.</p>
+
+            <p><b>Placement details:</b> Attendees will observe lessons in their chosen subjects and may get the chance to interact with pupils and classroom activities. Only offer key stage 1 experience for primary placements.</p>
+
+            <p><b>Placement subjects:</b> {{ school['Subjects'] }}.</p>
+
+            <h1 class="govuk-heading-m">Location</h1>
+            <div style="width: 100%; height: 400px; overflow: hidden; vertical-align: middle">
+                <div style="">
+                    <img class="school-map" src="/public/images/fir-trees.png" width="100%" />
+                </div>
+            </div>
+            <br>
+            <a class="" href="/schools/content-edit">Change</a>
+        </p>
+
+        <p><a class="govuk-button button" href="/schools/school-dashboard?request-count=2&change-count=1">Save and return to requests and bookings</a></p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Details</h3>
+        <h3 class="govuk-heading-s">Address</h3>
+        <p class="govuk-body">
+            Cheshire Road, Manchester MA2 4TW
+        </p>
+
+        <h3 class="govuk-heading-s">Availability</h3>
+        <p class="govuk-body">
+            We only offer school experience during the Autumn and Spring Terms and not during the Summer term due to it being the main exam period.
+            <br /><a class="" href="/schools/other-details-edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">DBS check required</h3>
+        <p class="govuk-body">
+            Yes - Sometimes <a href="">more info ></a>
+            <br /><a class="" href="/schools/other-details-edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Fees</h3>
+        <p class="govuk-body">
+            £10 daily administration fee</p>
+        <p> £50 one-off DBS check fee</p>
+        <br /><a class="" href="/schools/availability_edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Dress code</h3>
+        <p class="govuk-body">
+            Business dress, cover up tattoos and no jeans or trainers
+            <br /><a class="" href="/schools/availability_edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Placement start and finish times</h3>
+        <p class="govuk-body">
+            8.30am to 5.30pm - Flexible
+            <br /><a class="" href="/schools/subjects-edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Parking</h3>
+        <p class="govuk-body">
+            Yes - on site parking provided
+            <br /><a class="" href="/schools/other-details-edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Accessiblity details</h3>
+        <p class="govuk-body">
+            Full wheelchair access and hearing loops / audio induction loops for people with hearing impairments
+            <br /><a class="" href="/schools/other-details-edit">Change</a>
+        </p>
+
+        <h3 class="govuk-heading-s">Teacher training offered</h3>
+        <p class="govuk-body">
+            Yes - We’re part of The Greater Manchester SCITT.
+            <p>
+                <p><a href="">www.gmscitt.org.uk</a></p>
+                <br /><a class="" href="/schools/other-details-edit">Change</a>
+            </p>
+
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,106 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Service guidance</h1>
+
+        <p>Lorum ipsum</p>
+
+        <h1 class="govuk-heading-m">Heading</h1>
+
+        <p>Lorum ipsum</p>
+
+        <h1 class="govuk-heading-m">Dates bit </h1>
+
+        <p><b>A</b> 12 September 2019</p>
+        <p><b>B</b> 20 September 2019</p>
+        <p><b>C</b> 28 September 2019</p>
+        <p><b>D</b> 1 October 2019</p>
+        <p><b>E</b> 5 October 2019</p>
+
+        <h1 class="govuk-heading-m">Links</h1>
+
+        <p>
+            <li><a class="govuk-link" href="">Link 1</a></li>
+        </p>
+
+        <p>
+            <li><a class="govuk-link" href="">Link 2</a></li>
+        </p>
+
+        <p>
+            <li><a class="govuk-link" href="">Link 3</a></li>
+        </P>
+
+        <p>
+            <li><a class="govuk-link" href="">Link 4</a></li>
+        </p>
+
+        <h1 class="govuk-heading-m">Pretty pic</h1>
+        <div style="width: 100%; height: 400px; overflow: hidden; vertical-align: middle">
+            <div style="">
+                <img class="school-map" src="/public/images/fir-trees.png" width="100%" />
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <a class="govuk-button" href="">Button</a>
+
+        <br>
+        <p> <a href="" class="">Back to something else</a></p>
+    </div>
+
+    <div class="govuk-grid-column-one-third app-related-items ">
+        <h3 class="govuk-heading-m">Side panel</h3>
+        <p class="govuk-body">
+
+        </p>
+
+        <h3 class="govuk-heading-s">Title 1</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+        </p>
+
+        <h3 class="govuk-heading-s">Title 2</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+        </p>
+
+        <h3 class="govuk-heading-s">Title 3</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+        </p>
+
+        <h3 class="govuk-heading-s">Title 4</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+        </p>
+        <h3 class="govuk-heading-s">Title 5</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+        </p>
+
+        <h3 class="govuk-heading-s">Title 6</h3>
+        <p class="govuk-body">
+            Lorum ipsum
+
+            <h3 class="govuk-heading-s">Title 7</h3>
+            <p class="govuk-body">
+                Lorum ipsum
+            </p>
+
+            <h3 class="govuk-heading-s">Title 8</h3>
+            <p class="govuk-body">
+                Lorum ipsum</p>
+
+            <p><a href="" target="_blank">www.somewebpage.co.uk</a></p>
+
+    </div>
+
+</div>
+
+{% endblock %}
