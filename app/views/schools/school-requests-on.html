@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Turn requests on / off
+    </h1>
+		<p class="govuk-body">Decide to stop / start receiving requests from candidates</p>
+		<div class="turquoise-banner">
+			<br><h4 class="govuk-heading-m">&nbsp;&nbsp;Requests on - you're currently receiving requests from candidates.</h4>
+		</div>	
+
+<br>
+<br>
+
+<p><a class="govuk-button button" href="/schools/school-requests-off">Turn requests off - stop receieving requests from candidates</a></p>
+		<br>
+
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=2&change-count=1">Save and return to requests and bookings</a></p>
+
+
+
+{% endblock %}
