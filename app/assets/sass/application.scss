@@ -1534,10 +1534,10 @@ button.govuk-se-wide-button {
 
 .govuk-se-dashboard-row {
 	display: flex;
-	
+
 	.govuk-se-dashboard--heading {
 		flex-grow: 1;
-		
+
 	}
 	.govuk-se-dashboard--info {
 	}
@@ -1556,21 +1556,21 @@ col.status {
 	border: 5px solid govuk-colour('blue');
 	padding: 0.5rem 0rem;
 	margin: 1rem 0rem;
-	
+
 }
 
 .red-banner {
 	border: 5px solid govuk-colour('red');
 	padding: 0.5rem 0rem;
 	margin: 1rem 0rem;
-	
+
 }
 
 .turquoise-banner {
 	border: 5px solid govuk-colour('turquoise');
 	padding: 0.5rem 0rem;
 	margin: 1rem 0rem;
-	
+
 }
 
 table.attendance-confirmation {
@@ -1578,4 +1578,10 @@ table.attendance-confirmation {
 		padding: 9px 0 0 0;
 		margin: 0;
 	}
+}
+
+.se-letter-with-form {
+  background: govuk-colour('grey-3');
+  padding: govuk-spacing(4);
+  @include govuk-responsive-margin(4, "bottom");
 }
