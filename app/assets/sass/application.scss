@@ -1582,6 +1582,7 @@ table.attendance-confirmation {
 
 .se-letter-with-form {
   background: govuk-colour('grey-4');
+  background: lighten(govuk-colour('light-blue'), 50%);
   padding: govuk-spacing(4);
   @include govuk-responsive-margin(4, "bottom");
 }

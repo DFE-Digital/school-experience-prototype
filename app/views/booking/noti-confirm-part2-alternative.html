@@ -12,8 +12,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-  <form action="/booking/" method="post" class="form">
-      <h1 class="govuk-heading-l">Confirm booking details</h1>
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Send details to candidate</h1>
 
 <!--
       <div class="nav-cont">
@@ -39,84 +39,45 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">Confirm the following school experience details for {{ data['candidate-name'] }}</p>
 
-          <h2 class="govuk-heading-m">Placement dates</h2>
-					<p class="govuk-body">01 June 2019 to 5 June 2019</p>
+					<p class="govuk-body">The following contains the wording of the confirmation email which will be sent to Matthew Richards to confirm their booking.</p>
 
-          <h2 class="govuk-heading-m">School experience contact on the day</h2>
-					<p class="govuk-body">On the day of your school experience placement you’ll need to report to:
-</p>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Ian Boscastle
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      UK telephone number
-    </dt>
-    <dd class="govuk-summary-list__value">
-      0161 345 6355
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Email address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      i.boscastle@abbeycollege.co.uk
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Location
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Ask for Ian at the main school reception
-    </dd>
-  </div>
-</dl>
-
-					<p class="govuk-body">You can also contact them if you have any questions about your actual placement.</p>
-
-          <h2 class="govuk-heading-m">Placement details</h2>
-					<p class="govuk-body">You’ll be observing lessons and may get the chance to interact with pupils and classroom activities</p>
-
-					<p class="govuk-body"><strong>Subject: </strong>Maths</p>
-
-          <h2 class="govuk-heading-m">Remember to bring</h2>
-
-				<ul class="govuk-list govuk-list--bullet">
-					<li>your DBS certificate</li>
-					<li>your £50 DBS check fee</li>
-				</ul>
+<h2 class="govuk-heading-m">Read confirmation email </h2>
+<p>
+If required, you can add instructions to be sent to the Candidate along with their
+Booking details
+<p>
 
 
+		<div>
 
+			
+			<p><strong>Information from the School</strong></p>
+			
+			<div class="govuk-form-group">
+			 <textarea class="govuk-textarea" rows="8" 
+			 	placeholder="Please supply further information for the Candidate"></textarea>
+			</div>
+			
+			</div>
 
+					<p class="govuk-body">By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
 
-                  <a href="/booking/noti-confirm-part2" class="govuk-button">Continue</a><br>
-									<a href="/booking/noti-confirm-part2-alternative" class="govuk-button">Continue (alternative version)</a>
+<a href="noti-confirm-part3-alternative.html" class="govuk-button">Preview confirmation email</a>
+<br/>
 
-
-              <br />
-              <a class="govuk-link" href="/schools/school-dashboard">Back to request</a>
-              <br/>
-
-          </form>
+<a class="govuk-link" href="/booking/profile-request1-contact">Back to confirm booking details</a>
+<br>
+<br>
+<a class="govuk-link" href="/booking/profile-request1-full">Back to request</a>
+		</form>
 
 
     </div>
 </div>
 
 
-
+ 
 
 
 <!--
