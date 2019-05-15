@@ -1,4 +1,13 @@
-{% extends "layout-internal-booking-iteration.html" %} {% block pageTitle %} XXXXXXXXXXXXXXXXXXXXXXXXX {% endblock %} {% block beforeContent %}
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
 <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
 {% endblock %} {% block content %}
 <dl class="govuk-summary-list">
