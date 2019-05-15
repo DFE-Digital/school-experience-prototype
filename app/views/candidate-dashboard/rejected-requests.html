@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Rejected requests
+    </h1>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">School</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date requested</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Reason for rejection</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Altrincham Grammar School for Girls</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>1 October 2019</td>
+      <td class="govuk-table__cell">The date you requested is no longer available for school experience.</td>				
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">St James's Church of England High School</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>17 September 2019</td>
+      <td class="govuk-table__cell">we can't offer you the kind of school experience you're looking for.</td>				
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Glenthorne High School</th>
+      <td class="govuk-table__cell">Media studies</td>
+      <td class="govuk-table__cell"><strong>5 September 2019</td>
+      <td class="govuk-table__cell">We're fully booked on the date you requested.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">William Perkin Church of England High School</th>
+      <td class="govuk-table__cell">Maths</td>
+      <td class="govuk-table__cell"><strong>13 September 2019</td>
+      <td class="govuk-table__cell">We've had to cancel school experience for the dates you requested.</td>			
+    </tr>
+  </tbody>
+</table>
+
+
+
+<p><a class="govuk-button button-grey cta" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
+
+<p><a class="govuk-button button" href="/candidate-search/search">Make a new request</a></p>
+
+
+
+{% endblock %}
