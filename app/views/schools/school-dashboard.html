@@ -17,7 +17,7 @@
 
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
-      Manage school experience at Newton Heath School
+      Manage requests and bookings at Newton Heath School
     </h1>
     <a href="#" class="">Change school</a>
 		<!--
@@ -29,11 +29,11 @@
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-    {{ notification.count("/schools/school-requests1", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests from candidates") }}
+    {{ notification.count("/schools/school-requests1", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break">
 
-    {{ notification.count("/schools/school-change-booking", "Update bookings", change_count, "Accept or reject requests to change bookings from candidates") }}
+    {{ notification.count("/schools/school-change-booking", "Manage bookings", change_count, "Accept or reject change requests and cancel bookings") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -47,10 +47,6 @@
     <p class="govuk-hint">Add, edit and disable <strong>fixed</strong> dates for candidates</p>
     <hr class="govuk-section-break govuk-section-break--m">
 
-    <a href="/schools/school-bookings" class="govuk-!-font-weight-bold govuk-!-font-size-18">View bookings</a>
-    <p class="govuk-hint">View, update and cancel bookings</p>
-    <hr class="govuk-section-break govuk-section-break--m">
-
     <a href="/schools/school-rejected-requests" class="govuk-!-font-weight-bold govuk-!-font-size-18">View rejected requests</a>
     <p class="govuk-hint">View recently rejected requests</p>
     <hr class="govuk-section-break govuk-section-break--m">
@@ -60,7 +56,7 @@
     <hr class="govuk-section-break govuk-section-break--m">
 
     <a href="/schools/school-requests-on-radio" class="govuk-!-font-weight-bold govuk-!-font-size-18">Turn requests on / off</a>
-    <p class="govuk-hint">Choose to stop / start receiving requests from candidates</p>
+    <p class="govuk-hint">Stop / start receiving requests from candidates</p>
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
