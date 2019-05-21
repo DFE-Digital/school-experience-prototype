@@ -25,33 +25,28 @@
 			<br><h4 class="govuk-heading-s">&nbsp;&nbsp;You have no dates available for candidates to book. <a href="/schools/availability-start-date-edit"> Add more dates</a></h4>
 		</div>
 		-->
+	 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <h2>To do list</h2>
+    <h3 class="govuk-heading-m">To do list</h3>
 
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
 
 
     {{ notification.count("/schools/school-requests1", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests") }}
 
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-    {{ notification.count("/schools/school-change-booking?notifications=1", "Update bookings", change_count, "Accept or reject requests to change bookings from candidates") }}
-
 <br>
+
 
     {{ notification.count("/schools/school-change-booking", "Manage bookings", change_count, "Accept or reject change requests and cancel bookings") }}
 
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<br>
 
     {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 4, "Confirm if candidates have attended their school experience") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <h2>Account admin</h2>
+    <h3 class="govuk-heading-m">Account admin</h3>
 
-    <br>
     <a href="/schools/school-edit-dates" class="govuk-heading-s govuk-heading-s-no-margin">Manage dates</a>
     <p class="govuk-hint">Add, edit and disable <strong>fixed</strong> dates for candidates</p>
     <hr class="govuk-section-break govuk-section-break--m">
@@ -69,14 +64,14 @@
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    <h2>Help and support</h2>
+    <h3 class="govuk-heading-m">Help and support</h3>
 
     <a href="/schools/service-update-changes" class="govuk-heading-s govuk-heading-s-no-margin">Service updates and guidance</a>
     <p class="govuk-hint">Find out about the latest changes to the service and how it works</p>
 
     <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
     <p class="govuk-hint">Get in touch if you need help using the service</p>
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 
     <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on this service</a>
     <p class="govuk-hint">Help us improve the manage school experience service</p>
