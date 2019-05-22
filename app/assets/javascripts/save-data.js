@@ -13,6 +13,17 @@ function parseValue(field) {
   return value;
 }
 
+function restoreValue(field, value) {
+  switch(field.type) {
+    case 'checkbox' :
+      field.attr('checked') = value ;
+    case 'radio' :
+      field.attr('checked') = value ;
+    default:
+      field.val(value) ;
+  }
+}
+
 function parseName(field) {
   if (field.dataset.saveName) {
     return field.dataset.saveName;
@@ -33,12 +44,35 @@ let saveInputs = (form) => {
   });
 }
 
+let restoreInput = (input) => {
+  let jqInput = $(input) ;
+  let localStorageKey = jqInput.data('local-restore') ;
+  console.log('RESTORING ' + localStorageKey) ;
+
+  let encodedValue = window.localStorage.getItem(localStorageKey) ;
+  if (encodedValue == null) {
+    console('FOUND ' +localStorageKey + '=' + encodedValue ) ;
+    return ;
+  }
+
+  let value = JSON.parse(encodedValue) ;
+
+  restoreValue(jqInput, value) ;
+}
+
 $('form[data-local-save]').submit(function (e) {
   saveInputs(this);
 });
 $('a[data-save-inputs]').click(function (e) {
   saveInputs($('form[data-local-save]'));
 });
+
+$(document).ready(function(e) {
+  let inputs = $('input[data-local-restore]') ;
+  inputs.each(function(index) {
+    restoreInput(inputs[index]) ;
+  }) ;
+}) ;
 
 $('a[href="/prototype-admin/clear-data"]').click(function (e) {
   window.localStorage.clear();
