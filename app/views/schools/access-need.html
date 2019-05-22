@@ -1,0 +1,98 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<form action="/schools/availability" method="post" class="form" data-local-save="school-onboarding:candidate-details">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Tell us how you can support candidates who have a disability or access need</h1>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="access-needs">
+                    <span id="waste-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="access-needs1" name="access-needs" type="checkbox" value="need1">
+                            <label class="govuk-label govuk-checkboxes__label" for="access-needs1">
+                                We aim to offer an inclusive environment for students and staff. We encourage applications for school experience from underrepresented groups in teaching. Once we confirm your booking, please let us know if you need any specific support or adjustments . We try and make any adjustments for candidates to support their needs during school experience. If you would like to discuss your disability or access needs before applying please contact us.
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="access-needs2" name="disability" type="checkbox" value="disability1">
+                            <label class="govuk-label govuk-checkboxes__label" for="access-needs2">
+                                We support the Disability Confident Scheme 
+				                        <p class="govuk-hint">
+				                            This was previously known as Two Ticks
+				                        </p>
+                                <img src="/public/images/disability-confident-s.png" alt="disability confident logo">
+                            </label>
+                        </div>
+                </fieldset>
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                    Access needs
+                  </h1>
+                        </legend>
+                        <label class="govuk-label" for="more-detail">
+                            Briefly tell us about facilities or support for candidates with disabilities or access needs.
+                        </label>
+                        <p class="govuk-hint">
+                            For example, disabled parking spaces and support for autistic spectrum disorders, dyslexia and hearing impairments
+                        </p>
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
+                        </textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+              Do you have a policy online for your equality, disability or access needs?
+            </h1>
+                        </legend>
+                        <p class="govuk-hint">
+                            For example, a link to your equality policy
+                        </p>
+                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" data-save-name="offers-placement-Yes" id="how-contacted-conditional-6" name="dress" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-6">
+                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-6">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-6">
+                                <div class="govuk-form-group">
+
+                                    <label class="govuk-label" for="contact-by-email">
+                                        Enter a web address.
+                                    </label>
+                                    <input type="text" data-save-name="offers-placement-url" class="govuk-input govuk-!-width-two-thirds">
+                                </div>
+
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" data-save-name="offeres-placement-No" id="how-contacted-conditional-7" name="dress" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-7">
+                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
+                                    No
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+                <button type="submit" class="govuk-button">
+                    Continue
+                </button>
+
+            </div>
+        </div>
+</form>
+
+{% endblock %}

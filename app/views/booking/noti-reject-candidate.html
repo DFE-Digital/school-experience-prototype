@@ -1,0 +1,187 @@
+{% extends "layout-internal-booking-iteration.html" %}
+
+{% block pageTitle %}
+XXXXXXXXXXXXXXXXXXXXXXXXX
+{% endblock %}
+
+{% block beforeContent %}
+  <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Review and send confirmation email to candidate</h1>
+
+<!--
+      <div class="nav-cont">
+
+          <ul class="navi-style1">
+            <li>
+              <a href="/booking/view-bookings?id=5">View bookings</a>
+            </li>
+            <li>
+              <a href="/booking/view-messages?id=5">View messages</a>
+            </li>
+            <li class="on">
+              <strong class="govuk-heading-s">Notifications</strong>
+            </li>
+            <li>
+              <a href="/booking/attendance?id=5">Candidate attendance</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+-->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+					<p class="govuk-body">Review the following email which will be sent to the candidate. You can add extra details.
+<!--
+						The following contains the wording of the confirmation email which will be sent to Matthew Richards to confirm their booking.</p>
+
+
+<h2 class="govuk-heading-m">Read confirmation email </h2>
+<p>
+If required, you can add instructions to be sent to the Candidate along with their
+Booking details
+<p>
+-->
+
+
+		<div class="se-letter-with-form">
+			<h2 class="govuk-heading-m">
+				Dear Matthew Richards,
+			</h2>
+
+			<p>
+				Here are the details about your school experience at Newton Heath School.
+			</p>
+
+			<p>
+				<strong>School details</strong>
+			</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>School or college: Newton Heath School</li>
+				<li>Address: Crescent Road, Crumpsall, Manchester M8 5UF.</li>
+				<li>Dress code: Business attire with male attendees expected to wear a collar and tie</li>
+				<li>Parking: Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day</li>
+			</ul>
+
+			<p>
+				<strong>School experience contacts</strong>
+			</p>
+
+			<p>
+				On the day of your school experience, you’ll need to report to:
+			</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Name: Mrs I Teach</li>
+				<li>Email address: iteach@newtonheath.co.uk</li>
+				<li>UK telephone number: 0161 345 6355</li>
+			</ul>
+
+			<p>
+				You can also contact them if you have any questions about your experience.
+			</p>
+
+			<p>
+				<strong>School experience details</strong>
+			</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Dates: 01 to 05 June 2019</li>
+				<li>Subject: Maths</li>
+				<li>Experience details: You’ll be observing lessons and may get the chance to interact with pupils and classroom activities</li>
+				<li>Experience start and finish times: 9am to 5pm</li>
+			</ul>
+
+			<p><strong>Extra details from the school
+</strong></p>
+
+			<div class="govuk-form-group">
+			 <textarea class="govuk-textarea" rows="8"
+			 	placeholder="Add extra details. For example, things candidates might need to bring on the day such as their DBS certificate or fee payments"></textarea>
+			</div>
+
+			<p>
+				<strong>Help and support</strong>
+			</p>
+
+			<p>If you have any questions about your booking contact:</p>
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Name: Billy Admin</li>
+				<li>Email address: badmin@newtonheath.co.uk</li>
+				<li>UK telephone number: 0161 345 6000</li>
+			</ul>
+			</div>
+
+					<p class="govuk-body">By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
+
+<a href="/booking/noti-confirm-part3-alternative" class="govuk-button">Send confirmation email</a>
+<br/>
+
+<a class="govuk-link" href="/booking/profile-request1-full">Back to request</a>
+		</form>
+
+
+    </div>
+</div>
+
+
+
+
+
+<!--
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full emails">
+          <h2 class="govuk-heading-m">Email to {{ data['candidate-name'] }}</h2>
+          <div class="divider"></div>
+          <div class="noti-template">
+              This email is using the "Confirm booking" template.
+          </div>
+          <div class="divider"></div>
+      </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <p>
+            <strong>Subject:</strong> Your school experience placement confirmation
+          </p>
+          <p>
+              <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
+          </p>
+
+          <p>
+            The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+          </p>
+          <ul class="govuk-list">
+            <li>placement start and finish time - 8am to 4pm</li>
+            <li>school location and directions - (Abraham Moss Community School)[<a href="">https://goo.gl/maps/p3AgGMyAwgy</a>] </li>
+            <li>parking and access - in teaching car park accessed via south gate on Mosley Street</li>
+            <li>report to - John Lewis in main school reception</li>
+            <li>dress code - formal </li>
+            <li>placement fee - £10</li>
+          </ul>
+          <p>The school will be contacting you in due course with further details about your placement.</p>
+          <p>In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.</p>
+
+          <div class="divider"></div>
+
+
+
+
+      </div>
+  </div>
+-->
+
+{% endblock %}
