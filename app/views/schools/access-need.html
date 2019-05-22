@@ -5,27 +5,26 @@
 <form action="/schools/availability" method="post" class="form" data-local-save="school-onboarding:candidate-details">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Tell us how you can support candidates who have a disability or access need</h1>
+            <h1 class="govuk-heading-l">Enter disability and access need details for candidates</h1>
+
+            <p>Tell us about how you can support candidates who have a disabilities and access needs. Select all that apply.</p>
 
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="access-needs">
-                    <span id="waste-hint" class="govuk-hint">
-      Select all that apply.
-    </span>
                     <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="access-needs1" name="access-needs" type="checkbox" value="need1">
                             <label class="govuk-label govuk-checkboxes__label" for="access-needs1">
-                                We aim to offer an inclusive environment for students and staff. We encourage applications for school experience from underrepresented groups in teaching. Once we confirm your booking, please let us know if you need any specific support or adjustments . We try and make any adjustments for candidates to support their needs during school experience. If you would like to discuss your disability or access needs before applying please contact us.
+                              We offer an inclusive environment for students and staff. We encourage requests from under-represented groups and do our best to support and make adjustments for all needs and requirements. We are happy to discuss you disability or access needs before or as part of your school experience request.
                             </label>
                         </div>
 												<br>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="access-needs2" name="disability" type="checkbox" value="disability1">
                             <label class="govuk-label govuk-checkboxes__label" for="access-needs2">
-                                We support the Disability Confident Scheme 
+                                We support the Disability Confident employer scheme.
 				                        <p class="govuk-hint">
-				                            This was previously known as Two Ticks
+				                            This was previously known as the 'Two Ticks scheme'
 				                        </p>
                                 <img src="/public/images/disability-confident-s.png" alt="disability confident logo">
                             </label>
@@ -37,12 +36,9 @@
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h1 class="govuk-fieldset__heading">
-                    Access needs
+                    Enter details about what facilities and support you offer candidates
                   </h1>
                         </legend>
-                        <label class="govuk-label" for="more-detail">
-                            Briefly tell us about facilities or support for candidates with disabilities or access needs.
-                        </label>
                         <p class="govuk-hint">
                             For example, disabled parking spaces and support for autistic spectrum disorders, dyslexia and hearing impairments
                         </p>
@@ -54,7 +50,7 @@
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h1 class="govuk-fieldset__heading">
-              Do you have a policy online for your equality, disability or access needs?
+              Do you have any online information which covers your equality, disability and access needs policies?
             </h1>
                         </legend>
                         <p class="govuk-hint">
@@ -71,7 +67,7 @@
                                 <div class="govuk-form-group">
 
                                     <label class="govuk-label" for="contact-by-email">
-                                        Enter a web address.
+                                        Enter web address.
                                     </label>
                                     <input type="text" data-save-name="offers-placement-url" class="govuk-input govuk-!-width-two-thirds">
                                 </div>
