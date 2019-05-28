@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Give feedback on this service</h1>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">Help us improve the manage school experience service.</p>
+
+					<h2 class="govuk-heading-m">What did you come to do on the service?</h2>
+
+      <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="request" id="what1" name="action" type="radio" value="request2" data-aria-controls="request3">
+              <label class="govuk-label govuk-radios__label" for="what1">
+                Set up a new school or schools on the service
+              </label>
+            </div>					
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="withdraw" id="what2" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
+              <label class="govuk-label govuk-radios__label" for="what2">
+                Manage your school experience requests and bookings
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="else" id="what3" name="action" type="radio" value="else2" data-aria-controls="else3">
+              <label class="govuk-label govuk-radios__label" for="what3">
+                 Something else 
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="else3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="what3">
+                  Tell us what you came here to do. Do not include any information that could identify you personally - such as your name or the name of your school.
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="what3" id="what3" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+              </div>
+
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+          </div>
+      </div>							
+
+<h2 class="govuk-heading-m">Overall, how did you feel about the service you received?</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel1" name="how-do-you-feel" type="radio" value="very-satisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel1">
+          Very satisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel2" name="how-do-you-feel" type="radio" value="satisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel2">
+          Satisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel3" name="how-do-you-feel" type="radio" value="neither-satisfied-or-dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel3">
+          Neither satisfied or dissatisfied
+        </label> </div>			
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel4" name="how-do-you-feel" type="radio" value="dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel4">
+          Dissatisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel5" name="how-do-you-feel" type="radio" value="very-dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel5">
+          Very dissatisfied
+        </label> </div>
+    </div>		
+  </fieldset>
+</div>
+
+<h2 class="govuk-heading-m">How could we improve the service? (optional)</h2>
+
+
+<div class="govuk-form-group">
+  <span id="more-detail-hint" class="govuk-hint">
+    Do not include any information that could identify you personally - such as your name or the name of your school.
+  </span>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+<a href="/schools/school-dashboard?request-count=7&change-count=7" class="govuk-button">Submit feedback</a>
+<br>
+
+<h2 class="govuk-heading-m">Help and support</h2>
+
+<p class="govuk-body">If there’s anything else you’d like to add email our School Experience Service team with your URN at <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-link">organise.school-experience@education.gov.uk</a>.</p>
+
+		</form>
+
+
+    </div>
+</div>
+{% endblock %}
