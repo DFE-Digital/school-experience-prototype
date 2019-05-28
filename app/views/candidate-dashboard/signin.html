@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Schools Admin - for School Experience
+  Candidate login - for School Experience
 {% endblock %}
 
 {% block header %}
@@ -26,49 +26,49 @@
 
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-one-half">
+							
+							<fieldset class="govuk-fieldset">
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="firstname">
+										First name
+									</label>
+									
+									<input class="govuk-input" id="firstname" name="firstname" type="firstname">
+								</div>
+								
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="lastname">
+										Last name
+									</label>
+									
+									<input class="govuk-input" id="lastname" name="lastname" type="text">
+								</div>
+								
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="emailaddress">
+										Email Address
+									</label>
+									
+									<input class="govuk-input" id="emailaddress" name="emailaddress" type="email">
+								</div>
+								
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="date_of_birth">
+										Date of Birth
+									</label> 
+									
+									<input class="govuk-input" id="date_of_birth" name="date_of_birth" type="date">
+								</div>
+								
+								<a href="/candidate-dashboard/signin-link-sent" role="button" draggable="false" class="govuk-button govuk-button--start">
+									Sign in
+								</a>
+							</fieldset>
 
-
-                {% call govukFieldset({
-                  legend: {
-
-                    classes: "govuk-fieldset__legend--m",
-                    isPageHeading: true
-                  }
-                }) %}
-
-
-                {{ govukInput({
-                  label: {
-                    text: "User ID"
-                  },
-
-                  id: "user-id",
-                  name: "user-id",
-                  type: "user-id"
-                }) }}
-
-                {{ govukInput({
-                  label: {
-                    text: "Password"
-                  },
-
-                  id: "password",
-                  name: "password",
-                  type: "password"
-                })}}
-
-                {{ govukButton({
-                  text: "Sign in",
-                  href: "dash-search",
-                  classes: "govuk-button--start"
-                }) }}
-
-              {% endcall %}
               </div>
           </div>
-
-
-
+					
+					
 
 
             <!--<a class="govuk-link" href=""></a>-->
