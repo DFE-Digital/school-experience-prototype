@@ -12,110 +12,71 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
-
-      <!--<div class="nav-cont">
-
-          <ul class="navi-style1">
-            <li>
-              <a href="/booking/view-bookings?id=5">View bookings</a>
-            </li>
-            <li>
-              <a href="/booking/view-messages?id=5">View messages</a>
-            </li>
-            <li class="on">
-              <strong class="govuk-heading-s">Notifications</strong>
-            </li>
-            <li>
-              <a href="/booking/attendance?id=5">Candidate attendance</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-  </div>
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Send rejection email to candidate</h1>
 
 
 
--->
-<form action="/booking/" method="post" class="form">
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Send request rejection</h1>
 
-            <p>
-              You’ve confirmed the reasons for rejecting the request for school experience at your school by {{ data['full-name'] }}.
-            </p>
-						<p>The following contains the wording of the email which will be sent to them to let them know their request has been turned down.
-						</p>
-						<p>
-							You can change any of the details ahead of sending this message by simply editing or adding in any extra details in to the following text box.
-						</p>
-            <h2 class="govuk-heading-s">Read and update rejection email </h2>
-            <div class="govuk-form-group">
-                <textarea class="govuk-textarea" id="more-detail1" name="more-detail" rows="8" aria-describedby="more-detail-hint">
+					<p class="govuk-body">The following contains the wording of the rejection email which will be sent to Matthew Richards.
 
-The request you made for school experience at Newton Heath school has been turned down for the following reasons:
+			<h2 class="govuk-heading-m">
+				Preview rejection email 
+			</h2>
 
-The school is fully booked and has no school experience available on the date you requested.
+		<div class="se-letter-with-form">
+			<h2 class="govuk-heading-m">
+				Dear Matthew Richards,
+			</h2>
 
-If you have any questions about this decision contact Irene Cara.
+			<p>
+				Newton Heath School has turned down your school experience request for the following dates:
+			</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>01 June 2019</li>
+			</ul>
+			<p>
+				<strong>Your request was turned down for the following reasons:</strong>
+			</p>
+			<p>The school is fully booked and has no school experience available on the date you requested.</p>
 
-You can still apply to other schools for placements. If you need support call the Teaching Line on Freephone 0800 389 2500.
+			<p>If you have any questions about this decision contact Irene Cara on 0161 345 6355.</p>
 
-                </textarea>
-          </div>
+			<p><strong>Extra details from the school
+</strong></p>
 
-
-          <!-- End Form -->
-
-          <a href="noti-sent-rejected" class="govuk-button">Reject request</a>
-
-
-          <br>
-          <a class="govuk-link" href="/schools/school-dashboard">Your requests and bookings</a>
-					<br>
-
-      </form>
+			<p>We have 05 June 2019 available</p>
 
 
+			<p>
+				<strong>Next steps</strong>
+			</p>
 
+			<p>You can still apply to other schools for school experience using the <a href="/candidate-search/start-page" class="govuk-link">get school experience service</a>.</p>
+			
+			<p>If you need any further help and support call the Teaching Line on 0161 234 5000</p>
+
+
+		</form>
     </div>
 
+<p>By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
+		
+<a href="/booking/noti-sent-rejected" class="govuk-button">Send rejection email</a>
+<br/>
+
+<p><a class="govuk-link" href="/booking/noti-reject">Amend the rejection email</a></p>
+
+<p><a class="govuk-link" href="/booking/profile-request1-full">Back to request</a></p>		
+		
 </div>
 
-<!--
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full emails">
-          <h2 class="govuk-heading-m">Email to {{ data['full-name'] }}</h2>
-          <div class="divider"></div>
-          <div class="noti-template">
-              This email is using the "Reject booking" template.
-          </div>
-          <div class="divider"></div>
-      </div>
-  </div>
--->
-
-<!--
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-
-            <strong>Subject:</strong> Your school experience placement request has been turned down
-
-          The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been rejected.</p>
-
-              If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk
-
-
-          <div class="divider"></div>
-
--->
 
 
 
 
-      </div>
-  </div>
 
 
 {% endblock %}
