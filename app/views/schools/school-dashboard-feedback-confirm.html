@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="school-dashboard">
+
+
+  <div class="govuk-grid-column-full">
+		
+		
+		<div class="turquoise-banner">
+			<br><h2 class="govuk-heading-s">&nbsp;&nbsp;Thank you for your feedback. &nbsp;<a href="/schools/school-dashboard?request-count=7&change-count=7" class="govuk-link">Close</a>
+				<p>
+	  </h2>
+		</div>			
+		
+    <h1 class="govuk-heading-l">
+      Manage requests and bookings at Newton Heath School
+    </h1>
+    <a href="#" class="">Change school</a>
+		<!--
+		<div class="blue-banner">
+			<br><h4 class="govuk-heading-s">&nbsp;&nbsp;You have no dates available for candidates to book. <a href="/schools/availability-start-date-edit"> Add more dates</a></h4>
+		</div>
+		-->
+	 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">To do list</h3>
+
+
+
+
+    {{ notification.count("/schools/school-requests1", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests") }}
+
+<br>
+
+
+    {{ notification.count("/schools/school-change-booking", "Manage bookings", change_count, "Accept or reject change requests and cancel bookings") }}
+
+<br>
+
+    {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 4, "Confirm if candidates have attended their school experience") }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Account admin</h3>
+
+    <a href="/schools/school-edit-dates" class="govuk-heading-s govuk-heading-s-no-margin">Manage dates</a>
+    <p class="govuk-hint">Add, edit and disable <strong>fixed</strong> dates for candidates</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="/schools/school-rejected-requests" class="govuk-heading-s govuk-heading-s-no-margin">View rejected requests</a>
+    <p class="govuk-hint">View recently rejected requests</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="/booking/profile-from-dash" class="govuk-heading-s govuk-heading-s-no-margin">Update school profile</a>
+    <p class="govuk-hint">Add, edit and remove school profile details</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="/schools/school-requests-on-radio" class="govuk-heading-s govuk-heading-s-no-margin">Turn requests on / off</a>
+    <p class="govuk-hint">Stop / start receiving requests from candidates</p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Help and support</h3>
+
+    <a href="/schools/service-update-changes" class="govuk-heading-s govuk-heading-s-no-margin">Service updates and guidance</a>
+    <p class="govuk-hint">Find out about the latest changes to the service and how it works</p>
+
+    <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
+    <p class="govuk-hint">Get in touch if you need help using the service</p>
+
+
+    <a href="/booking/feedback-school" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on this service</a>
+    <p class="govuk-hint">Help us improve the manage school experience service</p>
+
+  </div>
+</div>
+{% endblock %}
