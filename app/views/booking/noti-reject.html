@@ -12,9 +12,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Review and send rejection email to candidate</h1>
 
-
-      <!--<div class="nav-cont">
+<!--
+      <div class="nav-cont">
 
           <ul class="navi-style1">
             <li>
@@ -33,76 +35,119 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
         </div>
     </div>
   </div>
-
-
-
 -->
-<form action="/booking/" method="post" class="form">
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Reject request</h1>
 
-            <p>Enter and confirm the reasons for rejecting the school experience request by {{ data['full-name'] }}.</p>
-            <p>The reasons you enter will be sent to them in an email confirmation to let them know why their request has been turned down.</p>
-
-            <h2 class="govuk-heading-s">Reasons for rejecting request</h2>
-            <div class="govuk-form-group">
-                <label class="govuk-label" for="more-detail">
-                    Provide a reason.
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
-
-                </textarea>
-          </div>
+					<p class="govuk-body">Review the following email which will be sent to the candidate. You can add extra details.
+<!--
+						The following contains the wording of the confirmation email which will be sent to Matthew Richards to confirm their booking.</p>
 
 
-          <!-- End Form -->
-          <a href="/booking/noti-reject2" class="govuk-button">Continue</a>
+<h2 class="govuk-heading-m">Read confirmation email </h2>
+<p>
+If required, you can add instructions to be sent to the Candidate along with their
+Booking details
+<p>
+-->
 
 
-          <br>
-          <a class="govuk-link" href="/schools/school-requests-fixed">Your requests</a>
-      </form>
+		<div class="se-letter-with-form">
+			<h2 class="govuk-heading-m">
+				Dear Matthew Richards,
+			</h2>
 
+			<p>
+				Newton Heath School has turned down your school experience request for the following dates:
+			</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>01 June 2019</li>
+			</ul>
+			<p>
+				<strong>Your request was turned down for the following reasons:</strong>
+			</p>
+			<p>The school is fully booked and has no school experience available on the date you requested.</p>
+
+			<p>If you have any questions about this decision contact Irene Cara on 0161 345 6355.</p>
+
+			<p>
+				<strong>Next steps</strong>
+			</p>
+
+			<p>You can still apply to other schools for school experience using the <a href="/candidate-search/start-page" class="govuk-link">get school experience service</a>.</p>
+			
+			<p>If you need any further help and support call the Teaching Line on 0161 234 5000</p>
+
+			<p><strong>Extra details from the school
+</strong></p>
+
+			<div class="govuk-form-group">
+			 <textarea class="govuk-textarea" rows="8"
+			 	placeholder="Add extra details. For example, you may have availability on a different date or you can offer experience in another subject"></textarea>
+			</div>
+
+
+
+					<p class="govuk-body">By sending this email you’re confirming, to the best of your knowledge, the booking details you’re providing are correct.</p>
+
+<a href="/booking/noti-sent-rejected" class="govuk-button">Send rejection email</a>
+<br/>
+
+<a class="govuk-link" href="/booking/profile-request1-full">Back to request</a>
+		</form>
 
 
     </div>
-
 </div>
 
+
+
+
+
 <!--
+
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-full emails">
-          <h2 class="govuk-heading-m">Email to {{ data['full-name'] }}</h2>
+          <h2 class="govuk-heading-m">Email to {{ data['candidate-name'] }}</h2>
           <div class="divider"></div>
           <div class="noti-template">
-              This email is using the "Reject booking" template.
+              This email is using the "Confirm booking" template.
           </div>
           <div class="divider"></div>
       </div>
   </div>
--->
 
-<!--
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+         <p>
+            <strong>Subject:</strong> Your school experience placement confirmation
+          </p>
+          <p>
+              <strong>Body:</strong> Your placement at Abraham Moss Community School has been confirmed for {{ data['candidate-booking-dates'] }}.
+          </p>
 
-            <strong>Subject:</strong> Your school experience placement request has been turned down
-
-          The placement you requested at Abraham Moss Community School for {{ data['candidate-booking-dates'] }} has been rejected.</p>
-
-              If you have any questions about this decision contact John Lewis at Abraham Moss Community School on 0161 123 4567 or at info@central.co.uk
-
+          <p>
+            The school has provided the following important details about your placement which you need to read and take note of ahead your arrival:
+          </p>
+          <ul class="govuk-list">
+            <li>placement start and finish time - 8am to 4pm</li>
+            <li>school location and directions - (Abraham Moss Community School)[<a href="">https://goo.gl/maps/p3AgGMyAwgy</a>] </li>
+            <li>parking and access - in teaching car park accessed via south gate on Mosley Street</li>
+            <li>report to - John Lewis in main school reception</li>
+            <li>dress code - formal </li>
+            <li>placement fee - £10</li>
+          </ul>
+          <p>The school will be contacting you in due course with further details about your placement.</p>
+          <p>In the meantime, if you have any urgent questions contact John Lewis at Abraham Moss Community School on <a href="tel:0161 123 4567">0161 123 4567</a> or at <a href="mailto:info@abmoss.ac.uk">info@central.co.uk</a>.</p>
 
           <div class="divider"></div>
-
--->
 
 
 
 
       </div>
   </div>
-
+-->
 
 {% endblock %}
