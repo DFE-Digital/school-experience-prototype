@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<form action="/schools/access-need3" method="post" class="form" data-local-save="school-onboarding:candidate-details">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Are you signed up to the Disability Confident employer scheme?</h1>
+
+            <img src="/public/images/disability-confident-s.png" alt="disability confident logo">
+
+            <p class="govuk-hint">
+                This was previously known as the 'Two Ticks scheme'
+            </p>
+            <br>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+                            <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                            <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                                No
+                            </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint"> 
+        </span> </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <p>
+                Find out more about how to become a <a href="https://disabilityconfident.campaign.gov.uk/" target="_blank">Disability Confident committed employer</a>.
+            </p>
+
+            <button type="submit" class="govuk-button">
+                Continue
+            </button>
+
+        </div>
+    </div>
+</form>
+
+{% endblock %}
