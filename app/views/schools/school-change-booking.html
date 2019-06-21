@@ -28,8 +28,8 @@
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th class="govuk-table__header app-custom-class" scope="col">Name</th>
-      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
-      <th class="govuk-table__header app-custom-class" scope="col">Date booked</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject &nbsp;<img src="/public/images/sort.png" width=11px height=16px></th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date booked &nbsp;<img src="/public/images/sort.png" width=11px height=16px></th>
       <th class="govuk-table__header app-custom-class" scope="col"></th>
     </tr>
   </thead>
@@ -39,49 +39,40 @@
         <col>
         <col span="" class="subject">
     </colgroup>
-<!--
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">
-        Matthew Richards {{ dismissableNotifications.count(notifications) }}
-      </th>
-      <td class="govuk-table__cell">Physics</td>
-      <td class="govuk-table__cell"><strong>01 June 2019</td>
-      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
-    </tr>
-	-->
+
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Jason Taylor</th>
       <td class="govuk-table__cell">Art</td>
-      <td class="govuk-table__cell"><strong>18 September 2019</td>
+      <td class="govuk-table__cell"><strong>23 October 2019</td>
       <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Ellie Simpson</th>
-      <td class="govuk-table__cell">Media studies</td>
-      <td class="govuk-table__cell"><strong>19 September 2019</td>
+      <td class="govuk-table__cell">Business studies</td>
+      <td class="govuk-table__cell"><strong>19 October 2019</td>
       <td class="govuk-table__cell"><a href="" class="govuk-link">View</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Paul Baker</th>
-      <td class="govuk-table__cell">Maths</td>
+      <td class="govuk-table__cell">Health and social care</td>
       <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Juan Gutierrez-Dominguez</th>
-      <td class="govuk-table__cell">Spanish</td>
+      <td class="govuk-table__cell">Maths</td>
       <td class="govuk-table__cell"><strong>11 September 2019</td>
       <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Peter Campbell-Jones</th>
-      <td class="govuk-table__cell">Health and social care</td>
+      <td class="govuk-table__cell">Media studies</td>
       <td class="govuk-table__cell"><strong>3 September2019</td>
       <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">Edward Vasey</th>
-      <td class="govuk-table__cell">Business studies</td>
+      <td class="govuk-table__cell">Spanish</td>
       <td class="govuk-table__cell"><strong>1 September 2019</td>
       <td class="govuk-table__cell"><a href="" class="govuk-link">View</a></td>
     </tr>
@@ -91,37 +82,4 @@
 <p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=7&change-count=7">Return to requests and bookings</a></p>
 
 
-<!--
-<div class="govuk-grid-row" id="school-requests">
-  <div class="govuk-grid-column-full">
-  {{ candidate_request.profile(
-      "Matthew Richards",
-      "Any time during July 2019",
-      "01 January 2019",
-      "1 Arcadia avenue, Middle Town, Northampton NP1 1JD",
-      "01689 444 555",
-      "mat.rich1996@outlook.com",
-      "I've applied for teacher training",
-      "Maths",
-      "NEW",
-      "/booking/profile-request1-full"
-      ) }}
-
-  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-  {{ candidate_request.profile(
-      "Jacob Sterling",
-      "20 to 27 March, 6 to 25 April and 5 until 20 May 2019",
-      "01 January 2019",
-      "101 Brook Street, West Hampstead, London SW1 8RG",
-      "0207 555 6666",
-      "jacob.sterling@gmail.com",
-      "I’m very sure and think I’ll apply",
-      "Biology",
-      "AMENDED",
-      "/booking/profile-request2"
-      ) }}
-  </div>
-</div>
--->
 {% endblock %}
