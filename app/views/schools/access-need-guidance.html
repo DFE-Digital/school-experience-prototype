@@ -1,0 +1,326 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<form action="/schools/access-need3" method="post" class="form" data-local-save="school-onboarding:candidate-details">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Disability and access need guidance for candidates</h1>
+
+            <p>This guidance may enable your school to help candidates. </p>
+
+
+<div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          On accepting the candidate
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class="govuk-body govuk-!-font-weight-bold">Ask all candidates if they have a disability or access need and if they require any adustments for school experience.</p>
+                   <p class="govuk-hint">
+                       Each individual will be the best 'expert' on their needs.  Two people may have the same condition but have different needs and preferences.  If you don't ask people directly if they need any adjustments then some participants wont be confident enough to ask.
+                   </p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Prior to the school experience
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+              <p class="govuk-body govuk-!-font-weight-bold">Provide all candidates with an outline of the school experience day and agenda in advance.</p>
+				                        <p class="govuk-hint">
+				                            This will support all candidates and it would be good practice to share this information in advance.   This will be particularly beneficial to candidates who have an Autistic Spectrum Disorder, reading disability such as dyslexia or Anxiety
+				                        </p>
+												
+												<br>
+												<br>												
+                              <p class="govuk-body govuk-!-font-weight-bold">Provide all printed material in at least font size 14. </p> 
+				                        <p class="govuk-hint">
+				                            This is good practice, 50% of the population can't read fonts smaller than 12 point.  Reading is easier and quicker for most people in larger fonts.
+				                        </p>
+
+												
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Enable candidates to bring their laptops to school experience if requested.</p>
+				                        <p class="govuk-hint">
+				                            People with dyslexia might prefer to follow along on their own device and they may also have their own assistive technology (software) on their laptop/device that makes reading and comprehension easier.  People with sight impairments may find it difficult or impossible to use paper materials 
+				                        </p>
+
+
+
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Provide candidates with printed materials / electronic materials in advance.</p>
+				                        <p class="govuk-hint">
+				                            This wil potentially support participants with dyslexia, autistic spectrum disorders and those who are deaf, have a sight impairment or anxiety.  
+				                        </p>
+
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Share information about disabled access, lifts, accessible toilets and accessible car parking. If you have rooms that are not wheel chair accessible or are a 'long walk' then offer to relocate classes or school experience sessions on request.</p>
+				                        <p class="govuk-hint">
+				                            If people have mobility issues this will be a key concern.  You need to consider people who may not be able to walk very far as well as wheelchair users
+				                        </p>
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Let candidates know about any additional access support you have such as hearing loops.  Its worth mentioning if you know you have good acousitic sound levels.</p>
+				                        <p class="govuk-hint">
+				                            Good communication support tactics, such as one person speaking at a time, loops and good acoustics (i.e. lagging on walls) all support deaf and hard of hearing people. If a room has lots of hard surfaces and is echoey it may be problematic for hearing, 50% of over 50's have hearing lost but more young people have hearing loss now as well.
+				                        </p>
+
+												<br>
+												<br>
+                              <p class="govuk-body govuk-!-font-weight-bold">Share information on how communication support can be booked for school experience such as sign language interpreters, speech to text services or lip speakers.</p>
+				                        <p class="govuk-hint">
+				                            Make sure you are clear on who provides, books and pays for these services.  The recommended lead times for booking BSL interpreters is 6 weeks so you will need to build this into your planning.
+				                        </p>
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Let candidates contact you directly before booking school experience if they want to discuss their access needs.</p>
+				                        <p class="govuk-hint">
+				                            This is very important for candidates who have more significant needs, anxiety or require communication support.
+				                        </p>
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Use plain english in all communications.</p>
+				                        <p class="govuk-hint">
+				                            Use of metaphors can be particularly problematic for people with autistic spectrum disorders.
+				                        </p>
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Ask candidates their preferred method of contact.</p>
+				                        <p class="govuk-hint">
+				                            Some candidates may be unable or struggle with some forms of contact. For example deaf and hard of hearing candidates may struggle with phone calls. Candidates with autistic spectrum disorders may also struggle with phone calls.
+				                        </p>
+	
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          On the day
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                               <p class="govuk-body govuk-!-font-weight-bold">Ask candidates where they want to sit.</p>
+				                        <p class="govuk-hint">
+				                            Particularly important for sight impaired, deaf an hard of hearing, mobility issues, autistic spectrum disorders and anxiety.
+				                        </p>
+
+
+
+
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Provide some materials in large print (suggest font size 18 - landscape), just in case for each session.</p> 
+				                        <p class="govuk-hint">
+				                            Some candidates will struggle with even 14 point font and not everyone is confident to ask for adjustments.  Having a few copies of materials in larger fonts can be helpful.  For fonts from 18 point and higher its easier to print in landscape.  You can also add to your profile that large print and (alternative formats) are available on request
+
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          On request
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+                               <p class="govuk-body govuk-!-font-weight-bold">On request print material in larger fonts.</p>
+				                        <p class="govuk-hint">
+				                            Some candidates will have very specific needs, large print means different things to different people.  Candidates may also want a specific font.  Letting people know they can ask for this in advance is good practice.
+				                        </p>
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">On request print material on different colour backrounds</p>
+				                        <p class="govuk-hint">
+				                            This is particularly helpful for candidates with Dyslexia, reading black text on a white background can be very difficult and having different colours can make reading easier, even off-white will help, many people use yellow paper or other pastel colours.  Some people with Dyslexia would prefer to recieve material electronically and follow along on their own laptop or electronic device. 
+				                        </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Old list
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">On accepting the candidate</h3>
+												<br>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="access-needs-list">
+                   <p class="govuk-body govuk-!-font-weight-bold">Ask all candidates if they have a disability or access need and if they require any adustments for school experience.</p>
+				                        <p class="govuk-hint">
+				                            Each individual will be the best 'expert' on their needs.  Two people may have the same condition but have different needs and preferences.  If you don't ask people directly if they need any adjustments then some participants wont be confident enough to ask.
+				                        </p>                            
+														</label>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+												
+<h3 class="govuk-heading-m">Prior to the school experience</h3>
+												<br>
+              <p class="govuk-body govuk-!-font-weight-bold">Provide all candidates with an outline of the school experience day and agenda in advance.</p>
+				                        <p class="govuk-hint">
+				                            This will support all candidates and it would be good practice to share this information in advance.   This will be particularly beneficial to candidates who have an Autistic Spectrum Disorder, reading disability such as dyslexia or Anxiety
+				                        </p>
+												
+												<br>
+												<br>												
+                              <p class="govuk-body govuk-!-font-weight-bold">Provide all printed material in at least font size 14. </p> 
+				                        <p class="govuk-hint">
+				                            This is good practice, 50% of the population can't read fonts smaller than 12 point.  Reading is easier and quicker for most people in larger fonts.
+				                        </p>
+
+												
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Enable candidates to bring their laptops to school experience if requested.</p>
+				                        <p class="govuk-hint">
+				                            People with dyslexia might prefer to follow along on their own device and they may also have their own assistive technology (software) on their laptop/device that makes reading and comprehension easier.  People with sight impairments may find it difficult or impossible to use paper materials 
+				                        </p>
+
+
+
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Provide candidates with printed materials / electronic materials in advance.</p>
+				                        <p class="govuk-hint">
+				                            This wil potentially support participants with dyslexia, autistic spectrum disorders and those who are deaf, have a sight impairment or anxiety.  
+				                        </p>
+
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Share information about disabled access, lifts, accessible toilets and accessible car parking. If you have rooms that are not wheel chair accessible or are a 'long walk' then offer to relocate classes or school experience sessions on request.</p>
+				                        <p class="govuk-hint">
+				                            If people have mobility issues this will be a key concern.  You need to consider people who may not be able to walk very far as well as wheelchair users
+				                        </p>
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Let candidates know about any additional access support you have such as hearing loops.  Its worth mentioning if you know you have good acousitic sound levels.</p>
+				                        <p class="govuk-hint">
+				                            Good communication support tactics, such as one person speaking at a time, loops and good acoustics (i.e. lagging on walls) all support deaf and hard of hearing people. If a room has lots of hard surfaces and is echoey it may be problematic for hearing, 50% of over 50's have hearing lost but more young people have hearing loss now as well.
+				                        </p>
+
+												<br>
+												<br>
+                              <p class="govuk-body govuk-!-font-weight-bold">Share information on how communication support can be booked for school experience such as sign language interpreters, speech to text services or lip speakers.</p>
+				                        <p class="govuk-hint">
+				                            Make sure you are clear on who provides, books and pays for these services.  The recommended lead times for booking BSL interpreters is 6 weeks so you will need to build this into your planning.
+				                        </p>
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Let candidates contact you directly before booking school experience if they want to discuss their access needs.</p>
+				                        <p class="govuk-hint">
+				                            This is very important for candidates who have more significant needs, anxiety or require communication support.
+				                        </p>
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Use plain english in all communications.</p>
+				                        <p class="govuk-hint">
+				                            Use of metaphors can be particularly problematic for people with autistic spectrum disorders.
+				                        </p>
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Ask candidates their preferred method of contact.</p>
+				                        <p class="govuk-hint">
+				                            Some candidates may be unable or struggle with some forms of contact. For example deaf and hard of hearing candidates may struggle with phone calls. Candidates with autistic spectrum disorders may also struggle with phone calls.
+				                        </p>
+												
+												
+												
+												
+												
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+<h3 class="govuk-heading-m">On the day</h3>
+
+												<br>
+												<br>
+                               <p class="govuk-body govuk-!-font-weight-bold">Ask candidates where they want to sit.</p>
+				                        <p class="govuk-hint">
+				                            Particularly important for sight impaired, deaf an hard of hearing, mobility issues, autistic spectrum disorders and anxiety.
+				                        </p>
+
+
+
+
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">Provide some materials in large print (suggest font size 18 - landscape), just in case for each session.</p> 
+				                        <p class="govuk-hint">
+				                            Some candidates will struggle with even 14 point font and not everyone is confident to ask for adjustments.  Having a few copies of materials in larger fonts can be helpful.  For fonts from 18 point and higher its easier to print in landscape.  You can also add to your profile that large print and (alternative formats) are available on request
+				                        </p>	
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">On request</h3>
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">On request print material in larger fonts.</p>
+				                        <p class="govuk-hint">
+				                            Some candidates will have very specific needs, large print means different things to different people.  Candidates may also want a specific font.  Letting people know they can ask for this in advance is good practice.
+				                        </p>
+
+
+												<br>
+												<br>												
+                               <p class="govuk-body govuk-!-font-weight-bold">On request print material on different colour backrounds</p>
+				                        <p class="govuk-hint">
+				                            This is particularly helpful for candidates with Dyslexia, reading black text on a white background can be very difficult and having different colours can make reading easier, even off-white will help, many people use yellow paper or other pastel colours.  Some people with Dyslexia would prefer to recieve material electronically and follow along on their own laptop or electronic device. 
+				                        </p>
+
+																						
+                </fieldset>
+                </div>
+
+
+-->
+
+
+<button type="submit" class="govuk-button govuk-button--secondary">
+  Return to access needs
+</button>
+
+            </div>
+        </div>
+</form>
+
+{% endblock %}

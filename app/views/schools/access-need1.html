@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<form action="/schools/access-need2" method="post" class="form" data-local-save="school-onboarding:candidate-details">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Enter disability and access need details for candidates</h1>
+
+            <p>Tell us about how you can support candidates who have a disabilities and access needs. Select all that apply.</p>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="access-needs">
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="access-needs1" name="access-needs" type="checkbox" value="need1">
+                            <label class="govuk-label govuk-checkboxes__label" for="access-needs1">
+                                We offer an inclusive environment for students and staff. We encourage requests from under-represented groups and do our best to support and make adjustments for all needs and requirements. We are happy to discuss you disability or access needs before or as part of your school experience request.
+                            </label>
+                        </div>
+
+                        <fieldset class="govuk-fieldset" aria-describedby="access-needs">
+                            <div class="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="access-needs1" name="access-needs" type="checkbox" value="need1">
+                                    <label class="govuk-label govuk-checkboxes__label" for="access-needs1">
+                                        Our own facilities. For example, disabled parking spaces and support for autistic spectrum disorders, dyslexia and hearing impairments. Enter it here.
+                                    </label>
+                                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                                </div>
+                        </fieldset>
+                        </div>
+
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+
+                    </div>
+            </div>
+</form>
+
+{% endblock %}
