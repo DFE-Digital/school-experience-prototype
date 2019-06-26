@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l"></h1>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Change how dates are displayed
+      </h1>
+    </legend>
+    <span id="sign-in-hint" class="govuk-hint">
+      Select how you'd like to show your school experience dates to candidates
+    </span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+          Display specific dates
+        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          If you do not enter any specific dates then you will not receive school
+          experience requests from candidates
+        </span> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+          Display a description of when you'll host school experience candidates
+        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            For example, on certain days of the week or around exams, holidays
+            and term times
+        </span> </div>
+    </div>
+  </fieldset>
+
+  <div class="govuk-form-group">
+    <a href='/schools/school-dashboard' class='govuk-button'>Continue</a>
+  </div>
+</div>
+{% endblock %}
