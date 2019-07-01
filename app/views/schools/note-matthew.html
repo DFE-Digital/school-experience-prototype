@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+	tag: {
+		text: "alpha"
+	},
+	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+
+
+
+		<form action="/register/account-check" method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+
+
+
+     <div class="govuk-character-count" data-module="character-count" data-maxwords="150"><div class="govuk-form-group" id="candidates_registrations_placement_preference_objectives_container"><label class="govuk-heading-l" for="candidates_registrations_placement_preference_objectives">Notes for Matthew Richards</label>
+          <p>
+            Provide notes regarding this candidates attendance.
+          </p>
+
+<textarea rows="5" class="govuk-textarea js-character-count" name="candidates_registrations_placement_preference[objectives]" id="candidates_registrations_placement_preference_objectives">
+</textarea></div></div>
+
+
+				</fieldset>
+			</div>
+
+
+<h2 class="govuk-heading-m">Previous notes</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      1 October 2019
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Called to say he is ill and couldn't attend
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Delete<span class="govuk-visually-hidden"> delete</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      20 September 2019
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Didn't turn up
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Delete<span class="govuk-visually-hidden"> delete</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      9 September 2019
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Called to say he overslept
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Delete<span class="govuk-visually-hidden"> delete</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+
+
+			<a href="/schools/confirm-attendance" class="govuk-button">Save and return to candidate attendance</a>
+
+		</form>
+	</div>
+</div>
+{% endblock %}

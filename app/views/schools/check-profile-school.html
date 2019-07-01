@@ -1,12 +1,35 @@
-{% extends "layout-internal-booking-iteration.html" %} {% block pageTitle %} XXXXXXXXXXXXXXXXXXXXXXXXX {% endblock %} {% block beforeContent %}
-<!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
-{% endblock %} {% block content %}
+{% extends "layout.html" %}
 
-<div class="govuk-grid-row">
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-    </div>
-</div>
+      <h1 class="govuk-heading-l">Preview your school experience profile</h1>
 
+        <p>This is how your school will appear to candidates.  </p>
+				
+			<ul class="govuk-list govuk-list--bullet">
+					<li>If you're happy with this - select 'Accept and set up profile' at the bottom of this page </li>
+					<li>If you need to change anything - select relevant 'Change' link shown within each section of the following preview </li>
+       </ul>
+				
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">				
+				
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Newton Heath School</h1>
@@ -80,7 +103,6 @@
                                 <p>																	
                                     <a class="" href="/schools/content-edit">Change</a>
                                 </p>
-        <p><a class="govuk-button button" href="/schools/school-dashboard?request-count=2&change-count=1">Save and return to requests and bookings</a></p>
 
     </div>
 
@@ -150,5 +172,40 @@
     </div>
     </div>
 
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">	
 
-    {% endblock %}
+
+
+
+    <div class="govuk-grid-column-full">
+<h2 class="govuk-heading-m">Set up your school experience profile</h2>
+
+
+
+<div class="govuk-form-group">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="" name="" type="checkbox">
+        <label class="govuk-label govuk-checkboxes__label" for="">
+By checking this box and setting up your school experience profile you’re confirming, to the best of your knowledge, the details you’re providing are correct and you accept our <a class="govuk-link" href="/register/privacy-policy-school">privacy policy</a>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+	<form method="get" action="/schools/school-registration-complete">
+    <div class="govuk-form-group">
+        <button type="submit" class="govuk-button">
+        Accept and set up profile
+        </button>
+    </div>
+    </form>
+</div>
+</div>
+
+
+
+
+    </div>
+
+{% endblock %}
