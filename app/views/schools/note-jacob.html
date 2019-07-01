@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+	tag: {
+		text: "alpha"
+	},
+	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+
+
+
+		<form action="/register/account-check" method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+
+
+
+     <div class="govuk-character-count" data-module="character-count" data-maxwords="150"><div class="govuk-form-group" id="candidates_registrations_placement_preference_objectives_container"><label class="govuk-heading-l" for="candidates_registrations_placement_preference_objectives">Notes for Jacob Sterling</label>
+          <p>
+            Provide notes regarding this candidates attendance.
+          </p>
+
+<textarea rows="5" class="govuk-textarea js-character-count" name="candidates_registrations_placement_preference[objectives]" id="candidates_registrations_placement_preference_objectives">
+</textarea></div></div>
+
+
+				</fieldset>
+			</div>
+
+
+
+
+
+
+			<a href="/schools/confirm-attendance" class="govuk-button">Save and return to candidate attendance</a>
+
+		</form>
+	</div>
+</div>
+{% endblock %}
