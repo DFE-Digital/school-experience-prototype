@@ -1167,10 +1167,12 @@ router.post('/schools/availability', function(req, res) {
 
 router.get('/schools/other-details', function(req, res) {
   res.render('schools/other-details', {
-    checkbox_admin_costs: req.session.data['checkbox_admin_costs'] ? 'checked="checked"' : '',
-    checkbox_dbs_costs: req.session.data['checkbox_dbs_costs'] ? 'checked="checked"' : '',
-    checkbox_other_costs: req.session.data['checkbox_other_costs'] ? 'checked="checked"' : '',
-    checkbox_no_costs: req.session.data['checkbox_no_costs'] ? 'checked="checked"' : ''
+    checkbox_admin_costs_yes: req.session.data['checkbox_admin_costs'] ? 'checked="checked"' : '',
+    checkbox_admin_costs_no: req.session.data['checkbox_admin_costs'] ? '' : 'checked="checked"',
+    checkbox_dbs_costs_yes: req.session.data['checkbox_dbs_costs'] ? 'checked="checked"' : '',
+    checkbox_dbs_costs_no: req.session.data['checkbox_dbs_costs'] ? '' : 'checked="checked"',
+    checkbox_other_costs_yes: req.session.data['checkbox_other_costs'] ? 'checked="checked"' : '',
+    checkbox_other_costs_no: req.session.data['checkbox_other_costs'] ? '' : 'checked="checked"'
   }) ;
 }) ;
 
@@ -1178,12 +1180,10 @@ router.post('/schools/other-details-admin-save', function(req, res) {
   let admin_costs = req.body['checkbox_admin_costs'] ;
   let dbs_costs = req.body['checkbox_dbs_costs'] ;
   let other_costs = req.body['checkbox_other_costs'] ;
-  let no_costs = req.body['checkbox_no_costs'] ;
 
   req.session.data['checkbox_admin_costs'] = (admin_costs == '1') ;
   req.session.data['checkbox_dbs_costs'] = (dbs_costs == '1') ;
   req.session.data['checkbox_other_costs'] = (other_costs == '1') ;
-  req.session.data['checkbox_no_costs'] = (no_costs == '1') ;
 
   res.redirect('/schools/other-details-admin') ;
 }) ;

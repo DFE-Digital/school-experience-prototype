@@ -33,37 +33,76 @@
 
 
 	<div class="govuk-form-group">
-
-	  <fieldset class="govuk-fieldset" aria-describedby="">
-
-
-	    <div class="govuk-checkboxes">
-	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="checkbox" {{ checkbox_admin_costs }} value="1" data-local-store>
-	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_admin_costs">
-	          Administration costs
+		
+		<fieldset class="govuk-fieldset">
+			<div class="govuk-radios govuk-radios__inline">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h1 class="govuk-fieldset__heading">Administration costs</h1>
+				</legend>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="radio" {{ checkbox_admin_costs_yes }} value="1" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_admin_costs">
+	          Yes
 	        </label>
-	      </div>
-	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" data-save-name="dbs-check-costs" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="checkbox" {{ checkbox_dbs_costs }} value="1" data-local-store>
-	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_dbs_costs">
-	          DBS check costs
+				</div>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="radio" {{ checkbox_admin_costs_no }} value="" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_admin_costs">
+	          No
 	        </label>
-	      </div>
-	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="checkbox" {{ checkbox_other_costs }} value="1" data-local-store>
-	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_other_costs">
-	          Other costs
+				</div>
+			</div>
+		</fieldset>
+	</div>
+		
+	<div class="govuk-form-group">
+		<fieldset class="govuk-fieldset">
+			<div class="govuk-radios govuk-radios__inline">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h1 class="govuk-fieldset__heading">DBS check costs</h1>
+				</legend>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="admin-costs" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="radio" {{ checkbox_dbs_costs_yes }} value="1" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_dbs_costs">
+	          Yes
 	        </label>
-	      </div>
-	      <div class="govuk-checkboxes__item">
-	        <input class="govuk-checkboxes__input" data-save-name="no-costs" id="checkbox_no_costs" name="checkbox_no_costs" type="checkbox" {{ checkbox_no_costs }} value="1" data-local-store>
-	        <label class="govuk-label govuk-checkboxes__label" for="checkbox_no_costs">
-	          No fees
+				</div>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="dbs-check-costs" id="checkbox_dbs_costs" name="checkbox_dbs_costs" type="radio" {{ checkbox_dbs_costs_no }} value="" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_dbs_costs">
+	          No
 	        </label>
-	      </div>
-	    </div>
-	  </fieldset>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="govuk-form-group">		
+		<fieldset class="govuk-fieldset">
+			<div class="govuk-radios govuk-radios__inline">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h1 class="govuk-fieldset__heading">Other costs</h1>
+				</legend>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="radio" {{ checkbox_other_costs_yes }} value="1" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_other_costs">
+	          Yes
+	        </label>
+				</div>
+				
+				<div class="govuk-radios__item">
+	        <input class="govuk-radios__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="radio" {{ checkbox_other_costs_no }} value="" data-local-store>
+	        <label class="govuk-label govuk-radios__label" for="checkbox_other_costs">
+	          No
+	        </label>
+				</div>
+			</div>
+		</fieldset>
 	</div>
 
 <br>
