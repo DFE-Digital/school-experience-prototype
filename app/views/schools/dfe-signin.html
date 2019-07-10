@@ -13,18 +13,87 @@
 
 
 {% block content %}
+<!--
+    <div class="grid-row">
+        <div class="col-8">
+            <h1 class="heading-xlarge">
+                DfE Sign-in
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p>DfE Sign-in is the new way to access some specific education sector services. To use DfE Sign-in you will need to <a href="https://pp-help.signin.education.gov.uk/contact/create-account">create an account</a>.</p>
+            <form method="post" id="form-signin" class="form-signin">
+                <input type="hidden" name="_csrf" value="vdbgQ5Gj-r0QlSo4JLnG1q22mNRD_rTBEO-0" />
+                <input type="hidden" name="clientId" value="schoolexperience"/>
+                <input type="hidden" name="redirectUri" value="https://school-experience-staging.azurewebsites.net/auth/callback"/>
+                <fieldset>
+                    <legend class="heading-medium">Sign-in</legend>
+                    <div class="form-group ">
+                        
+                            <label class="form-label" for="username">Email address</label>
+                        
+                        
+                        <input class="form-control full-width" id="username" name="username" type="text"  value="">
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label" for="password">Password</label>
+                        
+                        <div class="show-password full-width">
+                            <input class="form-control" id="password" name="password" type="password" >
+                        </div>
+                        <p class="form-help"><a href="/e033d1d8-f693-4773-b381-c8c7aa9ff7fb/resetpassword/request?clientid=schoolexperience&redirect_uri=https://school-experience-staging.azurewebsites.net/auth/callback">Forgotten your password?</a></p>
+                    </div>
+                </fieldset>
+                <div class="panel panel-border-wide">
+                    <p>By continuing you accept the <a href="/terms">terms and conditions</a>.</p>
+                </div>
+                <div class="form-submit submit-buttons">
+                    <button type="submit" class="button">
+                        Sign in
+                        <span class="loader spinner-inline vh">
+                            <span class="ball b-1"></span>
+                            <span class="ball b-2"></span>
+                            <span class="ball b-3"></span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <details class="helpdesk">
+    <summary><span class="summary">Having problems?</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>If you are having problems using the DfE Sign-in service, follow <a href="https://pp-help.signin.education.gov.uk/contact">DfE Sign-in Help</a>. You will be able to request further assistance if required.</p>
+    </div>
+</details>
 
+        </div>
+    </div>
+
+
+
+    </main>
+
+</div>
+
+
+-->
  <main class="govuk-main-wrapper">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
 
-          <h1  class="govuk-heading-xl">Manage school experience sign in</h1>
+          <h1  class="govuk-heading-xl">DfE Sign-in</h1>
 
-          <p>You need a DfE Sign-in user ID and password to use the manage school experience service.<p>
+          <p>DfE Sign-in is the new way to access some specific education sector services. To use DfE Sign-in you will need to <a href="https://pp-help.signin.education.gov.uk/contact/create-account">create an account</a>.</p>
+            <form method="post" id="form-signin" class="form-signin">
 
-          <p>DfE Sign-in use is the new way to sign in to access specific education sector services.<p>
+
 
           </p>
 
@@ -43,7 +112,7 @@
 
                 {{ govukInput({
                   label: {
-                    text: "User ID"
+                    text: "Email address"
                   },
 
                   id: "user-id",
@@ -60,7 +129,13 @@
                   name: "password",
                   type: "password"
                 })}}
-
+								<a href="#" class="govuk-link">Forgotten password?</a>
+							
+							<div class="govuk-inset-text">
+							  By continuing you accept the <a href="#" class="govuk-link">terms and conditions.</a>
+							</div>
+							
+							
                 {{ govukButton({
                   text: "Sign in",
                   href: "/schools/associations",
@@ -68,14 +143,26 @@
                 }) }}
 
               {% endcall %}
+							
+
+							
               </div>
           </div>
 
 
 
+		          <details class="govuk-details details-bottomfix">
+		                <summary class="govuk-details__summary">
+		                    <span class="govuk-details__summary-text">
+		                      Having problems?
+		                    </span>
+		                </summary>
+		                <div class="govuk-details__text">
+		                  If you are having problems using the DfE Sign-in service, follow <a href="#" class="govuk-link">DfE Sign-in Help</a>. You will be able to request further assistance if required.
+		                </div>
+		          </details>
 
-
-            <!--<a class="govuk-link" href=""></a>-->
+<!--
           <h2 class="govuk-heading-m">Problems signing in</h2>
 
 
@@ -127,7 +214,7 @@
                 </div>
           </details>
 
-
+-->
 
 
 
