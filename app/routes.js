@@ -1166,13 +1166,19 @@ router.post('/schools/availability', function(req, res) {
 }) ;
 
 router.get('/schools/other-details', function(req, res) {
+  // We want 'No' to default to not set when the form first renders
+  let setOptionForNo = function(req, field) {
+    if (req.session.data[field] == null) { return ''; }
+    return req.session.data[field] ? '' : 'checked="checked"';
+  }
+
   res.render('schools/other-details', {
     checkbox_admin_costs_yes: req.session.data['checkbox_admin_costs'] ? 'checked="checked"' : '',
-    checkbox_admin_costs_no: req.session.data['checkbox_admin_costs'] ? '' : 'checked="checked"',
+    checkbox_admin_costs_no: setOptionForNo(req, 'checkbox_admin_costs'),
     checkbox_dbs_costs_yes: req.session.data['checkbox_dbs_costs'] ? 'checked="checked"' : '',
-    checkbox_dbs_costs_no: req.session.data['checkbox_dbs_costs'] ? '' : 'checked="checked"',
+    checkbox_dbs_costs_no: setOptionForNo(req, 'checkbox_dbs_costs'),
     checkbox_other_costs_yes: req.session.data['checkbox_other_costs'] ? 'checked="checked"' : '',
-    checkbox_other_costs_no: req.session.data['checkbox_other_costs'] ? '' : 'checked="checked"'
+    checkbox_other_costs_no: setOptionForNo(req, 'checkbox_other_costs')
   }) ;
 }) ;
 
