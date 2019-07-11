@@ -3,7 +3,7 @@
 <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
 
 <h1 class="govuk-heading-l">
-      Past attendance
+      Previous bookings
     </h1>
 		
 			<fieldset class="govuk-fieldset">
@@ -13,8 +13,8 @@
 						<form action="/schools/note-matthew" method="post">
                 <div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
-										<label class="govuk-label" for="find-candidate">Find a candidate</label>
-										<input class="govuk-input govuk-!-width-full" id="enter-name" name="name" type="text" placeholder="Enter a name">
+										<label class="govuk-label" for="find-candidate">Search for a candidate</label>
+										<input class="govuk-input govuk-!-width-full" id="enter-name" name="name" type="text" placeholder="Enter name">
 									</div>
 								</div>
 
@@ -70,8 +70,8 @@
         <tr class="govuk-table__row">
             <th class="govuk-table__header app-custom-class" scope="col">Name</th>
             <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
-            <th class="govuk-table__header app-custom-class" scope="col">Date booked</th>
-            <th class="govuk-table__header app-custom-class" scope="col">Candidate attended</th>
+            <th class="govuk-table__header app-custom-class" scope="col">Date</th>
+            <th class="govuk-table__header app-custom-class" scope="col">Attended</th>
             <th class="govuk-table__header app-custom-class" scope="col"></th>
 						</tr>
     </thead>
@@ -88,7 +88,7 @@
             <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--unavailable">no</strong></div>
-	      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">3 Notes</a></td>			
+	      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">3 notes</a></td>			
     </div>
   </fieldset>
 </div></td>
@@ -100,7 +100,7 @@
       <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong></div>
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>
     </div>
   </fieldset>
 </div></td></td>
@@ -112,7 +112,7 @@
       <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong>	
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>							
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>							
     </div>
   </fieldset>
 </div></td></td>
@@ -124,7 +124,7 @@
       <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong>	
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>							
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>							
     </div>
         <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Stacey Curran</th>
@@ -132,7 +132,7 @@
             <td class="govuk-table__cell"><strong>1 October 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--unavailable">no</strong></div>
-	      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">1 Note</a></td>			
+	      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">1 note</a></td>			
     </div>
   </fieldset>
 </div></td>
@@ -144,7 +144,7 @@
       <td class="govuk-table__cell"><strong>12 September 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--unavailable">no</strong></div>
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">2 Notes</a></td>
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">2 notes</a></td>
     </div>
   </fieldset>
 </div></td></td>
@@ -156,7 +156,7 @@
       <td class="govuk-table__cell"><strong>12 September 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong>	
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>							
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>							
     </div>
   </fieldset>
 </div></td></td>
@@ -168,7 +168,7 @@
       <td class="govuk-table__cell"><strong>12 September 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong>	
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>							
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>							
     </div>		
   </fieldset>
 </div></td></td>
@@ -180,7 +180,7 @@
       <td class="govuk-table__cell"><strong>12 September 2019</td>
       <td class="govuk-table__cell"><div class="govuk-form-group">
 				<strong class="govuk-tag govuk-tag--available">yes</strong>	
-	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add note</a></td>							
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>							
     </div>		
   </fieldset>
 </div></td></td>
