@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">22 September 2019 (3 days)</h1>
+	<form action="/schools/availability-select-dates-subjects-all" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<h2 class="govuk-heading-m">Is there a maximum number of bookings you’ll accept for this date?</h2>
+
+<p>Once you’ve accepted the maximum number of bookings this date will not be shown to candidates.</p>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">ß
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="candidate-requirements-Yes" id="how-contacted-conditional-5" name="requirements" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-5">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Enter maximum number of bookings.
+                </label>
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="candidate-requirements-details" id="more-detail" name="more-detail" rows="1" aria-describedby="more-detail-hint"></textarea>
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="candidate-requirements-No" id="how-contacted-conditional-1" name="requirements" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+<h2 class="govuk-heading-m">Is this date available for all the subjects you offer?</h2>
+
+<div class="govuk-form-group">
+    <div class="govuk-radios govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Yes
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label> </div>
+    </div>
+  </fieldset>
+</div>
+
+
+	<br>
+	<button type="submit" class="govuk-button">
+		Continue
+	</button>
+</div>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}
