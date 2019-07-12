@@ -548,7 +548,6 @@ router.post('/booking-v1/notify', function (req, res) {
 
 
 router.post('/schools/add-school', function (req, res) {
-    console.log("post");
     req.session.data['school-request'] = 'A';
     res.render('schools/add-school-template');
 });
@@ -1248,5 +1247,13 @@ router.get('/schools/school-change-booking', function(req, res) {
   let notifications = req.query['notifications']
   res.render('schools/school-change-booking', { notifications: notifications });
 });
+
+router.post('/schools/availability-select-dates-subjects-maximum', function(req, res) {
+  if (req.session.data['all-subjects'] == 'yes') {
+    res.redirect('/schools/availability-select-dates-subjects-all') ;
+  } else {
+    res.redirect('/schools/school-edit-dates') ;
+  }
+}) ;
 
 module.exports = router
