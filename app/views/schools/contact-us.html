@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <form action="/schools/school-dashboard?request-count=2&change-count=1" method="post" class="form">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Contact us</h1>
+            <p>
+                If you need help and support or have a question about the service email us with your URN at <a href="mailto:organise.school-experience@education.gov.uk">organise.school-experience@education.gov.uk.</a>
+            </p>
+            <br>
+            <button type="submit" class="govuk-button">
+                Return to requests and booking
+            </button>
+
+        </div>
+
+</div>
+
+
+
+
+
+            {% endblock %}
