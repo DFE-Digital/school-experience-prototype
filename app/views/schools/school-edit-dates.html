@@ -98,6 +98,18 @@
       <td class="govuk-table__cell"><a href="/schools/availability-start-date-edit" class="govuk-link">Change</a></td>
     </tr>
 
+    {% for date in dates %}
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">{{ date.date }}</th>
+        <td class="govuk-table__cell">{{ date.duration }} days</td>
+        <td class="govuk-table__cell">{{ date.subjects }}</td>			
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--{{date.tag}}">{{ date.status }}</strong>
+        </td>
+        <td class="govuk-table__cell"><a href="/schools/availability-start-date-edit" class="govuk-link">Change</a></td>
+      </tr>
+    {% endfor %}
+
   </tbody>
 </table>
 <p><a class="govuk-button button" href="/schools/availability-start-date-edit">Add more dates</a></p>

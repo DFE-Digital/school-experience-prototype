@@ -1250,10 +1250,23 @@ router.get('/schools/school-change-booking', function(req, res) {
 
 router.post('/schools/availability-select-dates-subjects-maximum', function(req, res) {
   if (req.session.data['all-subjects'] == 'yes') {
-    res.redirect('/schools/availability-select-dates-subjects-all') ;
+    let dates = [ { date: '22 September 2019', duration: 2, subjects: 'All', status: 'AVAILABLE', tag: 'available' } ];
+    let q = JSON.stringify(dates);
+    res.redirect('/schools/school-edit-dates' + '?json=' + q) ;
   } else {
-    res.redirect('/schools/school-edit-dates') ;
+    res.redirect('/schools/availability-select-dates-subjects-all') ;
   }
 }) ;
+
+router.get('/schools/school-edit-dates', function(req, res) {
+  let dates;
+
+  if (req.query.json) {
+    dates = JSON.parse(req.query.json);
+  } else {
+    dates = [];
+  }
+  res.render('schools/school-edit-dates', { dates: dates });
+});
 
 module.exports = router
