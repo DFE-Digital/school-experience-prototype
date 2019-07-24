@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <form action="/schools/school-dashboard?request-count=2&change-count=1" method="post" class="form">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">The school has accepted your request</h1>
+            <p>
+                Black Firs Secondary School has accepted your request for school experience on 1 October 2019. 
+            </p>
+            <p>
+                You will receive experience teaching Physics. 
+            </p>
+            <p>
+                Please arrive at 8:30am and bring a packed lunch. The experience will end at 4:00pm and you will receive a pack. 
+            </p>						
+						
+            <p>
+                <b>Important:</b> If you cannot attend please call Mary Jones on 07950 100200 to cancel your booking. 
+            </p>						
+           <br>
+            <button type="submit" class="govuk-button">
+                Go to the School Experience Service
+            </button>
+
+        </div>
+
+</div>
+
+
+
+
+
+            {% endblock %}
