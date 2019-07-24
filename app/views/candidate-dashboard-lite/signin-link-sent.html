@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Candidate login - for School Experience
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+			<h1  class="govuk-heading-l">Get School Experience Sign In sent</h1>
+				<p>
+					If you have an account with Get School Experience, we will sent you
+					an email with Sign In link included.
+				</p>
+				
+				<p>
+					Follow that link to sign in.
+				</p>
+
+      </div>
+  </div>
+	
+	<hr />
+	<p>
+		<a href="/fake-emails/signin-email">
+			Continue to simulated email
+		</a>
+	</p>
+</main>
+
+{% endblock %}

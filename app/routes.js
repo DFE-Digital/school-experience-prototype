@@ -1243,6 +1243,12 @@ router.get('/candidate-dashboard/c-dashboard', function(req, res) {
   res.render('candidate-dashboard/c-dashboard', { request_count: request_count, bookings_count: bookings_count });
 });
 
+router.get('/candidate-dashboard-lite/c-dashboard-lite', function(req, res) {
+  let request_count = req.query['request-count']
+  let bookings_count = req.query['bookings-count']
+  res.render('candidate-dashboard-lite/c-dashboard-lite', { request_count: request_count, bookings_count: bookings_count });
+});
+
 router.get('/schools/school-change-booking', function(req, res) {
   let notifications = req.query['notifications']
   res.render('schools/school-change-booking', { notifications: notifications });

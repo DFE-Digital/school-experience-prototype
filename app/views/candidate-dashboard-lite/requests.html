@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Requests
+    </h1>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">School</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date requested</th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>New Islington Free School</td>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>1 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>Chorlton High School</td>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>17 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>Buile Hill Visual Arts College</td>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>15 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>Barlow Hall Primary School</td>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>13 August 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1" class="govuk-link">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a class="govuk-button button" href="/candidate-search/search">Make a new request</a></p>
+
+<p><a class="govuk-button button-grey cta" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ s.banner() }} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Give feedback</h1>
+        <p>
+
+        </p>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+                Tell us about your school experience at Newton Heath School on 1 October 2019.
+            </label>
+            <br/>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+        <p>
+            <a href="feedback-confirm" class="govuk-button">Send</a>
+            <br />
+            <a href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7" class="">Return to your bookings</a>
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}
