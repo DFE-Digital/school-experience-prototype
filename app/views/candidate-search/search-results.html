@@ -148,13 +148,25 @@
 			<div class="govuk-grid-column-full">
 
 				<div class="sortby">
-					<div class="sort-text">Sorted by</div>
-					<div class="drop">
-						<select name="orderby" id="OrderBy" aria-controls="js-search-results-info" class="select govuk-select">
-							<option value="" selected="">Distance</option>
-							<option value="SCHNAME_sort asc">Name</option>
-						</select>
+
+					<div class="govuk-form-group sort-by">
+					  <div class="sort-text">Sorted by</div>
+					  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+						<div class="govuk-radios govuk-radios--inline govuk-radios--small">
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+							<label class="govuk-label govuk-radios__label" for="changed-name-1">
+							  Distance
+							</label> </div>
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+							<label class="govuk-label govuk-radios__label" for="changed-name-2">
+							  Name
+							</label> </div>
+						</div>
+					  </fieldset>
 					</div>
+
 				</div>
 
 				<div class="list">
