@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <form action="/candidate-dashboard-lite//c-dashboard-lite?request-count=4&bookings-count=7" method="post" class="form">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">REMINDER: School experience booking</h1>
+            <p>
+                Dear candidate,
+            </p>
+            <p>
+                This is just a reminder about your upcoming school experience at <strong>Ellen Wilkinson High School</strong> on the following dates:
+            </p>
+            
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                <strong>16 September 2019</strong>
+                </li>
+              </ul>
+            <p>
+                Here are the other important details about your school experience:
+            </p>						
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <strong>Address:</strong> Long Millgate, Manchester.
+                </li>
+                <li>
+                    <strong>Location:</strong> <a href="https://goo.gl/maps/wsGXNxnn25aXNEvr8">Ellen Wilkinson High School map</a> 
+                </li>
+                <li>
+                    <strong>Experience start and finish times:</strong> 8.30am to 5.30pm
+                </li>
+                <li>
+                    <strong>Dress code:</strong> Business dress, cover up tattoos and no jeans or trainers
+                </li>
+                <li>
+                    <strong>Parking:</strong> Yes - on site parking provided
+                </li>
+              </ul>
+            <br>
+            <h2 class="govuk-heading-2">School experience contacts</h2>
+
+            <p>If you have any questions or need to cancel your experience:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <strong>Name:</strong> Mr John Anderson
+                </li>
+                <li>
+                    <strong>Email address:</strong> <a href="mailto:john.anderson@ellenhigh.gov.uk">john.anderson@ellenhigh.gov.uk</a>
+                </li>
+                <li>
+                    <strong>UK telephone number:</strong> 0161 123 4000
+                </li>
+              </ul>
+            
+            <p>On the day of your school experience, you’ll need to report to:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <strong>Name:</strong> Mrs Mary Blige
+                </li>
+                <li>
+                    <strong>Email address:</strong> <a href="mailto:mary.blige@ellenhigh.gov.uk">mary.blige@ellenhigh.gov.uk</a>
+                </li>
+                <li>
+                    <strong>UK telephone number:</strong> 0161 123 4567
+                </li>
+              </ul>
+
+              <p>You can also contact them if you have any questions about your experience.</p>
+
+              <br>
+              <h2 class="govuk-heading-2">School experience details</h2>
+
+              <p>Your experience will be in maths and you'll get observe lessons and may get the chance to interact with pupils and classroom activities.</p>
+           <br>
+            <button type="submit" class="govuk-button">
+                Sign-in to Get school experience service
+            </button>
+
+        </div>
+
+</div>
+
+
+
+
+
+            {% endblock %}
