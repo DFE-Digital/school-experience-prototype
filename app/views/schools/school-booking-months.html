@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+{% import "schools/notification-circle-dismissable.html" as dismissableNotifications %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      View bookings by month
+    </h1>
+
+    <p>Select a month to view bookings.</p> 
+      
+
+<p><a href="/schools/school-change-booking-grouped-july" class="govuk-link">July 2019</a></p>
+<p><a href="/schools/school-change-booking-grouped-august" class="govuk-link">August 2019</a></p>
+<p><a href="/schools/school-change-booking-grouped-september" class="govuk-link">September 2019</a></p>
+<p><a href="/schools/school-change-booking-grouped-october" class="govuk-link">October 2019</a></p>
+
+<br>
+<br>
+
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=7&change-count=7">Return to requests and bookings</a></p>
+
+
+{% endblock %}
