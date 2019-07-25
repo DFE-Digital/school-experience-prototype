@@ -1643,3 +1643,12 @@ table.attendance-confirmation {
     }
   }
 }
+
+.govuk-form-group.sort-by {
+  display: flex;
+  align-items: center;
+
+  .sort-text {
+    margin-right: 1rem;
+  }
+}
