@@ -42,7 +42,7 @@
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
     "standard": "^11.0.1",
-    "supertest": "^3.0.0",
+    "supertest": "^4.0.2",
     "sync-request": "^6.1.0",
     "universal-analytics": "^0.4.16",
     "uuid": "^3.2.1"
