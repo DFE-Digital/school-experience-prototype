@@ -39,7 +39,7 @@
     "nunjucks": "^3.2.0",
     "portscanner": "^2.1.1",
     "prompt": "^1.0.0",
-    "require-dir": "^1.0.0",
+    "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
     "standard": "^11.0.1",
     "supertest": "^3.0.0",
