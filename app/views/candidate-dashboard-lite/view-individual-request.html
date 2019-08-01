@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Request details</h1>
+
+
+<p>Here are the details you sent to request school experience at New Islington High School.</p>
+
+
+<dl class="govuk-summary-list">
+
+<h2 class="govuk-heading-m">Personal details</h2>
+
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Full name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Robert Smith
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      110 Acacia Avenue, Northern Quarter, Manchester M1 1AD.
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      0161 555 2222
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      bob.smith1995@outlook.com
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <br>
+
+ <h2 class="govuk-heading-m">Request details</h2>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School or college
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">New Islington High School</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Experience availability
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Any time during April or May
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change availability
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Experience outcome
+    </dt>
+    <dd class="govuk-summary-list__value">
+      	I want to experience classroom life, the way lessons are delivered, as well as various types of classroom behaviour and how to deal with them.
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Final year
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Degree subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      English
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching stage
+    </dt>
+    <dd class="govuk-summary-list__value">
+      	I’ve applied for teacher training
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject - first choice
+    </dt>
+    <dd class="govuk-summary-list__value">
+      English
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Teaching subject - second choice
+    </dt>
+    <dd class="govuk-summary-list__value">
+      History
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      DBS certificate
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Yes
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </dl>
+  </div>
+
+
+    <div class="govuk-grid-column-full">
+
+
+			  <p>
+              <a href="dash-search" class="govuk-link">Your requests and bookings</a>
+            </p>
+
+
+</div>
+</div>
+
+
+
+
+    </div>
+
+{% endblock %}

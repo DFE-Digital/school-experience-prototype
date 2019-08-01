@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="school-dashboard">
+
+  <div class="govuk-grid-column-full">
+
+		<div class="turquoise-banner">
+			<br><h2 class="govuk-heading-s">&nbsp;&nbsp;Thank you for your feedback. &nbsp;<a href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7" class="govuk-link">Close</a>
+				<p>
+	  </h2>
+		</div>				
+		
+		
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends "layout-internal-booking-iteration.html" %} {% block pageTitle %} XXXXXXXXXXXXXXXXXXXXXXXXX {% endblock %} {% block beforeContent %}
+<!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
+{% endblock %} {% block content %}
+
+<dl class="govuk-summary-list">
+
+    <h2 class="govuk-heading-l">Request from Edward Vasey</h2>
+    <p><h2 class="govuk-heading-m">Personal details</h2></p>
+    <dl class="govuk-summary-list">
+
+        <div class="govuk-summary-list__row">
+
+            <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+            <dd class="govuk-summary-list__value">
+                101 Brook Street, West Hampstead, London SW1 8RG.
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+            <dd class="govuk-summary-list__value">
+                0207 555 6666
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+            <dd class="govuk-summary-list__value">
+                edward.vasey@gmail.com
+            </dd>
+        </div>
+        <br>
+    </dl>
+
+    <p><h2 class="govuk-heading-m">Request details</h2></p>
+    <dl class="govuk-summary-list">
+
+        <div class="govuk-summary-list__row">
+
+            <dt class="govuk-summary-list__key">
+      Dates requested
+    </dt>
+            <dd class="govuk-summary-list__value">
+                Ideally any week in June but could do another time in the first week of October
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      DBS certificate
+    </dt>
+            <dd class="govuk-summary-list__value">
+                Yes - Candidate says they have DBS certificate (not verified by DfE)
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Request received
+    </dt>
+            <dd class="govuk-summary-list__value">
+                15 January 2019
+            </dd>
+        </div>
+        <br>
+    </dl>
+
+    <p><h2 class="govuk-heading-m">Candidate details</h2></p>
+    <dl class="govuk-summary-list">
+
+        <div class="govuk-summary-list__row">
+
+            <dt class="govuk-summary-list__key">
+      What they want out of school experience
+    </dt>
+            <dd class="govuk-summary-list__value">
+                I would like to gain first-hand experience in a high school because I'm considering undertaking a PGCE in secondary Biology.
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Degree stage
+    </dt>
+            <dd class="govuk-summary-list__value">
+                Graduate or postgraduate
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Degree subject
+    </dt>
+            <dd class="govuk-summary-list__value">
+                Business Studies
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Teaching stage
+    </dt>
+            <dd class="govuk-summary-list__value">
+                I’m very sure and think I’ll apply
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+            <dd class="govuk-summary-list__value">
+                First choice: Business Studies
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Teaching subject
+    </dt>
+            <dd class="govuk-summary-list__value">
+                Second choice: Chemistry
+            </dd>
+        </div>
+        <br>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Notes
+    </dt>
+            <dd class="govuk-summary-list__value">
+                <div class="govuk-form-group">
+                    <span id="more-detail-hint" class="govuk-hint">
+			    Enter and record notes about the candidate. For example, useful extra details picked up during any conversations. <strong>Do not include any private or financial information</strong>.
+			  </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+
+                <a class="govuk-button" href="" class="govuk-button">Save note</a>
+            </dd>
+        </div>
+    </dl>
+
+
+
+    <a class="govuk-button" href="/booking/noti-confirm-part1">Accept request</a>
+    <p><a class="govuk-button button-grey cta" href="/booking/noti-change">Change request</a></p>
+    <p><a class="govuk-button button-grey cta" href="/booking/noti-reject">Reject request</a></p>
+
+    <a class="govuk-link" href="/schools/school-requests-fixed">Your requests</a>
+
+    </form>
+
+    </div>
+
+    </div>
+
+    {% endblock %}

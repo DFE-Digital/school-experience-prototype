@@ -32,45 +32,51 @@
 
 
 
-    {{ notification.count("/schools/school-requests1", "Manage requests", request_count, "Accept and reject new and revisit outstanding requests") }}
+    {{ notification.count("/schools/school-requests1", "Manage requests", 2, "Accept and reject new and revisit outstanding requests") }}
 
 <br>
 
 
-    {{ notification.count("/schools/school-change-booking", "Manage bookings", change_count, "Accept or reject change requests and cancel bookings") }}
+    {{ notification.count("/schools/school-booking-months", "Manage bookings", 24, "Accept or reject change requests and cancel bookings") }}
 
 <br>
 
-    {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 4, "Confirm if candidates have attended their school experience") }}
+    {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 8, "Confirm if candidates have attended their school experience") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 	<section>
 		<h3 class="govuk-heading-m">Manage dates</h3>
 
-		<a href="/schools/school-edit-dates" class="govuk-heading-s govuk-heading-s-no-margin">Manage dates</a>
+		<a href="/schools/school-edit-dates" class="govuk-heading-s govuk-heading-s-no-margin">View, add and change dates</a>
 		<hr class="govuk-section-break govuk-section-break--m">
 
-		<a href="/schools/set-date-preference" class="govuk-heading-s govuk-heading-s-no-margin">Describe when you'll host school experience candidates</a>
+		<a href="/schools/set-date-preference" class="govuk-heading-s govuk-heading-s-no-margin">Choose how dates are displayed</a>
 		<hr class="govuk-section-break govuk-section-break--m">
 
 	</section>
-
 
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     <h3 class="govuk-heading-m">Account admin</h3>
 
     <a href="/schools/school-rejected-requests" class="govuk-heading-s govuk-heading-s-no-margin">View rejected requests</a>
-    <p class="govuk-hint">View recently rejected requests</p>
+    <p class="govuk-hint">View request dates, subjects, candidate names and reasons for rejection  </p>
     <hr class="govuk-section-break govuk-section-break--m">
 
-    <a href="/booking/profile-from-dash" class="govuk-heading-s govuk-heading-s-no-margin">Update school profile</a>
+    <a href="/schools/past-attendance" class="govuk-heading-s govuk-heading-s-no-margin">View previous bookings</a>
+    <p class="govuk-hint">View booking dates, subjects and candidate names and attendance</p>
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <a href="/schools/check-profile-school" class="govuk-heading-s govuk-heading-s-no-margin">Update school profile</a>
     <p class="govuk-hint">Add, edit and remove school profile details</p>
     <hr class="govuk-section-break govuk-section-break--m">
 
     <a href="/schools/school-requests-on-radio" class="govuk-heading-s govuk-heading-s-no-margin">Turn requests on / off</a>
     <p class="govuk-hint">Stop / start receiving requests from candidates</p>
+		
+    <a href="/schools/manage-email" class="govuk-heading-s govuk-heading-s-no-margin">Manage email alerts</a>
+    <p class="govuk-hint">Choose to receive instant or daily candidate request emails</p>
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -79,7 +85,7 @@
     <a href="/schools/service-update-changes" class="govuk-heading-s govuk-heading-s-no-margin">Service updates and guidance</a>
     <p class="govuk-hint">Find out about the latest changes to the service and how it works</p>
 
-    <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
+    <a href="/schools/contact-us" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
     <p class="govuk-hint">Get in touch if you need help using the service</p>
 
 

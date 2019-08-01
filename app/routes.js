@@ -548,7 +548,6 @@ router.post('/booking-v1/notify', function (req, res) {
 
 
 router.post('/schools/add-school', function (req, res) {
-    console.log("post");
     req.session.data['school-request'] = 'A';
     res.render('schools/add-school-template');
 });
@@ -1165,6 +1164,23 @@ router.post('/schools/availability', function(req, res) {
   }
 }) ;
 
+router.get('/schools/other-details', function(req, res) {
+  // We want 'No' to default to not set when the form first renders
+  let setOptionForNo = function(req, field) {
+    if (req.session.data[field] == null) { return ''; }
+    return req.session.data[field] ? '' : 'checked="checked"';
+  }
+
+  res.render('schools/other-details', {
+    checkbox_admin_costs_yes: req.session.data['checkbox_admin_costs'] ? 'checked="checked"' : '',
+    checkbox_admin_costs_no: setOptionForNo(req, 'checkbox_admin_costs'),
+    checkbox_dbs_costs_yes: req.session.data['checkbox_dbs_costs'] ? 'checked="checked"' : '',
+    checkbox_dbs_costs_no: setOptionForNo(req, 'checkbox_dbs_costs'),
+    checkbox_other_costs_yes: req.session.data['checkbox_other_costs'] ? 'checked="checked"' : '',
+    checkbox_other_costs_no: setOptionForNo(req, 'checkbox_other_costs')
+  }) ;
+}) ;
+
 router.post('/schools/other-details-admin-save', function(req, res) {
   let admin_costs = req.body['checkbox_admin_costs'] ;
   let dbs_costs = req.body['checkbox_dbs_costs'] ;
@@ -1227,9 +1243,36 @@ router.get('/candidate-dashboard/c-dashboard', function(req, res) {
   res.render('candidate-dashboard/c-dashboard', { request_count: request_count, bookings_count: bookings_count });
 });
 
+router.get('/candidate-dashboard-lite/c-dashboard-lite', function(req, res) {
+  let request_count = req.query['request-count']
+  let bookings_count = req.query['bookings-count']
+  res.render('candidate-dashboard-lite/c-dashboard-lite', { request_count: request_count, bookings_count: bookings_count });
+});
+
 router.get('/schools/school-change-booking', function(req, res) {
   let notifications = req.query['notifications']
   res.render('schools/school-change-booking', { notifications: notifications });
+});
+
+router.post('/schools/availability-select-dates-subjects-maximum', function(req, res) {
+  if (req.session.data['all-subjects'] == 'yes') {
+    let dates = [ { date: '5 September 2019', duration: 2, subjects: 'All', status: 'AVAILABLE', tag: 'available' } ];
+    let q = JSON.stringify(dates);
+    res.redirect('/schools/school-edit-dates' + '?json=' + q) ;
+  } else {
+    res.redirect('/schools/availability-select-dates-subjects-all') ;
+  }
+}) ;
+
+router.get('/schools/school-edit-dates', function(req, res) {
+  let dates;
+
+  if (req.query.json) {
+    dates = JSON.parse(req.query.json);
+  } else {
+    dates = [];
+  }
+  res.render('schools/school-edit-dates', { dates: dates });
 });
 
 module.exports = router

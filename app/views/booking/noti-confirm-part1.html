@@ -10,103 +10,77 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-  <form action="/booking/" method="post" class="form">
-      <h1 class="govuk-heading-l">Confirm booking details</h1>
-
-<!--
-      <div class="nav-cont">
-
-          <ul class="navi-style1">
-            <li>
-              <a href="/booking/view-bookings?id=5">View bookings</a>
-            </li>
-            <li>
-              <a href="/booking/view-messages?id=5">View messages</a>
-            </li>
-            <li class="on">
-              <strong class="govuk-heading-s">Notifications</strong>
-            </li>
-            <li>
-              <a href="/booking/attendance?id=5">Candidate attendance</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-  </div>
--->
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">Confirm the following school experience details for {{ data['candidate-name'] }}</p>
-
-          <h2 class="govuk-heading-m">Placement dates</h2>
-					<p class="govuk-body">01 June 2019 to 5 June 2019</p>
-
-          <h2 class="govuk-heading-m">School experience contact on the day</h2>
-					<p class="govuk-body">On the day of your school experience placement you’ll need to report to:
-</p>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Ian Boscastle
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      UK telephone number
-    </dt>
-    <dd class="govuk-summary-list__value">
-      0161 345 6355
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Email address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      i.boscastle@abbeycollege.co.uk
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Location
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Ask for Ian at the main school reception
-    </dd>
-  </div>
-</dl>
-
-					<p class="govuk-body">You can also contact them if you have any questions about your actual placement.</p>
-
-          <h2 class="govuk-heading-m">Placement details</h2>
-					<p class="govuk-body">You’ll be observing lessons and may get the chance to interact with pupils and classroom activities</p>
-
-					<p class="govuk-body"><strong>Subject: </strong>Maths</p>
-
-          <h2 class="govuk-heading-m">Remember to bring</h2>
-
-				<ul class="govuk-list govuk-list--bullet">
-					<li>your DBS certificate</li>
-					<li>your £50 DBS check fee</li>
-				</ul>
+<div class="govuk-grid-column-full-width">
+    <h1 class="govuk-heading-l">Confirm booking</h1>
+    <h3>
+      <p>Confirm the booking for Jacob Stirling.</p>
+    </h3>
+    <dl id="placement-request-details" class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          School
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Thornden School
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Availability/requested date
+        </dt>
+        <dd class="govuk-summary-list__value availability-requested-date">
+            Every second Thursday
+        </dd>
+      </div>
+    </dl>
+    <form class="new_schools_placement_requests_confirm_booking" id="new_schools_placement_requests_confirm_booking" novalidate="novalidate" action="/schools/placement_requests/1/acceptance/confirm_booking" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="+Z4KbBNioJaaYZo0Lfl5EZLhlsos9XgDuljQRqNjMxXRspgysBEv0SSzxAwhWrX45wuFdxKlB3ULVRXpBzt/9A==">
+      <div class="govuk-form-group" id="schools_placement_requests_confirm_booking_date_container"><fieldset class="govuk-fieldset"><legend class="govuk-fieldset__legend"><span class="govuk-label">Confirm experience date</span></legend><div class="govuk-date-input"><div class="govuk-date-input__item"><label for="schools_placement_requests_confirm_booking_date_3i" class="govuk-label govuk-date-input__label">Day</label><input class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" pattern="[0-9]*" name="schools_placement_requests_confirm_booking[date(3i)]" id="schools_placement_requests_confirm_booking_date_3i"></div><div class="govuk-date-input__item"><label for="schools_placement_requests_confirm_booking_date_2i" class="govuk-label govuk-date-input__label">Month</label><input class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" pattern="[0-9]*" name="schools_placement_requests_confirm_booking[date(2i)]" id="schools_placement_requests_confirm_booking_date_2i"></div><div class="govuk-date-input__item"><label for="schools_placement_requests_confirm_booking_date_1i" class="govuk-label govuk-date-input__label">Year</label><input class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" pattern="[0-9]*" name="schools_placement_requests_confirm_booking[date(1i)]" id="schools_placement_requests_confirm_booking_date_1i"></div></div></fieldset></div>
+      <div class="govuk-form-group" id="schools_placement_requests_confirm_booking_bookings_subject_id_container"><label class="govuk-label" for="schools_placement_requests_confirm_booking_bookings_subject_id">Confirm subject</label><select class="govuk-select govuk-select govuk-!-width-one-half" name="schools_placement_requests_confirm_booking[bookings_subject_id]" id="schools_placement_requests_confirm_booking_bookings_subject_id"><option value="1">Art and design</option>
+<option selected="selected" value="2">Biology</option>
+<option value="3">Business studies</option>
+<option value="4">Chemistry</option>
+<option value="5">Citizenship</option>
+<option value="6">Classics</option>
+<option value="7">Computing</option>
+<option value="8">Dance</option>
+<option value="9">Design and technology</option>
+<option value="10">Drama</option>
+<option value="11">Economics</option>
+<option value="12">English</option>
+<option value="13">French</option>
+<option value="14">Geography</option>
+<option value="15">German</option>
+<option value="16">Health and social care</option>
+<option value="17">History</option>
+<option value="18">Language (other)</option>
+<option value="19">Maths</option>
+<option value="20">Media studies</option>
+<option value="21">Music</option>
+<option value="22">Physical Education</option>
+<option value="23">Physics</option>
+<option value="24">Physics with maths</option>
+<option value="25">Primary</option>
+<option value="26">Psychology</option>
+<option value="27">Religious Education</option>
+<option value="28">Social Sciences</option>
+<option value="29">Spanish</option>
+<option value="30">Vocational health</option></select></div>
+      <div class="govuk-form-group" id="schools_placement_requests_confirm_booking_placement_details_container"><label class="govuk-label" for="schools_placement_requests_confirm_booking_placement_details">Confirm experience details<span class="govuk-hint">You can add extra experience details</span></label><textarea class="govuk-textarea" name="schools_placement_requests_confirm_booking[placement_details]" id="schools_placement_requests_confirm_booking_placement_details" style="height: 133px;">This is the perfect opportunity for you to learn all you need to know about teaching within a primary or secondary school. Getting some classroom experience can help you to decide whether teaching is right for you and it could also strengthen your application.
+Our event is designed for anyone who has a degree and is interested in initial teacher training with our partnership.
+During the visit you’ll be able to:
+* talk to teachers about day-to-day school life
+* observe teaching in a range of lessons
+You will not need to complete a DBS check prior to your visit. However, you will need to present photographic ID upon arrival.</textarea></div>
 
 
 
 
+                  <a href="/booking/noti-confirm-part3-alternative" class="govuk-button">Continue</a><br>
 
-                  <a href="/booking/noti-confirm-part2" class="govuk-button">Continue</a><br>
 
-
-              <br />
-              <a class="govuk-link" href="/schools/school-dashboard">Back to request</a>
-              <br/>
+              <br>
+              <p><a class="govuk-link" href="/schools/school-dashboard">Back to request</a></p>
+              <br>
 
           </form>
 

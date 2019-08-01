@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <form action="/candidate-dashboard-lite//c-dashboard-lite?request-count=4&bookings-count=7" method="post" class="form">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">School experience request</h1>
+            <p>
+                Hello,
+            </p>
+            <p>
+              A candidate has requested school experience at <strong>Ellen Wilkinson High School</strong> for the following dates and subjects:
+            </p>
+            
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                Experience dates: <strong>11 October 2019</strong>
+                </li>
+                <li>
+                First choice subject: <strong>Biology</strong>
+                </li>
+                <li>
+                Second choice subject: <strong>Chemistry</strong>
+                </li>
+              </ul>
+              
+              <p><strong>If possible, you should try and contact them or respond to their request within 10 working days (term time).</strong></p>
+
+              <h2 class="govuk-heading-m">View the request</h2>
+              <p>
+                To view the request and get the candidate’s name and contact details use the following link:
+            </p>						
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                  <a href="https://school-experience-rolling.herokuapp.com/booking/profile-request2-note">View request</a> 
+              </li>
+            </ul>
+            
+            <p>The candidate is aware you may be in touch to discuss their request.  </p>
+            
+            <h2 class="govuk-heading-m">Accept or reject the request</h2>
+
+            <p>It's your responsibility to book the candidate on experience at your school and you can email or call them to:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  discuss their request suitability for school experience at your site
+                </li>
+                <li>
+                  offer and arrange the best available school experience dates
+                </li>
+                <li>
+                  find out more about their requirements - including any disability or access needs
+                </li>
+                <li>
+                  explain any background and security checks they might need to go through
+                </li>
+                <li>
+                  explain any fees they might need to pay - including any administration, DBS check, parking or other fees
+                </li>
+              </ul>
+
+            <p>Once you’ve made your decision you’ll need to confirm this with the candidate via email or telephone.</p>              
+            <br>
+            <h2 class="govuk-heading-m">Help and support</h2>
+
+            <p>If you’ve got any feedback, questions or would like to take part in user testing contact us at <a href="mailto:organise.schoolexperience@education.gov.uk">organise.schoolexperience@education.gov.uk</a>.</p>
+           
+        </div>
+
+</div>
+
+
+
+
+
+            {% endblock %}

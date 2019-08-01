@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/notification-circle.html" as notification %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="school-dashboard">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Your requests and bookings
+    </h1>
+		<!--
+		<div class="blue-banner">
+			<br><h4 class="govuk-heading-s">&nbsp;&nbsp;You have no dates available for candidates to book. <a href="/schools/availability-start-date-edit"> Add more dates</a></h4>
+		</div>
+		-->
+		    <hr class="govuk-section-break govuk-section-break--m">
+
+    {{ notification.count("/candidate-dashboard/bookings", "Bookings", bookings_count, "Ask to change a date and view your bookings") }}
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Account admin</h3>
+
+    <a href="/candidate-dashboard/rejected-requests" class="govuk-heading-s govuk-heading-s-no-margin">Rejected requests</a>
+    <p class="govuk-hint">View all your rejected requests</p>
+
+    <a href="/candidate-dashboard/past-bookings-feedback" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on your school experience</a>
+    <p class="govuk-hint">Tell us about your school experience and help the school improve</p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Help and support</h3>
+
+    <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
+    <p class="govuk-hint">Get in touch if you need help using the service</p>
+
+    <a href="/booking/feedback-candidate" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on this service</a>
+    <p class="govuk-hint">Help us improve the get school experience service</p>
+
+
+  </div>
+</div>
+{% endblock %}

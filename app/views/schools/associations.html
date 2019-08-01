@@ -25,7 +25,7 @@
 
       <div class="govuk-grid-column-two-thirds">
 
-            <h1 class="govuk-heading-l">Your schools</h1>
+            <h1 class="govuk-heading-l">Select your organisation</h1>
 
 
                 <form action="/schools/other-details-requirements-school-experience" method="post" class="form">
@@ -33,24 +33,40 @@
 
 
                 <p>
-                  Our records show you have been linked to:</p>
+                  You're associated with more than 1 organisation. Select which one to sign-in with.</p>
                 <p>
-                  <span class="govuk-!-font-weight-bold">Chiserly Academy, Cheshire Road, Manchester MA2 4TW</span>
-                </p>
-                <p>
-                  You need to confirm or reject this link.
-                </p>
-                <p>
-                  If you need to link to more schools, this can be done later.
-                </p>
+									
+									
+									<div class="govuk-form-group">
+									  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+									    <div class="govuk-radios">
+									      <div class="govuk-radios__item">
+									        <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+									        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+														Burton Morewood CofE Primary School (Open)
+									        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+														URN: 137537, UKPRN: 10035504
+														Main Street, Burton-in-Kendal, Carnforth, Lancashire, LA6 1ND
+									        </span> </div>
+									      <div class="govuk-radios__item">
+									        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+									        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+									          University Academy Keighley (Open)
+									        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+														URN: 136198, UKPRN: 10030998
+														Green Head Road, Utley, Keighley, West Yorkshire, BD20 6EB
+									        </span> </div>
+									    </div>
+									  </fieldset>
+									</div>
+									
+									
+									
 
 
                 <button type="submit" class="govuk-button">
-                  Confirm
+                  Continue
                 </button>
-                <br/>
-                <a href="reject" class="govuk-link govuk-!-font-size-19">Reject</a>
-
                 </form>
     </div>
 

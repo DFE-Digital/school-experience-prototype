@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Ancoats Nursery School booking details</h1>
+
+
+<p>Here are the details about your school experience at Ancoats Nursery School.</p>
+
+
+
+
+<h2 class="govuk-heading-m">School details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+			Crescent Road, Crumpsall, Manchester M8 5UF.
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Location
+    </dt>
+    <dd class="govuk-summary-list__value">
+			<img src="/public/images/school-map.png" alt="map of school location">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+     Experience dates
+    </dt>
+    <dd class="govuk-summary-list__value">
+      10 to 18 April 2019
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Experience start and finish times
+    </dt>
+    <dd class="govuk-summary-list__value">
+      9am to 5pm
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Dress code
+    </dt>
+    <dd class="govuk-summary-list__value">
+	  Smart casual and remove piercings
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Parking
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Limited on-site parking arranged as part of placement. Local paid-for on-street parking around school site for £3 per day.
+    </dd>
+</dl>
+
+  <br>
+
+<h2 class="govuk-heading-m">School experience contacts</h2>
+
+<p class="govuk-body">
+If you have any questions about your booking:
+</p>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Susan Tanner</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      s.tanner@abbeycollege.co.uk
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+     UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      0161 345 6000
+    </dd>
+</dl>
+
+  <p>
+<p class="govuk-body">
+On the day of your school experience you'll need to report to:
+</p>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Ian Boscastle
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      i.boscastle@abbeycollege.co.uk
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK telephone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      0161 345 6355
+    </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Location
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Ask for Ian at the main school reception
+      </dd>
+      </div>
+</dl>
+<p class="govuk-body">
+You can also contact them if you have any questions about your actual experience.
+</p>
+
+<h2 class="govuk-heading-m">Placement details</h2>
+
+<p class="govuk-body">
+  You’ll be observing lessons and may get the chance to interact with pupils and classroom activities.
+</p>
+<p><strong>Subject:</strong>Maths</p>
+
+
+<h2 class="govuk-heading-m">Remember to bring</h2>
+
+<p class="govuk-body">
+Make sure you bring the following with you on the day:
+  </p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>your DBS certificate</li>
+<li>your £50 one-off DBS check fee</li>
+</ul>
+            <p>
+              <a href="cancel-booking" class="govuk-link">Cancel booking</a>
+			  <p>
+              <a href="dash-search" class="govuk-link">Your requests and bookings</a>
+            </p>
+
+</div>
+</div>
+
+
+
+
+    </div>
+
+{% endblock %}

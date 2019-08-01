@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Bookings
+    </h1>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">School</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date booked</th>	
+      <th class="govuk-table__header app-custom-class" scope="col"></th>							
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">New Islington Free School</th>
+      <td class="govuk-table__cell">Chemistry</td>
+      <td class="govuk-table__cell"><strong>3 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Waterloo Primary School</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>18 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Ashton-on-Mersey School</th>
+      <td class="govuk-table__cell">Chemistry</td>
+      <td class="govuk-table__cell"><strong>19 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Barton Moss Community Primary School</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>1 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">The Blue Coat CofE School</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>11 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Prestolee Primary School</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>3 September2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Cheadle Hulme High School</th>
+      <td class="govuk-table__cell">Chemistry</td>
+      <td class="govuk-table__cell"><strong>1 September 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/candidate-request1-booking" class="govuk-link">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<p><a class="govuk-button button-grey cta" href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7">Return to bookings and admin</a></p>
+
+
+{% endblock %}

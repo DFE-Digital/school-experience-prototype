@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Thank you for your feedback</h1>
+            <p>
+Your feedback will be used by DfE to improve school experience across primary and secondary schools in England.
+            </p>
+
+
+
+            <p>
+
+              <a href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7" class="">Return to your bookings</a>
+            </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <form action="/schools/school-dashboard?request-count=2&change-count=1" method="post" class="form">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Manage email alerts</h1>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+          Instant
+        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll receive an instant email every time a candidate makes a request
+        </span> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+          Daily
+        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll receive a daily email listing every candidate request for that day
+        </span> </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+            <br>
+            <button type="submit" class="govuk-button">
+                Save and return to requests and bookings
+            </button>
+
+        </div>
+
+</div>
+
+
+
+
+
+            {% endblock %}
