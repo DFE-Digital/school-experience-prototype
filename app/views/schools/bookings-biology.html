@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+{% import "schools/notification-circle-dismissable.html" as dismissableNotifications %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+     Biology bookings 
+    </h1>
+<p><a href="/schools/school-booking-months" class="govuk-link">Choose a different subject</a></p>
+
+
+
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">Name &nbsp;<img src="/public/images/sort.png" width=11px height=16px></th>
+      <th class="govuk-table__header app-custom-class" scope="col">Date &nbsp;<img src="/public/images/sort.png" width=11px height=16px></th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="date">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Jason Taylor</th>
+      <td class="govuk-table__cell">1 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Ellie Simpson</th>
+      <td class="govuk-table__cell">4 October 2019</td>
+      <td class="govuk-table__cell"><a href="" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Paul Baker</th>
+      <td class="govuk-table__cell">11 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request1-full" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Juan Gutierrez-Dominguez</th>
+      <td class="govuk-table__cell">19 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Peter Campbell-Jones</th>
+      <td class="govuk-table__cell">22 October 2019</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-request2" class="govuk-link">View</a></td>
+    </tr>	
+  </tbody>
+</table>
+
+
+
+
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=7&change-count=7">Return to requests and bookings</a></p>
+
+
+{% endblock %}

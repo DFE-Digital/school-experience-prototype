@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+{% import "schools/notification-circle-dismissable.html" as dismissableNotifications %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      Manage bookings during June 2020
+    </h1>
+
+<p><a href="/schools/school-booking-months" class="govuk-link">Choose a different month</a></p>
+
+    <h2 class="govuk-heading-m">
+      1 June 2020 
+    </h2>
+
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-full">
+				<div class="sortby">
+					<div class="govuk-form-group sort-by govuk-body">
+					  <div class="sort-text">Sorted by</div>
+					  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+						<div class="govuk-radios govuk-radios--inline govuk-radios--small">
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="no">
+							<label class="govuk-label govuk-radios__label" for="changed-name-1">
+							  Name
+							</label> </div>
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-2" name="changed-name" checked type="radio" value="yes">
+							<label class="govuk-label govuk-radios__label" for="changed-name-2">
+							  Subject
+							</label> </div>
+						</div>
+					  </fieldset>
+					</div>
+				</div>
+
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">Name</th>
+      <th class="govuk-table__header app-custom-class" scope="col">Subject &nbsp;<img src="/public/images/sort.png" width=11px height=16px></th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Jason Taylor</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+
+
+
+
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=7&change-count=7">Return to requests and bookings</a></p>
+
+
+{% endblock %}
