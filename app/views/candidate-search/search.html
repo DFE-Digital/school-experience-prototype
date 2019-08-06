@@ -27,17 +27,18 @@
 				<p class="govuk-hint">Search by location or postcode</p>
 
 				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
-				<div class="govuk-grid-row school-search-form">
-						<form action="/candidate-search/search-results-post" method="post">
-                <div class="govuk-grid-column-one-third">
-									<div class="govuk-form-group">
-										<label class="govuk-label" for="search-by-location">Where?</label>
-										<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="Such as Manchester or M1 3BD">
-									</div>
-								</div>
+				<form action="/candidate-search/search-results-post" class="school-search-form" method="post">
+					<div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="search-by-location">Where?</label>
+								<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="Such as Manchester or M1 3BD">
+							</div>
+						</div>
+					</div>
 
 
-
+					<div class="govuk-grid-row">
 								<div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
 										<label class="govuk-label" for="search-location-radius">Distance</label>
@@ -52,12 +53,14 @@
 										</select>
 									</div>
 								</div>
+							</div>
 
+							<div class="govuk-grid-row">
 								<div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
 										<label class="govuk-label" for="subject">Subject (optional)</label>
 										<select id="sunject" class="govuk-select" name="subject">
-											<option selected>Select subject</option>
+											<option selected>All</option>
 											<option value="art">Art and design</option>
 											<option value="biology">Biology</option>
 											<option value="business">Business studies</option>
@@ -88,6 +91,9 @@
 										</select>
 									</div>
 								</div>
+							</div>
+							
+							<div class="govuk-grid-row">
 
 	              <div class="school-search-form__submit govuk-grid-column-one-third">
 	                <div class="govuk-form-group">
@@ -95,8 +101,8 @@
 									</div>
 								</div>
 
-						</form>
-					</div>
+							</div>
+					</form>
 
 			</fieldset>
 

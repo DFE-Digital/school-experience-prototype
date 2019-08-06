@@ -1,19 +1,20 @@
 {% extends "layout.html" %}
+{% import "sections.html" as s %}
 
 {% block pageTitle %}
   Blank page
 {% endblock %}
 
 {% block beforeContent %}
-{% import "sections.html" as s %}
-{{ s.banner(true) }}
+{{ s.banner() }}
 {% endblock %}
 
 {% block content %}
 
+
 <div class="govuk-grid-row" id="search-results-heading">
       <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-l">School experience near {{ data['searchLocation'] }}</h1>
+        <h1 class="govuk-heading-l">School experience near </h1>
     </div>
 </div>
 <div class="govuk-grid-row">
@@ -112,14 +113,217 @@
 				</span>
 
 				<div class="govuk-checkboxes">
-					{% for subject in data['subjects'] %}
+					
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
 						<label class="govuk-label govuk-checkboxes__label">
-							{{ subject }}
+							Art and design
 						</label>
 					</div>
-					{% endfor %}
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Biology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Business studies
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Chemistry
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Citizenship
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Classics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Computing
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Dance
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Design and technology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Drama
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Economics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							English
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							French
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Geography
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							German
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Health and social care
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							History
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Languages (other)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Maths
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Media studies
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Music
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physical education (PE)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physics with maths
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Primary
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Psychology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Religious education (RE)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Social sciences
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Spanish
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Vocational health
+						</label>
+					</div>
+					
 				</div>
 
 			</fieldset>
@@ -167,13 +371,13 @@
 
 				<div class="list">
 					<ul>
-						{% for item in data['schools'] %}
+						
 						<li>
 							<div class="school-result">
 
 								<h3 class="govuk-heading-l">
-									{{item.Name}}
-									<span class="govuk-caption-m">{{'1 mile' if item.Distance == 1 else item.Distance + ' miles'}} away</span>
+									Ellen Wilkinson High School
+									<span class="govuk-caption-m">1 mile away</span>
 								</h3>
 
 								<dl class="govuk-summary-list">
@@ -182,7 +386,7 @@
 											Address
 										</dt>
 										<dd class="govuk-summary-list__value">
-											{{item.Address}}
+											Long Millgate, Manchester
 								    </dd>
 									</div>
 
@@ -191,7 +395,7 @@
 											Education phases
 										</dt>
 										<dd class="govuk-summary-list__value">
-											{{item.Phase}}
+											Primary, Secondary and 16 to 18
 								    </dd>
 									</div>
 
@@ -200,7 +404,7 @@
 											Fees
 										</dt>
 										<dd class="govuk-summary-list__value">
-											{{item.Fees}}
+											Admin and DBS check fees
 								    </dd>
 									</div>
 
@@ -209,16 +413,220 @@
 											Experience subjects
 										</dt>
 										<dd class="govuk-summary-list__value">
-											{{item.Subjects}}
+											Maths, English, Art, Physics, Geography
 								    </dd>
 									</div>
 								</dl>
 
-								<a href="/schools/{{item.Id}}" class="govuk-button" style="font-weight:normal">View school details</a>
+								<a href="/schools/1" class="govuk-button" style="font-weight:normal">View school details</a>
 
 							</div>
 						</li>
-						{% endfor %}
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									City College Manchester
+									<span class="govuk-caption-m">1.5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Long Millgate, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary, Secondary and 16 to 18
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Fees
+										</dt>
+										<dd class="govuk-summary-list__value">
+											None
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Experience subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Maths, English, Art, Physics, Music
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/schools/2" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Chiserly Academy
+									<span class="govuk-caption-m">2.5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Cheshire Road, Manchester M42 4TW.
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Both primary and secondary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Fees
+										</dt>
+										<dd class="govuk-summary-list__value">
+											DBS check fee
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Experience subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Key stage 1, Maths, Art, Physics, Geography
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/schools/3" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Medlock Primary School
+									<span class="govuk-caption-m">5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											142 Dantzic Street, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Fees
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Admin fee
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Experience subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Maths, English, Art
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/schools/4" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Ancoats Nursery School
+									<span class="govuk-caption-m">10 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											10 Hugh Oldham Way, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Nursery School
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Fees
+										</dt>
+										<dd class="govuk-summary-list__value">
+											None
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Experience subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Maths, English, Geography
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/schools/5" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
 					</ul>
 				</div>
 
@@ -255,5 +663,9 @@
 
 
 
+
+
+        </main>
+      </div>
 
 {% endblock %}
