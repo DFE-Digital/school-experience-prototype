@@ -55,7 +55,8 @@
                         </div>
 
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="final" name="degree" type="radio" value="final year">
+                            <input class="govuk-radios__input" id="final" name="degree" type="radio" value="final year"
+															{{ 'checked' if data['found-in-gitis'] }}>
                             <label class="govuk-label govuk-radios__label" for="final">
                                 Final year
                             </label>
@@ -120,7 +121,7 @@
                         <option value="1661">Civil engineering</option>
                         <option value="1530">Classical languages</option>
                         <option value="1531">Classics</option>
-                        <option value="1532">Computer studies</option>
+                        <option value="1532" {{ 'selected' if data['found-in-gitis'] }}>Computer studies</option>
                         <option value="1656">Dentistry</option>
                         <option value="1535">Design and technology</option>
                         <option value="1536">Drama and performing arts</option>

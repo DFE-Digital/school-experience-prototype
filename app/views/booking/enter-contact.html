@@ -30,7 +30,8 @@
 	    <label class="govuk-label" for="address-postcode">
 	      Postcode
 	    </label>
-	    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+	    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
+				value="{{ 'MA1 2WD' if data['found-in-gitis']}}">
 	  </div>
 
 	</fieldset>
@@ -88,7 +89,8 @@
 					  <label class="govuk-label" for="name">
 					    UK telephone number
 					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text">
+					  <input class="govuk-input" id="name" name="name" type="text" 
+							value="{{'01234567890' if data['found-in-gitis']}}">
 					</div>
 
 
@@ -109,12 +111,12 @@
           Phone
         </label> </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="text">
+        <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="text" {{ 'checked' if data['found-in-gitis']}}>
         <label class="govuk-label govuk-checkboxes__label" for="contact-2">
           Text
         </label> </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="email">
+        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="email" {{ 'checked' if data['found-in-gitis']}}>
         <label class="govuk-label govuk-checkboxes__label" for="contact-3">
           Email
         </label> </div>
