@@ -218,7 +218,7 @@ By checking this box and sending this request you’re confirming, to the best o
 </div>
 
 
-	<form method="get" action="/register/confirm-placement">
+	<form method="get" action="{{ '/register/created-sent' if data['found-in-gitis'] else '/register/confirm-placement' }}">
     <div class="govuk-form-group">
         <button type="submit" class="govuk-button">
         Accept and send
