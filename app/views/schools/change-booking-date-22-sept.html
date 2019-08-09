@@ -20,7 +20,15 @@
 {% block content %}
 
 
-<h1 class="govuk-heading-l">Change 2 October 2019 to a new date</h1>
+<h1 class="govuk-heading-l">Change booking for 22 September 2019</h1>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This date has already been booked. You will need to inform the candidate.
+  </strong>
+</div>
 	<form action="/schools/school-edit-dates" method="post" class="form">
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
@@ -35,7 +43,7 @@
 	<div id="dates-block">
 		<div id="initial-block">
 			<h2 class="govuk-heading-m">Enter start date</h2>
-			<p class="govuk-hint">For example, 01 09 2020</p>
+			<p class="govuk-hint">For example, 01 09 2019</p>
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-one-third">
 					<div class="govuk-form-group">
@@ -46,7 +54,7 @@
 										<label class="govuk-label govuk-date-input__label" for="single-day">
 											Day
 										</label>
-										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-day" name="dob-day" type="number" pattern="[0-9]*" value="2">
+										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-day" name="dob-day" type="number" pattern="[0-9]*" value="22">
 									</div>
 								</div>
 								<div class="govuk-date-input__item">
@@ -54,7 +62,7 @@
 										<label class="govuk-label govuk-date-input__label" for="single-month">
 											Month
 										</label>
-										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-month" name="dob-month" type="number" pattern="[0-9]*" value="10">
+										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="single-month" name="dob-month" type="number" pattern="[0-9]*" value="09">
 									</div>
 								</div>
 								<div class="govuk-date-input__item">
@@ -79,10 +87,11 @@
 						<label class="govuk-label" for="width-3">
 							Enter number of days.
 						</label>
-						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="1">
+						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="3">
 					</div>
 				</div>
 			</div>
+
 
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds">
@@ -92,7 +101,7 @@
 						<label class="govuk-label" for="width-3">
 							This is the maximum number of candidates you'll accept on this experience.
 						</label>
-						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="1">
+						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="10">
 					</div>
 				</div>
 			</div>
@@ -104,12 +113,11 @@
 
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="width-3">
-							<p>Physics <a href="/schools/change-subject" class="govuk-link"> Change</a></p>
+							<p>Maths <a href="/schools/change-subject" class="govuk-link"> Change</a></p>
 						</label>
 					</div>
 				</div>
 			</div>
-
 
 
 <!--
