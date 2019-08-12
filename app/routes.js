@@ -1288,4 +1288,12 @@ router.post('/register/login-check', function(req, res) {
   }
 }) ;
 
+router.post('/schools/candidate-requirements-conditional', function(req, res) {
+	if (req.session.data['changed-name'] == 'yes') {
+		res.redirect('/schools/candidate-requirements2') ;
+	} else {
+		res.redirect('/schools/other-details') ;
+	}
+}) ;
+
 module.exports = router
