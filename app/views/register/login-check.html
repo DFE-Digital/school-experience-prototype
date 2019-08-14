@@ -14,7 +14,7 @@
 
 {% block content %}
 
-
+<form method="post" action="/register/login-check">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -38,17 +38,17 @@
 
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="full-name">
+  <label class="govuk-label" for="first-name">
     First name
   </label>
-  <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+  <input class="govuk-input" id="first-name" name="first-name" type="text" autocomplete="firstname" spellcheck="false">
 </div>
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="full-name">
+  <label class="govuk-label" for="last-name">
     Last name
   </label>
-  <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+  <input class="govuk-input" id="last-name" name="last-name" type="text" autocomplete="lastname" spellcheck="false">
 </div>
 
 
@@ -71,6 +71,7 @@
 -->
 
 <div class="govuk-form-group">
+
   <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
 		          <h2 class="govuk-heading-m">Date of birth</h2>
     <span id="dob-hint" class="govuk-hint">
@@ -105,13 +106,13 @@
   </fieldset>
 </div>
 
-			<a href="/booking/enter-contact" class="govuk-button">Continue</a>
+			<button type="submit" class="govuk-button">Continue</button>
 
       </div>
     </div>
 
 
-
+</form>
 
 
 

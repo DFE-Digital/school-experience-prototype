@@ -32,28 +32,29 @@
 
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="think" name="how-far" type="radio" value="thinking">
-                            <label class="govuk-label govuk-radios__label" for="think">
+                            <input class="govuk-radios__input" id="idea" name="how-far" type="radio" value="thinking">
+                            <label class="govuk-label govuk-radios__label" for="udea">
                               It's just an idea
                             </label>
                         </div>
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="think" name="how-far" type="radio" value="thinking">
-                            <label class="govuk-label govuk-radios__label" for="think">
+                            <input class="govuk-radios__input" id="notsure" name="how-far" type="radio" value="thinking">
+                            <label class="govuk-label govuk-radios__label" for="notsure">
                                 I’m not sure and finding out more
                             </label>
                         </div>
                         <div class="govuk-radios">
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="think" name="how-far" type="radio" value="thinking">
-                                <label class="govuk-label govuk-radios__label" for="think">
+                                <input class="govuk-radios__input" id="sure" name="how-far" type="radio" value="thinking"
+																	{{'checked' if data['found-in-gitis']}}>
+                                <label class="govuk-label govuk-radios__label" for="sure">
                                   I'm fairly sure and exploring my options
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="think" name="how-far" type="radio" value="thinking">
-                                <label class="govuk-label govuk-radios__label" for="think">
+                                <input class="govuk-radios__input" id="apply" name="how-far" type="radio" value="thinking">
+                                <label class="govuk-label govuk-radios__label" for="apply">
                                   I’m very sure and think I’ll apply
                                 </label>
                             </div>
@@ -103,7 +104,7 @@
                         <option value="1544">Health and social care</option>
                         <option value="1545">History</option>
                         <option value="1555">Languages (other)</option>
-                        <option value="1559">Mathematics</option>
+                        <option value="1559" {{'selected' if data['found-in-gitis']}}>Mathematics</option>
                         <option value="1560">Media studies</option>
                         <option value="1562">Music</option>
                         <option value="1565">Physical education (PE)</option>
@@ -130,7 +131,7 @@
                         <option value="1527">Chemistry</option>
                         <option value="1529">Citizenship</option>
                         <option value="1531">Classics</option>
-                        <option value="1532">Computing</option>
+                        <option value="1532" {{'selected' if data['found-in-gitis']}}>Computing</option>
                         <option value="1535">Design and technology</option>
                         <option value="1536">Drama</option>
                         <option value="1537">Economics</option>

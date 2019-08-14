@@ -7,17 +7,7 @@
 
 {% block beforeContent %}
 {{ s.banner() }}
-<div class="signin-status">
-    <div class="banner1">
 
-
-      <div class="signin-status">
-        <p class="govuk-!-font-size-16">Hello, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
-      </div>
-    </div>
-
-
-</div>
 {% endblock %}
 
 {% block content %}
@@ -32,6 +22,7 @@
         <p>Date booked: 10 March 2019<br />
       </p>
 
+<!--
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
@@ -39,7 +30,7 @@
           To change any school experience details you’ll need to contact the school. For example, to change the date of your booking.
         </strong>
       </div>
-
+-->
 
 <div class="govuk-form-group">
   <h2 class="govuk-heading-m">Cancellation reasons</h2>
@@ -51,14 +42,15 @@ Tell us a why you want to cancel your booking so we can let the school know you 
 </div>
 
             <p>
-              <a href="booking-cancel-confirm" class="govuk-button">Cancel booking</a><br/>
+              <a href="booking-cancel-confirm" class="govuk-button govuk-button--warning">Cancel booking</a><br/>
 
-
+<!--
       <p>
         <a href="view-booking" class="govuk-button">Contact school</a><br/>
       </p>
+-->
+<p><a class="govuk-button button-grey cta" href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7">Return to bookings and admin</a></p>
 
-            <p>  <a href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7" class="">Your bookings</a>
             </p>
                 </div>
 

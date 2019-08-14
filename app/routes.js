@@ -1275,4 +1275,25 @@ router.get('/schools/school-edit-dates', function(req, res) {
   res.render('schools/school-edit-dates', { dates: dates });
 });
 
+router.post('/register/login-check', function(req, res) {
+  if (req.session.data['email'].match(/unknown/) ||
+      req.session.data['first-name'].match(/unknown/) ||
+      req.session.data['last-name'].match(/unknown/)) {
+
+    req.session.data['found-in-gitis'] = false ;
+    res.redirect('/booking/enter-contact') ;
+  } else {
+    req.session.data['found-in-gitis'] = true
+    res.redirect('/register/gitis-verify') ;
+  }
+}) ;
+
+router.post('/schools/candidate-requirements-conditional', function(req, res) {
+	if (req.session.data['changed-name'] == 'yes') {
+		res.redirect('/schools/candidate-requirements2') ;
+	} else {
+		res.redirect('/schools/other-details') ;
+	}
+}) ;
+
 module.exports = router
