@@ -6,7 +6,14 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ s.banner() }}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. <a class="" href="/"> Sign out</a>'
+}) }}
+
 {% endblock %}
 
 {% block content %}

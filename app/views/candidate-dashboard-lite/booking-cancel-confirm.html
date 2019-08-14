@@ -6,7 +6,15 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ s.banner() }}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. <a class="" href="/"> Sign out</a>'
+}) }}
+
+<!--
 <div class="signin-status">
     <div class="banner1">
 
@@ -15,9 +23,9 @@
         <p class="govuk-!-font-size-16">Hello, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
       </div>
     </div>
+-->
 
 
-</div>
 {% endblock %}
 
 {% block content %}
