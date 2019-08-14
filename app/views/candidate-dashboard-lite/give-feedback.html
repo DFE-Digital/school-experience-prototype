@@ -1,4 +1,9 @@
-{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ s.banner() }} {% endblock %} {% block content %}
+{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. <a class="" href="/"> Sign out</a>'
+}) }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
 

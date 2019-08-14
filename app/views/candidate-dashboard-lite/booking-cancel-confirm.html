@@ -6,7 +6,15 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ s.banner() }}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. <a class="" href="/"> Sign out</a>'
+}) }}
+
+<!--
 <div class="signin-status">
     <div class="banner1">
 
@@ -15,9 +23,9 @@
         <p class="govuk-!-font-size-16">Hello, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
       </div>
     </div>
+-->
 
 
-</div>
 {% endblock %}
 
 {% block content %}
@@ -38,7 +46,7 @@
 
     <h3 class="govuk-heading-m">What happens next</h3>
 
-    <p>Your school experience booking from 10 March 2019 at Ancoats Nursery School has been cancelled.</p>
+    <p>Your school experience booking from 01 September 2019 at New Islington Free School has been cancelled.</p>
 
     <p><strong>The school will be notified about this cancellation.</strong></p>
 

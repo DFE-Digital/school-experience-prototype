@@ -6,7 +6,12 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ s.banner() }}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it. <a class="" href="/"> Sign out</a>'
+}) }}
 
 {% endblock %}
 
@@ -18,8 +23,8 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Cancel booking</h1>
       <p>
-        You've chosen to cancel your school experience booking for Ancoats Nursery School.</p>
-        <p>Date booked: 10 March 2019<br />
+        You've chosen to cancel your school experience booking for New Islington Free School.</p>
+        <p>Date booked: 01 September 2019<br />
       </p>
 
 <!--
