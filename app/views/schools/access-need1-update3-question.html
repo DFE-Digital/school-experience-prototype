@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<form action="/schools/access-need2" method="post" class="form" data-local-save="school-onboarding:candidate-details">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Do you want to add details about how you can support candidates with disabilites and access needs?</h1>
+
+            <p>These details will be added to your school profile.</p>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" data-save-name="offers-placement-Yes" id="how-contacted-conditional-6" name="dress" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-6">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-6">
+                                Yes
+                            </label>
+                        </div>
+            
+                            </div>
+
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" data-save-name="offeres-placement-No" id="how-contacted-conditional-7" name="dress" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-7">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-7">
+                                No
+                            </label>
+                        </div>
+                        <br>
+                        <br>
+
+
+    <p class="govuk-inset-text">
+        Find out how you can <a href="/schools/access-need-guidance2">help and support candidates with disability and access needs</a>.
+    </p>
+    
+<br>
+<br>
+<br>
+
+
+                        <button type="submit" class="govuk-button">
+                                Continue
+                            </button>
+                        </div>
+
+                    </div>
+            </div>
+</form>
+
+{% endblock %}
