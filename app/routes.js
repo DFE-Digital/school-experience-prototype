@@ -1296,4 +1296,12 @@ router.post('/schools/candidate-requirements-conditional', function(req, res) {
 	}
 }) ;
 
+router.post('/schools/access-need1-update3-question-conditional', function(req, res) {
+	if (req.session.data['changed-name'] == 'yes') {
+		res.redirect('/schools/access-need1-update3-question2') ;
+	} else {
+		res.redirect('/schools/outline-experience') ;
+	}
+}) ;
+
 module.exports = router
