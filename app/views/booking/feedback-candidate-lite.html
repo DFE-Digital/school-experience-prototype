@@ -25,7 +25,7 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">Help us improve the manage school experience service.</p>
+          <p class="govuk-body">Help us improve the school experience service.</p>
 
 					<h2 class="govuk-heading-m">What did you come to do on the service?</h2>
 
@@ -46,17 +46,41 @@
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="else" id="what3" name="action" type="radio" value="else2" data-aria-controls="else3">
+              <input class="govuk-radios__input" data-save-name="withdraw" id="what3" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
+              <label class="govuk-label govuk-radios__label" for="what2">
+                View upcoming experience days
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="withdraw" id="what4" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
+              <label class="govuk-label govuk-radios__label" for="what2">
+                View previous bookings
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="withdraw" id="what5" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
+              <label class="govuk-label govuk-radios__label" for="what2">
+                Amend a booking
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="withdraw" id="what6" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
+              <label class="govuk-label govuk-radios__label" for="what2">
+                Give feedback about the school experience
+              </label>
+            </div>																								
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="else" id="else" name="action" type="radio" value="else2" data-aria-controls="else-reveal">
               <label class="govuk-label govuk-radios__label" for="what3">
                  Something else 
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="else3">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="else-reveal">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="what3">
+                <label class="govuk-label" for="else-reveal">
                   Tell us what you came here to do. Do not include any information that could identify you personally - such as your name
                 </label>
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="what3" id="what3" name="more-detail" rows="7" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="else" id="else-reveal" name="else-text" rows="7" aria-describedby="else-reveal"></textarea>
               </div>
 
             </div>
@@ -65,8 +89,42 @@
         </fieldset>
       </div>
 
+						
+
+
+		<h2 class="govuk-heading-m">Were you able to do what you wanted? </h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="achieve1" id="visit1" name="visit" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="yes">
+                Yes
+              </label>
+            </div>					
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" data-save-name="achieve2" id="visit2" name="visit" type="radio" value="no" data-aria-controls="visit-reveal">
+              <label class="govuk-label govuk-radios__label" for="no">
+                 No
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="visit-reveal">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="visit">
+                  Give details
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="visit-text" id="visit-text" name="visit-text" rows="7" aria-describedby="more-detail-hint"></textarea>
+              </div>
+            </div>
           </div>
-      </div>							
+        </fieldset>
+      </div>
+
+
+          </div>
+      </div>	
+
+
 
 <h2 class="govuk-heading-m">Overall, how did you feel about the service you received?</h2>
 
@@ -102,6 +160,27 @@
   </fieldset>
 </div>
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+<h2 class="govuk-heading-m">Would you recommend this service to others?</h2>
+    <div class="govuk-radios govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
 <h2 class="govuk-heading-m">How could we improve the service? (optional)</h2>
 
 
@@ -109,20 +188,18 @@
   <span id="more-detail-hint" class="govuk-hint">
     Do not include any information that could identify you personally - such as your name.
   </span>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  <textarea class="govuk-textarea" id="more-detail-improve" name="more-detail-improve" rows="5" aria-describedby="more-detail-improve"></textarea>
 </div>
 
 
 <a href="/candidate-dashboard-lite/feedback-confirm?request-count=4&bookings-count=7" class="govuk-button">Submit feedback</a>
 <br>
-
+<!--
 <h2 class="govuk-heading-m">Help and support</h2>
 
 <p class="govuk-body">If there’s anything else you’d like to add email our School Experience Service team at <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-link">organise.school-experience@education.gov.uk</a>.</p>
-
+-->
 		</form>
-
-
     </div>
 </div>
 {% endblock %}
