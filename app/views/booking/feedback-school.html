@@ -64,7 +64,6 @@
 
 		<h2 class="govuk-heading-m">Did you achieve what you wanted from your visit? </h2>
 
-      <fieldset class="govuk-fieldset">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
@@ -75,16 +74,16 @@
               </label>
             </div>					
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="achieve2" id="visit2" name="visit" type="radio" value="no">
+              <input class="govuk-radios__input" data-save-name="achieve2" id="visit2" name="visit" type="radio" value="no" data-aria-controls="visit-reveal">
               <label class="govuk-label govuk-radios__label" for="no">
-                 No 
+                 No
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="visit">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="visit-reveal">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="visit">
                   Give details
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="visit" id="visit" name="visit" rows="7" aria-describedby="more-detail-hint"></textarea>
+                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="visit-text" id="visit-text" name="visit-text" rows="7" aria-describedby="more-detail-hint"></textarea>
               </div>
             </div>
           </div>
