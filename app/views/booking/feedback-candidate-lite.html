@@ -29,65 +29,65 @@
 
 					<h2 class="govuk-heading-m">What did you come to do on the service?</h2>
 
-      <fieldset class="govuk-fieldset">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="request" id="what1" name="action" type="radio" value="request2" data-aria-controls="request3">
-              <label class="govuk-label govuk-radios__label" for="what1">
-                Make a school experience request
-              </label>
-            </div>					
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="withdraw" id="what2" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
-              <label class="govuk-label govuk-radios__label" for="what2">
-                Withdraw a request or cancel a booking
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="withdraw" id="what3" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
-              <label class="govuk-label govuk-radios__label" for="what2">
-                View upcoming experience days
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="withdraw" id="what4" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
-              <label class="govuk-label govuk-radios__label" for="what2">
-                View previous bookings
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="withdraw" id="what5" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
-              <label class="govuk-label govuk-radios__label" for="what2">
-                Amend a booking
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="withdraw" id="what6" name="action" type="radio" value="withdraw2" data-aria-controls="withdraw3">
-              <label class="govuk-label govuk-radios__label" for="what2">
-                Give feedback about the school experience
-              </label>
-            </div>																								
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" data-save-name="else" id="else" name="action" type="radio" value="else2" data-aria-controls="else-reveal">
-              <label class="govuk-label govuk-radios__label" for="what3">
-                 Something else 
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="else-reveal">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="else-reveal">
-                  Tell us what you came here to do. Do not include any information that could identify you personally - such as your name
-                </label>
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="else" id="else-reveal" name="else-text" rows="7" aria-describedby="else-reveal"></textarea>
-              </div>
 
-            </div>
-
-          </div>
-        </fieldset>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="service-hint">
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="service" name="service" type="checkbox" value="request">
+        <label class="govuk-label govuk-checkboxes__label" for="service">
+          Make a school experience request
+        </label>
       </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="service-2" name="service" type="checkbox" value="withdraw">
+        <label class="govuk-label govuk-checkboxes__label" for="service-2">
+          Withdraw a request or cancel a booking
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="service-3" name="service" type="checkbox" value="days">
+        <label class="govuk-label govuk-checkboxes__label" for="service-3">
+          View upcoming experience days
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="service-4" name="service" type="checkbox" value="previous">
+        <label class="govuk-label govuk-checkboxes__label" for="service-4">
+          View previous bookings
+        </label>
+      </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="service-5" name="service" type="checkbox" value="amend">
+      <label class="govuk-label govuk-checkboxes__label" for="service-5">
+        Amend a booking
+      </label>
+    </div>
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="service-6" name="service" type="checkbox" value="feedback">
+    <label class="govuk-label govuk-checkboxes__label" for="service-6">
+      Give feedback about the school experience
+    </label>
+  </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="service-7" name="citizen" type="checkbox" value="email" data-aria-controls="else-reveal">
+        <label class="govuk-label govuk-checkboxes__label" for="service-7">
+          Something else 
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="else-reveal">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="else-reveal">
+            Tell us what you came here to do. Do not include any information that could identify you personally - such as your name
+          </label>
+       <textarea class="govuk-textarea govuk-!-width-two-thirds" data-save-name="else" id="else-reveal" name="else-text" rows="7" aria-describedby="else-reveal"></textarea>
+        </div>					
+  </fieldset>
+</div>
+
 
 						
 
