@@ -26,7 +26,7 @@
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
-    This date has already been booked. You will need to inform the candidate.
+    This date is now full. You'll need to inform the candidate.
   </strong>
 </div>
 	<form action="/schools/school-edit-dates" method="post" class="form">
@@ -97,8 +97,10 @@
 
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="width-3">
-							This is the maximum number of candidates you'll accept on this experience.
+							This is the maximum number of candidates you'll accept on this date.<br/><br/>
+							Once this limit has been reached the date will be removed from your school profile.
 						</label>
+						<br/>
 						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="10">
 					</div>
 				</div>

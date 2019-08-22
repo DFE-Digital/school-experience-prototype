@@ -1,81 +1,71 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
-
-{% block pageTitle %}
-  Blank page
-{% endblock %}
-
-{% block beforeContent %}
-{{ s.banner() }}
-{% endblock %}
-
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-  		<form action="/booking/" method="post" class="form">
-      <h1 class="govuk-heading-l">Enter your contact details</h1>
+{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ s.banner() }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">Your details will be used by schools to contact you about school experience once you’ve sent them a request.</p>
+    <div class="govuk-grid-column-full">
+        <form action="/booking/" method="post" class="form">
+            <h1 class="govuk-heading-l">Enter your contact details</h1>
 
-					<div class="govuk-form-group">
-					  <label class="govuk-label" for="name">
-					    UK telephone number
-					  </label>
-					  <input class="govuk-input" id="name" name="name" type="text" 
-							value="{{'01234567890' if data['found-in-gitis']}}">
-					</div>
-					
-					
-					
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-    <h2 class="govuk-fieldset__heading">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <p class="govuk-body">Your details will be used by schools to contact you about school experience once you’ve sent them a request.</p>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="name">
+                            UK telephone number
+                        </label>
+                        <input class="govuk-input" id="name" name="name" type="text" value="{{'01234567890' if data['found-in-gitis']}}">
+                    </div>
+
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
       Address
     </h2>
-  </legend>
+                        </legend>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-1">
-      Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-    </label>
-    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
-  </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-line-1">
+                                Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+                            </label>
+                            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text"
+															value="{{ 'Picadilly Gate' if data['found-in-gitis']}}">
+                        </div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-2">
-      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-    </label>
-    <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
-  </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-line-2">
+                                <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                            </label>
+                            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text"
+															value="{{ 'Store Street' if data['found-in-gitis']}}">
+                        </div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-town">
-      Town or city
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
-  </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-town">
+                                Town or city
+                            </label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"
+															value="{{ 'Manchester' if data['found-in-gitis']}}">
+                        </div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-county">
-      County
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
-  </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-county">
+                                County
+                            </label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"
+															value="{{ 'Manchester' if data['found-in-gitis']}}">
+                        </div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-  </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-postcode">
+                                Postcode
+                            </label>
+                            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
+															value="{{ 'MA1 2WD' if data['found-in-gitis']}}">
+                        </div>
 
-</fieldset>
+                    </fieldset>
 
-
-<!--
+                    <!--
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-1">
       Building and street
@@ -105,10 +95,6 @@
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
   </div>
 
-
-
-
-
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
@@ -122,14 +108,7 @@
 
 -->
 
-
-
-
-
-
-
-
-<!--
+                    <!--
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
       <h2 class="govuk-heading-m">
@@ -167,13 +146,11 @@
 </div>
 -->
 
-<a href="/register/account-info" class="govuk-button">Continue</a>
-<br/>
+                    <a href="/register/account-info" class="govuk-button">Continue</a>
+                    <br/>
 
+        </form>
 
-		</form>
-
-
-    </div>
-</div>
-{% endblock %}
+        </div>
+        </div>
+        {% endblock %}

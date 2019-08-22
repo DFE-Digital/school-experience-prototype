@@ -1276,9 +1276,9 @@ router.get('/schools/school-edit-dates', function(req, res) {
 });
 
 router.post('/register/login-check', function(req, res) {
-  if (req.session.data['email'].match(/unknown/) ||
-      req.session.data['first-name'].match(/unknown/) ||
-      req.session.data['last-name'].match(/unknown/)) {
+  if (req.session.data['email'].match(/unknown/i) ||
+      req.session.data['first-name'].match(/unknown/i) ||
+      req.session.data['last-name'].match(/unknown/i)) {
 
     req.session.data['found-in-gitis'] = false ;
     res.redirect('/booking/enter-contact') ;
@@ -1293,6 +1293,14 @@ router.post('/schools/candidate-requirements-conditional', function(req, res) {
 		res.redirect('/schools/candidate-requirements2') ;
 	} else {
 		res.redirect('/schools/other-details') ;
+	}
+}) ;
+
+router.post('/schools/access-need1-update3-question-conditional', function(req, res) {
+	if (req.session.data['changed-name'] == 'yes') {
+		res.redirect('/schools/access-need1-update3-question2') ;
+	} else {
+		res.redirect('/schools/outline-experience') ;
 	}
 }) ;
 
