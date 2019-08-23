@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Change booking for 22 September 2019</h1>
+
+
+	<form action="some wizzy javascript that happens" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<h2 class="govuk-heading-m">What details do you wish to change?</h2>
+		</div>
+	</div>
+
+
+<div class="govuk-form-group">
+    <span id="nationality-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Date
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          Move the experience to another date.
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Duration of the experience
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          The number of days the experience will run.
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Maximum number of candidates booked
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          The maximum number of candidates you will accept for this experience.
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Subject
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          Change the experience subject.
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Delete
+        </label>
+        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          Cancel the date and any bookings.
+        </span>
+      </div>						
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+	<br>
+<button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Continue
+</button>
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</button>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}
