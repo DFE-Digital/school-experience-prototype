@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Schools Admin - for School Experience
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<form method="post" action="/register/login-check">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+          <h1  class="govuk-heading-l">Sign in</h1>
+
+          <p>Provide the following information so we can retrieve your details.<p>
+
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="first-name">
+    First name
+  </label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text" autocomplete="firstname" spellcheck="false">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="last-name">
+    Last name
+  </label>
+  <input class="govuk-input" id="last-name" name="last-name" type="text" autocomplete="lastname" spellcheck="false">
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    Email address
+  </label>
+  <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+</div>
+
+
+<!--
+<div class="govuk-form-group">
+  <label class="govuk-label" for="telephone-number">
+    UK telephone number
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
+</div>
+
+-->
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+		          <h2 class="govuk-heading-m">Date of birth</h2>
+    <span id="dob-hint" class="govuk-hint">
+      This will only be used to identify you and won’t be shared with any schools. For example, 12 11 2007
+    </span>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+			<button type="submit" class="govuk-button">Continue</button>
+
+      </div>
+    </div>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+{% endblock %}
