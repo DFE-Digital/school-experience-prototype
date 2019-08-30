@@ -41,19 +41,12 @@
                     <div class="govuk-radios govuk-radios--conditional" data-module="radios">
 
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="dont-have" name="degree" type="radio" value="nodegree">
-                            <label class="govuk-label govuk-radios__label" for="dont-have">
-                                I don't have a degree and am not studying for one
-                            </label>
-                        </div>
-
-                        <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="graduate" name="degree" type="radio" value="graduate or postgrad">
                             <label class="govuk-label govuk-radios__label" for="graduate">
                                 Graduate or postgraduate
                             </label>
                         </div>
-
+												
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="final" name="degree" type="radio" value="final year"
 															{{ 'checked' if data['found-in-gitis'] }}>
@@ -61,18 +54,25 @@
                                 Final year
                             </label>
                         </div>
-
+												
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="second" name="degree" type="radio" value="second year">
                             <label class="govuk-label govuk-radios__label" for="second">
                                 Second year
                             </label>
-                        </div>
-
+                        </div>	
+												
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="firstyear" name="degree" type="radio" value="first year">
                             <label class="govuk-label govuk-radios__label" for="firstyear">
                                 First year
+                            </label>
+                        </div>																							
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="dont-have" name="degree" type="radio" value="nodegree">
+                            <label class="govuk-label govuk-radios__label" for="dont-have">
+                                I don't have a degree and am not studying for one
                             </label>
                         </div>
 
