@@ -1,57 +1,40 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
+{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ s.banner() }}
 
-{% block pageTitle %}
-  Blank page
-{% endblock %}
+<div class="banner1">
 
-{% block beforeContent %}
-{{ s.banner() }}
+</div>
 
-    <div class="banner1">
-
-
-
-    </div>
-
-
-
-{% endblock %}
-
-{% block content %}
-
+{% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Cancel request</h1>
-            <p>
-              You've chosen to cancel your school experience request for New Islington Free  School.</p>
+        <h1 class="govuk-heading-l">Cancel request</h1>
+        <p>
+            You've chosen to cancel your school experience request for New Islington Free School.</p>
 
-<p>
-              <span class="greyout">Request sent: 10 September 2019</span><br/>
-            </p>
-      <h2 class="govuk-heading-m">Cancellation reasons</h2>
-            <p>
-<div class="govuk-form-group">
+        <p>
+            <span class="greyout">Request sent: 10 September 2019</span>
+            <br/>
+        </p>
+        <h2 class="govuk-heading-m">Cancellation reasons</h2>
+        <p>
+            <div class="govuk-form-group">
 
-  <p>
-    Tell us why you want to cancel your request so we can let the school know you no longer want school experience.
-  </p>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-</div>
+                <p>
+                    Tell us why you want to cancel your request so we can let the school know you no longer want school experience.
+                </p>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
             <p>
-              <a href="cancel-confirm" class="govuk-button govuk-button--warning">Cancel request</a><br/>
+                <a href="cancel-confirm" class="govuk-button govuk-button--warning">Cancel request</a>
+                <br/>
 
-<p><a class="govuk-button button-grey cta" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
+                <p><a class="govuk-button button-grey cta" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
             </p>
 
     </div>
 
 </div>
-
-
-
-
 
 {% endblock %}
