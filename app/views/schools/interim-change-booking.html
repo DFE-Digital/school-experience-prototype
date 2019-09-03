@@ -14,7 +14,7 @@
 })
 }}
 
-<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+<a class="govuk-back-link" href="" onclick="history.back(-1)">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@
 <h1 class="govuk-heading-l">Update booking for 22 September 2019</h1>
 
 
-	<form action="some wizzy javascript that happens" method="post" class="form">
+	<form action="/schools/school-dashboard?request-count=2&change-count=1" method="post" class="form">
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
 
@@ -59,15 +59,6 @@
           Change subject
         </label>
       </div>
-      <br>
-      <hr>
-      <br>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality">
-          Cancel booking
-        </label>
-      </div>						
     </div>
   </fieldset>
 </div>
@@ -76,7 +67,6 @@
 
 
 
-	<br>
 <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
   Continue
 </button>
