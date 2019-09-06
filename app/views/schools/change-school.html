@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">Change school</h1>
+
+
+                <form action="/schools/change-school-conditional" method="post" class="form">
+
+
+
+                <p>
+									Select which school to switch to.</p>
+                <p>
+									
+									<div class="govuk-form-group">
+									  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+									    <div class="govuk-radios">
+									      <div class="govuk-radios__item">
+									        <input class="govuk-radios__input" id="sign-in-1" name="selected-school" type="radio" value="Newton Heath School" aria-describedby="sign-in-1-item-hint">
+									        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+														Newton Heath School (Open)
+									        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+														URN: 158367, UKPRN: 1003294
+														Worsley Street, Manchester M1 5BY
+									        </span> </div>
+												<div class="govuk-radios__item">
+									        <input class="govuk-radios__input" id="sign-in-1" name="selected-school" type="radio" value="Burton Morewood CofE Primary School" aria-describedby="sign-in-1-item-hint">
+									        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+														Burton Morewood CofE Primary School (Open)
+									        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+														URN: 137537, UKPRN: 10035504
+														Main Street, Burton-in-Kendal, Carnforth, Lancashire, LA6 1ND
+									        </span> </div>
+													<div class="govuk-radios__item">
+										        <input class="govuk-radios__input" id="sign-in-1" name="selected-school" type="radio" value="Ellen Wilkinson High School" aria-describedby="sign-in-1-item-hint">
+										        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+															Ellen Wilkinson High School (Open)
+										        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+															URN: 12855, UKPRN: 10045205
+																Long Millgate, Manchester, Lancashire, M22 4HG
+										        </span> </div>
+									      <div class="govuk-radios__item">
+									        <input class="govuk-radios__input" id="sign-in-2" name="selected-school" type="radio" value="University Academy Keighley" aria-describedby="sign-in-2-item-hint">
+									        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+									          University Academy Keighley (Open)
+									        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+														URN: 136198, UKPRN: 10030998
+														Green Head Road, Utley, Keighley, West Yorkshire, BD20 6EB
+									        </span> </div>
+									    </div>
+									  </fieldset>
+									</div>
+									
+									
+						
+
+
+                <button type="submit" class="govuk-button">
+                  Continue
+                </button>
+                </form>
+    </div>
+
+</div>
+
+{% endblock %}
