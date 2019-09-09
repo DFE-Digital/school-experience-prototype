@@ -1,18 +1,15 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
-{% import "schools/candidate-request.html" as candidate_request %}
-
-{% block pageTitle %}
-  Candidate Requests
-{% endblock %}
-
-{% block beforeContent %}
-{{ s.banner() }}
+{% extends "layout-internal-booking-iteration.html" %} {% block pageTitle %} XXXXXXXXXXXXXXXXXXXXXXXXX {% endblock %} {% block beforeContent %}
 <!--<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>-->
 {% endblock %} {% block content %}
 <dl class="govuk-summary-list">
 
-    <h2 class="govuk-heading-l">Request sent to New Islington Free School</h2>
+    <h2 class="govuk-heading-l">Request from Matthew Richards</h2>
+		
+		<div class="red-banner">
+			<br><h2 class="govuk-heading-s">&nbsp;&nbsp;This request has been rejected<br> <p>		
+	  </h2>
+		</div>			
+		
     <p><h2 class="govuk-heading-m">Personal details</h2></p>
     <dl class="govuk-summary-list">
 
@@ -53,7 +50,7 @@
       Dates requested
     </dt>
             <dd class="govuk-summary-list__value">
-                1 October 2019
+                01 June 2019
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -69,7 +66,7 @@
       Request received
     </dt>
             <dd class="govuk-summary-list__value">
-                12 September 2019
+                30 January 2019
             </dd>
         </div>
         <br>
@@ -81,7 +78,7 @@
         <div class="govuk-summary-list__row">
 
             <dt class="govuk-summary-list__key">
-      What you want out of school experience
+      What they want out of school experience
     </dt>
             <dd class="govuk-summary-list__value">
                 I'd like to experience what it would be like to be a teacher. This would then influence my decision to proceed onto the next stage of teacher training.
@@ -127,19 +124,27 @@
                 Second choice: Science
             </dd>
         </div>
+		        <div class="govuk-summary-list__row">
+		            <dt class="govuk-summary-list__key">
+		      Notes
+		    </dt>
+		            <dd class="govuk-summary-list__value">
+		                <div class="govuk-form-group">
+		                    <span id="more-detail-hint" class="govuk-hint">
+					    Enter and record notes about the candidate. For example, useful extra details picked up during any conversations. <strong>Do not include any private or financial information</strong>.
+					  </span>
+		                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+		                </div>
 
+		                <a class="govuk-button" href="" class="govuk-button">Save note</a>
+		            </dd>
+		        </div>
     </dl>
+		
 
-    <br>
+	
 
-
-<p><a class="govuk-button" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
-
-
-    <a href="/candidate-dashboard/cancel-request" class="govuk-button govuk-button--warning">Cancel request</a>
-
-
-
+    <a class="govuk-button button-grey cta" href="/schools/school-dashboard?request-count=2&change-count=1">Back to requests and bookings</a>
 
     </form>
 

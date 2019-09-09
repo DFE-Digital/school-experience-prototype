@@ -1,52 +1,54 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
-{% import "schools/notification-circle.html" as notification %}
+{% extends "layout.html" %} {% import "sections.html" as s %} {% import "schools/notification-circle.html" as notification %} {% block pageTitle %} Dashboard {% endblock %} {% block beforeContent %} {{ s.banner() }}
 
-{% block pageTitle %}
-  Dashboard
-{% endblock %}
-
-{% block beforeContent %}
-{{ s.banner() }}
-
-<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
-{% endblock %}
-
-{% block content %}
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
 <h1 class="govuk-heading-l"></h1>
 
-
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
         Choose how dates are displayed
       </h1>
-    </legend>
-    <p>
-      Select how you'd like to present school experience dates to candidates.
-    </p>
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
-          Show specific dates
-        </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
-          You must enter specific school experience dates to start receiving requests from candidates
-        </span> </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
-          Show a description of when you can host candidates
-        </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-            For example, on set days of the week or at certain times of the year such as around exams, holidays
-            and busy term times
-        </span> </div>
-    </div>
-  </fieldset>
+        </legend>
+        <p>
+            Select how you'd like to present school experience dates to candidates.
+        </p>
+        <div class="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+                    Show specific dates
+                </label>
+                <div id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+                    You must enter specific school experience dates to start receiving requests from candidates
+                    <div class="govuk-inset-text govuk-!-margin-top-3">
+                        <p>
+                            <strong>Upcoming experience dates</strong>
+                        </p>
+                        <p>01 January 2020 (1day)
+                       <br>02 January 2020 (1day)</p>
+                    </div>
+                </div>
+            </div>
 
-  <div class="govuk-form-group">
-    <a href='/schools/school-dashboard' class='govuk-button'>Continue</a>
-  </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                    Show a description of when you can host candidates
+                </label>
+                <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                    For example, on set days of the week or at certain times of the year such as around exams, holidays and busy term times
+                    <div class="govuk-inset-text govuk-!-margin-top-3">
+                        <p><strong>Experience availability</strong></p>
+                        <p>We offer career experience placements throughout the school year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="govuk-form-group">
+        <a href='/schools/school-dashboard' class='govuk-button'>Continue</a>
+    </div>
 </div>
 {% endblock %}

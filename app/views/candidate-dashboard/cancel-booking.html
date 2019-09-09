@@ -1,71 +1,32 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
-
-{% block pageTitle %}
-  Blank page
-{% endblock %}
-
-{% block beforeContent %}
-{{ s.banner() }}
-<div class="signin-status">
-    <div class="banner1">
-
-
-      <div class="signin-status">
-        <p class="govuk-!-font-size-16">Hello, you last signed in 12:34pm, Monday 5 October 2018&nbsp;&nbsp;<a href="/candidate-dashboard/signout">Sign out</a></p>
-      </div>
-    </div>
-
-
-</div>
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% import "sections.html" as s %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ s.banner() }} {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Cancel booking</h1>
-      <p>
-        You've chosen to cancel your school experience booking for Ancoats Nursery School.</p>
-        <p>Date booked: 10 March 2019<br />
-      </p>
+        <h1 class="govuk-heading-l">Cancel booking</h1>
+        <p>
+            You've chosen to cancel your school experience booking for New Islington Free School.</p>
 
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          To change any school experience details you’ll need to contact the school. For example, to change the date of your booking.
-        </strong>
-      </div>
+        <p><span class="greyout">Date booked: 3 October 2019</span></p>
+        </p>
 
+        <div class="govuk-form-group">
+            <h2 class="govuk-heading-m">Cancellation reasons</h2>
+            <p>
+                Tell us why you want to cancel your booking so we can let the school know you no longer want school experience.</p>
+            </span>
 
-<div class="govuk-form-group">
-  <h2 class="govuk-heading-m">Cancellation reasons</h2>
-  <p>
-Tell us a why you want to cancel your booking so we can let the school know you no longer want school experience.</p>
-  </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
 
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        <p>
+            <a href="cancel-booking-confirm" class="govuk-button govuk-button--warning">Cancel booking</a>
+            <br/>
+
+            <p><a class="govuk-button button-grey cta" href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7">Return to requests and bookings</a></p>
+        </p>
+    </div>
+
 </div>
 
-            <p>
-              <a href="booking-cancel-confirm" class="govuk-button">Cancel booking</a><br/>
-
-
-      <p>
-        <a href="view-booking" class="govuk-button">Contact school</a><br/>
-      </p>
-
-            <p>  <a href="dash-search" class="">Your requests and bookings</a>
-            </p>
-                </div>
-
-            </div>
-
-
-
-
-
-            {% endblock %}
+{% endblock %}

@@ -1304,4 +1304,22 @@ router.post('/schools/access-need1-update3-question-conditional', function(req, 
 	}
 }) ;
 
+router.post('/schools/change-school-conditional', function(req, res) {
+	if (req.session.data['selected-school'] == 'Newton Heath School') {
+		res.redirect('/schools/school-dashboard') ;
+	} 
+	else if (req.session.data['selected-school'] == 'Burton Morewood CofE Primary School') {
+		res.redirect('/schools/school-dashboard-burton') ;
+	}
+	else if (req.session.data['selected-school'] == 'Ellen Wilkinson High School') {
+		res.redirect('/schools/school-dashboard-ellen') ;
+	}
+	else if (req.session.data['selected-school'] == 'University Academy Keighley') {
+		res.redirect('/schools/school-dashboard-university') ;
+	}
+	else {
+		res.render('/schools/change-school') ;
+	}
+}) ;
+
 module.exports = router

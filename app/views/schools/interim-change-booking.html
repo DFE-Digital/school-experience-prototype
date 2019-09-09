@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Update booking for 22 September 2019</h1>
+
+
+	<form action="/schools/school-dashboard?request-count=2&change-count=1" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>
+  Tell us what you want to do to this school experience booking. Select all that apply.
+</p>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Change start date
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Change how long it will last
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Change maximum number of bookings
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+          Change subject
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+<button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Continue
+</button>
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</button>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}

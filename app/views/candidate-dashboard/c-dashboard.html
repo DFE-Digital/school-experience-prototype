@@ -24,7 +24,7 @@
 			<br><h4 class="govuk-heading-s">&nbsp;&nbsp;You have no dates available for candidates to book. <a href="/schools/availability-start-date-edit"> Add more dates</a></h4>
 		</div>
 		-->
-		    <hr class="govuk-section-break govuk-section-break--m">
+		<hr class="govuk-section-break govuk-section-break--m">
     <h3 class="govuk-heading-m">To do list</h3>
 
     {{ notification.count("/candidate-dashboard/requests", "Requests", request_count, "Request school experience and view requests you've sent") }}
@@ -55,6 +55,11 @@
     <a href="/booking/feedback-candidate" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on this service</a>
     <p class="govuk-hint">Help us improve the get school experience service</p>
 
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Request more school experience</h3>
+
+<p><a class="govuk-button button" href="/candidate-search/search-with-subject">Make a new request</a></p>
 
   </div>
 </div>

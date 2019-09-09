@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Enter duration</h1>
+	<form action="/schools/school-edit-dates" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>Enter the number of days your experience will run for.</p>
+
+		</div>
+	</div>
+
+
+
+
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-two-thirds">
+
+					<div class="govuk-form-group">
+						<label class="govuk-label" for="width-3">
+							Enter number of days.
+						</label>
+						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="1">
+					</div>
+				</div>
+			</div>
+
+
+
+
+	<button type="submit" class="govuk-button">
+		Save and return to manage dates
+	</button>
+</div>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}

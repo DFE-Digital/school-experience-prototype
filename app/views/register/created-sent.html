@@ -1,64 +1,53 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block pageTitle %} Blank page {% endblock %} {% block beforeContent %} {{ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.' }) }} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-  Blank page
-{% endblock %}
-
-{% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-
-{% endblock %}
-
-{% block content %}
-
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
         <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
+            <h1 class="govuk-panel__title">
             Your school experience request has been sent to Ellen Wilkinson High School
           </h1>
 
         </div>
 
-      <h3 class="govuk-heading-m">What happens next</h3>
+        <h3 class="govuk-heading-m">What happens next</h3>
 
-      <p>The school may contact you to discuss your request and experience dates.</p> 
-        
-      <p class="govuk-!-font-weight-bold">Be aware, due to the summer holidays, they may not get in touch until at least late August or early September.</p>
+        <p>The school may contact you to discuss your request and experience dates.</p>
 
-      <p>If you can’t find any messages from the school in your inbox - check your spam and other mailbox folders.</p>
+        <p class="govuk-!-font-weight-bold">Be aware, due to the summer holidays, they may not get in touch until at least late August or early September.</p>
 
-      <p>We'll email you a copy of your request for your records.</p>
+        <p>If you can’t find any messages from the school in your inbox - check your spam and other mailbox folders.</p>
 
-    <a class="govuk-button button" a href="/candidate-dashboard-lite/c-dashboard-lite?request-count=4&bookings-count=7" class="">Your requests and bookings</a>
+        <p>We'll email you a copy of your request for your records.</p>
 
+        <a class="govuk-button button" a href="/candidate-dashboard/c-dashboard?request-count=4&bookings-count=7" class="">Your requests and bookings</a>
 
-		<br /><br /><br /><br /><br /><br /><br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-		<hr style="govuk-section-break govuk-section-break--visible" />
+        <hr style="govuk-section-break govuk-section-break--visible" />
 
-			<div class="govuk-insert">
-				<h4 class="govuk-heading-s">Email demo</h4>
-				<p>
-					Example email sent to candidate confirmation delivery to school
-					<br>
-					<a href="/fake-emails/candidate-request-confirmation" target="_target" class="govuk-button">Candidate confirmation email</a>
-				</p>
-				<p>
-					Example email sent to school with candidate experience request details
-					<br>
-					<a href="/fake-emails/school-request-confirmation" target="_target" class="govuk-button">School experience request email</a>
+        <div class="govuk-insert">
+            <h4 class="govuk-heading-s">Email demo</h4>
+            <p>
+                Example email sent to candidate confirmation delivery to school
+                <br>
+                <a href="/fake-emails/candidate-request-confirmation" target="_target" class="govuk-button">Candidate confirmation email</a>
+            </p>
+            <p>
+                Example email sent to school with candidate experience request details
+                <br>
+                <a href="/fake-emails/school-request-confirmation" target="_target" class="govuk-button">School experience request email</a>
 
-				</p>
-			</div>
+            </p>
+        </div>
 
     </div>
-  </div>
+</div>
 {% endblock %}

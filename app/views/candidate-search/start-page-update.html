@@ -4,17 +4,10 @@
   {% if serviceName %} {{ serviceName }} {% endif %}
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-
-  {{ govukHeader() }}
-{% endblock %}
-
-
 
 {% block content %}
 
-  {% set params = {url: "/candidate-search/search"} %}
+  {% set params = {url: "/candidate-search/search-with-subject"} %}
 
   {% include "./start-page-content2.html" %}
 
