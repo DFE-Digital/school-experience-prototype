@@ -958,7 +958,25 @@ opacity: 1;
   h3.govuk-heading-m {
     margin-bottom: 0px;
   }
+
+  fieldset {
+    margin-top: 2rem;
+  }
+
 }
+
+.filter-desktop {
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+}
+
+.filter-mobile {
+  @include govuk-media-query($from: tablet) {
+    display: none;
+  }
+}
+
 
 
 /* Search Boxes */
