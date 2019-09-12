@@ -558,10 +558,10 @@ router.post('/candidate-search/result-redirect', function(req, res) {
 
     if (phase == "primary") {
         // send them to primary results
-        return res.render('candidate-search/search-results-primary');
+        return res.redirect('/candidate-search/search-results-primary');
     } else {
         // send them to secondary results
-        return res.render('candidate-search/search-results-secondary');
+        return res.redirect('/candidate-search/search-results-secondary');
     }
 })
 
