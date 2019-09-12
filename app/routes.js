@@ -552,6 +552,19 @@ router.post('/schools/add-school', function (req, res) {
     res.render('schools/add-school-template');
 });
 
+router.post('/candidate-search/result-redirect', function(req, res) {
+
+    let phase = req.body['search-phase'];
+
+    if (phase == "primary") {
+        // send them to primary results
+        return res.render('candidate-search/search-results-primary');
+    } else {
+        // send them to secondary results
+        return res.render('candidate-search/search-results-secondary');
+    }
+})
+
 router.get('/schools/signout', function (req, res) {
     req.session.data['school-request'] = null;
     console.log("signout");
