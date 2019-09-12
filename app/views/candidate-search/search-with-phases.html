@@ -54,47 +54,34 @@
 								</div>
 							</div>
 
-
-					{{ govukRadios({
-					  idPrefix: "search-phase",
-					  name: "search-phase",
-					  fieldset: {
-						legend: {
-						  text: "What kind of school do you want experience at?",
-						  isPageHeading: true,
-						  classes: "govuk-fieldset__legend--m"
-						}
-					  },
-					  items: [
-						{
-						  value: "primary",
-						  text: "Primary schools",
-						  label: {
-							classes: "govuk-label--s"
-						  }
-						},
-						{
-						  value: "secondary-and-further",
-						  text: "Secondary schools, sixth forms and colleges",
-						  label: {
-							classes: "govuk-label--s"
-						  }
-						},
-						{
-							divider: "or"
-						},
-						{
-						  value: "any",
-						  text: "Any kind of school",
-						  label: {
-							classes: "govuk-label--s"
+						{{ govukCheckboxes({
+						  idPrefix: "search-phase",
+						  name: "search-phase",
+						  fieldset: {
+							legend: {
+							  text: "What kind of school do you want experience at?",
+							  isPageHeading: true,
+							  classes: "govuk-fieldset__legend--xl"
+							}
 						  },
 						  hint: {
-							text: "Primary schools, secondary schools, sixth forms and colleges may be included in the results"
-						  }
-						}
-					  ]
-					}) }}
+							text: "Select all that apply."
+						  },
+						  items: [
+							{
+							  value: "primary",
+							  text: "Primary"
+							},
+							{
+							  value: "secondary",
+							  text: "Secondary"
+							},
+							{
+							  value: "college",
+							  text: "Sixth form or college"
+							}
+						  ]
+						}) }}
 
 							<div class="govuk-grid-row">
 
