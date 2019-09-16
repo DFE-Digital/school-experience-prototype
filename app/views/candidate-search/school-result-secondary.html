@@ -17,40 +17,37 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">Preview your school experience profile</h1>
 
-        <p>This is how your school will appear to candidates.  </p>
-<!--		
-			<ul class="govuk-list govuk-list--bullet">
-					<li>If you're happy with this - select 'Accept and set up profile' at the bottom of this page </li>
-					<li>If you need to change anything - select relevant 'Change' link shown within each section of the following preview </li>
-       </ul>
--->				
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">				
-				
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Newton Heath School</h1>
+
+
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">{{ data['school-name'] }}</h1>
+
 
         <p>We’re a thriving community school serving a cosmopolitan community in North Manchester with more than 1,700 pupils.
         </p>
         <p>Our pupils’ GCSE scores are above the national average and, with more than 63 languages spoken at our school, we’re highly skilled in meeting the needs of bilingual children. </p>
         <p>We’re also a barrier free school and cater fully for the needs of pupils with movement difficulties while our work with hearing impaired children is well supported by the local authority and other agencies.</p>
 
+
         <h1 class="govuk-heading-m">About our school experience</h1>
 
-        <p><b>Individual requirements</b></p>
-	<ul class="govuk-list govuk-list--bullet">					
+
+
+        <p><b>Individual requirements</b> 
+<ul class="govuk-list govuk-list--bullet">					
 					<li>Must have a degree.</li></p>
 					<li>Must apply or have been accepted onto our Initial Teacher Training course.</li></p>
-					<li>Must live locally within 10 miles.</li></p>			
+					<li>Must live locally within 10 miles.</li></p>										
 </ul>
+
         <p><b>Details</b> 
-					
-	<ul class="govuk-list govuk-list--bullet">						
-					<li>Attendees will observe lessons in their chosen subjects and may get the chance to interact with pupils and classroom activities. Only offer key stage 1 experience for primary experiences.</li>
+<ul class="govuk-list govuk-list--bullet">						
+					<li>Attendees will observe lessons in their chosen subjects and may get the chance to interact with pupils and classroom activities. </li>
+					<li>Only offer key stage 4 and 5 experiences.</li></p>
 </ul>
         <p><b>Upcoming dates and subjects</b></p>
 				
@@ -71,19 +68,19 @@
     </colgroup>
 
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">20 September 2019</th>
+      <th class="govuk-table__header" scope="row">1 October 2019</th>
 			<td class="govuk-table__cell">1 day</td>
-			<td class="govuk-table__cell">Physics</td>			
+			<td class="govuk-table__cell">Maths</td>			
     </tr>
 
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">23 September 2019</th>
+      <th class="govuk-table__header" scope="row">2 October 2019</th>
 			<td class="govuk-table__cell">2 days</td>
 			<td class="govuk-table__cell">Maths</td>			
     </tr>
 
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">25 September 2019</th>
+      <th class="govuk-table__header" scope="row">30 September 2019</th>
 			<td class="govuk-table__cell">1 day</td>
 			<td class="govuk-table__cell">Physics, Maths</td>			
     </tr>
@@ -95,21 +92,19 @@
     </tr>
 
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">1 October 2019</th>
+      <th class="govuk-table__header" scope="row">15 September 2019</th>
 			<td class="govuk-table__cell">1 day</td>
-			<td class="govuk-table__cell">Chemistry</td>			
+			<td class="govuk-table__cell">All subjects available</td>			
     </tr>
 
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">2 October 2019</th>
-			<td class="govuk-table__cell">3 days</td>
-			<td class="govuk-table__cell">History</td>			
+      <th class="govuk-table__header" scope="row">10 September 2019</th>
+			<td class="govuk-table__cell">1 days</td>
+			<td class="govuk-table__cell">Art</td>			
     </tr>
-
   </tbody>
 </table>				
 				
-
 
         <h1 class="govuk-heading-m">Location</h1>
         <div style="width: 100%; height: 400px; overflow: hidden; vertical-align: middle">
@@ -120,9 +115,10 @@
         <br>
         <h1 class="govuk-heading-m">About our school</h1>
 
-        <p><b>Age range:</b> 3 to 16 years (nursery, primary and secondary)</p>
+        <p><b>Age range:</b> 11 to 16 years (secondary)</p>
+        <p>
 
-
+        </p>
         <p><b>For more information about our school use the following links: </b>
             <br>
 
@@ -135,24 +131,24 @@
             </p>
 
             <p>
-                <li><a class="govuk-link" href="https://reports.ofsted.gov.uk/provider/28/105560">Ofsted report: {{ school['Name'] }}</a></li>
+                <li><a class="govuk-link" href="https://reports.ofsted.gov.uk/provider/28/105560">Ofsted report {{ school['Name'] }}</a></li>
             </P>
 
             <p>
-                <li><a class="govuk-link" href="https://www.compare-school-performance.service.gov.uk/school/105560/abraham-moss-community-school">Performance information: {{ school['Name'] }}</a></li>
+                <li><a class="govuk-link" href="https://www.compare-school-performance.service.gov.uk/school/105560/abraham-moss-community-school">Performance information {{ school['Name'] }}</a></li>
             </p>
 
-                            <h1 class="govuk-heading-m">Disability and access needs details</h1>
+                            <h1 class="govuk-heading-m">Accessibility details</h1>
                             <p class="govuk-body">
       <p>We offer an inclusive environment for students and staff. We encourage requests from under-represented groups and do our best to support and make adjustments for all needs and requirements. We're happy to discuss you disability or access needs before or as part of your school experience request.
 			</p>
-			<p>Full wheelchair access and hearing loops / audio induction loops for people with hearing impairments. We are part of the Disability Confident employer scheme.</p>
+			<p>Full wheelchair access and hearing loops / audio induction loops for people with hearing impairments.</p> 
+			<p>We are part of the Disability Confident employer scheme.</p>
             <a class="" href="">Access needs policy</a>
 						<br>
 						<br>						
-						<img src="/public/images/disability-confident-small.png" alt="disability confident logo">
-<br>
 
+<br>
 <br>
 
     </div>
@@ -160,7 +156,7 @@
     <div class="govuk-grid-column-one-third">
             <h3 class="govuk-heading-s">DBS check required</h3>
             <p class="govuk-body">
-                Yes - Sometimes <a href="">more info</a>
+                Yes - Sometimes <a href="">more info ></a>
 
 
                 <h3 class="govuk-heading-s">Fees</h3>
@@ -194,47 +190,19 @@
     </div>
     </div>
 
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">	
 
-
-    <div class="govuk-grid-column-full">
-<h2 class="govuk-heading-m">Set up your school experience profile</h2>
-
-
-
-<div class="govuk-form-group">
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="" name="" type="checkbox">
-        <label class="govuk-label govuk-checkboxes__label" for="">
-By checking this box and setting up your school experience profile you’re confirming, to the best of your knowledge, the details you’re providing are correct and you accept our <a class="govuk-link" href="/register/privacy-policy-school">privacy policy</a>
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-	<form method="get" action="/schools/school-registration-complete">
-    <div class="govuk-form-group">
-        <button type="submit" class="govuk-button">
-        Set up profile
-        </button>
-    </div>
-    </form>
-		
-	<form method="get" action="/schools/check-answers-school">
-    <div class="govuk-form-group">		
-		<button type="submit" class="govuk-button govuk-button--secondary">
-		  Go back and change
-		</button>
-    </div>
-    </form>		
-		
-</div>
-</div>
-
-
+          <a class="govuk-button" href="/register/request-date                                   ">Start request</a>			
+<br>
+<br>
+          <p>  <a href="search-results" class="">Back to search results</a></p>
 
 
     </div>
+
+
+
+
 
 {% endblock %}
+
+

@@ -1,0 +1,336 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+
+		<div class="govuk-grid-row">
+			<div class="results">
+				<div class="pagination-container">
+					<ul class="pagin">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">Next</a></li>
+					</ul>
+				</div>
+				<div class="govuk-grid-column-full">
+					<div class="sortby">
+						<div class="govuk-form-group sort-by">
+						  <div class="sort-text">Sorted by</div>
+						  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+							<div class="govuk-radios govuk-radios--inline govuk-radios--small">
+							  <div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="changed-name-1" name="changed-name" checked type="radio" value="yes">
+								<label class="govuk-label govuk-radios__label" for="changed-name-1">
+								  Distance
+								</label> </div>
+							  <div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+								<label class="govuk-label govuk-radios__label" for="changed-name-2">
+								  Name
+								</label> </div>
+							</div>
+						  </fieldset>
+						</div>
+					</div>
+
+					<div class="list">
+						<ul>
+							<li>
+								<div class="school-result">
+
+									<h3 class="govuk-heading-l">
+										Ellen Wilkinson School
+										<span class="govuk-caption-m">1 mile away</span>
+									</h3>
+
+									<dl class="govuk-summary-list">
+										<div class="govuk-summary-list__row">
+											<dt class="govuk-summary-list__key">
+												Address
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Long Millgate, Manchester
+											</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Education phases
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Primary
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Fees
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Admin and DBS check fees
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Subjects
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Early years subjects
+										</dd>
+										</div>
+									</dl>
+
+									<a href="/schools/1" class="govuk-button" style="font-weight:normal">View school details</a>
+
+								</div>
+							</li>
+							<li>
+								<div class="school-result">
+
+									<h3 class="govuk-heading-l">
+										City Primary Manchester
+										<span class="govuk-caption-m">1.5 miles away</span>
+									</h3>
+
+									<dl class="govuk-summary-list">
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Address
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Whitworth Street West, Manchester
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Education phases
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Primary
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Fees
+											</dt>
+											<dd class="govuk-summary-list__value">
+												None
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Subjects
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Early years subjects
+										</dd>
+										</div>
+									</dl>
+
+									<a href="/candidate-search/school-result-flexible" class="govuk-button" style="font-weight:normal">View school details</a>
+
+								</div>
+							</li>
+							
+							<li>
+								<div class="school-result">
+
+									<h3 class="govuk-heading-l">
+										Chiserly Academy
+										<span class="govuk-caption-m">2.5 miles away</span>
+									</h3>
+
+									<dl class="govuk-summary-list">
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Address
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Cheshire Road, Manchester M42 4TW.
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Education phases
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Nursery and primary
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Fees
+											</dt>
+											<dd class="govuk-summary-list__value">
+												DBS check fee
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Subjects
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Early years subjects
+										</dd>
+										</div>
+									</dl>
+
+									<a href="/schools/3" class="govuk-button" style="font-weight:normal">View school details</a>
+
+								</div>
+							</li>
+							
+							<li>
+								<div class="school-result">
+
+									<h3 class="govuk-heading-l">
+										Medlock Primary School
+										<span class="govuk-caption-m">5 miles away</span>
+									</h3>
+
+									<dl class="govuk-summary-list">
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Address
+											</dt>
+											<dd class="govuk-summary-list__value">
+												142 Dantzic Street, Manchester
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Education phases
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Primary
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Fees
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Admin fee
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Subjects
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Early years subjects
+										</dd>
+										</div>
+									</dl>
+
+									<a href="/schools/4" class="govuk-button" style="font-weight:normal">View school details</a>
+
+								</div>
+							</li>
+							
+							<li>
+								<div class="school-result">
+
+									<h3 class="govuk-heading-l">
+										Ancoats Nursery School
+										<span class="govuk-caption-m">10 miles away</span>
+									</h3>
+
+									<dl class="govuk-summary-list">
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Address
+											</dt>
+											<dd class="govuk-summary-list__value">
+												10 Hugh Oldham Way, Manchester
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Education phases
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Nursery School
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Fees
+											</dt>
+											<dd class="govuk-summary-list__value">
+												None
+										</dd>
+										</div>
+
+									  <div class="govuk-summary-list__row">
+										<dt class="govuk-summary-list__key">
+												Subjects
+											</dt>
+											<dd class="govuk-summary-list__value">
+												Early years subjects
+										</dd>
+										</div>
+									</dl>
+
+									<a href="/schools/5" class="govuk-button" style="font-weight:normal">View school details</a>
+
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+
+
+					<div class="pagination-container">
+						<a href="#search-results-heading" class="govuk-link govuk-link--no-visited-state back-to-top">
+							<svg class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+						  <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+						</svg>
+
+							Back to top
+						</a>
+
+						<ul class="pagin">
+							<li><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">Next</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

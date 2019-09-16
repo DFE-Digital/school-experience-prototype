@@ -552,6 +552,19 @@ router.post('/schools/add-school', function (req, res) {
     res.render('schools/add-school-template');
 });
 
+router.post('/candidate-search/result-redirect', function(req, res) {
+
+    let phase = req.body['search-phase'];
+
+    if (phase == "primary") {
+        // send them to primary results
+        return res.redirect('/candidate-search/search-results-primary');
+    } else {
+        // send them to secondary results
+        return res.redirect('/candidate-search/search-results-secondary');
+    }
+})
+
 router.get('/schools/signout', function (req, res) {
     req.session.data['school-request'] = null;
     console.log("signout");
@@ -1255,6 +1268,16 @@ router.get('/schools/school-change-booking', function(req, res) {
 });
 
 router.post('/schools/availability-select-dates-subjects-maximum', function(req, res) {
+  if (req.session.data['all-subjects'] == 'yes') {
+    let dates = [ { date: '5 September 2019', duration: 2, subjects: 'All', status: 'AVAILABLE', tag: 'available' } ];
+    let q = JSON.stringify(dates);
+    res.redirect('/schools/school-edit-dates' + '?json=' + q) ;
+  } else {
+    res.redirect('/schools/availability-select-dates-subjects-all') ;
+  }
+}) ;
+
+router.post('/schools/availability-start-dates-edit', function(req, res) {
   if (req.session.data['all-subjects'] == 'yes') {
     let dates = [ { date: '5 September 2019', duration: 2, subjects: 'All', status: 'AVAILABLE', tag: 'available' } ];
     let q = JSON.stringify(dates);
