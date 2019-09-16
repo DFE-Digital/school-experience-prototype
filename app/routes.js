@@ -1277,6 +1277,16 @@ router.post('/schools/availability-select-dates-subjects-maximum', function(req,
   }
 }) ;
 
+router.post('/schools/availability-start-dates-edit', function(req, res) {
+  if (req.session.data['all-subjects'] == 'yes') {
+    let dates = [ { date: '5 September 2019', duration: 2, subjects: 'All', status: 'AVAILABLE', tag: 'available' } ];
+    let q = JSON.stringify(dates);
+    res.redirect('/schools/school-edit-dates' + '?json=' + q) ;
+  } else {
+    res.redirect('/schools/availability-select-dates-subjects-all') ;
+  }
+}) ;
+
 router.get('/schools/school-edit-dates', function(req, res) {
   let dates;
 
