@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Turn off 2 October 2019?</h1>
+	<form action="/schools/school-edit-dates-off" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>This date will no longer be shown for candidates to book.</p>
+
+
+		</div>
+	</div>
+
+<button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+  Turn off
+</button>
+<br>
+<a href="/schools/school-edit-dates" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</a>
+</form>
+<br>
+<br>
+{% endblock %}
