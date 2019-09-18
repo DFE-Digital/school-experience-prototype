@@ -1,0 +1,295 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Change the subject</h1>
+	<form action="/schools/change-booking-date-15sept" method="post" class="form">
+ 	 <div class="govuk-grid-row">
+	 	<div class="govuk-grid-column-two-thirds">
+
+<p>Change the experience subject.</p>
+
+
+		</div>
+	</div>
+
+
+		<div class="govuk-form-group se-filter">
+			<fieldset class="govuk-fieldset" aria-describedby="subjects">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+				</legend>
+				<span id="waste-hint" class="govuk-hint">
+					Select all that apply
+				</span>
+
+				<div class="govuk-checkboxes">
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Art and design
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Biology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Business studies
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox" checked>
+						<label class="govuk-label govuk-checkboxes__label">
+							Chemistry
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Citizenship
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Classics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Computing
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Dance
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Design and technology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Drama
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Economics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							English
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							French
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Geography
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							German
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Health and social care
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							History
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Languages (other)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Maths
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Media studies
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Music
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physical education (PE)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physics
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Physics with maths
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Primary
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Psychology
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Religious education (RE)
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Social sciences
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Spanish
+						</label>
+					</div>
+					
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+						<label class="govuk-label govuk-checkboxes__label">
+							Vocational health
+						</label>
+					</div>
+					
+				</div>
+
+			</fieldset>
+		</div>
+
+
+<!--
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button id="add-single" onclick="copy_dates_block(); return false" class="govuk-button button-grey">
+				Add more dates
+			</button>
+		</div>
+	</div>
+-->
+	<br>
+	<button type="submit" class="govuk-button">
+		Save selection
+	</button>
+</div>
+
+<script>
+	function copy_dates_block() {
+		var initialBlock = document.getElementById("initial-block") ;
+		var newBlock = document.createElement('div') ;
+
+		var parentBlock = document.getElementById('dates-block') ;
+		parentBlock.appendChild(newBlock) ;
+
+		newBlock.innerHTML = initialBlock.innerHTML ;
+
+		return true ;
+	}
+</script>
+
+<!--
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="/public/javascripts/availability-list.js"></script>
+-->
+{% endblock %}
