@@ -20,17 +20,16 @@
 
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 					<h1 class="govuk-fieldset__heading">
-						Find school experience
+						Search for school experience
 					</h1>
 				</legend>
-				<p class="govuk-hint">Search by location or postcode</p>
 
 				<!-- This version of the form starts horizontal but stacks vertically when narrow -->
 				<form action="/candidate-search/search-results-post" class="school-search-form" method="post">
 					<div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
 							<div class="govuk-form-group">
-								<label class="govuk-label" for="search-by-location">Where?</label>
+								<label class="govuk-label" for="search-by-location">Enter location or postcode</label>
 								<input class="govuk-input govuk-!-width-full" id="search-by-location" name="location" type="text" placeholder="Such as Manchester or M1 3BD">
 							</div>
 						</div>
@@ -40,7 +39,7 @@
 					<div class="govuk-grid-row">
 								<div class="govuk-grid-column-one-third">
 									<div class="govuk-form-group">
-										<label class="govuk-label" for="search-location-radius">Distance</label>
+										<label class="govuk-label" for="search-location-radius">Select search area</label>
 										<select id="search-location-radius" class="govuk-select" name="locationRadius">
 											<option value="1">1 mile</option>
 											<option value="3">3 miles</option>
@@ -102,7 +101,7 @@
 
 	              <div class="school-search-form__submit govuk-grid-column-one-third">
 	                <div class="govuk-form-group">
-										<button class="govuk-button inline-button">Find</button>
+										<button class="govuk-button inline-button">Search</button>
 									</div>
 								</div>
 							</div>
