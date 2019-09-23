@@ -19,16 +19,16 @@
 
 {% block content %}
 
-	<form action="/schools/school-edit-dates-added" method="post" class="form">
+
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
 
 <h1 class="govuk-heading-l">22 October 2019</h1>
 
-<h1 class="govuk-heading-m">Tell us which subjects are available for this date?</h2>
+<h2 class="govuk-heading-m">Tell us which subjects are available for this date?</h2>
 
 <div class="govuk-grid-row subject">
-    <div class="govuk-grid-column-two-thirds">
+
 
 
           <div class="govuk-form-group">
@@ -209,15 +209,13 @@
                       <label class="govuk-label govuk-checkboxes__label" for="subject20">
                        Spanish
                       </label>
-                      </div>
-                      <div class="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
+                   </div>
+                     <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" data-save-name="Vocational-health" id="subject26" name="sub" type="checkbox" value="">
                         <label class="govuk-label govuk-checkboxes__label" for="subject26">
                         Vocational health
-                       </label>
-                      </div>
-                    </div>
+                      </label>
+                     </div>
               </fieldset>
 
 
@@ -227,11 +225,12 @@
 
 
 	<br>
-	<button type="submit" class="govuk-button">
+	<a class="govuk-button" href="/schools/school-edit-dates-added">
 		Continue
 	</button>
-</div>
+   </div>
 
+<!--
 <script>
 	function copy_dates_block() {
 		var initialBlock = document.getElementById("initial-block") ;
@@ -246,7 +245,7 @@
 	}
 </script>
 
-<!--
+
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script src="/public/javascripts/availability-list.js"></script>
