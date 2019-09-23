@@ -20,7 +20,7 @@
 {% block content %}
 
 <h1 class="govuk-heading-l">State the fixed dates when you offer school experience</h1>
-	<form action="/schools/availability-start-dates-edit" method="post" class="form">
+	<form action="/schools/school-edit-dates-added" method="post" class="form">
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
 
@@ -143,7 +143,12 @@
         <label class="govuk-label govuk-radios__label" for="all-subjects-yes">
           A general group of subjects
         </label> </div>
-    </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="all-subjects-primary" name="all-subjects" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="all-subjects-primary">
+          Primary (no subject)
+        </label> </div>
+			</div>	
   </fieldset>
 </div>
 
