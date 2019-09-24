@@ -1576,6 +1576,10 @@ col.status {
 	border: 5px solid govuk-colour('blue');
 	padding: 1rem 1rem;
 	margin: 1rem 0rem;
+	
+	.govuk-warning-text {
+		margin-bottom: 0rem;
+	}
 
 }
 
