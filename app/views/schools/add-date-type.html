@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{
+ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+})
+}}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Is this date for a primary or secondary school?</h1>
+<form action="/schools/add-date-type-conditional" method="post" class="form" data-local-save="school-onboarding:add-date-type">
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+
+    <span id="sign-in-hint" class="govuk-hint">
+      You’ll set up the date on the next acreen
+    </span>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="primary" name="phase" type="radio" value="yes" aria-describedby="primary-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="primary">
+          Primary
+        </label>
+        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          Early years
+        </span>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="secondary" name="phase" type="radio" value="no" aria-describedby="secondary-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="secondary">
+          Secondary
+        </label>
+        <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          Secondary and 16 - 18 years 
+        </span>
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+
+
+
+
+
+
+	<br>
+	<button type="submit" class="govuk-button">
+		Continue
+	</button>
+</div>
+
+
+{% endblock %}
