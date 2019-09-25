@@ -1330,6 +1330,14 @@ router.post('/schools/candidate-requirements-conditional', function(req, res) {
 	}
 }) ;
 
+router.post('/schools/add-date-type-conditional', function(req, res) {
+	if (req.session.data['phase'] == 'yes') {
+		res.redirect('/schools/add-date-primary') ;
+	} else {
+		res.redirect('/schools/add-date-secondary') ;
+	}
+}) ;
+
 router.post('/schools/access-need1-update3-question-conditional', function(req, res) {
 	if (req.session.data['changed-name'] == 'yes') {
 		res.redirect('/schools/access-need1-update3-question2') ;
