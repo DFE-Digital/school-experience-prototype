@@ -1,0 +1,318 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" id="search-results-heading">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">School experience near Manchester</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third filter">
+		{% include './desktop-filter-general.html' %}
+
+		{% include './mobile-filter.html' %}
+	</div>
+
+	<div class="govuk-grid-column-two-thirds results">
+
+		<div class="results-number">
+			Showing 1 - 5 of 20 schools and colleges
+		</div>
+
+		<div class="pagination-container">
+			<ul class="pagin">
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">Next</a></li>
+			</ul>
+		</div>
+
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-full">
+				<div class="sortby">
+					<div class="govuk-form-group sort-by">
+					  <div class="sort-text">Sorted by</div>
+					  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+						<div class="govuk-radios govuk-radios--inline govuk-radios--small">
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-1" name="changed-name" checked type="radio" value="yes">
+							<label class="govuk-label govuk-radios__label" for="changed-name-1">
+							  Distance
+							</label> </div>
+						  <div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+							<label class="govuk-label govuk-radios__label" for="changed-name-2">
+							  Name
+							</label> </div>
+						</div>
+					  </fieldset>
+					</div>
+				</div>
+
+				<div class="list">
+					<ul>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Ellen Wilkinson School
+									<span class="govuk-caption-m">1 mile away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Long Millgate, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary, Secondary and 16 to 18
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Art, Chemistry, Maths, Physics 
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/candidate-search/school-result-secondary" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									City College Manchester
+									<span class="govuk-caption-m">1.5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Whitworth Street West, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary and Secondary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Art, Maths, Music, Physics 
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/candidate-search/school-result-secondary" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Chiserly Academy
+									<span class="govuk-caption-m">2.5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Cheshire Road, Manchester M42 4TW.
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary and secondary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Art, Geography, Key stage 1, Maths, Physics
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/candidate-search/school-result-secondary" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Medlock Secondary School
+									<span class="govuk-caption-m">5 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											142 Dantzic Street, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Secondary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Art, English, Maths
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/candidate-search/school-result-secondary" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="school-result">
+
+								<h3 class="govuk-heading-l">
+									Ancoats School
+									<span class="govuk-caption-m">10 miles away</span>
+								</h3>
+
+								<dl class="govuk-summary-list">
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Address
+										</dt>
+										<dd class="govuk-summary-list__value">
+											10 Hugh Oldham Way, Manchester
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Education phases
+										</dt>
+										<dd class="govuk-summary-list__value">
+											Primary and Secondary
+								    </dd>
+									</div>
+
+								  <div class="govuk-summary-list__row">
+								    <dt class="govuk-summary-list__key">
+											Subjects
+										</dt>
+										<dd class="govuk-summary-list__value">
+											English, Geography, Maths
+								    </dd>
+									</div>
+								</dl>
+
+								<a href="/candidate-search/school-result-secondary" class="govuk-button" style="font-weight:normal">View school details</a>
+
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+
+
+				<div class="pagination-container">
+					<a href="#search-results-heading" class="govuk-link govuk-link--no-visited-state back-to-top">
+						<svg class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+				      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+				    </svg>
+
+						Back to top
+					</a>
+
+					<ul class="pagin">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">Next</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+        </main>
+      </div>
+
+{% endblock %}

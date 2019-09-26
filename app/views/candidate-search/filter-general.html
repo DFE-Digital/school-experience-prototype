@@ -1,28 +1,45 @@
-{% extends "layout.html" %}
-{% import "sections.html" as s %}
-
-{% block pageTitle %}
-  Blank page
-{% endblock %}
-
-{% block beforeContent %}
-{{ s.banner() }}
-{% endblock %}
-
-{% block content %}
-
-
 <div class="govuk-form-group se-filter">
-
+<!--
+	<fieldset class="govuk-fieldset" aria-describedby="phases">
+		<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+			<h3 class="govuk-heading-m">
+				Education phases
+			</h3>
+		</legend>
+		<span id="waste-hint" class="govuk-hint">
+			Select all that apply
+		</span>
+		<div class="govuk-checkboxes">
+			<div class="govuk-checkboxes__item">
+				<input class="govuk-checkboxes__input" id="phase-1" name="phase" type="checkbox" value="primary">
+				<label class="govuk-label govuk-checkboxes__label" for="waste-1">
+					Primary (4 to 11)
+				</label>
+			</div>
+			<div class="govuk-checkboxes__item">
+				<input class="govuk-checkboxes__input" id="phase-2" name="phase" type="checkbox" value="secondary">
+				<label class="govuk-label govuk-checkboxes__label" for="waste-2">
+					Secondary (11 to 16)
+				</label>
+			</div>
+			<div class="govuk-checkboxes__item">
+				<input class="govuk-checkboxes__input" id="phase-3" name="phase" type="checkbox" value="1618">
+				<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+					16 to 18
+				</label>
+			</div>
+		</div>
+	</fieldset>
+-->	
 	<fieldset class="govuk-fieldset" aria-describedby="subjects">
 		<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 			<h3 class="govuk-heading-m">
-				What subject do you want your school experience to cover?
+				Subjects
 			</h3>
 		</legend>
-		<p>
-			Select all that apply.
-		</p>
+		<span id="waste-hint" class="govuk-hint">
+			Select all that apply
+		</span>
 
 		<div class="govuk-checkboxes">
 
@@ -33,11 +50,9 @@
 						   General experience / not subject specific </label>
 						  
 				  </div>
-				  <br>
 				  <hr>
 				  <br>
-
-			<div class="govuk-checkboxes__item">
+				  <div class="govuk-checkboxes__item">
 				<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
 				<label class="govuk-label govuk-checkboxes__label">
 					Art and design
@@ -164,7 +179,7 @@
 			</div>
 
 			<div class="govuk-checkboxes__item">
-				<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox">
+				<input class="govuk-checkboxes__input fix" id="subjects-1" type="checkbox" checked>
 				<label class="govuk-label govuk-checkboxes__label">
 					Maths
 				</label>
@@ -239,10 +254,11 @@
 					Vocational health
 				</label>
 			</div>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Update results
+</button>
+
 		</div>
 	</fieldset>
 </div>
-
-			<a href="/candidate-search/search-results-filter-general" class="govuk-button">Continue</a>
-
-{% endblock %}
