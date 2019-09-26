@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Schools Admin - for School Experience
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+ <main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+          <h1  class="govuk-heading-l">DfE Sign-in checklist</h1>
+        <p>Before signing in to the service using DfE Sign-in for the first time or if you want to add manage school experience for another school - check the following: </p>
+         <ul class="govuk-list govuk-list--bullet">
+           <li>you have a DfE Sign-in account</li>
+           <li>your DfE Sign-in account is associated with the school where you want to manage school experience requests and bookings</li>
+           <li>you have a 'School Experience Administrator' role</li>
+        </ul>
+        <p>If any of the above do not apply:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>contact your organisation's 'DfE Sign-in approver' (often your head or deputy head) to see if they can help</li>
+                <li>submit a <a href="https://help.signin.education.gov.uk/contact/submit?type=create-account">DfE Sign-in support request</a></li>
+             </ul>
+           
+          
+    
+	      </div>
+
+          <a class="govuk-button" href="/schools/start-page-dfe">Back</a>	
+        </div>
+      </div>
+              </div>
+          </div>
+
+</main>
+
+
+{% endblock %}
