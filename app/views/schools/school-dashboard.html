@@ -31,17 +31,18 @@
 
 
 
-
     {{ notification.count("/schools/school-requests1", "Manage requests", 2, "Accept, reject or revisit outstanding requests") }}
 
 <br>
-
 
     {{ notification.count("/schools/school-booking-months", "Manage bookings", 24, "Accept or reject change requests and cancel bookings") }}
 
 <br>
 
     {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 8, "Confirm if candidates have attended their school experience") }}
+<br>
+
+    {{ notification.count("/schools/withdrawn-requests", "Withdrawn requests", 1, "A candidate has cancelled their request") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
