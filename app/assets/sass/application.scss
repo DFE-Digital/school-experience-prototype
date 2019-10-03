@@ -104,8 +104,9 @@ $govuk-grid-widths: (
 .greyblock3.amber{
   border-left: 10px solid #ffbf47;
 }
-.greyblock3.green{
+.green-left-border {
   border-left: 10px solid #006435;
+	padding-left: 1rem;
 }
 
 // Schools Navigation
