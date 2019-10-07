@@ -1676,3 +1676,9 @@ table.attendance-confirmation {
     margin-right: 1rem;
   }
 }
+
+.govuk-se-summary-wide {
+	dt.govuk-summary-list__key {
+		width: 45%;
+	}
+}
