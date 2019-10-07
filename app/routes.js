@@ -561,7 +561,7 @@ router.post('/candidate-search/result-redirect', function(req, res) {
         return res.redirect('/candidate-search/search-results-primary');
     } else {
         // send them to secondary results
-        return res.redirect('/candidate-search/search-results-secondary');
+        return res.redirect('/candidate-search/search-results-filter');
     }
 })
 
