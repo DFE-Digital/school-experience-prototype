@@ -1,0 +1,208 @@
+{% extends "layout.html" %} {% import "sections.html" as s %} {% import "schools/candidate-request.html" as candidate_request %} {% block pageTitle %} Candidate Requests {% endblock %} {% block beforeContent %} {{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+      Manage upcoming bookings
+    </h1>
+		
+			<fieldset class="govuk-fieldset">
+
+
+				<div class="govuk-grid-row school-search-form">
+						<form action="/schools/note-matthew" method="post">
+                <div class="govuk-grid-column-one-third">
+									<div class="govuk-form-group">
+										<label class="govuk-label" for="find-candidate">Search for a candidate</label>
+										<input class="govuk-input govuk-!-width-full" id="enter-name" name="name" type="text" placeholder="Enter name">
+									</div>
+								</div>
+
+	              <div class="school-search-form__submit govuk-grid-column-one-third">
+	                <div class="govuk-form-group">
+										<button class="govuk-button inline-button">Search</button>
+									</div>
+								</div>
+						</form>
+					</div>
+
+
+<nav class="pagination" role="navigation" aria-label="pager">
+    
+        <span class="page current">
+  1
+</span>
+
+        <span class="page">
+  <a rel="next" href="">2</a>
+</span>
+
+        <span class="page">
+  <a rel="next" href="">3</a>
+</span>
+
+      <span class="next">
+  <a rel="next" href="">Next</a>
+</span>
+
+  </nav>
+<br>
+
+			</fieldset>		
+<table class="govuk-table attendance-confirmation">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header app-custom-class" scope="col">Name</th>
+            <th class="govuk-table__header app-custom-class" scope="col">Subject</th>
+            <th class="govuk-table__header app-custom-class" scope="col">Date</th>
+            <th class="govuk-table__header app-custom-class" scope="col">Status</th>
+            <th class="govuk-table__header app-custom-class" scope="col"></th>						
+						</tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <colgroup>
+            <col span="" class="name">
+                <col>
+                    <col span="" class="subject">
+        </colgroup>
+
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Matthew Richards</th>
+            <td class="govuk-table__cell">Biology</td>
+            <td class="govuk-table__cell"><strong>4 January 2020</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong></div>
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>				
+    </div>
+  </fieldset>
+</div></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Jacob Sterling</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>10 December 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></div>
+      <td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>				
+    </div>
+  </fieldset>
+</div></td></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Ellie Simpson</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>4 December 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>										
+    </div>
+  </fieldset>
+</div></td></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Paul Baker</th>
+      <td class="govuk-table__cell">Physics</td>
+      <td class="govuk-table__cell"><strong>15 November 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>										
+    </div>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Stacey Curran</th>
+            <td class="govuk-table__cell">Physics</td>
+            <td class="govuk-table__cell"><strong>3 November 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>					
+    </div>
+  </fieldset>
+</div></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Diane Smith</th>
+      <td class="govuk-table__cell">Art</td>
+      <td class="govuk-table__cell"><strong>12 October 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong></div>
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>				
+    </div>
+  </fieldset>
+</div></td></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Katy Perry</th>
+      <td class="govuk-table__cell">Media studies</td>
+      <td class="govuk-table__cell"><strong>19 September 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>									
+    </div>
+  </fieldset>
+</div></td></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Jack Hart</th>
+      <td class="govuk-table__cell">Maths</td>
+      <td class="govuk-table__cell"><strong>10 September 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>									
+    </div>		
+  </fieldset>
+</div></td></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Carlos Rodriguez</th>
+      <td class="govuk-table__cell">Portuguese</td>
+      <td class="govuk-table__cell"><strong>08 September 2019</td>
+      <td class="govuk-table__cell"><div class="govuk-form-group">
+				<strong class="govuk-tag govuk-tag--available">confirmed</strong>	
+      <td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>											
+    </div>		
+  </fieldset>
+</div></td></td>
+    </tr>
+
+		
+  </tbody>
+</table>
+
+<nav class="pagination" role="navigation" aria-label="pager">
+    
+        <span class="page current">
+  1
+</span>
+
+        <span class="page">
+  <a rel="next" href="">2</a>
+</span>
+
+        <span class="page">
+  <a rel="next" href="">3</a>
+</span>
+
+
+
+      <span class="next">
+  <a rel="next" href="">Next</a>
+</span>
+
+  </nav>
+<br>
+<br>
+<p><a class="govuk-button govuk-button--secondary" href="/schools/school-dashboard?request-count=4&change-count=1">Return to requests and bookings</a></p>
+
+{% endblock %}
+
+<!--
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>
+					      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">1 note</a></td>	
+									      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">2 notes</a></td>
+-->
