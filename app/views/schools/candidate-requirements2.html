@@ -19,8 +19,6 @@
 <form action="/schools/other-details" method="post" class="form" data-local-save="school-onboarding:candidate-requirements">
 
 
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -70,10 +68,24 @@
           </label>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="distance">
         </div>
-
       </div>
 
-
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-4" name="citizen" type="checkbox" value="id" data-aria-controls="conditional-citizenship-conditional-4">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+          They must bring photo ID
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Specify type. For example, passport or driving licence. 
+          </label>
+          <textarea class="govuk-textarea govuk-!-width-two-thirds" id="id" name="id" type="text">
+					</textarea>
+        </div>
+      </div>
+			
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="other" data-aria-controls="conditional-citizenship-conditional-2">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
@@ -88,9 +100,7 @@
           <textarea class="govuk-textarea govuk-!-width-two-thirds" id="contact-by-text" name="contact-by-text" type="distance">
 					</textarea>
         </div>
-
       </div>
-
 
     </div>
   </fieldset>
