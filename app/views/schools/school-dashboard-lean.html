@@ -27,7 +27,7 @@
 		-->
 	 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-    {{ notification.count("/schools/school-requests-ver3", "Requests", 5, "Accept and reject new requests, view old requests and turn requests on / off.") }}
+    {{ notification.count("/schools/school-requests-ver3", "Requests", 4, "Accept and reject new requests, view old requests and turn requests on / off.") }}
 
 <br>
 
@@ -36,6 +36,8 @@
 <br>
     <a href="/schools/school-edit-dates" class="govuk-heading-m govuk-heading-s-no-margin">Dates</a>
     <p class="govuk-hint">Add and update dates, change how they're displayed on your profile and open / close dates.</p>  
+<br>		
+		{{ notification.count("/schools/confirm-attendance", "Confirm attendance", 8, "Confirm if candidates have attended their school experience") }}
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 

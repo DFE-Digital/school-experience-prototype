@@ -18,7 +18,6 @@
       Manage requests
     </h1>
 
-	<p class="govuk-body govuk-!-font-size-19"><a href="/schools/school-requests-on-radio" class="govuk-link">Turn requests on / off</a><p>
 
 <details class="govuk-details">
   <summary class="govuk-details__summary">
@@ -36,15 +35,15 @@
 		  </thead>
 		  <tbody class="govuk-table__body">
 		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag">new</strong></th>
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">new</strong></th>
 		      <td class="govuk-table__cell">New request from candidate - requires your decision</td>
 		    </tr>
 		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">changed</strong></th>
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">changed</strong></th>
 		      <td class="govuk-table__cell">Your school has changed the date set by the candidate. Awaiting candidate response</td>
 		    </tr>
 		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">rejected</strong></th>
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">rejected</strong></th>
 		      <td class="govuk-table__cell">Request was rejected by your school</td>
 		    </tr>
 		    <tr class="govuk-table__row">
@@ -57,65 +56,71 @@
 </details>
 
 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Show me:
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>All requests</option>
+    <option value="updated">New requests</option>
+    <option value="views">Changed requests</option>
+    <option value="comments">Rejected requests</option>
+    <option value="comments">Withdrawn requests</option>		
+  </select>
+</div>
 
+
+<br>
 <table class="govuk-table">
 	<thead class="govuk-table__head">
 		<tr class="govuk-table__row">
-			<th class="govuk-table__header app-custom-class" scope="col"></th>
-			<th class="govuk-table__header app-custom-class" scope="col">Name</th>
-			<th class="govuk-table__header app-custom-class" scope="col">School experience date</th>
-			<th class="govuk-table__header app-custom-class" scope="col">Subject</th>
-			<th class="govuk-table__header app-custom-class" scope="col">Status</th>
-			<th class="govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">School experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
 		</tr>
 	</thead>
 	<tbody class="govuk-table__body">
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
-			<td class="govuk-table__cell"><strong>Jacob Sterling</td>
-			<td class="govuk-table__cell"><strong>11 October 2019</td>
-			<td class="govuk-table__cell"><strong>Biology</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag">new</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">Act</a></td>
-		</tr>
-		<tr class="govuk-table__row">
-			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
 			<td class="govuk-table__cell"><strong>John O'hanrahan</td>
-			<td class="govuk-table__cell"><strong>3 September 2019</td>
+			<td class="govuk-table__cell"><strong>24 October 2019</td>
 			<td class="govuk-table__cell"><strong>Physics</td>
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>		
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
+			<td class="govuk-table__cell"><strong>Jacob Sterling</td>
+			<td class="govuk-table__cell"><strong>11 October 2019</td>
+			<td class="govuk-table__cell"><strong>Biology</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">new</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
 			<td class="govuk-table__cell"><strong>Matthew Richards</td>
 			<td class="govuk-table__cell"><strong>1 October 2019</td>
 			<td class="govuk-table__cell"><strong>Chemistry</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag">new</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">Act</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">new</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
 			<td class="govuk-table__cell"><strong>Paul Baker</td>
 			<td class="govuk-table__cell"><strong>13 September 2019</td>
 			<td class="govuk-table__cell"><strong>Maths</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag">new</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">Act</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">new</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
 			<td class="govuk-table__cell">Sarah Toole</td>
 			<td class="govuk-table__cell">10 September 2019</td>
 			<td class="govuk-table__cell">Maths</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">changed</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
-		</tr>
-		<tr class="govuk-table__row">
-			<td class="govuk-table__header" scope="row"></td>
-			<td class="govuk-table__cell">Juan Dominguez</td>
-			<td class="govuk-table__cell">10 September 2019</td>
-			<td class="govuk-table__cell">Spanish</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">rejected</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -123,21 +128,48 @@
 			<td class="govuk-table__cell">Peter Campbell-Jones</td>
 			<td class="govuk-table__cell">5 September 2019</td>
 			<td class="govuk-table__cell">Health and social care</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">rejected</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">rejected</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-rejected" class="govuk-link">View</a></td>
 		</tr>
-
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">10 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">rejected</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-rejected" class="govuk-link">View</a></td>
+		</tr>
 	</tbody>
 </table>
 
+<nav class="pagination" role="navigation" aria-label="pager">
+    
+        <span class="page current">
+  1
+</span>
+
+        <span class="page">
+  <a rel="next" href="">2</a>
+</span>
+
+        <span class="page">
+  <a rel="next" href="">3</a>
+</span>
+
+      <span class="next">
+  <a rel="next" href="">Next</a>
+</span>
+
+  </nav>
+<br>
 <br>
 
 
 
 
-<p><a class="govuk-button button" href="/schools/school-dashboard?request-count=7&change-count=7">Return to manage school experience</a></p>
+<p><a class="govuk-button button" href="/schools/school-dashboard-lean">Return to manage school experience</a></p>
 
-
+<a class="govuk-button govuk-button--warning" href="/schools/school-requests-on-radio">Turn all requests off</a></p>
 
 
         </main>
