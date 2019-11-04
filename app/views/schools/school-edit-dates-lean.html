@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+{% import "schools/candidate-request.html" as candidate_request %}
+
+{% block pageTitle %}
+  Candidate Requests
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">
+      View, add and change dates
+    </h1>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Status key
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+		<table class="govuk-table">
+		  <thead class="govuk-table__head">
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="col"></th>
+		      <th class="govuk-table__header" scope="col"></th>
+		    </tr>
+		  </thead>
+		  <tbody class="govuk-table__body">
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">open</strong></th>
+		      <td class="govuk-table__cell">Date is displayed on your profile and available for candidates to book</td>
+		    </tr>
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">full</strong></th>
+		      <td class="govuk-table__cell">Date is full and no longer displayed on your profile</td>
+		    </tr>
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">closed</strong></th>
+		      <td class="govuk-table__cell">Date is NOT displayed on your profile and unavailable for candidates to book</td>
+		    </tr>				
+		  </tbody>
+		</table>
+  </div>
+</details>
+
+
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header app-custom-class" scope="col">Date</th>
+			<th class="govuk-table__header app-custom-class" scope="col">Subject</th>				
+			<th class="govuk-table__header app-custom-class" scope="col">Duration</th>			
+			<th class="govuk-table__header app-custom-class" scope="col">Status</th>		
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+      <th class="govuk-table__header app-custom-class" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <colgroup>
+        <col span="" class="name">
+        <col>
+        <col span="" class="subject">
+    </colgroup>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">15 September 2019</th>
+			<td class="govuk-table__cell">Chemistry</td>	
+			<td class="govuk-table__cell">1 day</td>		
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">open (5 of 10)</strong>
+			</td>
+      <td class="govuk-table__cell"><a href="/schools/change-booking-date-15sept" class="govuk-link">Change</a></td>
+      <td class="govuk-table__cell"><a href="/schools/disable-booking" class="govuk-link">Close date</a></td>				
+      <td class="govuk-table__cell"><a href="" class="govuk-link"></a></td>	
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">2 October 2019</th>
+			<td class="govuk-table__cell">Physics</td>			
+			<td class="govuk-table__cell">2 days</td>			
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--unavailable">full (10 of 10)</strong>
+			</td>
+      <td class="govuk-table__cell"><a href="/schools/change-booking-date-2oct" class="govuk-link">Change</a></td>
+      <td class="govuk-table__cell"><a href="/schools/change-booking-date-2oct-add" class="govuk-link">Add place</a></td>				
+      <td class="govuk-table__cell"><a href="" class="govuk-link"></a></td>	
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">4 October 2019</th>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell">1 day</td>			
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--default">closed</strong>
+			</td>
+      <td class="govuk-table__cell"><a href="/schools/change-booking-date-4oct" class="govuk-link">Change</a></td>
+      <td class="govuk-table__cell"><a href="/schools/enable-booking" class="govuk-link">Open date</a></td>			
+      <td class="govuk-table__cell"><a href="" class="govuk-link"></a></td>	
+    </tr>
+
+
+
+
+
+
+
+    {% for date in dates %}
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">{{ date.date }}</th>
+        <td class="govuk-table__cell">{{ date.duration }} days</td>
+        <td class="govuk-table__cell">{{ date.subjects }}</td>			
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--{{date.tag}}">{{ date.status }}</strong>
+        </td>
+        <td class="govuk-table__cell"><a href="/schools/availability-start-date-edit" class="govuk-link">Change</a></td>
+      <td class="govuk-table__cell"><a href="/schools/delete-booking" class="govuk-link">Delete</a></td>
+      <td class="govuk-table__cell"><a href="" class="govuk-link"></a></td>	
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+<p><a class="govuk-button button" href="/schools/add-date-type">Add more dates</a></p>
+<p><a class="govuk-button button-grey cta" href="/schools/school-dashboard-lean">Return to requests and bookings</a></p>
+
+{% endblock %}
