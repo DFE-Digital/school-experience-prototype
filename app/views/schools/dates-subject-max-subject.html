@@ -29,39 +29,44 @@
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 					<h1 class="govuk-fieldset__heading">Is there a maximum number of bookings you'll accept for this date?</h1>
 				</legend>
-				<p>Once you've accepted the maximum number of bookings this date will not be shown to candidates.</p>
-				<div class="govuk-radios__item">
-	        <input class="govuk-radios__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="radio" {{ checkbox_admin_costs_yes }} value="1" data-local-store>
-	        <label class="govuk-label govuk-radios__label" for="checkbox_admin_costs">
-	          Yes
-	        </label>
-				</div>
-				
 
-				<div class="govuk-grid-row">
-					<div class="govuk-grid-column-two-thirds">
-				<h2 class="govuk-heading-m">Enter maximum number of bookings you’ll accept for this date</h2>
-	
-						<div class="govuk-form-group">
-							<p>
-								Once you’ve accepted the maximum number of bookings this date will not be shown to candidates.
-							</p>
-							<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
-						</div>
-					</div>
-				</div>
-				<br/>
 				
-				<div class="govuk-radios__item">
-	        <input class="govuk-radios__input" data-save-name="admin-costs" id="checkbox_admin_costs" name="checkbox_admin_costs" type="radio" {{ checkbox_admin_costs_no }} value="" data-local-store>
-	        <label class="govuk-label govuk-radios__label" for="checkbox_admin_costs">
-	          No
-	        </label>
-				</div>
-			</div>
-		</fieldset>
-	</div>
-			
+				
+	      <fieldset class="govuk-fieldset">
+
+	      <div class="govuk-form-group">
+	        <fieldset class="govuk-fieldset">
+	          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+	            <div class="govuk-radios__item">
+	              <input class="govuk-radios__input" data-save-name="DBS-required-Sometimes" id="how-contacted-conditional-4" name="dbs" type="radio" value="" data-aria-controls="conditional-how-contacted-conditional-4">
+	              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
+	                Yes
+	              </label>
+	            </div>
+	            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-4">
+	              <div class="govuk-form-group">
+	                <label class="govuk-label" for="contact-by-email">
+	                  Enter maximum number of bookings you’ll accept for this date.
+	                </label>
+									<p>
+										Once you’ve accepted the maximum number of bookings this date will not be shown to candidates.
+									</p>
+	                  <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+	              </div>
+
+	            </div>
+	            <div class="govuk-radios__item">
+	              <input class="govuk-radios__input" data-save-name="DBS-required-Never" id="how-contacted-conditional-3" name="dbs" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-3">
+	              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+	                No
+	              </label>
+	            </div>
+
+	          </div>
+	        </fieldset>
+				
+<br>				
+		
 	<div class="govuk-form-group">		
 		<fieldset class="govuk-fieldset">
 			<div class="govuk-radios govuk-radios__inline">
