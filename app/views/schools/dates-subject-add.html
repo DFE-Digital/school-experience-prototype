@@ -33,7 +33,7 @@
 	<div id="dates-block">
 		<div id="initial-block">
 			<h2 class="govuk-heading-m">Enter start date</h2>
-			<p>For example, 01 09 2019.</p>
+			<p class="govuk-hint">For example, 01 09 2019.</p>
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-one-third">
 					<div class="govuk-form-group">
@@ -82,13 +82,29 @@
 				</div>
 			</div>
 			<section class="date-selector date-selector-primary">
-        <h3 class="govuk-heading-m">Select school experience phase</h3>
+		<h3 class="govuk-heading-m">Select school experience phase</h3>
+		
 
-        <div class="govuk-form-group" id="candidates_registrations_subject_and_date_information_subject_and_date_ids_container"><fieldset class="govuk-fieldset"><div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item"><input class="govuk-radios__input" choices="" value_method="id" text_method="name_with_duration" type="radio" value="5" name="candidates_registrations_subject_and_date_information[subject_and_date_ids]" id="candidates_registrations_subject_and_date_information_subject_and_date_ids_5" /><label class="govuk-label govuk-radios__label" for="candidates_registrations_subject_and_date_information_subject_and_date_ids_5">Primary school and early years</label></div>
-        <div class="govuk-radios__item"><input class="govuk-radios__input" choices="" value_method="id" text_method="name_with_duration" type="radio" value="6" name="candidates_registrations_subject_and_date_information[subject_and_date_ids]" id="candidates_registrations_subject_and_date_information_subject_and_date_ids_6" /><label class="govuk-label govuk-radios__label" for="candidates_registrations_subject_and_date_information_subject_and_date_ids_6">Secondary school, sixth form and college</label></div></div></fieldset></div>          </section>
-
-  
+		<div class="govuk-radios">
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="primary" name="phase" type="radio" value="yes" aria-describedby="primary-hint">
+			  <label class="govuk-label govuk-radios__label govuk-label--s" for="primary">
+				Primary
+			  </label>
+			  <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+				Including early years, key stage 1 and key stage 2.
+			  </span>
+			</div>
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="secondary" name="phase" type="radio" value="no" aria-describedby="secondary-hint">
+			  <label class="govuk-label govuk-radios__label govuk-label--s" for="secondary">
+				Secondary
+			  </label>
+			  <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+				Including secondary schools, sixth-forms, colleges and 16 to 18 years.
+			  </span>
+			</div>
+		  </div>
 
 <br>
 
