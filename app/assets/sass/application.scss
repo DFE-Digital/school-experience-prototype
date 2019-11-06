@@ -1714,3 +1714,13 @@ th.header {
 tr.bold-line {
   font-weight: bold;
 }
+
+ul.govuk-list.govuk-list--inline {
+  display: inline-block;
+  margin-bottom: 2rem;
+
+  li {
+    display: inline;
+    padding-right: 3rem;
+  }
+}
