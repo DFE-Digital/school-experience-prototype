@@ -46,7 +46,7 @@
 	            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-4">
 	              <div class="govuk-form-group">
 	                <label class="govuk-label" for="contact-by-email">
-	                  Enter maximum number of bookings you’ll accept for this date.
+	                  <strong>Enter maximum number of bookings you’ll accept for this date.</strong>
 	                </label>
 									<p>
 										Once you’ve accepted the maximum number of bookings this date will not be shown to candidates.
@@ -73,8 +73,15 @@
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 					<h1 class="govuk-fieldset__heading">Select type of experience</h1>
 				</legend>
-				<p>Tell us if the experience is a general experience and not subject specific or if it's about a specific subject.</p>
+				<p>Tell us if the experience is about a specific subject <strong>OR</strong> a general experience and not about a specific subject.</p>
 				
+				<div class="govuk-radios__item">
+						<input class="govuk-radios__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="radio" {{ checkbox_other_costs_no }} value="" data-local-store>
+						<label class="govuk-label govuk-radios__label" for="checkbox_other_costs">
+						  About a specific subject
+						</label>
+				</div>
+
 				<div class="govuk-radios__item">
 	        <input class="govuk-radios__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="radio" {{ checkbox_other_costs_yes }} value="1" data-local-store>
 	        <label class="govuk-label govuk-radios__label" for="checkbox_other_costs">
@@ -82,12 +89,7 @@
 	        </label>
 				</div>
 				
-				<div class="govuk-radios__item">
-	        <input class="govuk-radios__input" data-save-name="other-costs" id="checkbox_other_costs" name="checkbox_other_costs" type="radio" {{ checkbox_other_costs_no }} value="" data-local-store>
-	        <label class="govuk-label govuk-radios__label" for="checkbox_other_costs">
-	          About a specific subject
-	        </label>
-				</div>
+		
 			</div>
 		</fieldset>
 	</div>
