@@ -1,0 +1,656 @@
+{% extends "layout.html" %} {% import "sections.html" as s %} {% import "schools/candidate-request.html" as candidate_request %} {% block pageTitle %} Candidate Requests {% endblock %} {% block beforeContent %} {{ s.banner() }}
+
+<a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a> {% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+      Bookings
+    </h1>
+		
+			<fieldset class="govuk-fieldset">
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Status key
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+		<table class="govuk-table">
+		  <thead class="govuk-table__head">
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="col"></th>
+		      <th class="govuk-table__header" scope="col"></th>
+		    </tr>
+		  </thead>
+		  <tbody class="govuk-table__body">
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">booked</strong></th>
+		      <td class="govuk-table__cell">The candidates request has been accepted and is now booked</td>
+		    </tr>
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></th>
+		      <td class="govuk-table__cell">The candidate has cancelled their booking</td>
+		    </tr>
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">changed</strong></th>
+		      <td class="govuk-table__cell">The candidate or school has changed the date of the booking and is awaiting confirmation</td>
+		    </tr>
+		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">Archived</strong></th>
+		      <td class="govuk-table__cell">A previous booking</td>
+		    </tr>
+		  </tbody>
+		</table>
+  </div>
+</details>
+
+
+
+
+
+<div class="govuk-tabs" data-module="tabs">
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#all">
+        All (1)
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#new">
+        Upcoming
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#withdrawn">
+        Cancelled (1)
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#changed">
+        Changed
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#previous">
+        Previous
+      </a>
+    </li>
+  </ul>
+	
+  <section class="govuk-tabs__panel" id="all">
+<table class="govuk-table">
+	<thead class="govuk-table__head">
+		<tr class="govuk-table__row">
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+		</tr>
+	</thead>
+	<tbody class="cancelled-booking govuk-table__body">
+		<h2 class="govuk-heading-m">All</h2>
+		
+		<tr class="bold-line govuk-table__row">
+			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
+			<td class="govuk-table__cell">John O'hanrahan</td>
+			<td class="govuk-table__cell">24 October 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Matthew Richards</td>
+            <td class="govuk-table__cell">4 January 2020</td>
+            <td class="govuk-table__cell">Biology</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="/booking/profile-booking1" class="govuk-link">View</a>
+			</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Ellie Simpson</td>
+			<td class="govuk-table__cell">6 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Paul Baker</td>
+			<td class="govuk-table__cell">7 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+					<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Stacey Curran</td>
+			<td class="govuk-table__cell">14 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Diane Smith</td>
+			<td class="govuk-table__cell">16 January 2020</td>
+			<td class="govuk-table__cell">Art</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Katy Perry</td>
+			<td class="govuk-table__cell">20 January 2020</td>
+			<td class="govuk-table__cell">Media studies</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Jack Hart</td>
+			<td class="govuk-table__cell">21 January 2020</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Carlos Rodriguez</td>
+			<td class="govuk-table__cell">25 January 2020</td>
+			<td class="govuk-table__cell">Portuguese</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+	</tbody>
+</table>
+<img src="/public/images/download.png" width="18" height="18" alt="Download">&nbsp&nbsp<a href="" class="govuk-link">Download Microsoft Excel file of all bookings</a>
+  </section>
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="new">
+<table class="govuk-table">
+			<h2 class="govuk-heading-m">Upcoming bookings</h2>
+	<thead class="govuk-table__head">
+		<tr class="govuk-table__row">
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+		</tr>
+	</thead>
+	<tbody class="cancelled-booking govuk-table__body">
+		<tr class="govuk-table__row">
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Matthew Richards</td>
+            <td class="govuk-table__cell">4 January 2020</td>
+            <td class="govuk-table__cell">Biology</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="/booking/profile-booking1" class="govuk-link">View</a>
+			</td>
+		</tr>
+
+
+
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Ellie Simpson</td>
+			<td class="govuk-table__cell">6 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Paul Baker</td>
+			<td class="govuk-table__cell">7 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+					<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Stacey Curran</td>
+			<td class="govuk-table__cell">14 January 2020</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Diane Smith</td>
+			<td class="govuk-table__cell">16 January 2020</td>
+			<td class="govuk-table__cell">Art</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Katy Perry</td>
+			<td class="govuk-table__cell">20 January 2020</td>
+			<td class="govuk-table__cell">Media studies</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Jack Hart</td>
+			<td class="govuk-table__cell">21 January 2020</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell"></td>
+			<td class="govuk-table__cell">Carlos Rodriguez</td>
+			<td class="govuk-table__cell">25 January 2020</td>
+			<td class="govuk-table__cell">Portuguese</td>
+			<td class="govuk-table__cell">
+				<strong class="govuk-tag govuk-tag--available">booked</strong>
+			</td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+	</tbody>
+</table>
+  </section>
+	
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="withdrawn">
+<table class="govuk-table">
+	<thead class="govuk-table__head">
+				<h2 class="govuk-heading-m">Cancelled bookings</h2>
+		<tr class="govuk-table__row">
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+		</tr>
+	</thead>
+	<tbody class="cancelled-booking govuk-table__body">
+		<tr class="bold-line govuk-table__row">
+			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
+			<td class="govuk-table__cell">John O'hanrahan</td>
+			<td class="govuk-table__cell">24 October 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">James Smith</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Gaye Jones</td>
+			<td class="govuk-table__cell">11 September 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+		</tr>	
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Linda McKinzie</td>
+			<td class="govuk-table__cell">8 September 2019</td>
+			<td class="govuk-table__cell">English</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Faye Riley</td>
+			<td class="govuk-table__cell">3 September 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+		</tr>	
+	</tbody>
+</table>
+  </section>
+	
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="changed">	
+<table class="govuk-table">
+	<thead class="govuk-table__head">
+				<h2 class="govuk-heading-m">Changed bookings</h2>
+		<tr class="govuk-table__row">
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+		</tr>
+	</thead>
+	<tbody class="cancelled-booking govuk-table__body">
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Peter Campbell-Jones</td>
+			<td class="govuk-table__cell">25 September 2019</td>
+			<td class="govuk-table__cell">Health and social care</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">19 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Paul Hubris</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">French</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Finely</td>
+			<td class="govuk-table__cell">9 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Carlos Gutierrez</td>
+			<td class="govuk-table__cell">5 September 2019</td>
+			<td class="govuk-table__cell">PE</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Hare</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--available">changed</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
+		</tr>
+	</tbody>
+	</table>	
+  </section>
+	
+	
+
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous">	
+<table class="govuk-table">
+	<thead class="govuk-table__head">
+				<h2 class="govuk-heading-m">Previous bookings</h2>
+		<tr class="govuk-table__row">
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Name</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Experience date</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Subject</th>
+			<th class="header govuk-table__header app-custom-class" scope="col">Status</th>
+			<th class="header govuk-table__header app-custom-class" scope="col"></th>
+		</tr>
+	</thead>
+	<tbody class="cancelled-booking govuk-table__body">
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Peter Campbell-Jones</td>
+			<td class="govuk-table__cell">25 September 2019</td>
+			<td class="govuk-table__cell">Health and social care</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">19 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Paul Hubris</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">French</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Finely</td>
+			<td class="govuk-table__cell">9 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Carlos Gutierrez</td>
+			<td class="govuk-table__cell">5 September 2019</td>
+			<td class="govuk-table__cell">PE</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Hare</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Peter Campbell-Jones</td>
+			<td class="govuk-table__cell">25 September 2019</td>
+			<td class="govuk-table__cell">Health and social care</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">19 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Paul Hubris</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">French</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Finely</td>
+			<td class="govuk-table__cell">9 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Carlos Gutierrez</td>
+			<td class="govuk-table__cell">5 September 2019</td>
+			<td class="govuk-table__cell">PE</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Hare</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Peter Campbell-Jones</td>
+			<td class="govuk-table__cell">25 September 2019</td>
+			<td class="govuk-table__cell">Health and social care</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">19 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Paul Hubris</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">French</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Finely</td>
+			<td class="govuk-table__cell">9 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Carlos Gutierrez</td>
+			<td class="govuk-table__cell">5 September 2019</td>
+			<td class="govuk-table__cell">PE</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Hare</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Peter Campbell-Jones</td>
+			<td class="govuk-table__cell">25 September 2019</td>
+			<td class="govuk-table__cell">Health and social care</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Juan Dominguez</td>
+			<td class="govuk-table__cell">19 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Paul Hubris</td>
+			<td class="govuk-table__cell">14 September 2019</td>
+			<td class="govuk-table__cell">French</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Finely</td>
+			<td class="govuk-table__cell">9 September 2019</td>
+			<td class="govuk-table__cell">Spanish</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Carlos Gutierrez</td>
+			<td class="govuk-table__cell">5 September 2019</td>
+			<td class="govuk-table__cell">PE</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Richard Hare</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">Maths</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+		</tr>
+	</tbody>
+	</table>	
+  </section>	
+	
+</div>
+
+
+<p><a class="govuk-button govuk-button" href="/schools/school-dashboard-lean">Return to manage school experience</a></p>
+
+
+<p><a class="govuk-button govuk-button--warning" href="/schools/school-requests-on-radio">Turn all requests off</a></p>
+
+{% endblock %}
+
+<!--
+	      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">Add notes</a></td>
+					      <td class="govuk-table__cell"><a href="/schools/note-matthew" class="govuk-link">1 note</a></td>	
+									      <td class="govuk-table__cell"><a href="/schools/note-jacob" class="govuk-link">2 notes</a></td>
+-->
