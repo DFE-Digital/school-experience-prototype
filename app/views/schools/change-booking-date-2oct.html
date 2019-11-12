@@ -29,7 +29,7 @@
     This date has already been booked. You'll need to inform the candidate.
   </strong>
 </div>
-	<form action="/schools/school-edit-dates" method="post" class="form">
+	<form action="/schools/school-edit-dates-lean" method="post" class="form">
  	 <div class="govuk-grid-row">
 	 	<div class="govuk-grid-column-two-thirds">
 
@@ -91,6 +91,48 @@
 					</div>
 				</div>
 			</div>
+
+
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-two-thirds">
+        	<h2 class="govuk-heading-m">Maximum number of bookings</h2>
+
+					<div class="govuk-form-group">
+						<label class="govuk-label" for="width-3">
+							This is the maximum number of candidates you'll accept on this date.<br/><br/>
+							Once this limit has been reached the date will be removed from your school profile.
+						</label>
+						<br/>
+						<input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" value="10">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-two-thirds">
+        	<h2 class="govuk-heading-m">Subject</h2>
+
+					<div class="govuk-form-group">
+						<label class="govuk-label" for="width-3">
+							<p>Physics <a href="/schools/change-subject-chemistry" class="govuk-link">Update</a></p>
+						</label>
+					</div>
+				</div>
+			</div>
+
+<h2 class="govuk-heading-m">Publish this date on your school profile?</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="available">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" checked value="available">
+        <label class="govuk-label govuk-checkboxes__label" for="available">
+          Make this date available to candidates 
+        </label> </div>
+</fieldset>
+<br>
 
 <!--
 	<div class="govuk-grid-row">
