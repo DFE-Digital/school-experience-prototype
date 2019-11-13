@@ -36,70 +36,50 @@
 
 
 
-    <h3 class="govuk-heading-m">To do list</h3>
+	 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-
-
-
-    {{ notification.count("/schools/school-requests1", "Manage requests", 0, "Accept, reject or revisit outstanding requests") }}
+    {{ notification.count("/schools/school-requests-ver5", "Requests", 0, "Accept and reject new requests, view old requests and turn requests on / off.") }}
 
 <br>
 
-
-    {{ notification.count("/schools/school-booking-months", "Manage bookings", 0, "Accept or reject change requests and cancel bookings") }}
+    {{ notification.count("/schools/manage-bookings-all-ver2", "Bookings", 0, "Update and cancel bookings, send reminders and confirm candidate attendance.") }}
 
 <br>
 
-    {{ notification.count("/schools/confirm-attendance", "Confirm attendance", 0, "Confirm if candidates have attended their school experience") }}
+    {{ notification.count("/schools/confirm-attendance-lean", "Attendance", 0, "Confirm if candidates have attended their school experience.") }}
+    
+<br>
+    <a href="/schools/school-edit-dates-lean" class="govuk-heading-m govuk-heading-s-no-margin">Dates</a>
+    <p class="govuk-hint">Add and update dates, change how they're displayed on your profile and open / close dates.</p>  
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 	<section>
-		<h3 class="govuk-heading-m">Manage dates</h3>
 
-		<a href="/schools/school-edit-dates" class="govuk-heading-s govuk-heading-s-no-margin">View, add and update dates</a>
-		<hr class="govuk-section-break govuk-section-break--m">
+      <h3 class="govuk-heading-m">Administration</h3>
 
-		<a href="/schools/set-date-preference" class="govuk-heading-s govuk-heading-s-no-margin">Choose how dates are displayed</a>
-		<hr class="govuk-section-break govuk-section-break--m">
+      <a href="/schools/school-requests-on-radio" class="govuk-heading-s govuk-heading-s-no-margin">Turn requests on / off</a>
+      <p class="govuk-hint">Start / stop receiving requests from candidates.</p>
 
-	</section>
+      <a href="/schools/check-profile-school" class="govuk-heading-s govuk-heading-s-no-margin">View and update school profile</a>
+      <p class="govuk-hint">Add, edit and remove school profile details.</p>
+      
+      <a href="/schools/manage-email" class="govuk-heading-s govuk-heading-s-no-margin">Manage email alerts</a>
+      <p class="govuk-hint">Receive alerts instantly or in a daily round-up.</p>
 
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <h3 class="govuk-heading-m">Account admin</h3>
-
-    <a href="/schools/school-rejected-requests" class="govuk-heading-s govuk-heading-s-no-margin">View rejected requests</a>
-    <p class="govuk-hint">View request dates, subjects, candidate names and reasons for rejection  </p>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="/schools/past-attendance" class="govuk-heading-s govuk-heading-s-no-margin">View previous bookings</a>
-    <p class="govuk-hint">View booking dates, subjects and candidate names and attendance</p>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="/schools/check-profile-school" class="govuk-heading-s govuk-heading-s-no-margin">Update school profile</a>
-    <p class="govuk-hint">Add, edit and remove school profile details</p>
-    <hr class="govuk-section-break govuk-section-break--m">
-
-    <a href="/schools/school-requests-on-radio" class="govuk-heading-s govuk-heading-s-no-margin">Turn requests on / off</a>
-    <p class="govuk-hint">Stop / start receiving requests from candidates</p>
-		
-    <a href="/schools/manage-email" class="govuk-heading-s govuk-heading-s-no-margin">Manage email alerts</a>
-    <p class="govuk-hint">Choose to receive instant or daily candidate request emails</p>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     <h3 class="govuk-heading-m">Help and support</h3>
 
     <a href="/schools/service-update-changes" class="govuk-heading-s govuk-heading-s-no-margin">Service updates and guidance</a>
-    <p class="govuk-hint">Find out about the latest changes to the service and how it works</p>
+    <p class="govuk-hint">Find out about the latest changes to the service and how it works.</p>
 
     <a href="/schools/contact-us" class="govuk-heading-s govuk-heading-s-no-margin">Contact us</a>
-    <p class="govuk-hint">Get in touch if you need help using the service</p>
+    <p class="govuk-hint">Get in touch if you need help using the service.</p>
 
 
     <a href="/booking/feedback-school" class="govuk-heading-s govuk-heading-s-no-margin">Give feedback on this service</a>
-    <p class="govuk-hint">Help us improve the manage school experience service</p>
+    <p class="govuk-hint">Help us improve the manage school experience service.</p>
 
   </div>
 </div>

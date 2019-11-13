@@ -28,12 +28,8 @@
 		      <td class="govuk-table__cell">The candidates request has been accepted and is now booked</td>
 		    </tr>
 		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></th>
+		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></th>
 		      <td class="govuk-table__cell">The candidate has cancelled their booking</td>
-		    </tr>
-		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">changed</strong></th>
-		      <td class="govuk-table__cell">The candidate or school has changed the date of the booking and is awaiting confirmation</td>
 		    </tr>
 		    <tr class="govuk-table__row">
 		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">Archived</strong></th>
@@ -66,11 +62,6 @@
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#changed">
-        Changed
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#previous">
         Previous
       </a>
@@ -91,13 +82,18 @@
 	</thead>
 	<tbody class="cancelled-booking govuk-table__body">
 		<h2 class="govuk-heading-m">All</h2>
-		
+				<nav class="pagination" role="navigation" aria-label="pager">  
+		<span class="page current">1</span>
+		<span class="page"><a rel="next" href="">2</a></span>
+		<span class="page"><a rel="next" href="">3</a></span>
+		<span class="next"><a rel="next" href="">Next</a></span>
+				</nav>
 		<tr class="bold-line govuk-table__row">
 			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
 			<td class="govuk-table__cell">John O'hanrahan</td>
 			<td class="govuk-table__cell">24 October 2019</td>
 			<td class="govuk-table__cell">Physics</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -184,6 +180,13 @@
 		</tr>
 	</tbody>
 </table>
+		<nav class="pagination" role="navigation" aria-label="pager">  
+<span class="page current">1</span>
+<span class="page"><a rel="next" href="">2</a></span>
+<span class="page"><a rel="next" href="">3</a></span>
+<span class="next"><a rel="next" href="">Next</a></span>
+		</nav>
+		<br>
 <img src="/public/images/download.png" width="18" height="18" alt="Download">&nbsp&nbsp<a href="" class="govuk-link">Download Microsoft Excel file of all bookings</a>
   </section>
 	
@@ -191,6 +194,12 @@
   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="new">
 <table class="govuk-table">
 			<h2 class="govuk-heading-m">Upcoming bookings</h2>
+					<nav class="pagination" role="navigation" aria-label="pager">  
+			<span class="page current">1</span>
+			<span class="page"><a rel="next" href="">2</a></span>
+			<span class="page"><a rel="next" href="">3</a></span>
+			<span class="next"><a rel="next" href="">Next</a></span>
+					</nav>
 	<thead class="govuk-table__head">
 		<tr class="govuk-table__row">
 			<th class="header govuk-table__header app-custom-class" scope="col"></th>
@@ -297,6 +306,12 @@
 		</tr>
 	</tbody>
 </table>
+		<nav class="pagination" role="navigation" aria-label="pager">  
+<span class="page current">1</span>
+<span class="page"><a rel="next" href="">2</a></span>
+<span class="page"><a rel="next" href="">3</a></span>
+<span class="next"><a rel="next" href="">Next</a></span>
+		</nav>
   </section>
 	
 	
@@ -314,13 +329,19 @@
 			<th class="header govuk-table__header app-custom-class" scope="col"></th>
 		</tr>
 	</thead>
+			<nav class="pagination" role="navigation" aria-label="pager">  
+	<span class="page current">1</span>
+	<span class="page"><a rel="next" href="">2</a></span>
+	<span class="page"><a rel="next" href="">3</a></span>
+	<span class="next"><a rel="next" href="">Next</a></span>
+			</nav>
 	<tbody class="cancelled-booking govuk-table__body">
 		<tr class="bold-line govuk-table__row">
 			<td class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></td>
 			<td class="govuk-table__cell">John O'hanrahan</td>
 			<td class="govuk-table__cell">24 October 2019</td>
 			<td class="govuk-table__cell">Physics</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -328,39 +349,44 @@
 			<td class="govuk-table__cell">James Smith</td>
 			<td class="govuk-table__cell">14 September 2019</td>
 			<td class="govuk-table__cell">Maths</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
 			<td class="govuk-table__cell">Gaye Jones</td>
 			<td class="govuk-table__cell">11 September 2019</td>
 			<td class="govuk-table__cell">Physics</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>	
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
 			<td class="govuk-table__cell">Linda McKinzie</td>
 			<td class="govuk-table__cell">8 September 2019</td>
 			<td class="govuk-table__cell">English</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
 			<td class="govuk-table__cell">Faye Riley</td>
 			<td class="govuk-table__cell">3 September 2019</td>
 			<td class="govuk-table__cell">Physics</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>	
 	</tbody>
 </table>
+		<nav class="pagination" role="navigation" aria-label="pager">  
+<span class="page current">1</span>
+<span class="page"><a rel="next" href="">2</a></span>
+<span class="page"><a rel="next" href="">3</a></span>
+<span class="next"><a rel="next" href="">Next</a></span>
+		</nav>
   </section>
-	
-	
-	
+		
+<!--
   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="changed">	
 <table class="govuk-table">
 	<thead class="govuk-table__head">
@@ -374,6 +400,12 @@
 			<th class="header govuk-table__header app-custom-class" scope="col"></th>
 		</tr>
 	</thead>
+			<nav class="pagination" role="navigation" aria-label="pager">  
+	<span class="page current">1</span>
+	<span class="page"><a rel="next" href="">2</a></span>
+	<span class="page"><a rel="next" href="">3</a></span>
+	<span class="next"><a rel="next" href="">Next</a></span>
+			</nav>
 	<tbody class="cancelled-booking govuk-table__body">
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
@@ -424,10 +456,16 @@
 			<td class="govuk-table__cell"><a href="/booking/profile-booking1" class="govuk-link">View</a></td>
 		</tr>
 	</tbody>
-	</table>	
+	</table>
+			<nav class="pagination" role="navigation" aria-label="pager">  
+	<span class="page current">1</span>
+	<span class="page"><a rel="next" href="">2</a></span>
+	<span class="page"><a rel="next" href="">3</a></span>
+	<span class="next"><a rel="next" href="">Next</a></span>
+			</nav>	
   </section>
 	
-	
+-->	
 
   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous">	
 <table class="govuk-table">
@@ -442,6 +480,12 @@
 			<th class="header govuk-table__header app-custom-class" scope="col"></th>
 		</tr>
 	</thead>
+			<nav class="pagination" role="navigation" aria-label="pager">  
+	<span class="page current">1</span>
+	<span class="page"><a rel="next" href="">2</a></span>
+	<span class="page"><a rel="next" href="">3</a></span>
+	<span class="next"><a rel="next" href="">Next</a></span>
+			</nav>
 	<tbody class="cancelled-booking govuk-table__body">
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
@@ -480,8 +524,8 @@
 			<td class="govuk-table__cell">Carlos Gutierrez</td>
 			<td class="govuk-table__cell">5 September 2019</td>
 			<td class="govuk-table__cell">PE</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
@@ -560,8 +604,8 @@
 			<td class="govuk-table__cell">Paul Hubris</td>
 			<td class="govuk-table__cell">14 September 2019</td>
 			<td class="govuk-table__cell">French</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
-			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__header" scope="row"></td>
@@ -637,6 +681,12 @@
 		</tr>
 	</tbody>
 	</table>	
+			<nav class="pagination" role="navigation" aria-label="pager">  
+	<span class="page current">1</span>
+	<span class="page"><a rel="next" href="">2</a></span>
+	<span class="page"><a rel="next" href="">3</a></span>
+	<span class="next"><a rel="next" href="">Next</a></span>
+			</nav>
   </section>	
 	
 </div>
