@@ -35,6 +35,10 @@
 		  </thead>
 		  <tbody class="govuk-table__body">
 		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></th>
+		      <td class="govuk-table__cell">An item requiring your attention</td>
+		    </tr>
+		    <tr class="govuk-table__row">
 		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">new</strong></th>
 		      <td class="govuk-table__cell">New request from candidate - requires your decision</td>
 		    </tr>
@@ -54,11 +58,6 @@
 
 <div class="govuk-tabs" data-module="tabs">
   <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#all">
-        All (10)
-      </a>
-    </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#new">
         New (5)
@@ -69,9 +68,14 @@
         Withdrawn (5)
       </a>
     </li>
-    <li class="govuk-tabs__list-item">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
       <a class="govuk-tabs__tab" href="#archived">
         Rejected
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#all">
+        All (10)
       </a>
     </li>
   </ul>
@@ -175,6 +179,22 @@
 			<td class="govuk-table__cell">Physics</td>
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Michael Gilmore</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">History</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Jane Godley</td>
+			<td class="govuk-table__cell">28 August 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-request2-note" class="govuk-link">View</a></td>
 		</tr>
 	</tbody>
 </table>
@@ -319,6 +339,22 @@
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
 		</tr>	
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Michael Gilmore</td>
+			<td class="govuk-table__cell">1 September 2019</td>
+			<td class="govuk-table__cell">History</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__header" scope="row"></td>
+			<td class="govuk-table__cell">Jane Godley</td>
+			<td class="govuk-table__cell">28 August 2019</td>
+			<td class="govuk-table__cell">Physics</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">withdrawn</strong></td>
+			<td class="govuk-table__cell"><a href="/booking/profile-cancelled" class="govuk-link">View</a></td>
+		</tr>
 	</tbody>
 </table>
 		<nav class="pagination" role="navigation" aria-label="pager">  

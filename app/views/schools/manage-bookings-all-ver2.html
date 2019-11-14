@@ -24,6 +24,10 @@
 		  </thead>
 		  <tbody class="govuk-table__body">
 		    <tr class="govuk-table__row">
+		      <th class="govuk-table__header" scope="row"><img src="/public/images/dot.png" width="19" height="46" alt="new"></th>
+		      <td class="govuk-table__cell">An item requiring your attention</td>
+		    </tr>
+		    <tr class="govuk-table__row">
 		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--available">booked</strong></th>
 		      <td class="govuk-table__cell">The candidates request has been accepted and is now booked</td>
 		    </tr>
@@ -46,11 +50,6 @@
 
 <div class="govuk-tabs" data-module="tabs">
   <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#all">
-        All (1)
-      </a>
-    </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#new">
         Upcoming
@@ -59,6 +58,11 @@
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#withdrawn">
         Cancelled (1)
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#all">
+        All (1)
       </a>
     </li>
     <li class="govuk-tabs__list-item">
@@ -556,7 +560,7 @@
 			<td class="govuk-table__cell">Paul Hubris</td>
 			<td class="govuk-table__cell">14 September 2019</td>
 			<td class="govuk-table__cell">French</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -588,7 +592,7 @@
 			<td class="govuk-table__cell">Peter Campbell-Jones</td>
 			<td class="govuk-table__cell">25 September 2019</td>
 			<td class="govuk-table__cell">Health and social care</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -668,7 +672,7 @@
 			<td class="govuk-table__cell">Carlos Gutierrez</td>
 			<td class="govuk-table__cell">5 September 2019</td>
 			<td class="govuk-table__cell">PE</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
