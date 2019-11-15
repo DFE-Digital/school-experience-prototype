@@ -35,16 +35,10 @@
 		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--unavailable">cancelled</strong></th>
 		      <td class="govuk-table__cell">The candidate has cancelled their booking</td>
 		    </tr>
-		    <tr class="govuk-table__row">
-		      <th class="govuk-table__header" scope="row"><strong class="govuk-tag govuk-tag--default">Archived</strong></th>
-		      <td class="govuk-table__cell">A previous booking</td>
-		    </tr>
 		  </tbody>
 		</table>
   </div>
 </details>
-
-
 
 
 
@@ -63,11 +57,6 @@
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
       <a class="govuk-tabs__tab" href="#all">
         All
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#previous">
-        Previous
       </a>
     </li>
   </ul>
@@ -469,7 +458,7 @@
 			</nav>	
   </section>
 	
--->	
+
 
   <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous">	
 <table class="govuk-table">
@@ -560,7 +549,7 @@
 			<td class="govuk-table__cell">Paul Hubris</td>
 			<td class="govuk-table__cell">14 September 2019</td>
 			<td class="govuk-table__cell">French</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -592,7 +581,7 @@
 			<td class="govuk-table__cell">Peter Campbell-Jones</td>
 			<td class="govuk-table__cell">25 September 2019</td>
 			<td class="govuk-table__cell">Health and social care</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -672,7 +661,7 @@
 			<td class="govuk-table__cell">Carlos Gutierrez</td>
 			<td class="govuk-table__cell">5 September 2019</td>
 			<td class="govuk-table__cell">PE</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--default">archived</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--unavailable">no show</strong></td>
 			<td class="govuk-table__cell"><a href="/booking/profile-archived" class="govuk-link">View</a></td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -692,13 +681,14 @@
 	<span class="next"><a rel="next" href="">Next</a></span>
 			</nav>
   </section>	
-	
+-->		
 </div>
+
 
 <p><a class="govuk-button govuk-button" href="/schools/school-dashboard-lean">Return to manage school experience</a></p>
 
 
-<p><a class="govuk-button govuk-button--warning" href="/schools/school-requests-on-radio">Turn school profile off</a></p>
+<p><a class="govuk-button govuk-button--warning" href="/schools/school-requests-on-radio">Turn all requests off</a></p>
 
 {% endblock %}
 
