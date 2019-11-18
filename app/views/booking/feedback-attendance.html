@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% import "sections.html" as s %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ s.banner() }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+  		<form action="/booking/" method="post" class="form">
+      <h1 class="govuk-heading-l">Give feedback on Newton Heath School</h1>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">Help us improve the school experience service.</p>
+
+					<h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="experience">
+    </legend>
+    <span id="experience-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="experience" name="experience" type="checkbox" value="career">
+        <label class="govuk-label govuk-checkboxes__label" for="experience">
+          Become a teacher
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="experience-2" name="experience" type="checkbox" value="place">
+        <label class="govuk-label govuk-checkboxes__label" for="experience-2">
+          Teach at Newton Heath School
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="experience-3" name="experience" type="checkbox" value="subject">
+        <label class="govuk-label govuk-checkboxes__label" for="experience-3">
+         Teach my chosen subject
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="experience-3" name="experience" type="checkbox" value="diff-subject">
+        <label class="govuk-label govuk-checkboxes__label" for="experience-4">
+         Teach a different subject
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="experience-3" name="experience" type="checkbox" value="diff-career">
+        <label class="govuk-label govuk-checkboxes__label" for="experience-5">
+         Try a different career
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>					
+
+<h2 class="govuk-heading-m">Overall, how did you feel about your experience at Newton Heath School?</h2>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel1" name="how-do-you-feel" type="radio" value="very-satisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel1">
+          Very satisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel2" name="how-do-you-feel" type="radio" value="satisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel2">
+          Satisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel3" name="how-do-you-feel" type="radio" value="neither-satisfied-or-dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel3">
+          Neither satisfied or dissatisfied
+        </label> </div>			
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel4" name="how-do-you-feel" type="radio" value="dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel4">
+          Dissatisfied
+        </label> </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-do-you-feel5" name="how-do-you-feel" type="radio" value="very-dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="how-feel5">
+          Very dissatisfied
+        </label> </div>
+    </div>		
+  </fieldset>
+</div>
+
+<h2 class="govuk-heading-m">How could the experience be improved? (optional)</h2>
+
+
+<div class="govuk-form-group">
+  <span id="more-detail-hint" class="govuk-hint">
+    Do not include any information that could identify you personally - such as your name.
+  </span>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+<a href="/candidate-dashboard/c-dashboard-feedback-confirm?request-count=4&bookings-count=7" class="govuk-button">Submit feedback</a>
+<br>
+
+<h2 class="govuk-heading-m">Help and support</h2>
+
+<p class="govuk-body">If there’s anything else you’d like to add email us at <a href="mailto:organise.school-experience@education.gov.uk" class="govuk-link">organise.school-experience@education.gov.uk</a>.</p>
+
+		</form>
+
+
+    </div>
+</div>
+{% endblock %}
